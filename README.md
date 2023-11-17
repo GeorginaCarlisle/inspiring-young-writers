@@ -50,6 +50,53 @@ Project currently under development and no live link available.
 
 ### The Strategy Plane
 
+#### Target User Group
+
+Children who can write and specifically children aged 8 – 12.
+
+They can:
+
+- Use a keyboard to type.
+- Spell words, put together sentences and build a larger piece of writing.
+- Articulate simple concepts or ideas through the written word.
+
+However, they are still developing the skills needed to:
+
+-	Articulate clearly more complex thoughts, ideas and concepts through the written word.
+-	Write for the reader and include details that will allow the reader to fully understand the story/concept etc.
+-	Build narratives that flow, with the story they are telling working together as a whole.
+
+
+#### Problem Background
+
+Becoming an articulate writer and being able to tell a story (whether fiction or non-fiction) for an audience is a complex skill that takes time and practice to master. As with any skill, it is practice, exposure and feedback that leads to progress. 
+
+Primary schools do an amazing job of helping children to progress with their writing. However, while children get plenty of chance to practice writing at school, their writing is usually accompanied by restriction (a theme, writing style, time limit, particular language construct to be focused on) and even the environment of a classroom can provide further restriction. 
+
+Where then can children build in this practice of writing for an audience in a less restricted way? Where can they share their writing and gain feedback, motivation, inspiration, and exposure to stories written by those at a similar skill level to them?
+
+There are plenty of writing competitions for children and magazines where they can send stories. However, these again often come with restrictions (theme, word count, deadline) and often don’t lend themselves to a child being able to continually share new stores and quickly gain feedback.
+
+
+#### Problem Statement
+
+“I am a child who has the potential to become a fantastic writer, however a lack of opportunity to share and gain feedback from writing created purely for pleasure means I have less motivation and reason to write. I therefore write less and gain less feedback which ultimately means my progression is less than it could be.”
+
+
+#### Project Aim
+
+This project aims to provide children aged 8 - 12 with a safe space where they can share their writing - created for pleasure without restriction - and gain feedback.
+
+
+#### Safety Considerations
+
+As this project is aimed at children, extra thought needs to be given to making sure the space provided for them to share their writing in is safe. 
+
+Two main areas of danger will be considered throughout this project:
+
+-	The danger of children being exposed to material or comments that are inappropriate or may cause harm.
+-	The danger of someone being able to contact and connect with a child (whether in the space or outside via the gaining of contact information) which then leaves them vulnerable to abuse.
+
 [Return to contents list](#contents)
 
 
