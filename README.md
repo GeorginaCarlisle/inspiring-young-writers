@@ -1,39 +1,143 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Inspiring Young Writers
 
-Welcome,
+Developer: Georgina Carlisle
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Image showing deployed project to go here.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+Inspiring Young Writers is a platform specifically designed for children aged 8 - 12 to share their writing and give and gain feedback.
 
-## Codeanywhere Reminders
+Project currently under development and no live link available.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
 
-`python3 -m http.server`
+## Contents
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+[Design](#design)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+- [The Strategy Plane](#the-strategy-plane)
 
-`http_server`
+- [The Scope Plane](#the-scope-plane)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- [The Structure Plane](#the-structure-plane)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- [The Skeleton Plane](#the-skeleton-plane)
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- [The Surface Plane](#the-surface-plane)
 
-To log into the Heroku toolbelt CLI:
+[Agile Methodology](#agile-methodology)
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+[Features](#features)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- [Existing Features](#existing-features)
 
----
+- [Future Features](#future-features)
 
-Happy coding!
+[Languages](#languages)
+
+[Tools and Technologies](#tools-and-technologies)
+
+[Testing and Validation](#testing-and-validation)
+
+[Bugs and Fixes](#bugs-and-fixes)
+
+[Deployment](#deployment)
+
+[Credits](#credits)
+
+[Acknowledgements](#acknowledgements)
+
+
+## Design
+
+### The Strategy Plane
+
+[Return to contents list](#contents)
+
+
+### The Scope Plane
+
+[Return to contents list](#contents)
+
+
+### The Structure Plane
+
+[Return to contents list](#contents)
+
+
+### The Skeleton Plane
+
+[Return to contents list](#contents)
+
+
+### The Surface Plane
+
+[Return to contents list](#contents)
+
+
+## Agile Methodology
+
+[Return to contents list](#contents)
+
+
+## Features
+
+### Existing Features
+
+[Return to contents list](#contents)
+
+
+### Future Features
+
+[Return to contents list](#contents)
+
+
+## Languages
+
+[Return to contents list](#contents)
+
+
+## Tools and Technologies
+
+Tools and technologies are listed in order of use during the development of this project.
+
+[Code Institute Template](https://github.com/Code-Institute-Org/ci-full-template) - Provided me with a familiar base from which to build my project.
+
+[GitHub](https://github.com/) - Stores the repository for this project so that it can be viewed by others.
+
+[git](https://git-scm.com/) - Controlled the building of this project in a series of versions which can be tracked.
+
+[Visual Studio Code](https://code.visualstudio.com/) - The editor in which this project has been built. The following extentions were installed and used: Markdown Preview Enhanced
+
+[Return to contents list](#contents)
+
+
+## Testing and Validation
+
+[Return to contents list](#contents)
+
+
+## Bugs and Fixes
+
+[Return to contents list](#contents)
+
+
+## Deployment
+
+[Return to contents list](#contents)
+
+
+## Credits
+
+[Return to contents list](#contents)
+
+
+## Acknowledgements
+
+[Code Institue](https://codeinstitute.net) - The majority of the coding skills, knowledge and understanding showcased in this project have been learnt through the 'Diploma of Full stack software development' that I am completing with Code Institute.
+
+### Websites, articles and tutorials
+
+The following websites, articles and tutorials are listed in order of use during the development of this project.
+
+[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) - I followed the structure given in this article for my commit messages.
+
+[Return to contents list](#contents)
