@@ -313,6 +313,17 @@ As the **site admin** I can send parents an email sharing posted feedback and th
 
 ### The Structure Plane
 
+The following diagrams show how the platform will be structured and how the user will move through it.
+
+![Flow diagram showing the structure of the platform and the flow of logic through it](documentation/design/site-flow-logic.png)
+
+![Key to show the meaning behind the different shapes and colours used on the main flow diagram](documentation/design/site-flow-logic-key.png)
+
+
+The following diagram shows the models that will be used to store all the data needed by the platform and any connections between the different models.
+
+![Diagram showing a plan for the database](documentation/design/database-plan.png)
+
 [Return to contents list](#contents)
 
 
@@ -359,6 +370,10 @@ Tools and technologies are listed in order of use during the development of this
 [git](https://git-scm.com/) - Controlled the building of this project in a series of versions which can be tracked.
 
 [Visual Studio Code](https://code.visualstudio.com/) - The editor in which this project has been built. The following extentions were installed and used: Markdown Preview Enhanced
+
+[Drawio](https://www.drawio.com) - Used to visually plan out the structure of the platform and how the user will be able to move through it.
+
+[LucidChart](https://www.lucidchart.com/pages/) - Used to plan the models to be included in the database and how they connect together.
 
 [Return to contents list](#contents)
 
