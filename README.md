@@ -326,11 +326,201 @@ The following diagram shows the models that will be used to store all the data n
 
 [Return to contents list](#contents)
 
+---
 
 ### The Skeleton Plane
 
+The following wire frames show the intended design for the platform on both mobile and desktop.
+
+The platform will be split into two distinction sections:
+- New User Experience (the part of the platform that can be accessed without logging in)
+- Authenticated User Experience (this will be unique to each registered user and can only be accessed by logging in)
+
+#### New User Experience
+
+This section of the platform can be accessed by anyone and will consist of four pages and one modal. Each page will build on the same base template and will share the same header, hero image, footer and background.
+
+<details>
+<summary>
+Landing Page
+</summary>
+
+The main url will direct straight to the landing page.
+
+![Wireframe showing the intended design of the landing page](documentation/design/wireframes/wireframe-landing-page.png)
+
+Notes: The landing page can be re-accessed by clicking on the platform name in the top left corner. The sign-up today section will also contain details about the ability to give and recieve feedback, should this feature be implemented.
+
+</details>
+
+<details>
+<summary>
+Contact
+</summary>
+
+This page provides parents of new users with a means of contacting the site admin.
+
+![Wireframe showing the intended design of the contact page](documentation/design/wireframes/wireframe-contact.png)
+
+Notes: Feedback will be provided to the user if any of the form input fields fail to pass validation. Feedback to the user will also be provided on successful submission of the form.
+
+</details>
+
+<details>
+<summary>
+Sign-up
+</summary>
+
+This page provides new users alongside their parents with the means to register for the platform and create an account.
+
+![Wireframe showing the intended design of the sign-up page](documentation/design/wireframes/wireframe-signup.png)
+
+Notes: Feedback will be provided to the user if any of the form input fields fail to pass validation. Feedback to the user will also be provided on successful submission of the form.
+
+</details>
+
+<details>
+<summary>
+Login
+</summary>
+
+This page provides registered users with the means to login to their account.
+
+![Wireframe showing the intended design of the login page](documentation/design/wireframes/wireframe-login.png)
+
+Notes: Feedback will be provided to the user if any of the form input fields fail to link to a known account. Feedback to the user will also be provided on successful user authentication prior to redirection to their account home page.
+
+</details>
+
+<details>
+<summary>
+Parent Information Modal
+</summary>
+
+This part of the platform provides parents with all the information they should need. It has been created as a modal, so that it can be viewed during the sign-up process (as well as independently as shown here) without the user needing to come away from the sign-up form. 
+
+![Wireframe showing the intended design of the parent information modal](documentation/design/wireframes/wireframe-parents.png)
+
+Notes: In the above view the modal is shown as accessed from the landing page.
+
+</details>
+
+#### Authenticated User Experience
+
+This section of the platform can only be accessed by a registered user logging into their account and will allow them to access to their work as well as published work. It will consist of six pages. Each page will build on the same base template and will share the same header, footer and background. Two of these pages will also contain a number of changing modals.
+
+<details>
+<summary>
+Account Home
+</summary>
+
+This is the page a user will be directed to when they first log in.
+
+![Wireframe showing the intended design of the account home page](documentation/design/wireframes/wireframe-account-home.png)
+
+Notes: The Tips will be about how to use the platform. Providing support and guidance for users.
+</details>
+
+<details>
+<summary>
+Contact
+</summary>
+
+This page ensures the parents of users can still contact the site admin and that it's a feature that spans both sections of the platform.
+
+![Wireframe showing the intended design of the contact page for logged in users](documentation/design/wireframes/wireframe-account-contact.png)
+
+Notes: The contact form when sent will pull information from the users profile, such as email address, pen-name of the child and name of parent. Feedback will be provided to the user if any of the form input fields fail to pass validation. Feedback to the user will also be provided on successful submission of the form.
+
+</details>
+
+<details>
+<summary>
+Profile
+</summary>
+
+This page allows the user to edit their profile information as well as delete thier account should they wish.
+
+![Wireframe showing the intended design of the profile page](documentation/design/wireframes/wireframe-account-profile.png)
+
+Notes: Any changes to the users profile will need to be verified by their parent via an email sent to the registered email address. Feedback will be provided to the user if any of the form input fields fail to pass validation. Feedback to the user will also be provided on successful submission of the form.
+
+</details>
+
+<details>
+<summary>
+Information for parents
+</summary>
+
+This page allows the parent of a user to still access all the information provided during the new user experience section of the website.
+
+![Wireframe showing the intended design of the information for parents page](documentation/design/wireframes/wireframe-account-parents.png)
+
+</details>
+
+<details>
+<summary>
+My Work
+</summary>
+
+This is the page that the user will use to access, edit, create and delete all of their work.
+Notes: The Tips will include ideas for the sort of work the user could create. Each listed item of work can be clicked on to bring that piece up in a modal.
+
+![Wireframe showing the intended design of the my work page](documentation/design/wireframes/wireframe-my-work.png)
+
+
+Clicking on the create new work button (from the my work page or as a shortcut from account home), or on a draft item of work, or clicking to edit a published or submitted piece of work with bring up the **edit** view. This will either be empty or prepopulated with the work to be editted.
+
+
+![Wireframe showing the intended design of the modal for creating and editing work accessed through the my work page](documentation/design/wireframes/wireframe-my-work-edit.png)
+
+Clicking on a published piece of work will bring it up in this view.
+This wireframe shows the view once the feedback feature has also been implemented.
+
+![Wireframe showing the intended design of the published work modal accessed through the my work page](documentation/design/wireframes/wireframe-my-work-published.png)
+
+Clicking on a submitted piece of work will bring it up in this view.
+
+![Wireframe showing the submitted work modal accessed through the my work page](documentation/design/wireframes/wireframe-my-work-submitted.png)
+
+</details>
+
+<details>
+<summary>
+Library
+</summary>
+
+This is the page that the user will use to access published work from other users.
+Notes: The Tips will include ideas around gaining inspiration and tips from other peoples writing.
+
+![Wireframe showing the intended design of the library page](documentation/design/wireframes/wireframe-library.png)
+
+Users will be able to click on a published piece of work to expand it.
+Notes: This view is prior to the comments feature being implemented
+
+![Wireframe showing the intended design of the published work modal accessed through the library page](documentation/design/wireframes/wireframe-library-article.png)
+
+Every published piece of work will have a red flag next to the title, clicking on the red flag brings up this view.
+
+![Wireframe showing the sequence of clicking on a red flag attached to a piece of work](documentation/design/wireframes/wireframe-library-article-redflag.png)
+
+The following view shows how viewing a published piece of work will look once the comment feature has been implemented. Including how the user can create feedback.
+
+![Wireframe showing the published work modal including feedback as accessed through the library page](documentation/design/wireframes/wireframe-library-comment.png)
+
+The following wireframes show how a user can edit or delete their feedback. The edit and delete functionality will only be active on feedback they have written.
+
+![Wireframe showing how users can edit their feedback](documentation/design/wireframes/wireframe-library-comment-edit.png)
+
+Every item of feedback will have a red flag next to the authors name, clicking on the red flag brings up this view.
+
+![Wireframe showing the sequence of clicking on a red flag attached to an item of feedback](documentation/design/wireframes/wireframe-library-comment-redflag.png)
+
+</details>
+
 [Return to contents list](#contents)
 
+---
 
 ### The Surface Plane
 
@@ -374,6 +564,8 @@ Tools and technologies are listed in order of use during the development of this
 [Drawio](https://www.drawio.com) - Used to visually plan out the structure of the platform and how the user will be able to move through it.
 
 [LucidChart](https://www.lucidchart.com/pages/) - Used to plan the models to be included in the database and how they connect together.
+
+[Balsamiq](https://balsamiq.com) - Used to create wireframes showing the skeleton plane of the design phase.
 
 [Return to contents list](#contents)
 
