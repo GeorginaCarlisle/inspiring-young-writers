@@ -529,6 +529,79 @@ Every item of feedback will have a red flag next to the authors name, clicking o
 
 ## Agile Methodology
 
+Agile values and principles have been followed in the creation of this project where they fit into a solo project built purely for educational purposes.
+
+In particular the following common Agile practices have been followed:
+user stories, story points and team velocity, product backlog, time boxing, prioritization and information radiators.
+
+### User Stories
+
+Please see the [Scope Plane](#the-scope-plane) for the user stories created for this project which breakdown the Epics detailing the main features of the platform into manageable chunks of work.
+
+The issues tool on GitHub has been used to record all user stories. Acceptance criteria and tasks were added to the user stories as the project progressed.
+
+### Story Points and Team Velocity
+
+Story Points were used as a way to judge how long a user story might take to complete. With an estimated team velocity used to judge how many story points may beable to be completed per iteration and therefore which user stories to add to the next iteration.
+
+In order to judge story points the following user story was used as the base guide and given a value of **2 story points**:
+> 3 - As a new user I am given clear information on what registered users can do, so that I know what signing up will allow me to see and do.
+
+I chose this user story to base the story points on, as I felt it represent a fairly short and familiar task.
+
+A Doubling score was then used when estimating story points for other user stories, with familiarity of the coding needed to complete the user story also taken into account. Story points were also re-assessed at the beginning of each new iteration in light of work already completed and my increasing confidence and familiarity with Django.
+
+Story points were recorded using labels attached to the user story.
+
+An initial team velocity was set as **40 story points a week**. Note that the 4 iterations will each be a week long.
+
+### Product Backlog
+
+A product backlog was used in which to store all user stories, prior to being assigned into an iteration. Any user stories not completed at the end of the iteration were then moved back into the backlog. At the end of the project a number of user stories remained in the product backlog. These have been discussed in the [future features](#future-features) section of the readme.
+
+The product backlog is visible on GitHub through the use of a milestone titled "Backlog" and a specific backlog column in the project board.
+
+### Time Boxing
+
+Developement of the project was split into four time boxes/iterations. Each iteration was set to a period of one week.
+
+#### First Iteration
+
+#### Second Iteration
+
+#### Third Iteration
+
+#### Fourth Iteration
+
+### MoSCoW Prioritisation
+
+MoSCoW prioritisation was used throughout the project. At the beginning of each new iteration the project backlog was accessed and each user story categorised for the current iteration (not the project over all), thus allowing for the correct balance of prioritisation for each iteration. This process was repeated for each new iteration, being mindful at all times of the overall remaining project time left.
+
+- **Must Have** the user stories deemed vital for this iteration of the project.
+
+- **Should Have** the user stories deemed important but not vital for this iteration of the project.
+
+- **Could Have** the user stories that will only have a small impact if left out of this iteration of the project.
+
+- **Won't Have** the user stories that won't be worked on during this iteration of the project. These weren't speicifically labelled and were simply left in the backlog.
+
+
+#### Extra notes on prioritisation
+
+It is to be noted that:
+
+- While solving a real world problem and being designed for the real world this project is being built for education purposes only.
+
+- The nature of the project involving children has necessitated a large number of user stories geared around safety. All of which in the real world would need to be in place and therefore designated **Must Have**.
+
+- Completing ALL of the user stories geared around safety is not a viable or necessary aim of this project, given that the real underlying purpose of this project is to showcase software development skills and it is current form won't be released as a real project for anyone to sign-up to and use.
+
+Therefore it has been decided for this particular project that user stories geared around safety won't necessarily be prioritised as must haves. However, should any remain uncompleted at the end of the project a full explanation will be given.
+
+### Information Radiators
+
+GitHub projects was utilised as a kanban board for this project.
+
 [Return to contents list](#contents)
 
 
