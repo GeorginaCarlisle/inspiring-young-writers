@@ -33,6 +33,8 @@ Project currently under development and no live link available.
 
 [Languages](#languages)
 
+[Frameworks and Libraries](#frameworks-and-libraries)
+
 [Tools and Technologies](#tools-and-technologies)
 
 [Testing and Validation](#testing-and-validation)
@@ -619,7 +621,22 @@ GitHub projects was utilised as a kanban board for this project.
 
 ## Languages
 
+HTML
+CSS
+JavaScript
+Python
+
 [Return to contents list](#contents)
+
+
+## Frameworks and Libraries
+
+[Django 3.2](https://www.djangoproject.com) - A high-level Python web framework that encourages rapid development and clean, pragmatic design.
+
+[Gunicorn 21.2](https://gunicorn.org) - A Python WSGI HTTP Server for UNIX.
+
+[Psycopg2 2.9](https://www.psycopg.org/docs/#) -  A PostgreSQL database adapter for the Python programming language.
+
 
 
 ## Tools and Technologies
@@ -639,6 +656,12 @@ Tools and technologies are listed in order of use during the development of this
 [LucidChart](https://www.lucidchart.com/pages/) - Used to plan the models to be included in the database and how they connect together.
 
 [Balsamiq](https://balsamiq.com) - Used to create wireframes showing the skeleton plane of the design phase.
+
+[Cloudinary](https://cloudinary.com) - Image and video API platform.
+
+[Heroku](https://www.heroku.com) - Used to host and deploy the project
+
+[ElephantSQL](https://www.elephantsql.com) - Used to store the PostgreSQL database
 
 [Return to contents list](#contents)
 
@@ -660,7 +683,7 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 ## Credits
 
-[Code Institute](https://codeinstitute.net) - "I think therefore I Blog" walk through followed when installing dependencies and deploying to Heroku. 
+[Code Institute](https://codeinstitute.net) - "I think therefore I Blog" walkthrough followed when installing dependencies and deploying to Heroku. 
 
 [Return to contents list](#contents)
 
