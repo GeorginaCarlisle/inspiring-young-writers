@@ -660,12 +660,14 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 ## Credits
 
+[Code Institute](https://codeinstitute.net) - "I think therefore I Blog" walk through followed when installing dependencies and deploying to Heroku. 
+
 [Return to contents list](#contents)
 
 
 ## Acknowledgements
 
-[Code Institue](https://codeinstitute.net) - The majority of the coding skills, knowledge and understanding showcased in this project have been learnt through the 'Diploma of Full stack software development' that I am completing with Code Institute.
+[Code Institute](https://codeinstitute.net) - The majority of the coding skills, knowledge and understanding showcased in this project have been learnt through the 'Diploma of Full stack software development' that I am completing with Code Institute.
 
 ### Other projects
 
