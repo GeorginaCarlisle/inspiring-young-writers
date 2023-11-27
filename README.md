@@ -667,6 +667,23 @@ Tools and technologies are listed in order of use during the development of this
 
 [Code Institue](https://codeinstitute.net) - The majority of the coding skills, knowledge and understanding showcased in this project have been learnt through the 'Diploma of Full stack software development' that I am completing with Code Institute.
 
+### Other projects
+
+I spent time looking at Django projects created by other students and how they utilised Django, the information contained in their readme and the testing they completed. This aided my understanding of the Django framework as well as providing a reference for good documentation and testing. Any code directly copied or which has heavily influenced my code has been mentioned in [Credits](#credits).
+
+[BroBonds](https://github.com/GeorginaCarlisle/brobonds-movember-hackathon) - A Django blog and event style project created by Team!Alone of which I was a team member.
+
+[Tailor's Thimble](https://github.com/MoniPar/tailors_thimble) - A fictional business website created by MoniPar.
+
+[Tribe](https://github.com/adamgilroy22/tribe) - A social media application created by Adam Gilroy.
+
+[Knowledge Flow](https://github.com/rockroman/CI_PP4-Knowledge-Flow) - A learning and blogging application created by RockRoman.
+
+[Dome Restaurant](https://github.com/christiangoran/dome-restaurant-repo) - A restaurant booking website created by Christian Goran.
+
+[AutoMarket](https://github.com/Dayana-N/AutoMarket-PP4) - A listing site for selling cars created by Dayana-N.
+
+
 ### Websites, articles and tutorials
 
 The following websites, articles and tutorials are listed in order of use during the development of this project.
