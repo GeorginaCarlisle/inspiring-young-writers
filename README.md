@@ -676,6 +676,10 @@ Tools and technologies are listed in order of use during the development of this
 
 [ElephantSQL](https://www.elephantsql.com) - Used to store the PostgreSQL database
 
+[Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework used when writing the CSS for this project
+
+[Django-Tailwind](https://django-tailwind.readthedocs.io/en/latest/index.html#) - Used to intgrate Tailwind CSS into the Django framework used for this project
+
 [Return to contents list](#contents)
 
 
@@ -701,6 +705,8 @@ See [TESTING.md](TESTING.md) for all testing and validation
 [BroBonds](https://github.com/GeorginaCarlisle/brobonds-movember-hackathon) 
 - Influenced how I chose to structure the apps, folders and files in this project.
 - Used as a reference point when creating views
+
+[Integrate Tailwind into your Django application](https://www.youtube.com/watch?v=76n7sqZocSk) - YouTube video by Cloud with Django, followed when installing Django-Tailwind
 
 [Return to contents list](#contents)
 
@@ -731,5 +737,7 @@ I spent time looking at Django projects created by other students and how they u
 The following websites, articles and tutorials are listed in order of use during the development of this project.
 
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) - I followed the structure given in this article for my commit messages.
+
+[Tailwind CSS documentation](https://tailwindcss.com/docs/utility-first) - Used to find the tailwind class tags required.
 
 [Return to contents list](#contents)
