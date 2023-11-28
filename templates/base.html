@@ -11,11 +11,15 @@
     <title>Inspiring Young Writers{% block extra_title %}{% endblock %}</title>
 </head>
 <body>
-    
+
+    {% include 'header.html' %}
+
     <main>
         {% block content %}
         {% endblock %}
     </main>
+
+    {% include 'footer.html' %}
 
 </body>
 </html>
