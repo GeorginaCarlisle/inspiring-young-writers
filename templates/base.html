@@ -1,4 +1,3 @@
-{% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,14 +9,12 @@
     {% endblock %}
 
     <title>Inspiring Young Writers{% block extra_title %}{% endblock %}</title>
-
-    {% tailwind_css %}
 </head>
 <body>
 
     {% include 'header.html' %}
 
-    <h1 class="text-lime-500">Base template</h1>
+    Base template
     
     <main>
         {% block content %}
