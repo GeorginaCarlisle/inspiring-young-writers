@@ -1,3 +1,6 @@
+{% load compress %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +11,17 @@
     <meta name="keywords" content="young writers, children's writing, writing for children, creative writing, sharing writing">
     {% endblock %}
 
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    {% endcompress %}
+
     <title>Inspiring Young Writers{% block extra_title %}{% endblock %}</title>
 </head>
 <body>
 
     {% include 'header.html' %}
 
-    Base template
+    <h1 class="text-amber-600">Base template</h1>
     
     <main>
         {% block content %}

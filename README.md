@@ -676,6 +676,8 @@ Tools and technologies are listed in order of use during the development of this
 
 [ElephantSQL](https://www.elephantsql.com) - Used to store the PostgreSQL database
 
+[Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
+
 [Return to contents list](#contents)
 
 
@@ -731,5 +733,9 @@ I spent time looking at Django projects created by other students and how they u
 The following websites, articles and tutorials are listed in order of use during the development of this project.
 
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) - I followed the structure given in this article for my commit messages.
+
+[Using Git - how to go back to a previous commit](https://medium.com/swlh/using-git-how-to-go-back-to-a-previous-commit-8579ccc8180f) - I followed this article when reverting to a previous commit.
+
+[Tailwind CSS Django - Flowbite](https://flowbite.com/docs/getting-started/django/) - Instructions in article followed to install tailwind css.
 
 [Return to contents list](#contents)
