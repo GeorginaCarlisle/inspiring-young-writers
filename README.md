@@ -308,6 +308,19 @@ As the **site admin** I can send parents an email sharing posted feedback and th
 
 </details>
 
+#### Additional User Stories added after initial planning phase
+
+<details>
+<summary>
+View User Stories
+</summary>
+
+As a **user** I can navigate intuitively through the site, so that I can quickly access the areas I need. (64)
+- Initially this was going to be handled as part of other user stories. However, I then later decided it would sit better as a user story in it's own right.
+
+
+</details>
+
 
 [Return to contents list](#contents)
 
@@ -684,6 +697,8 @@ See [TESTING.md](TESTING.md) for all testing and validation
 ## Credits
 
 [Code Institute](https://codeinstitute.net) - "I think therefore I Blog" walkthrough followed when installing dependencies and deploying to Heroku. 
+
+[BroBonds](https://github.com/GeorginaCarlisle/brobonds-movember-hackathon) - A project that heavily influenced how I chose to structure the apps, folders and files in this project.
 
 [Return to contents list](#contents)
 
