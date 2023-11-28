@@ -698,7 +698,9 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 [Code Institute](https://codeinstitute.net) - "I think therefore I Blog" walkthrough followed when installing dependencies and deploying to Heroku. 
 
-[BroBonds](https://github.com/GeorginaCarlisle/brobonds-movember-hackathon) - A project that heavily influenced how I chose to structure the apps, folders and files in this project.
+[BroBonds](https://github.com/GeorginaCarlisle/brobonds-movember-hackathon) 
+- Influenced how I chose to structure the apps, folders and files in this project.
+- Used as a reference point when creating views
 
 [Return to contents list](#contents)
 
