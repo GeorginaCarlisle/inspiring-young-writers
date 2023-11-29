@@ -672,11 +672,13 @@ Tools and technologies are listed in order of use during the development of this
 
 [Cloudinary](https://cloudinary.com) - Image and video API platform.
 
-[Heroku](https://www.heroku.com) - Used to host and deploy the project
+[Heroku](https://www.heroku.com) - Used to host and deploy the project.
 
-[ElephantSQL](https://www.elephantsql.com) - Used to store the PostgreSQL database
+[ElephantSQL](https://www.elephantsql.com) - Used to store the PostgreSQL database.
 
-[Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
+[Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
+
+[Canva](https://www.canva.com) - Used to create the hero image.
 
 [Return to contents list](#contents)
 
@@ -702,11 +704,23 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 ## Credits
 
+### Code
+
 [Code Institute](https://codeinstitute.net) - "I think therefore I Blog" walkthrough followed when installing dependencies and deploying to Heroku. 
 
 [BroBonds](https://github.com/GeorginaCarlisle/brobonds-movember-hackathon) 
 - Influenced how I chose to structure the apps, folders and files in this project.
 - Used as a reference point when creating views
+
+### Images
+
+[boys-using-silver-macbook](https://www.pexels.com/photo/boy-using-silver-macbook-indoors-3401403/) by Agung Pandit Wiguna - Used to create Hero Image.
+
+[girl-watching-movie-on-laptop](https://www.pexels.com/photo/little-girl-watching-movie-on-laptop-4017428/) by Gustavo Fring - Used to create Hero Image.
+
+[girl-typing-on laptop](https://www.pexels.com/photo/focused-asian-girl-typing-on-laptop-at-home-5905969/) by Katerina Holmes - Used to create Hero Image.
+
+[young-woman-sitting-on-the-carpet-while-using-laptop](https://www.pexels.com/photo/a-young-woman-sitting-on-the-carpet-while-using-her-laptop-5998826/) by cottonbro studio - Used to create Hero Image.
 
 [Return to contents list](#contents)
 
