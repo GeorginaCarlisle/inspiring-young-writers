@@ -542,6 +542,10 @@ video {
   display: block;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-52 {
   height: 13rem;
 }
@@ -597,12 +601,38 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:h-60 {
     height: 15rem;
   }
 }
 
+@media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+}
+
 @media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:h-auto {
     height: auto;
   }

@@ -24,8 +24,22 @@
     <main>
 
         <!-- Hero Image -->
-        <div class=" h-48 sm:h-60 lg:h-auto">
-            <img src="{% static 'images/hero-image.png' %}" alt="" class="h-full object-cover object-left" id="" />
+        <div>
+            <!-- Small Screens -->
+            <img 
+            src="{% static 'images/hero-image-sm.png' %}" 
+            alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
+            class="sm:hidden"/>
+            <!-- Medium Screens -->
+            <img 
+            src="{% static 'images/hero-image-md.png' %}" 
+            alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
+            class="hidden sm:block lg:hidden"/>
+            <!-- Large Screens -->
+            <img 
+            src="{% static 'images/hero-image.png' %}" 
+            alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
+            class="hidden lg:block"/>
         </div>
 
         {% block content %}
