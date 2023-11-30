@@ -44,7 +44,12 @@
             <img 
             src="{% static 'images/hero-image-large.webp' %}" 
             alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
-            class="hidden lg:block"/>
+            class="hidden lg:block xl:hidden"/>
+            <!-- Extra Large Screens -->
+            <img 
+            src="{% static 'images/hero-image-extra-large.webp' %}" 
+            alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
+            class="hidden xl:block"/>
         </div>
 
         {% block content %}

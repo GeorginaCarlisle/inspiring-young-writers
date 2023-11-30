@@ -25,8 +25,10 @@ The acceptance criteria for each user story has been checked on completion (1st 
 
 | # | User Story | Acceptance Criteria | 1st Check | Final Check |
 | -- | ---- | ---- | -- | -- |
-| 1 | As a **new user** the website is clearly geared towards children age 8 - 12 and sharing writing | | | |
-| | | | | | 
+| 1 | As a **new user** the website is clearly geared towards children age 8 - 12 and sharing writing | I am drawn to a clear title "Inspiring Young Writers aged 8 - 12" | PASS | |
+| | | A hero image shows children at laptops creating stories and poems | PASS | | 
+| | | The platform name "Inspiring young writers" is clearly displayed on the left of the nav bar | PASS | |
+| | | A short introduction tells me exactly what the platform is for. | PASS | |
 | 2 | As a **new user** I can read work written by another child | | | |
 | 3 | As a **new user** I am given clear information on what registered users can do | | | |
 | | | | | |
