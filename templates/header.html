@@ -1,3 +1,22 @@
 {% load static %}
 
-<h1 class="text-teal-600">Header template</h1>
+<header class="absolute top-0 grid grid-cols-4 md:grid-cols-5 xl:grid-cols-6 h-16 lg:h-20 w-full">
+    <!-- Logo -->
+    <div class="w-40 lg:w-60 col-span-1">
+        <div class="p-1.5">
+            <a>
+                <span class="inline-block text-center w-full font-title text-2xl lg:text-3xl leading-none">Inspiring Young</span>
+                <span class="inline-block text-center w-full font-title text-2xl lg:text-3xl leading-none">Writers</span>
+            </a>
+        </div>
+    </div>
+    <div class="md:col-span-1 xl:col-span-2"></div>
+    <nav class="col-span-3 p-5 lg:p-6">
+        <ul class="flex flex-row justify-around font-body lg:text-xl">
+            <li><a>Parents</a></li>
+            <li><a>Contact</a></li>
+            <li><a>Sign-up</a></li>
+            <li><a>Login</a></li>
+        </ul>
+    </nav>
+</header>
