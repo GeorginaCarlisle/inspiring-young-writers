@@ -8,6 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      title: ['Boogaloo', 'sans-serif'],
+      body: ['Ubuntu', 'sans-serif'],
+      kids: ['Ubuntu Mono', 'monospace'],
+    }
   },
   plugins: [],
 }
