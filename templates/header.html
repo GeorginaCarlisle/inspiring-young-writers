@@ -1,49 +1,49 @@
 {% load static %}
 
-<header class="fixed top-0 grid grid-cols-4 md:grid-cols-5 xl:grid-cols-6 h-16 lg:h-20 w-full">
-    <!-- Logo -->
-    <div class="w-40 lg:w-60 col-span-1">
-        <div class="p-1.5">
-            <a>
-                <span class="inline-block text-center w-full font-title text-2xl lg:text-3xl leading-none">Inspiring Young</span>
-                <span class="inline-block text-center w-full font-title text-2xl lg:text-3xl leading-none">Writers</span>
-            </a>
+<header>
+    <div class="fixed top-0 grid grid-cols-4 md:grid-cols-5 xl:grid-cols-6 h-16 lg:h-20 w-full border-b-2 border-black bg-zinc-50">
+        <!-- Logo -->
+        <div class="w-40 lg:w-60 col-span-1">
+            <div class="p-1.5">
+                <a>
+                    <span class="inline-block text-center w-full font-title text-2xl lg:text-3xl leading-none text-orange-600">Inspiring Young</span>
+                    <span class="inline-block text-center w-full font-title text-2xl lg:text-3xl leading-none text-orange-600">Writers</span>
+                </a>
+            </div>
         </div>
-    </div>
 
-    <!-- Additional space between logo and nav for larger screens-->
-    <div class="md:col-span-1 xl:col-span-2"></div>
+        <!-- Additional space between logo and nav for larger screens-->
+        <div class="md:col-span-1 xl:col-span-2"></div>
 
-    <!-- Navigation-->
-    <nav class="col-span-3 p-5 lg:p-6 font-body">
+        <!-- Navigation-->
+        <nav class="col-span-3 p-5 lg:p-6 font-body">
 
-        <!-- Desktop Navigation -->
-        <ul class="hidden md:flex flex-row justify-around lg:text-xl">
-            <li><a>Parents</a></li>
-            <li><a>Contact</a></li>
-            <li><a>Sign-up</a></li>
-            <li><a>Login</a></li>
-        </ul>
-    
-        <!-- Mobile Navigation -->
-        <!-- Nav Closed -->
-        <button class="absolute top-4 right-4 md:hidden" id="nav-open">
-            <i class="fa-solid fa-bars text-4xl"></i>
-        </button>
-
-        <!-- Nav Open -->
-        <div class="hidden absolute top-0 right-0 p-4 bg-white w-36" id="mobile-nav">
-            <button class="absolute top-4 right-4" id="nav-closed">
-                <i class="fa-solid fa-x text-4xl"></i>
-            </button>
-            <ul class="flex flex-col justify-around font-body text-xl mt-10">
-                <li class="mb-2"><a>Parents</a></li>
-                <li class="mb-2"><a>Contact</a></li>
-                <li class="mb-2"><a>Sign-up</a></li>
-                <li class="mb-2"><a>Login</a></li>
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex flex-row justify-around lg:text-xl">
+                <li><a>Parents</a></li>
+                <li><a>Contact</a></li>
+                <li><a>Sign-up</a></li>
+                <li><a>Login</a></li>
             </ul>
-        </div>
         
-    
-    </nav>
+            <!-- Mobile Navigation -->
+            <!-- Nav Closed -->
+            <button class="absolute top-4 right-4 md:hidden" id="nav-open">
+                <i class="fa-solid fa-bars text-4xl"></i>
+            </button>
+
+            <!-- Nav Open -->
+            <div class="hidden absolute top-0 right-0 p-4 bg-white w-36" id="mobile-nav">
+                <button class="absolute top-4 right-4" id="nav-closed">
+                    <i class="fa-solid fa-x text-4xl"></i>
+                </button>
+                <ul class="flex flex-col justify-around font-body text-xl mt-10">
+                    <li class="mb-2"><a>Parents</a></li>
+                    <li class="mb-2"><a>Contact</a></li>
+                    <li class="mb-2"><a>Sign-up</a></li>
+                    <li class="mb-2"><a>Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 </header>
