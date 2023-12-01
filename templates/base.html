@@ -23,6 +23,11 @@
     <link rel="stylesheet" href="{% static 'src/output.css' %}">
     {% endcompress %}
 
+    <!-- JavaScript -->
+    {% block corejs %}
+    <script src="{% static 'js/script.js' %}"></script>
+    {% endblock %}
+
     <title>Inspiring Young Writers{% block extra_title %}{% endblock %}</title>
 </head>
 <body class="flex flex-col h-screen">
