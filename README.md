@@ -750,6 +750,10 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 [Ubuntu-Mono](https://fonts.google.com/specimen/Ubuntu+Mono) - by Dalton Maag
 
+### Icons
+
+[Font Awesome icons](https://fontawesome.com/) - Used for the mobile nav and also in the footer.
+
 [Return to contents list](#contents)
 
 
