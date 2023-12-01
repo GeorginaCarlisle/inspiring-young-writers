@@ -38,8 +38,10 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | | | |
 | 6 | As the **site admin** user's question and concerns along with their contact details are passed to me | | | |
 | | | | | |
-| 7 | As a **new user** I am provided with the name and contact links for the developer who created this platform | | | |
-| | | | | |
+| 7 | As a **new user** I am provided with the name and contact links for the developer who created this platform | The name of the developer and year platform created are clearly visible at the bottom of every page. | PASS | |
+| | | On larger screens extra info is given to say that the platform was created for 'educational purposes only'. | PASS | |
+| | | Clear and easy to access links to take the user to the developer's LinkedIn and GitHub. | PASS | |
+| | | Clicking on links open relevant page in new tab. | PASS | |
 | 8 | As a **new user** I am informed when page link errors occur and provided with a link straight back to the landing page | | | |
 | | | | | |
 | 9 | As a **new user** I can easily set up an account | | | |
@@ -146,7 +148,13 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | | | |
 | 60 | As the **site admin** I can send parents an email sharing posted feedback and the reason it has been removed  | | | |
 | | | | | |
-
+| 64 | As a **user** I can navigate intuitively through the site | The navigation links display clearly across the top of the page for larger screens. | PASS | |
+| | | The navigation links display clearly in a dropdown menu on smaller screens. | PASS | |
+| | | On smaller screens I can click a hamburger icon allowing me to open the mobile nav. | PASS | |
+| | | On smaller screens I can click on an x to close the mobile nav. | PASS | |
+| | | The platform name "Inspiring young writers" is clearly displayed on the left of the nav bar. This directs back to the home page. | PASS | |
+| | | When hovering over a link there is clear visual feedback. | PASS | |
+| | | All navigation links take you to the correct destination when clicked. | PASS | |
 
 [Return to contents list](#contents)
 
