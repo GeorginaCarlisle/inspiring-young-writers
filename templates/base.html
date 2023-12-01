@@ -11,12 +11,14 @@
     <meta name="keywords" content="young writers, children's writing, writing for children, creative writing, sharing writing">
     {% endblock %}
 
+    <!-- Fonts -->
     {% block core_css %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     {% endblock %}
 
+    <!-- CSS -->
     {% compress css %}
     <link rel="stylesheet" href="{% static 'src/output.css' %}">
     {% endcompress %}
@@ -56,6 +58,13 @@
         {% endblock %}
     </main>
     {% include 'footer.html' %}
+
+    <!-- Script for fontawesome icons, copied from https://fontawesome.com/ -->
+    {% block extra_js %}
+    {% endblock %}
+    <script src="https://kit.fontawesome.com/ab3127d928.js" crossorigin="anonymous"></script>
+    {% block postloadjs %}
+    {% endblock %}
 
 </body>
 </html>
