@@ -8,3 +8,7 @@ from django.views.generic import TemplateView
 class Index(TemplateView):
     """ View for the landing page """
     template_name = 'index.html'
+
+class Contact(TemplateView):
+    """ View for the contact page """
+    template_name = 'contact.html'

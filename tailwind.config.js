@@ -4,7 +4,11 @@ module.exports = {
     './templates/base.html', 
     './templates/footer.html', 
     './templates/header.html', 
-    './home/templates/index.html'
+    './home/templates/index.html',
+    './home/templates/contact.html',
+    './templates/404.html',
+    './templates/500.html',
+    './templates/hero.html',
   ],
   theme: {
     extend: {},
