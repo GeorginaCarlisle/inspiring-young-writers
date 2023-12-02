@@ -4,29 +4,7 @@
 
 {% block content %}
 
-<!-- Hero Image -->
-<div class="mt-16 lg:mt-20">
-    <!-- Small Screens -->
-    <img 
-    src="{% static 'images/hero-image-small.webp' %}" 
-    alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
-    class="sm:hidden"/>
-    <!-- Medium Screens -->
-    <img 
-    src="{% static 'images/hero-image-medium.webp' %}" 
-    alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
-    class="hidden sm:block lg:hidden"/>
-    <!-- Large Screens -->
-    <img 
-    src="{% static 'images/hero-image-large.webp' %}" 
-    alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
-    class="hidden lg:block xl:hidden"/>
-    <!-- Extra Large Screens -->
-    <img 
-    src="{% static 'images/hero-image-extra-large.webp' %}" 
-    alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
-    class="hidden xl:block"/>
-</div>
+{% include 'hero.html' %}
 
 <!-- Title and site introduction -->
 <div class="flex justify-center bg-neutral-50">
