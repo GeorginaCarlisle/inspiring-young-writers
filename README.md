@@ -640,6 +640,24 @@ Developement of the project was split into four time boxes/iterations. Each iter
 
 #### First Iteration
 
+<details>
+<summary>
+See more
+</summary>
+
+During the first iteration the following user stories and key tasks were completed and closed:
+![Screen shot of the First iteration milestone showing closed issues - User stories 1, 7 and 64 plus key additional tasks](documentation/agile/first-iteration-closed.png)
+
+At the end of the iteration the following user stories remained un-completed and open:
+![Screen shot of the First iteration milestone showing open issues - User stories 5, 8, 9, 10, 11 and 17](documentation/agile/first-iteration-open.png)
+
+It is to be noted that the:
+- **Contact** user story (#5) had all tasks completed, however it failed manual testing with a bug and  additional task identified. Both have been added into the backlog as issues.
+- **Page link errors** (#8) user story cannot be fully completed until authorisation is in place.
+- **Contact form data passed to Admin** (#6) user story despite not being part of this iteration has also been partially completed.
+
+</details>
+
 #### Second Iteration
 
 #### Third Iteration
@@ -756,6 +774,7 @@ See [TESTING.md](TESTING.md) for all testing and validation
 | -- | ----- | --- |
 | Tailwind CSS working locally, but not being served on the deployed site. | Research into Tailwind and Django. Research into Tailwind and Heroku. Tested different methods of installing Tailwind. Tried various fixes to deploy through Heroku. Went back to basics. Found advice from slack community around Heroku and static files. Worked back through changes, which changes were needed and which weren't. | Followed [Tailwind CSS Django - Flowbite](https://flowbite.com/docs/getting-started/django/) to install Tailwind with css files stored in best location. Set DISABLE_COLLECTSTATIC to 0 on Heroku. Specific Deployment Branch with Debug to False. Run the command **./manage.py collectstatic** prior to deployment. |
 | Contact form textarea automatically renders with 16 whitespace characters | | |
+| On contact form submission the following error displays: SMTP.starttls() got an unexpected keyword argument 'keyfile' | | |
 
 [Return to contents list](#contents)
 
