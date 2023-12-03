@@ -8,11 +8,17 @@
 
 <div class="flex justify-center p-8">
     <div class="border border-black rounded bg-zinc-50 p-4 relative">
+        {% if name %}
+        <!-- Thank you message on contact form submission -->
+        <h2 class="text-2xl md:text-3xl mb-2 font-title text-orange-600 text-center">Thank you for contacting us</h2>
+        <p class="text-center">Thank you for contacting us {{ name }}. We will be back in touch soon.</p>
+
+        {% else %}
+        <!-- Contact us form -->
         <div class="text-center mb-6">
-            <h1 class="text-3xl md:text-4xl mb-2 font-title text-orange-600">Contact us - {{ name }}</h1>
+            <h1 class="text-3xl md:text-4xl mb-2 font-title text-orange-600">Contact us</h1>
             <p>Please get in touch if you have any questions, worries or concerns.</p>
         </div>
-
         <form action="{% url 'contact' %}" method="post" id="contact-form">
             {% csrf_token %}
             <!-- User information -->
@@ -66,6 +72,7 @@
                 id="submit-button"
                 class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white text-orange-700 text-lg hover:cursor-pointer">
         </form>
+        {% endif %}
     </div>
 </div>
 

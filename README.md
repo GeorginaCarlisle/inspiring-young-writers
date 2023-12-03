@@ -774,6 +774,8 @@ See [TESTING.md](TESTING.md) for all testing and validation
 - Influenced how I chose to structure the apps, folders and files in this project.
 - Used as a reference point when creating views
 
+[How To Send Email With Django by Codemy.com](https://www.youtube.com/watch?v=xNqnHmXIuzU) - Youtube tutorial followed and adapted so that on submission of the contact us form an email is sent to the site owner.
+
 ### Images
 
 [boys-using-silver-macbook](https://www.pexels.com/photo/boy-using-silver-macbook-indoors-3401403/) by Agung Pandit Wiguna - Used to create Hero Image.
