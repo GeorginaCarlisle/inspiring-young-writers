@@ -755,6 +755,7 @@ See [TESTING.md](TESTING.md) for all testing and validation
 | Bug | What was tried | Fix |
 | -- | ----- | --- |
 | Tailwind CSS working locally, but not being served on the deployed site. | Research into Tailwind and Django. Research into Tailwind and Heroku. Tested different methods of installing Tailwind. Tried various fixes to deploy through Heroku. Went back to basics. Found advice from slack community around Heroku and static files. Worked back through changes, which changes were needed and which weren't. | Followed [Tailwind CSS Django - Flowbite](https://flowbite.com/docs/getting-started/django/) to install Tailwind with css files stored in best location. Set DISABLE_COLLECTSTATIC to 0 on Heroku. Specific Deployment Branch with Debug to False. Run the command **./manage.py collectstatic** prior to deployment. |
+| Contact form textarea automatically renders with 16 whitespace characters | | |
 
 [Return to contents list](#contents)
 

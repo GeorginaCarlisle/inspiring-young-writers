@@ -34,8 +34,13 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | | | |
 | 4 | As the **parent of a new user** I am provided with information which details how the site works | | | |
 | | | | | |
-| 5 | As the **parent of a new user** I can contact the site admin | | | |
-| | | | | |
+| 5 | As the **parent of a new user** I can contact the site admin | I can navigate intuitively and easily to the contact page | PASS | |
+| | | The design of the page is pleasing to the eye and doesn't distract | FAIL | |
+| | | The title and introduction reassure me as to what the form is for | PASS | |
+| | | Clear labels indicate the information to be added to each input field | PASS | |
+| | | The button to submit is clear | PASS | |
+| | | When entering the wrong information I am prompted and informed what needs to be entered | FAIL | |
+| | | I am given clear success feedback on submission of the form | PASS | |
 | 6 | As the **site admin** user's question and concerns along with their contact details are passed to me | | | |
 | | | | | |
 | 7 | As a **new user** I am provided with the name and contact links for the developer who created this platform | The name of the developer and year platform created are clearly visible at the bottom of every page. | PASS | |
