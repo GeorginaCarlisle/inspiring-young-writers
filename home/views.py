@@ -12,3 +12,11 @@ class Index(TemplateView):
 class Contact(TemplateView):
     """ View for the contact page """
     template_name = 'contact.html'
+
+    def post(self, request, *args, **kwargs):
+        first_name = request.POST['first-name']
+        last_name = request.POST['last-name']
+        email = request.POST['email']
+        message = request.POST['message']
+
+        return render(request, 'contact.html', {'name': first_name})
