@@ -752,11 +752,11 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 ## Bugs and Fixes
 
-| Bug                                                                                                                   | What was tried                                                                                                                                                                                                                                                                                                                        | Fix                                                                                                                                                                                                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tailwind CSS working locally, but not being served on the deployed site.                                              | Research into Tailwind and Django. Research into Tailwind and Heroku. Tested different methods of installing Tailwind. Tried various fixes to deploy through Heroku. Went back to basics. Found advice from slack community around Heroku and static files. Worked back through changes, which changes were needed and which weren't. | Followed [Tailwind CSS Django - Flowbite](https://flowbite.com/docs/getting-started/django/) to install Tailwind with css files stored in best location. Set DISABLE_COLLECTSTATIC to 0 on Heroku. Specific Deployment Branch with Debug to False. Run the command **./manage.py collectstatic** prior to deployment. |
-| Contact form textarea automatically renders with 16 whitespace characters                                             |                                                                                                                                                                                                                                                                                                                                       |                                                                                                                                                                                                                                                                                                                       |
-| On contact form submission the following error displays: SMTP.starttls() got an unexpected keyword argument 'keyfile' | [Research](https://stackoverflow.com/questions/77482831/smtp-starttls-got-an-unexpected-keyword-argument-keyfile) revealed the version of Django being used may be the cause of the bug.                                                                                                                                              |                                                                                                                                                                                                                                                                                                                       |
+| # | Bug | What was tried | Fix |
+| - | -- | ----- | --- |
+| 1 | Tailwind CSS working locally, but not being served on the deployed site. | Research into Tailwind and Django. Research into Tailwind and Heroku. Tested different methods of installing Tailwind. Tried various fixes to deploy through Heroku. Went back to basics. Found advice from slack community around Heroku and static files. Worked back through changes, which changes were needed and which weren't. | Followed [Tailwind CSS Django - Flowbite](https://flowbite.com/docs/getting-started/django/) to install Tailwind with css files stored in best location. Set DISABLE_COLLECTSTATIC to 0 on Heroku. Specific Deployment Branch with Debug to False and compress removed (base.html and settings.py). Run the command **./manage.py collectstatic** prior to deployment. |
+| 2 | Contact form textarea automatically renders with 16 whitespace characters | | |
+| 3 | On contact form submission the following error displays: SMTP.starttls() got an unexpected keyword argument 'keyfile' | [Research](https://stackoverflow.com/questions/77482831/smtp-starttls-got-an-unexpected-keyword-argument-keyfile) found which I thought suggested Django version was the issue. Django updated causing postgresql to need updating which caused the project to fully cease working. Tutor support contacted and python version identified as root cause. | Python version updated to 3.9.17 |
 
 [Return to contents list](#contents)
 
@@ -807,6 +807,8 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 Code Institute's Slack community - Provided me with support and key insight into issues I was facing. Where specific support was gained, this has been noted either in [credits](#credits) or in [bugs](#bugs-and-fixes) as appropriate.
 
+Code Institute's Tutor support - Helped me to solve bug #3.
+
 ### Other projects
 
 I spent time looking at Django projects created by other students and how they utilised Django, the information contained in their readme and the testing they completed. This aided my understanding of the Django framework as well as providing a reference for good documentation and testing. Any code directly copied or which has heavily influenced my code has been mentioned in [Credits](#credits).
@@ -831,7 +833,7 @@ The following websites, articles and tutorials are listed in order of use during
 
 [Using Git - how to go back to a previous commit](https://medium.com/swlh/using-git-how-to-go-back-to-a-previous-commit-8579ccc8180f) - I followed this article when reverting to a previous commit.
 
-[Tailwind CSS Django - Flowbite](https://flowbite.com/docs/getting-started/django/) - Instructions in article followed to install tailwind css.
+[Tailwind CSS Django - Flowbite](https://flowbite.com/docs/getting-started/django/) - Instructions in article followed to install tailwind css and used in fix for bug 1.
 
 [Tailwind CSS Tutorial #6 - Custom Fonts by Net Ninja](https://www.youtube.com/watch?v=arfDRUIZOiw) - Instructions in video followed to create custom font family styles.
 
