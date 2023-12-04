@@ -8,7 +8,6 @@ Inspiring Young Writers is a platform specifically designed for children aged 8 
 
 Project currently under development and no live link available.
 
-
 ## Contents
 
 [Design](#design)
@@ -65,40 +64,36 @@ They can:
 
 However, they are still developing the skills needed to:
 
--	Articulate clearly more complex thoughts, ideas and concepts through the written word.
--	Write for the reader and include details that will allow the reader to fully understand the story/concept etc.
--	Build narratives that flow, with the story they are telling working together as a whole.
-
+- Articulate clearly more complex thoughts, ideas and concepts through the written word.
+- Write for the reader and include details that will allow the reader to fully understand the story/concept etc.
+- Build narratives that flow, with the story they are telling working together as a whole.
 
 #### Problem Background
 
-Becoming an articulate writer and being able to tell a story (whether fiction or non-fiction) for an audience is a complex skill that takes time and practice to master. As with any skill, it is practice, exposure and feedback that leads to progress. 
+Becoming an articulate writer and being able to tell a story (whether fiction or non-fiction) for an audience is a complex skill that takes time and practice to master. As with any skill, it is practice, exposure and feedback that leads to progress.
 
-Primary schools do an amazing job of helping children to progress with their writing. However, while children get plenty of chance to practice writing at school, their writing is usually accompanied by restriction (a theme, writing style, time limit, particular language construct to be focused on) and even the environment of a classroom can provide further restriction. 
+Primary schools do an amazing job of helping children to progress with their writing. However, while children get plenty of chance to practice writing at school, their writing is usually accompanied by restriction (a theme, writing style, time limit, particular language construct to be focused on) and even the environment of a classroom can provide further restriction.
 
 Where then can children build in this practice of writing for an audience in a less restricted way? Where can they share their writing and gain feedback, motivation, inspiration, and exposure to stories written by those at a similar skill level to them?
 
 There are plenty of writing competitions for children and magazines where they can send stories. However, these again often come with restrictions (theme, word count, deadline) and often don’t lend themselves to a child being able to continually share new stores and quickly gain feedback.
 
-
 #### Problem Statement
 
 “I am a child who has the potential to become a fantastic writer, however a lack of opportunity to share and gain feedback from writing created purely for pleasure means I have less motivation and reason to write. I therefore write less and gain less feedback which ultimately means my progression is less than it could be.”
-
 
 #### Project Aim
 
 This project aims to provide children aged 8 - 12 with a safe space where they can share their writing - created for pleasure without restriction - and gain feedback.
 
-
 #### Safety Considerations
 
-As this project is aimed at children, extra thought needs to be given to making sure the space provided for them to share their writing in is safe. 
+As this project is aimed at children, extra thought needs to be given to making sure the space provided for them to share their writing in is safe.
 
 Two main areas of danger will be considered throughout this project:
 
--	The danger of children being exposed to material or comments that are inappropriate or may cause harm.
--	The danger of someone being able to contact and connect with a child (whether in the space or outside via the gaining of contact information) which then leaves them vulnerable to abuse.
+- The danger of children being exposed to material or comments that are inappropriate or may cause harm.
+- The danger of someone being able to contact and connect with a child (whether in the space or outside via the gaining of contact information) which then leaves them vulnerable to abuse.
 
 [Return to contents list](#contents)
 
@@ -107,7 +102,6 @@ Two main areas of danger will be considered throughout this project:
 ### The Scope Plane
 
 The scope of this project is provided by user stories, organised below by epic and then role.
-
 
 #### EPIC - New User Experience
 
@@ -134,7 +128,6 @@ As a **new user** I am informed when page link errors occur and provided with a 
 
 </details>
 
-
 #### EPIC - Authentication
 
 <details>
@@ -153,7 +146,6 @@ As a **signed-in user** I can easily logout of my account, so that I can keep my
 As a **registered user** (with the help of my parent) I can reset my password using a link sent to my parent’s email, so that if I forget my password I can still login to my account. (13)
 
 </details>
-
 
 #### EPIC - Profile Management
 
@@ -174,7 +166,6 @@ As the **parent of a registered user** I am informed via email if my child’s a
 
 </details>
 
-
 #### EPIC - Account Home
 
 <details>
@@ -193,7 +184,6 @@ As the **parent of a signed-in user** I can also access the information for pare
 As the **parent of a signed-in user** I can also contact the site admin when my child is logged in, so that there is always an easy to access way to contact the site admin. (23)
 
 </details>
-
 
 #### EPIC - My Work
 
@@ -226,7 +216,6 @@ As a **signed-in user** I can delete my writing, so that I can remove any of my 
 
 </details>
 
-
 #### EPIC - Approval of writing
 
 <details>
@@ -245,7 +234,6 @@ As the **site admin** I can send parents an email sharing the submitted story an
 As the **site admin** I can remove approved status from previously approved work, so that I can respond to any concerns raised post approval. (39)
 
 </details>
-
 
 #### EPIC - Library of Published work
 
@@ -267,7 +255,6 @@ As the **parent of a signed-in user** I can raise concern about a specific piece
 As the **site admin** I am alerted immediately to any raised concerns, so that I can respond swiftly. (45)
 
 </details>
-
 
 #### EPIC - Feedback
 
@@ -316,11 +303,10 @@ View User Stories
 </summary>
 
 As a **user** I can navigate intuitively through the site, so that I can quickly access the areas I need. (64)
+
 - Initially this was going to be handled as part of other user stories. However, I then later decided it would sit better as a user story in it's own right.
 
-
 </details>
-
 
 [Return to contents list](#contents)
 
@@ -333,7 +319,6 @@ The following diagrams show how the platform will be structured and how the user
 ![Flow diagram showing the structure of the platform and the flow of logic through it](documentation/design/site-flow-logic.png)
 
 ![Key to show the meaning behind the different shapes and colours used on the main flow diagram](documentation/design/site-flow-logic-key.png)
-
 
 The following diagram shows the models that will be used to store all the data needed by the platform and any connections between the different models.
 
@@ -348,6 +333,7 @@ The following diagram shows the models that will be used to store all the data n
 The following wire frames show the intended design for the platform on both mobile and desktop.
 
 The platform will be split into two distinction sections:
+
 - New User Experience (the part of the platform that can be accessed without logging in)
 - Authenticated User Experience (this will be unique to each registered user and can only be accessed by logging in)
 
@@ -412,7 +398,7 @@ Notes: Feedback will be provided to the user if any of the form input fields fai
 Parent Information Modal
 </summary>
 
-This part of the platform provides parents with all the information they should need. It has been created as a modal, so that it can be viewed during the sign-up process (as well as independently as shown here) without the user needing to come away from the sign-up form. 
+This part of the platform provides parents with all the information they should need. It has been created as a modal, so that it can be viewed during the sign-up process (as well as independently as shown here) without the user needing to come away from the sign-up form.
 
 ![Wireframe showing the intended design of the parent information modal](documentation/design/wireframes/wireframe-parents.png)
 
@@ -434,6 +420,7 @@ This is the page a user will be directed to when they first log in.
 ![Wireframe showing the intended design of the account home page](documentation/design/wireframes/wireframe-account-home.png)
 
 Notes: The Tips will be about how to use the platform. Providing support and guidance for users.
+
 </details>
 
 <details>
@@ -483,9 +470,7 @@ Notes: The Tips will include ideas for the sort of work the user could create. E
 
 ![Wireframe showing the intended design of the my work page](documentation/design/wireframes/wireframe-my-work.png)
 
-
 Clicking on the create new work button (from the my work page or as a shortcut from account home), or on a draft item of work, or clicking to edit a published or submitted piece of work with bring up the **edit** view. This will either be empty or prepopulated with the work to be editted.
-
 
 ![Wireframe showing the intended design of the modal for creating and editing work accessed through the my work page](documentation/design/wireframes/wireframe-my-work-edit.png)
 
@@ -544,16 +529,19 @@ Every item of feedback will have a red flag next to the authors name, clicking o
 Three different fonts have been chosen for the platform to provide extra distinctness to text used for different purposes. All the fonts are sans serif to make for clear text that is easy to read and share some common themes so that they work well together. All fonts have been sourced from [Google Fonts](https://fonts.google.com).
 
 ##### Headings
+
 The font **Boogaloo** by [John Vargas Beltran](https://fonts.google.com/specimen/Boogaloo?preview.text=Inspiring%20Young%20Writers&classification=Display&stroke=Sans+Serif) has been chosen for all the headings across the site. It has a more organic feel with clear character while still being clear and easy to read.
 
 ![Example of the Boogaloo font with the text "Inspiring Young Writers"](documentation/design/typography-boogaloo.png)
 
 ##### Main platform text
+
 The font **Ubuntu** by [Dalton Maag](https://fonts.google.com/specimen/Ubuntu?preview.text=View%20Feedback&stroke=Sans+Serif) has been chosen for all the main text on the platform. It is the most uniform of the three texts, while still showing a little organic character.
 
 ![Example of the Ubuntu font with the text "Write and share stories"](documentation/design/typography-ubuntu.png)
 
 ##### Children's work text
+
 A third font has been chosen so that any text generated by the users, such as their work and feedback, stands out against the main platform text. The font **Ubuntu Mono** by [Dalton Maag](https://fonts.google.com/specimen/Ubuntu+Mono) has been chosen for this purpose. It is more akin to handwritten text, while still maintaining a clearness and uniformity which will be important during it's use for large blocks of text.
 
 ![Example of the Ubuntu Mono font with the text "Once upon a time"](documentation/design/typography-ubuntu-mono.png)
@@ -577,10 +565,10 @@ Three background colours have been chosen:
 - An orange #EA580C (234, 88, 12)
 
 With three text colours:
+
 - Black #000000 for all the main text
 - Orange #EA580C (234, 88, 12) for the main titles
 - A darker orange #C2410C (194, 65, 12) for titles with a smaller font weight and size.
-
 
 ##### Colour contrast
 
@@ -598,7 +586,6 @@ It is to be noted that the above text colour will only be used with this backgro
 ![The contrast of black text on a light zinc gray background passes all criteria](documentation/design/colour-contrast-d-orange-on-zinc.png)
 
 [Return to contents list](#contents)
-
 
 ## Agile Methodology
 
@@ -618,6 +605,7 @@ The issues tool on GitHub has been used to record all user stories. Acceptance c
 Story Points were used as a way to judge how long a user story might take to complete. With an estimated team velocity used to judge how many story points may beable to be completed per iteration and therefore which user stories to add to the next iteration.
 
 In order to judge story points the following user story was used as the base guide and given a value of **2 story points**:
+
 > 3 - As a new user I am given clear information on what registered users can do, so that I know what signing up will allow me to see and do.
 
 I chose this user story to base the story points on, as I felt it represent a fairly short and familiar task.
@@ -652,7 +640,8 @@ At the end of the iteration the following user stories remained un-completed and
 ![Screen shot of the First iteration milestone showing open issues - User stories 5, 8, 9, 10, 11 and 17](documentation/agile/first-iteration-open.png)
 
 It is to be noted that the:
-- **Contact** user story (#5) had all tasks completed, however it failed manual testing with a bug and  additional task identified. Both have been added into the backlog as issues.
+
+- **Contact** user story (#5) had all tasks completed, however it failed manual testing with a bug and additional task identified. Both have been added into the backlog as issues.
 - **Page link errors** (#8) user story cannot be fully completed until authorisation is in place.
 - **Contact form data passed to Admin** (#6) user story despite not being part of this iteration has also been partially completed.
 
@@ -676,7 +665,6 @@ MoSCoW prioritisation was used throughout the project. At the beginning of each 
 
 - **Won't Have** the user stories that won't be worked on during this iteration of the project. These weren't speicifically labelled and were simply left in the backlog.
 
-
 #### Extra notes on prioritisation
 
 It is to be noted that:
@@ -695,18 +683,15 @@ GitHub projects was utilised as a kanban board for this project.
 
 [Return to contents list](#contents)
 
-
 ## Features
 
 ### Existing Features
 
 [Return to contents list](#contents)
 
-
 ### Future Features
 
 [Return to contents list](#contents)
-
 
 ## Languages
 
@@ -717,16 +702,13 @@ Python
 
 [Return to contents list](#contents)
 
-
 ## Frameworks and Libraries
 
 [Django 3.2](https://www.djangoproject.com) - A high-level Python web framework that encourages rapid development and clean, pragmatic design.
 
 [Gunicorn 21.2](https://gunicorn.org) - A Python WSGI HTTP Server for UNIX.
 
-[Psycopg2 2.9](https://www.psycopg.org/docs/#) -  A PostgreSQL database adapter for the Python programming language.
-
-
+[Psycopg2 2.9](https://www.psycopg.org/docs/#) - A PostgreSQL database adapter for the Python programming language.
 
 ## Tools and Technologies
 
@@ -738,7 +720,7 @@ Tools and technologies are listed in order of use during the development of this
 
 [git](https://git-scm.com/) - Controlled the building of this project in a series of versions which can be tracked.
 
-[Visual Studio Code](https://code.visualstudio.com/) - The editor in which this project has been built. The following extentions were installed and used: Markdown Preview Enhanced
+[Visual Studio Code](https://code.visualstudio.com/) - One of the two editors in which this project has been built. The following extentions were installed and used: Markdown Preview Enhanced, Python, Pylance, Tailwind CSS IntelliSense
 
 [Drawio](https://www.drawio.com) - Used to visually plan out the structure of the platform and how the user will be able to move through it.
 
@@ -760,37 +742,36 @@ Tools and technologies are listed in order of use during the development of this
 
 [WebAim contrast checker](https://webaim.org/resources/contrastchecker/) - Used to test contrast between text and background.
 
-[Return to contents list](#contents)
+[Code Anywhere](https://app.codeanywhere.com/) - One of the two editors in which this project has been built.
 
+[Return to contents list](#contents)
 
 ## Testing and Validation
 
 See [TESTING.md](TESTING.md) for all testing and validation
 
-
 ## Bugs and Fixes
 
-| Bug | What was tried | Fix |
-| -- | ----- | --- |
-| Tailwind CSS working locally, but not being served on the deployed site. | Research into Tailwind and Django. Research into Tailwind and Heroku. Tested different methods of installing Tailwind. Tried various fixes to deploy through Heroku. Went back to basics. Found advice from slack community around Heroku and static files. Worked back through changes, which changes were needed and which weren't. | Followed [Tailwind CSS Django - Flowbite](https://flowbite.com/docs/getting-started/django/) to install Tailwind with css files stored in best location. Set DISABLE_COLLECTSTATIC to 0 on Heroku. Specific Deployment Branch with Debug to False. Run the command **./manage.py collectstatic** prior to deployment. |
-| Contact form textarea automatically renders with 16 whitespace characters | | |
-| On contact form submission the following error displays: SMTP.starttls() got an unexpected keyword argument 'keyfile' | [Research](https://stackoverflow.com/questions/77482831/smtp-starttls-got-an-unexpected-keyword-argument-keyfile) revealed the version of Django being used may be the cause of the bug. | |
+| Bug                                                                                                                   | What was tried                                                                                                                                                                                                                                                                                                                        | Fix                                                                                                                                                                                                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tailwind CSS working locally, but not being served on the deployed site.                                              | Research into Tailwind and Django. Research into Tailwind and Heroku. Tested different methods of installing Tailwind. Tried various fixes to deploy through Heroku. Went back to basics. Found advice from slack community around Heroku and static files. Worked back through changes, which changes were needed and which weren't. | Followed [Tailwind CSS Django - Flowbite](https://flowbite.com/docs/getting-started/django/) to install Tailwind with css files stored in best location. Set DISABLE_COLLECTSTATIC to 0 on Heroku. Specific Deployment Branch with Debug to False. Run the command **./manage.py collectstatic** prior to deployment. |
+| Contact form textarea automatically renders with 16 whitespace characters                                             |                                                                                                                                                                                                                                                                                                                                       |                                                                                                                                                                                                                                                                                                                       |
+| On contact form submission the following error displays: SMTP.starttls() got an unexpected keyword argument 'keyfile' | [Research](https://stackoverflow.com/questions/77482831/smtp-starttls-got-an-unexpected-keyword-argument-keyfile) revealed the version of Django being used may be the cause of the bug.                                                                                                                                              |                                                                                                                                                                                                                                                                                                                       |
 
 [Return to contents list](#contents)
-
 
 ## Deployment
 
 [Return to contents list](#contents)
 
-
 ## Credits
 
 ### Code
 
-[Code Institute](https://codeinstitute.net) - "I think therefore I Blog" walkthrough followed when installing dependencies and deploying to Heroku. 
+[Code Institute](https://codeinstitute.net) - "I think therefore I Blog" walkthrough followed when installing dependencies and deploying to Heroku.
 
-[BroBonds](https://github.com/GeorginaCarlisle/brobonds-movember-hackathon) 
+[BroBonds](https://github.com/GeorginaCarlisle/brobonds-movember-hackathon)
+
 - Influenced how I chose to structure the apps, folders and files in this project.
 - Used as a reference point when creating views
 
@@ -820,7 +801,6 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 [Return to contents list](#contents)
 
-
 ## Acknowledgements
 
 [Code Institute](https://codeinstitute.net) - The majority of the coding skills, knowledge and understanding showcased in this project have been learnt through the 'Diploma of Full stack software development' that I am completing with Code Institute.
@@ -842,7 +822,6 @@ I spent time looking at Django projects created by other students and how they u
 [Dome Restaurant](https://github.com/christiangoran/dome-restaurant-repo) - A restaurant booking website created by Christian Goran.
 
 [AutoMarket](https://github.com/Dayana-N/AutoMarket-PP4) - A listing site for selling cars created by Dayana-N.
-
 
 ### Websites, articles and tutorials
 
