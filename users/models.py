@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.utils import timezone
+from django.core.exceptions import ValidationError
 
 """
 The following Tutorial was followed when creating the models in this file
@@ -9,10 +10,23 @@ https://www.youtube.com/watch?v=Ae7nc1EGv-A
 """
 
 
+def validate_age(value):
+    if value < 8:
+        raise ValidationError(
+            _('You are not old enough to register for this platform'),
+            params={'value': value},
+        )
+    elif value > 12:
+        raise ValidationError(
+            _('You are too old to register for this platform'),
+            params={'value': value},
+        )
+
+
 class User(AbstractBaseUser, PermissionsMixin):
 
     pen_name = models.CharField(max_length=20, unique=True)
-    age = models.IntegerField()
+    age = models.IntegerField(validators=[validate_age])
     first_name = models.CharField(max_length=12)
     last_name = models.CharField(max_length=20)
     email = models.EmailField()
