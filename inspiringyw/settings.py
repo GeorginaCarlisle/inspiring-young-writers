@@ -35,8 +35,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'inspiring-young-writers-0f3170377dc7.herokuapp.com',
     'localhost',
-    '8001-georginacarlisle-inspiri-8obw9gciep.us2.codeanyapp.com']
-
+    '8001-georginacarlisle-inspiri-8obw9gciep.us2.codeanyapp.com',
+    '8000-georginacarlisle-inspiri-8obw9gciep.us2.codeanyapp.com']
 
 # Application definition
 
@@ -150,6 +150,9 @@ COMPRESS_ENABLED = True
 
 STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
+# Link Authentication to custom user model
+
+AUTH_USER_MODEL = 'users.User'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
