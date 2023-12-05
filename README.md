@@ -777,6 +777,8 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 [How To Send Email With Django by Codemy.com](https://www.youtube.com/watch?v=xNqnHmXIuzU) - Youtube tutorial followed and adapted so that on submission of the contact us form an email is sent to the site owner.
 
+[Learn Django - Build a Custom User Model with Extended Fields by Very Academy] - Youtube tutorial followed and adapted in order to create a custom user model.
+
 ### Images
 
 [boys-using-silver-macbook](https://www.pexels.com/photo/boy-using-silver-macbook-indoors-3401403/) by Agung Pandit Wiguna - Used to create Hero Image.
@@ -808,6 +810,8 @@ See [TESTING.md](TESTING.md) for all testing and validation
 Code Institute's Slack community - Provided me with support and key insight into issues I was facing. Where specific support was gained, this has been noted either in [credits](#credits) or in [bugs](#bugs-and-fixes) as appropriate.
 
 Code Institute's Tutor support - Helped me to solve bug #3.
+
+[Django's documentation](https://docs.djangoproject.com/en/3.2) - Used throughout this project to check how to correctly use Django's inbuilt functions and models et.
 
 ### Other projects
 
