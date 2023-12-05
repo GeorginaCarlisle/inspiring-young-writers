@@ -152,7 +152,7 @@ STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
 # Link Authentication to custom user model
 
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.CustomUser'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

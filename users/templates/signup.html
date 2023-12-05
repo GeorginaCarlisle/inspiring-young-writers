@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% include 'hero.html' %}
+
+<div class="flex justify-center p-8">
+    <div class="border border-black rounded bg-zinc-50 p-4 relative">
+       
+        <!-- Signup form -->
+        <div class="text-center mb-6">
+            <h1 class="text-3xl md:text-4xl mb-2 font-title text-orange-600">Sign-up</h1>
+            <p>You will need a parent or guardian to help you complete this process</p>
+        </div>
+        <form action="{% url 'signup' %}" method="post" id="signup-form">
+            {% csrf_token %}
+            {% for field in new_user_form %}
+                <p>
+                    {{field.label_tag}}
+                    {{field}}
+
+                    {% if field.help_text%}
+                        <p>
+                            {{field.help_text}}
+                        </p>
+                    {% endif %}
+                </p>
+
+            {% endfor %}
+
+            <!-- Submit the form -->
+            <input type="submit" value="Sign-up" id="submit-button"
+                class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white text-orange-700 text-lg hover:cursor-pointer">
+        </form>
+        
+    </div>
+</div>
+
+{% endblock%}

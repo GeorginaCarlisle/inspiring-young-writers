@@ -777,7 +777,9 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 [How To Send Email With Django by Codemy.com](https://www.youtube.com/watch?v=xNqnHmXIuzU) - Youtube tutorial followed and adapted so that on submission of the contact us form an email is sent to the site owner.
 
-[Learn Django - Build a Custom User Model with Extended Fields by Very Academy] - Youtube tutorial followed and adapted in order to create a custom user model.
+[Learn Django - Build a Custom User Model with Extended Fields by Very Academy](https://www.youtube.com/watch?v=Ae7nc1EGv-A) - Youtube tutorial followed and adapted in order to create a custom user model.
+
+[Custom User Registration Django (AbstractBaseUser and UserCreationForm) by CodingWithMitch](https://www.youtube.com/watch?v=oZUb372g6Do) - Youtube tutorial followed and adapted in order to create form and view to work with custom user mode for users signing up.
 
 ### Images
 

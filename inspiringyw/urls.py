@@ -20,6 +20,7 @@ from .views import handler404, handler500
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls'), name=''),
+    path('user/', include('users.urls'), name=''),
 ]
 
 handler404 = handler404

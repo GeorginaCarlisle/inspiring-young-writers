@@ -1,5 +1,5 @@
-""" The following project was used as a reference point 
-when writing the code in this file: 
+""" The following project was used as a reference point
+when writing the code in this file:
 https://github.com/GeorginaCarlisle/brobonds-movember-hackathon"""
 
 from django.shortcuts import render
@@ -31,13 +31,13 @@ class Contact(TemplateView):
         email = request.POST['email']
         message = request.POST['message']
 
-        # send contact us data in email to site owner 
+        # send contact us data in email to site owner
         owner_email = os.environ.get('SITE_OWNER_EMAIL')
         send_mail(
-            'Inspiring Young Writers - User contact', # subject
-            f'Email from {first_name} {last_name}\n{email}\n{message}', # message
-            email, # user's email
-            [owner_email], # site owner's email
+            'Inspiring Young Writers - User contact',
+            f'Email from {first_name} {last_name}\n{email}\n{message}',
+            email,
+            [owner_email],
         )
 
         return render(request, 'contact.html', {'name': first_name})

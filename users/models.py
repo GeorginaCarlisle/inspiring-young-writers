@@ -1,43 +1,18 @@
-from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
-from django.utils import timezone
-
 """
 The following Tutorial was followed when creating the models in this file
 Learn Django - Build a Custom User Model with Extended Fields by Very Academy
 https://www.youtube.com/watch?v=Ae7nc1EGv-A
 """
 
+from django.db import models
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
+from django.utils import timezone
+
 
 class CustomAccountManager(BaseUserManager):
 
     def create_user(self, pen_name, age, password, first_name, last_name,
                     email, consent, **other_fields):
-
-        # Validation for required fields
-        if not pen_name:
-            raise ValueError('You must provide a pen name')
-        elif age < 8:
-            raise ValueError(
-                'You are not old enough to register for this platform')
-        elif age > 12:
-            raise ValueError('You are too old to register for this platform')
-        elif not first_name:
-            raise ValueError(
-                'As the parent/guardian you need to provide a first name so that we can contact you should the need arise'
-            )
-        elif not last_name:
-            raise ValueError(
-                'As the parent/guardian you need to provide a last name so that we can contact you should the need arise'
-            )
-        elif not email:
-            raise ValueError(
-                'As the parent/guardian you need to provide an email address so that we can contact you should the need arise'
-            )
-        elif not consent:
-            raise ValueError(
-                'As the parent/guardian you need to provide consent for your child to use this platform'
-            )
 
         # set and save user
         email = self.normalize_email(email)
@@ -66,7 +41,9 @@ class CustomAccountManager(BaseUserManager):
         return super_user
 
 
-class User(AbstractBaseUser, PermissionsMixin):
+class CustomUser(AbstractBaseUser, PermissionsMixin):
+
+    __name__ = 'CustomUser'
 
     pen_name = models.CharField(max_length=20, unique=True)
     age = models.IntegerField()
