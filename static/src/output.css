@@ -576,12 +576,21 @@ video {
   top: 1rem;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
 
 .col-span-3 {
   grid-column: span 3 / span 3;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .mb-12 {
@@ -614,6 +623,14 @@ video {
 
 .mt-16 {
   margin-top: 4rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .block {
@@ -670,6 +687,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.max-w-sm {
+  max-width: 24rem;
 }
 
 .grow {
@@ -838,11 +859,6 @@ video {
   color: rgb(194 65 12 / var(--tw-text-opacity));
 }
 
-.text-slate-200 {
-  --tw-text-opacity: 1;
-  color: rgb(226 232 240 / var(--tw-text-opacity));
-}
-
 /* Import Fonts from Google Fonts */
 
 .hover\:cursor-pointer:hover {
@@ -878,6 +894,18 @@ video {
 
   .sm\:hidden {
     display: none;
+  }
+
+  .sm\:max-w-md {
+    max-width: 28rem;
+  }
+
+  .sm\:max-w-lg {
+    max-width: 32rem;
+  }
+
+  .sm\:max-w-xl {
+    max-width: 36rem;
   }
 
   .sm\:flex-row {

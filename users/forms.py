@@ -13,10 +13,12 @@ from .models import CustomUser
 class NewUserForm(UserCreationForm):
 
     pen_name = forms.CharField(max_length=20)
-    age = forms.IntegerField()
+    age = forms.IntegerField(widget=forms.NumberInput(
+        attrs={'style': 'width: 40px'}))
     first_name = forms.CharField(max_length=12)
     last_name = forms.CharField(max_length=20)
-    email = forms.EmailField()
+    email = forms.EmailField(
+        widget=forms.Textarea(attrs={'rows': 1, 'cols': 30}))
     consent = forms.BooleanField()
     username = pen_name
 
