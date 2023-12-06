@@ -1,25 +1,28 @@
-"""
-The following Tutorial was followed when creating the sign_up_view
-Custom User Registration Django (AbstractBaseUser and UserCreationForm) by 
-CodingWithMitch
-https://www.youtube.com/watch?v=oZUb372g6Do
-"""
-
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from django.contrib.auth import login, authenticate
 from .forms import NewUserForm
 
 
-def sign_up_view(request):
+"""
+The following Tutorial was followed and adapted when creating the sign_up_view
+Register New Users with Django Custom User by CodingWithMitch
+https://www.youtube.com/watch?v=sbCd52JiCU4
+"""
+def sign_up_view(request, *args, **kwargs):
+    user = request.user
+    if user.is_authenticated:
+        return HttpResponse(f"You are already authenticated as {user.username}")
+
     context = {}
     if request.POST:
         form = NewUserForm(request.POST)
         if form.is_valid():
             form.save()
-            pen_name = form.cleaned_data['pen_name']
-            raw_password = form.cleaned_data['password1']
-            account = authenticate(pen_name=pen_name, password=raw_password)
-            login(request, account)
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=password)
+            login(request, user)
             return redirect('home')
         else:
             context['new_user_form'] = form
@@ -28,3 +31,4 @@ def sign_up_view(request):
         context['new_user_form'] = form
 
     return render(request, 'signup.html', context)
+    

@@ -16,28 +16,22 @@
       <p class="mb-4">
         You will need a parent or guardian to help you complete this process
       </p>
+
     </div>
 
     <!-- Signup form. NewUserForm passed in by view -->
-    <form action="{% url 'signup' %}" method="post" id="signup-form">
+    <form action="{% url 'signup' %}" method="post">
       {% csrf_token %}
-
-      <!-- Form errors displayed here -->
-      {% if form.errors %}
-      <div class="alert alert-danger bg-warning" role="alert">
-        <strong>Error:</strong> Please correct the errors below. {{form.errors}}
-      </div>
-      {% endif %}
 
       <!-- Child's section -->
       <div class="border-b-2 border-black">
         <h2 class="text-xl text-orange-600 mb-2">Your Section</h2>
         <div class="mb-4 flex flex-col sm:flex-row">
           <div class="mb-4">
-            <label for="{{ new_user_form.pen_name.id_for_label }}" class="">
+            <label for="{{ new_user_form.username.id_for_label }}" class="">
               Pen Name
             </label>
-            {{ new_user_form.pen_name }}
+            {{ new_user_form.username }}
           </div>
           <div>
             <label for="{{ new_user_form.age.id_for_label }}" class="sm:ml-4">
@@ -97,7 +91,7 @@
       </div>
 
       <!-- Password section -->
-      <div class="mb-12 sm: mb-4">
+      <div class="mb-12 sm:mb-4">
         <h2 class="text-xl text-orange-600 my-2">Complete Sign-up</h2>
         <div class="mb-4">
           <label for="{{ new_user_form.password1.id_for_label }}">
@@ -113,6 +107,17 @@
         </div>
       </div>
 
+      {% for field in new_user_form %}
+        <p>
+            {% for error in field.errors %}
+            <p>{{ error }}</p>
+            {% endfor %}
+        </p>
+        {% endfor %}
+        {% if new_user_form.non_field_errors %}
+        <p>{{new_user_form.non_field_errors}}</p>
+        {% endif %}
+
       <!-- Submit the form -->
       <input
         type="submit"
@@ -123,5 +128,4 @@
     </form>
   </div>
 </div>
-
 {% endblock%}
