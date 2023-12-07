@@ -10,6 +10,7 @@ module.exports = {
         './templates/500.html',
         './templates/hero.html',
         './users/templates/signup.html',
+        './templates/account_header',
     ],
     theme: {
         extend: {},
