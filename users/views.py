@@ -26,7 +26,7 @@ def sign_up_view(request, *args, **kwargs):
             password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=password)
             login(request, user)
-            return redirect('home')
+            return redirect('account_home')
         else:
             messages.error(
                 request,
@@ -58,13 +58,13 @@ def login_view(request, *args, **kwargs):
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             user = authenticate(username=username, password=password)
-            if user:
-                login(request, user)
+            login(request, user)
             return redirect('account_home')
         else:
             messages.error(
                 request,
-                'Form not valid. Please correct before clicking to signup')
+                'Details given do not match a registered user')
+            form = LoginForm()
             context['login_form'] = form
     else:
         form = LoginForm()

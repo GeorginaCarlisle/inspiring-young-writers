@@ -24,20 +24,20 @@
             </ul>
             {% endif %}
             <!-- Specific error details -->
-            {% for field in new_user_form %}
+            {% for field in login_form %}
             <p>
                 {% for error in field.errors %}
             <p class="text-blue-700">{{ error }}</p>
             {% endfor %}
             </p>
             {% endfor %}
-            {% if new_user_form.non_field_errors %}
-            <p>{{new_user_form.non_field_errors}}</p>
+            {% if login_form.non_field_errors %}
+            <p>{{login_form.non_field_errors}}</p>
             {% endif %}
         </div>
 
         <!-- Login form. LoginForm passed in by view -->
-        <form action="{% url 'signup' %}" method="post">
+        <form action="{% url 'login' %}" method="post">
             {% csrf_token %}
 
             <div class="flex flex-col mt-4 mb-12">
