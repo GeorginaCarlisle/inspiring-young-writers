@@ -39,7 +39,11 @@
     <title>Inspiring Young Writers{% block extra_title %}{% endblock %}</title>
   </head>
   <body class="flex flex-col h-screen">
-    {% include 'header.html' %}
+    {% if request.user.is_authenticated %}
+    <!-- Header for when logged in -->
+    {% include 'account_header.html' %} {% else %}
+    <!-- Header for un authorised user -->
+    {% include 'header.html' %} {% endif %}
 
     <main class="grow font-body">{% block content %} {% endblock %}</main>
     {% include 'footer.html' %}
