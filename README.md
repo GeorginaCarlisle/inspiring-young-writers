@@ -781,6 +781,7 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 [Register New Users with Django Custom User by CodingWithMitch](https://www.youtube.com/watch?v=sbCd52JiCU4) - Youtube tutorial followed and adapted in order to create NewUserForm and signup.html and associated view.
 
+[Login and Logout with Django by CodingWithMitch](https://www.youtube.com/watch?v=5qhlDC_bQsA) - Youtube tutorial followed and adapted in order to create LoginForm and associated view.
 
 ### Images
 

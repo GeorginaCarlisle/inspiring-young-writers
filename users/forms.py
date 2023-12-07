@@ -25,3 +25,24 @@ class NewUserForm(UserCreationForm):
         model = User
         fields = ('username', 'age', 'first_name', 'last_name', 'email',
                   'consent', 'password1', 'password2')
+
+
+"""
+The following Tutorial was followed and adapted when creating the LoginForm
+Login and Logout with Django by CodingWithMitch
+https://www.youtube.com/watch?v=5qhlDC_bQsA
+"""
+
+
+class LoginForm(forms.ModelForm):
+
+    class Meta:
+        model = User
+        fields = ("username", "password")
+
+    def clean(self):
+        if self.is_valid():
+            email = self.cleaned_data['email']
+            password = self.cleaned_data['password']
+            if not authenticate(email=email, password=password):
+                raise forms.ValidationError("Invalid Login")

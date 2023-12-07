@@ -1,0 +1,64 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<!-- Pull in hero image -->
+{% include 'hero.html' %}
+
+<div class="flex justify-center p-8">
+    <!-- Container for form and all its info -->
+    <div class="border border-black rounded bg-zinc-50 p-4 relative max-w-sm sm:max-w-xl">
+        
+        <!-- Form title and initial instruction -->
+        <div class="text-center mb-2 border-b-2 border-black">
+            <h1 class="text-3xl md:text-4xl mb-2 font-title text-orange-600">
+                Login
+            </h1>
+
+            <!-- When errors in submitted form instruction replaced by error message -->
+            {% if messages %}
+            <ul class="mb-4">
+                {% for message in messages %}
+                <li{% if message.tags %} class="text-blue-700" {% endif %}>
+                    {{ message }}
+                    </li>
+                    {% endfor %}
+            </ul>
+            {% endif %}
+            <!-- Specific error details -->
+            {% for field in new_user_form %}
+            <p>
+                {% for error in field.errors %}
+            <p class="text-blue-700">{{ error }}</p>
+            {% endfor %}
+            </p>
+            {% endfor %}
+            {% if new_user_form.non_field_errors %}
+            <p>{{new_user_form.non_field_errors}}</p>
+            {% endif %}
+        </div>
+
+        <!-- Login form. LoginForm passed in by view -->
+        <form action="{% url 'signup' %}" method="post">
+            {% csrf_token %}
+
+            <div class="flex flex-col mt-4 mb-12">
+                <div class="mb-4">
+                    <label for="{{ login_form.username.id_for_label }}" class="">
+                        Pen Name
+                    </label>
+                    {{ login_form.username }}
+                </div>
+                <div>
+                    <label for="{{ login_form.password.id_for_label }}" class="sm:ml-4">
+                        Password
+                    </label>
+                    {{ login_form.password }}
+                </div>
+            </div>
+
+            <!-- Submit the form -->
+            <input type="submit" value="Login" id="submit-button"
+                class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white text-orange-700 text-lg hover:cursor-pointer" />
+        </form>
+    </div>
+</div>
+{% endblock%}

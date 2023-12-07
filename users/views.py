@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
-from .forms import NewUserForm
+from .forms import NewUserForm, LoginForm
 
 
 """
@@ -37,3 +37,37 @@ def sign_up_view(request, *args, **kwargs):
         context['new_user_form'] = form
 
     return render(request, 'signup.html', context)
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('home')
+
+
+def login_view(request, *args, **kwargs):
+
+    context = {}
+
+    user = request.user
+    if user.is_authenticated:
+        return redirect("account_home")
+
+    if request.POST:
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            if user:
+                login(request, user)
+            return redirect('account_home')
+        else:
+            messages.error(
+                request,
+                'Form not valid. Please correct before clicking to signup')
+            context['login_form'] = form
+    else:
+        form = LoginForm()
+        context['login_form'] = form
+
+    return render(request, 'login.html', context)

@@ -32,7 +32,9 @@
         <li class="hover:font-bold hover:cursor-pointer">
           <a href="{% url 'signup' %}">Sign-up</a>
         </li>
-        <li class="hover:font-bold hover:cursor-pointer"><a>Login</a></li>
+        <li class="hover:font-bold hover:cursor-pointer">
+          <a href="{% url 'login' %}">Login</a>
+        </li>
       </ul>
 
       <!-- Mobile Navigation -->
@@ -56,9 +58,9 @@
         </button>
         <ul class="flex flex-col justify-around font-body text-xl mt-10">
           <li class="mb-4"><a>Parents</a></li>
-          <li class="mb-4"><a>Contact</a></li>
-          <li class="mb-4"><a>Sign-up</a></li>
-          <li><a>Login</a></li>
+          <li class="mb-4"><a href="{% url 'contact' %}">Contact</a></li>
+          <li class="mb-4"><a href="{% url 'signup' %}">Sign-up</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
         </ul>
       </div>
     </nav>
