@@ -846,4 +846,6 @@ The following websites, articles and tutorials are listed in order of use during
 
 [Innovation-Creativity](https://www.innovation-creativity.com/colors-that-inspire-creativity/) - This article provided inspiration for the colour scheme used on the platform.
 
+[Python / Django - How to create regex (RegexValidator) which allows only letters and spaces?](https://stackoverflow.com/questions/33334907/python-django-how-to-create-regex-regexvalidator-which-allows-only-letters) - This StackOverflow question provided me with a context in which to understand how to use the RegexValidator.
+
 [Return to contents list](#contents)

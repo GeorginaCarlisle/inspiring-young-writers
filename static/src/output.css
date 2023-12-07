@@ -625,14 +625,6 @@ video {
   margin-top: 4rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
 .block {
   display: block;
 }
@@ -859,6 +851,21 @@ video {
   color: rgb(194 65 12 / var(--tw-text-opacity));
 }
 
+.text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+.text-blue-700 {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
 /* Import Fonts from Google Fonts */
 
 .hover\:cursor-pointer:hover {
@@ -880,6 +887,10 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
   .sm\:ml-4 {
     margin-left: 1rem;
   }
@@ -894,14 +905,6 @@ video {
 
   .sm\:hidden {
     display: none;
-  }
-
-  .sm\:max-w-md {
-    max-width: 28rem;
-  }
-
-  .sm\:max-w-lg {
-    max-width: 32rem;
   }
 
   .sm\:max-w-xl {

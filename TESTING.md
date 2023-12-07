@@ -6,6 +6,8 @@
 
 [User Story Testing](#user-story-testing)
 
+[Form validation Testing](#form-validation-testing)
+
 [Accessibility Testing](#accessibility-testing)
 
 [Lighthouse](#lighthouse)
@@ -162,6 +164,39 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | All navigation links take you to the correct destination when clicked. | PASS | |
 
 [Return to contents list](#contents)
+
+## Form validation Testing
+
+### Sign-up form
+
+| Input Field | Requirement | Error caught | Final check |
+| --- | ----- | ---- | -- |
+| Pen name | Required field | "Please fill in this field" notification pointed at input box | |
+| | Unique name required | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "User with this Username already exists." | |
+| | Text only no numbers | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Only letters and spaces are allowed in your Pen name" | |
+| | Maximum length 20 | Cannot physically enter more than 20 characters | |
+| Age | Required field | "Please fill in this field" notification pointed at input box | |
+| | Age must be between and including 8 and 12 | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Ensure this value is greater than or equal to 8." | |
+| | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Ensure this value is less than or equal to 12." | |
+| First name | Required field | "Please fill in this field" notification pointed at input box | |
+| | Text only no numbers | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Only letters and spaces are allowed in your First name" | |
+| | Maximum length 12 | Cannot physically enter more than 12 characters | |
+| Second name | Required field | "Please fill in this field" notification pointed at input box | |
+| | Text only no numbers | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Only letters and spaces are allowed in your Second name" | |
+| | Maximum length 20 | Cannot physically enter more than 20 characters | |
+| Email | Recognisable as a real email address | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Enter a valid email address." | |
+| | | "Please include an @ in the email address" notification pointed at input box | |
+| | | "Please enter a part following the @" notification pointed at input box | |
+| | | "Please enter a part followed by @" notification pointed at input box | |
+| | Maximum length 320 | Cannot physically enter more than 320 characters | |
+| Consent | Must be checked | "Please tick this box if you want to proceed" notification pointed at input box | |
+| Password1 | Required field | "Please fill in this field" notification pointed at input box | |
+| | Can't be too similar to other personal information | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "The password is too similar to the username." | |
+| | Must contain at least 8 characters | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is too short. It must contain at least 8 characters." | |
+| | Can't be a commonly used password | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is too common." | |
+| | Can't be entirely numeric | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is entirely numeric." | |
+| Password2 | Required field | "Please fill in this field" notification pointed at input box | |
+| | Must match password1 | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "The two password fields didn’t match." | |
 
 
 ## Accessibility Testing

@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 from django.utils import timezone
-from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.validators import MinValueValidator, MaxValueValidator, RegexValidator
 
 
 """
@@ -10,6 +10,8 @@ the user model and manager
 Custom User Model with email login (DJANGO) by CodingWithMitch
 https://www.youtube.com/watch?v=SFarxlTzVX4
 """
+
+
 class CustomAccountManager(BaseUserManager):
 
     def create_user(self, username, age, first_name, last_name,
@@ -71,12 +73,23 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     __name__ = 'CustomUser'
 
-    username = models.CharField(max_length=20, unique=True)
+    # Specifc validators for username, first_name and last_name
+    validUsername = RegexValidator(
+        r'^[a-zA-Z ]+$', 'Only letters and spaces are allowed in your Pen name')
+    validFirstName = RegexValidator(
+        r'^[a-zA-Z ]+$',
+        'Only letters and spaces are allowed in your First name')
+    validSecondName = RegexValidator(
+        r'^[a-zA-Z ]+$',
+        'Only letters and spaces are allowed in your Second name')
+
+    username = models.CharField(
+        max_length=20, unique=True, validators=[validUsername])
     age = models.IntegerField(
         validators=[MinValueValidator(8), MaxValueValidator(12),],)
-    first_name = models.CharField(max_length=12)
-    last_name = models.CharField(max_length=20)
-    email = models.EmailField()
+    first_name = models.CharField(max_length=12, validators=[validFirstName])
+    last_name = models.CharField(max_length=20, validators=[validSecondName])
+    email = models.EmailField(max_length=320)
     consent = models.BooleanField(default=False)
     join_date = models.DateTimeField(default=timezone.now)
     is_staff = models.BooleanField(default=False)

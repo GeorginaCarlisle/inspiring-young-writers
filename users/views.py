@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import login, authenticate
+from django.contrib import messages
 from .forms import NewUserForm
 
 
@@ -9,6 +10,8 @@ The following Tutorial was followed and adapted when creating the sign_up_view
 Register New Users with Django Custom User by CodingWithMitch
 https://www.youtube.com/watch?v=sbCd52JiCU4
 """
+
+
 def sign_up_view(request, *args, **kwargs):
     user = request.user
     if user.is_authenticated:
@@ -25,10 +28,12 @@ def sign_up_view(request, *args, **kwargs):
             login(request, user)
             return redirect('home')
         else:
+            messages.error(
+                request,
+                'Form not valid. Please correct before clicking to signup')
             context['new_user_form'] = form
     else:
         form = NewUserForm()
         context['new_user_form'] = form
 
     return render(request, 'signup.html', context)
-    
