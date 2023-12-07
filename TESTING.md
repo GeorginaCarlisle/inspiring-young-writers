@@ -199,6 +199,15 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | Must match password1 | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "The two password fields didn’t match." | |
 
 
+### Sign-up form
+
+| Input Field | Requirement | Error caught | Final check |
+| --- | ----- | ---- | -- |
+| Pen name | Required field | "Please fill in this field" notification pointed at input box | |
+| | Pen name matches a registered username | Message displayed under login title: "Details given do not match a registered user" | |
+| Password | Required field | "Please fill in this field" notification pointed at input box | |
+| | Password matches password for pen name given | Message displayed under login title: "Details given do not match a registered user" | |
+
 ## Accessibility Testing
 
 [Return to contents list](#contents)
