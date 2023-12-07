@@ -26,6 +26,7 @@ def sign_up_view(request, *args, **kwargs):
             password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=password)
             login(request, user)
+            messages.success(request, "You have successfully signed up")
             return redirect('account_home')
         else:
             messages.error(
@@ -41,6 +42,7 @@ def sign_up_view(request, *args, **kwargs):
 
 def logout_view(request):
     logout(request)
+    messages.success(request, "You were successfully logged out")
     return redirect('home')
 
 
@@ -59,6 +61,7 @@ def login_view(request, *args, **kwargs):
             password = form.cleaned_data.get('password')
             user = authenticate(username=username, password=password)
             login(request, user)
+            messages.success(request, "You were successfully logged in")
             return redirect('account_home')
         else:
             messages.error(

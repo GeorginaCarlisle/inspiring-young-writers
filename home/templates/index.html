@@ -10,8 +10,20 @@
       Inspiring Young Writers aged 8 -12
     </h1>
     <div class="font-body text-sm md:text-xl">
-      <p>Write and share stories, poetry or non-fiction text.</p>
-      <p>Whatever you feel inspired to write!</p>
+        <!-- Space for successful log out message -->
+        {% if messages %}
+        <ul class="mb-4">
+            {% for message in messages %}
+            <li{% if message.tags %} class="text-blue-700" {% endif %}>
+                {{ message }}
+                </li>
+                {% endfor %}
+        </ul>
+        <!-- Original introduction -->
+        {% else %}
+        <p>Write and share stories, poetry or non-fiction text.</p>
+        <p>Whatever you feel inspired to write!</p>
+        {% endif %}
     </div>
   </div>
 </div>

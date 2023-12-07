@@ -7,8 +7,20 @@
       Welcome to your account
     </h1>
     <div class="font-body text-sm md:text-xl">
-      <p></p>
-      <p></p>
+        <!-- Space for successful log out message -->
+        {% if messages %}
+        <ul class="mb-4">
+            {% for message in messages %}
+            <li{% if message.tags %} class="text-blue-700" {% endif %}>
+                {{ message }}
+                </li>
+                {% endfor %}
+        </ul>
+        <!-- Original introduction -->
+        {% else %}
+        <p></p>
+        <p></p>
+        {% endif %}
     </div>
   </div>
 </div>
