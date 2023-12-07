@@ -11,6 +11,7 @@ module.exports = {
         './templates/hero.html',
         './users/templates/signup.html',
         './templates/account_header',
+        './account/templates/account_home',
     ],
     theme: {
         extend: {},
