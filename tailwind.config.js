@@ -11,17 +11,21 @@ module.exports = {
         './templates/hero.html',
         './users/templates/signup.html',
         './templates/account_header',
-        './account/templates/account_home',
+        './account/templates/account_home.html',
         './users/templates/login.html',
         './users/templates/logout.html',
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                'horange': '#F6BD58',
+            },
+        },
         fontFamily: {
             title: ['Boogaloo', 'sans-serif'],
             body: ['Ubuntu', 'sans-serif'],
             kids: ['Ubuntu Mono', 'monospace'],
-        }
+        },
     },
     plugins: [],
 };
