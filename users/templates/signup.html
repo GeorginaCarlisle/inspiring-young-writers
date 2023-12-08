@@ -3,7 +3,7 @@
 <!-- Pull in hero image -->
 {% include 'hero.html' %}
 
-<div class="flex justify-center p-8">
+<div class="flex justify-center p-8 bg-blue-900">
   <!-- Container for form and all its info -->
   <div
     class="border border-black rounded bg-zinc-50 p-4 relative max-w-sm sm:max-w-xl"
@@ -110,7 +110,7 @@
           to find out more about what signing up will mean for your child and
           the steps that are in place to increase safety. If you have any
           questions of concerns please
-          <a>contact us</a>.
+          <a href="{% url 'contact' %}" class="text-blue-700">Contact Us</a>.
         </p>
       </div>
 

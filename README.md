@@ -558,11 +558,12 @@ Three key thoughts inspired the chosen colour scheme:
 
 ![An image showing the four main colours, all details in the image are provided below](documentation/design/colour-scheme.png)
 
-Three background colours have been chosen:
+Four background colours have been chosen:
 
 - A very light zinc gray #FAFAFA (250, 250, 250)
 - A lighter yellowy orange #F6BD58 (246, 189, 88)
 - An orange #EA580C (234, 88, 12)
+- A dark blue #1E3A8A (30 58 138);
 
 With three text colours:
 
