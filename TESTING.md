@@ -37,28 +37,42 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | 4 | As the **parent of a new user** I am provided with information which details how the site works | | | |
 | | | | | |
 | 5 | As the **parent of a new user** I can contact the site admin | I can navigate intuitively and easily to the contact page | PASS | |
-| | | The design of the page is pleasing to the eye and doesn't distract | FAIL | |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
 | | | The title and introduction reassure me as to what the form is for | PASS | |
 | | | Clear labels indicate the information to be added to each input field | PASS | |
 | | | The button to submit is clear | PASS | |
 | | | When entering the wrong information I am prompted and informed what needs to be entered | FAIL | |
 | | | I am given clear success feedback on submission of the form | PASS | |
-| 6 | As the **site admin** user's question and concerns along with their contact details are passed to me | | | |
-| | | | | |
+| 6 | As the **site admin** user's question and concerns along with their contact details are passed to me | Submitted contact us data emailed to the site owner | PASS | |
 | 7 | As a **new user** I am provided with the name and contact links for the developer who created this platform | The name of the developer and year platform created are clearly visible at the bottom of every page. | PASS | |
 | | | On larger screens extra info is given to say that the platform was created for 'educational purposes only'. | PASS | |
 | | | Clear and easy to access links to take the user to the developer's LinkedIn and GitHub. | PASS | |
 | | | Clicking on links open relevant page in new tab. | PASS | |
 | 8 | As a **new user** I am informed when page link errors occur and provided with a link straight back to the landing page | | | |
 | | | | | |
-| 9 | As a **new user** I can easily set up an account | | | |
-| | | | | |
-| 10 | As the **parent of a new user** I am asked to input my name and email address and give consent for my child joining the site | | | |
-| | | | | |
-| 11 | As a **registered user** I can use my pen-name and password to login to my account | | | |
-| | | | | |
-| 12 | As a **signed-in user** I can easily logout of my account | | | |
-| | | | | |
+| 9 | As a **new user** I can easily set up an account | I can navigate intuitively and easily to the sign-up page | PASS | |
+| | | The landing page contains a call to action providing a direct and clear link to sign-up | PASS | |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
+| | | The title and clear instructions help me to navigate the sign-up process | PASS | |
+| | | It is clear which part of the form is for the child and which is for the parent | PASS | |
+| | | Clear labels indicate the information to be added to each input field | PASS | |
+| | | The button to sign-up is clear | PASS | |
+| | | When entering the wrong information I am prompted and informed what needs to be entered | PASS | |
+| | | I am given clear feedback to let me know I have successfully signed up | PASS | |
+| | | On signing-up I am redirected to the account_home page | PASS | |
+| 10 | As the **parent of a new user** I am asked to input my name and email address and give consent for my child joining the site | When signing up to the platform, my child is informed that they will need me to sign up | PASS | |
+| | | I am asked to provide my name, email address and consent before my child can sign up | PASS | |
+| 11 | As a **registered user** I can use my pen-name and password to login to my account | I can navigate intuitively and easily to the login page | PASS | |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
+| | | The title and clear instructions help me to navigate the login process | PASS | |
+| | | Clear labels indicate the information to be added to each input field | PASS | |
+| | | The button to login is clear | PASS | |
+| | | When entering the wrong information I am prompted and informed what needs to be entered | PASS | |
+| | | I receive a clear message to let me know I have successfully logged in | PASS | |
+| | | On logging in I am redirected to the account_home page | PASS | |
+| 12 | As a **signed-in user** I can easily logout of my account | I can logout out easily and intuitively | PASS | |
+| | | I am given clear success feedback on logging out of my account | PASS | |
+| | | On logging out I am redirected to the home page | PASS | |
 | 13 | As a **registered user** (with the help of my parent) I can reset my password using a link sent to my parent’s email | | | |
 | | | | | |
 | 14 | As a **signed-in user** I can edit my profile | | | |
@@ -177,7 +191,7 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | Maximum length 20 | Cannot physically enter more than 20 characters | |
 | Age | Required field | "Please fill in this field" notification pointed at input box | |
 | | Age must be between and including 8 and 12 | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Ensure this value is greater than or equal to 8." | |
-| | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Ensure this value is less than or equal to 12." | |
+| | | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Ensure this value is less than or equal to 12." | |
 | First name | Required field | "Please fill in this field" notification pointed at input box | |
 | | Text only no numbers | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Only letters and spaces are allowed in your First name" | |
 | | Maximum length 12 | Cannot physically enter more than 12 characters | |
@@ -199,7 +213,7 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | Must match password1 | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "The two password fields didn’t match." | |
 
 
-### Sign-up form
+### Login form
 
 | Input Field | Requirement | Error caught | Final check |
 | --- | ----- | ---- | -- |
