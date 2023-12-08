@@ -22,7 +22,11 @@
         <!-- Original introduction -->
         {% else %}
         <p>Write and share stories, poetry or non-fiction text.</p>
-        <p>Whatever you feel inspired to write!</p>
+        <p class="mb-6">Whatever you feel inspired to write!</p>
+        <a class="p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-xl hover:cursor-pointer"
+            href="{% url 'signup' %}">
+            Sign up and become an inspiring young writer
+        </a>
         {% endif %}
     </div>
   </div>
