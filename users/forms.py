@@ -13,7 +13,9 @@ https://www.youtube.com/watch?v=sbCd52JiCU4
 
 class NewUserForm(UserCreationForm):
 
-    username = forms.CharField(max_length=20)
+    username = forms.CharField(
+        max_length=20,
+        widget=forms.TextInput(attrs={'style': 'border-color: black'}))
     age = forms.IntegerField(
         widget=forms.NumberInput(attrs={'style': 'width: 40px'}))
     first_name = forms.CharField(max_length=12)
@@ -25,6 +27,23 @@ class NewUserForm(UserCreationForm):
         model = User
         fields = ('username', 'age', 'first_name', 'last_name', 'email',
                   'consent', 'password1', 'password2')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['username'].widget.attrs.update(
+            {'class': 'border border-black'})
+        self.fields['age'].widget.attrs.update(
+            {'class': 'border border-black'})
+        self.fields['first_name'].widget.attrs.update(
+            {'class': 'border border-black'})
+        self.fields['last_name'].widget.attrs.update(
+            {'class': 'border border-black'})
+        self.fields['email'].widget.attrs.update(
+            {'class': 'border border-black'})
+        self.fields['password1'].widget.attrs.update(
+            {'class': 'border border-black'})
+        self.fields['password2'].widget.attrs.update(
+            {'class': 'border border-black'})
 
 
 """
@@ -46,3 +65,10 @@ class LoginForm(forms.ModelForm):
             password = self.cleaned_data['password']
             if not authenticate(username=username, password=password):
                 raise forms.ValidationError("Invalid Login")
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['username'].widget.attrs.update(
+            {'class': 'border border-black'})
+        self.fields['password'].widget.attrs.update(
+            {'class': 'border border-black'})

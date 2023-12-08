@@ -849,4 +849,6 @@ The following websites, articles and tutorials are listed in order of use during
 
 [Python / Django - How to create regex (RegexValidator) which allows only letters and spaces?](https://stackoverflow.com/questions/33334907/python-django-how-to-create-regex-regexvalidator-which-allows-only-letters) - This StackOverflow question provided me with a context in which to understand how to use the RegexValidator.
 
+[How to Easily Style Your Django Form Fields With Django Widget Tweaks by Pretty Printed](https://www.youtube.com/watch?v=ynToND_xOAM) - This tutorial gave me some insight into how to add widgets to provide classes to my form input fields.
+
 [Return to contents list](#contents)
