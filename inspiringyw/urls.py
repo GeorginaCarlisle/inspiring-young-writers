@@ -24,5 +24,10 @@ urlpatterns = [
     path('account/', include('account.urls'), name='')
 ]
 
+# Error Pages
 handler404 = handler404
 handler500 = handler500
+
+# Admin Site basic costumisation
+admin.site.site_header = "Inspiring Young Writers administration"
+admin.site.site_title = "Inspiring YW Admin"
