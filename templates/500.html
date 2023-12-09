@@ -3,8 +3,8 @@
 {% block content %}
 
 <!-- Error title and explanation -->
-<div class="flex justify-center mt-16 lg:mt-20 h-full">
-    <div class="text-center p-8 bg-neutral-50 mt-10">
+<div class="flex justify-center mt-16 lg:mt-20 h-full bg-neutral-50">
+    <div class="text-center p-8 mt-10">
         <h1 class="text-3xl md:text-4xl mb-4 font-title text-orange-600">500 ERROR</h1>
         <div class="font-body text-sm md:text-xl mb-4">
             <p>The server has encountered an unexpected condition</p>
@@ -12,7 +12,7 @@
         </div>
         <!-- Return home button -->
         <a 
-        class="p-2 rounded border-orange-700 border-2 border-solid bg-white text-orange-700 text-2xl hover:cursor-pointer"
+        class="p-2 rounded border-orange-700 border-2 border-solid  bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-2xl hover:cursor-pointer"
         href="{% url 'home' %}"
         role="button">
             Return to the home page
