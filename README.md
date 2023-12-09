@@ -745,6 +745,8 @@ Tools and technologies are listed in order of use during the development of this
 
 [Code Anywhere](https://app.codeanywhere.com/) - One of the two editors in which this project has been built.
 
+[ChatGPT](https://chat.openai.com/) - ChatGPT was used to help resolve project bugs This has then been clearly referenced in [Bugs and Fixes](#bugs-and-fixes).
+
 [Return to contents list](#contents)
 
 ## Testing and Validation
@@ -756,7 +758,7 @@ See [TESTING.md](TESTING.md) for all testing and validation
 | # | Bug | What was tried | Fix |
 | - | -- | ----- | --- |
 | 1 | Tailwind CSS working locally, but not being served on the deployed site. | Research into Tailwind and Django. Research into Tailwind and Heroku. Tested different methods of installing Tailwind. Tried various fixes to deploy through Heroku. Went back to basics. Found advice from slack community around Heroku and static files. Worked back through changes, which changes were needed and which weren't. | Followed [Tailwind CSS Django - Flowbite](https://flowbite.com/docs/getting-started/django/) to install Tailwind with css files stored in best location. Set DISABLE_COLLECTSTATIC to 0 on Heroku. Specific Deployment Branch with Debug to False and compress removed (base.html and settings.py). Run the command **./manage.py collectstatic** prior to deployment. |
-| 2 | Contact form textarea automatically renders with 16 whitespace characters | | |
+| 2 | Contact form textarea automatically renders with 16 whitespace characters | This is the repeat of a bug from my first project and numerous google searching once again led to no answers. Problem inputted into ChatGPT which then located the error. | The way I had formatted the code with the close tag of the textarea element on the line below the open tag was leading to the error. Placing the close tag directly after the open tag resolved the error. |
 | 3 | On contact form submission the following error displays: SMTP.starttls() got an unexpected keyword argument 'keyfile' | [Research](https://stackoverflow.com/questions/77482831/smtp-starttls-got-an-unexpected-keyword-argument-keyfile) found which I thought suggested Django version was the issue. Django updated causing postgresql to need updating which caused the project to fully cease working. Tutor support contacted and python version identified as root cause. | Python version updated to 3.9.17 |
 | 4 | When working locally using VScode and trying to runserver I encountered the following error messages: 'python3(29793,0x70000e8e1000) malloc: *** error for object 0x82: pointer being freed was not allocated', 'python3(29793,0x70000e8e1000) malloc: *** set a breakpoint in malloc_error_break to debug' | Initial research led to suggestions about X-code, which I am unable to install on this laptop. Decision to move to using CodeAnywhere, where the project ran without issue. Then Daisy McGirr from CI's slack community suggested switching to use psycopg2-binary. Installing latest psycopg2-binary caused errors as it wasn't compatible with older postgresql. | Switched from Psycopg2 to Psycopg2-binary version 2.8.6 |
 
