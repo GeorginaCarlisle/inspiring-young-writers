@@ -10,7 +10,7 @@ module.exports = {
         './templates/500.html',
         './templates/hero.html',
         './users/templates/signup.html',
-        './templates/account_header',
+        './templates/account_header.html',
         './account/templates/account_home.html',
         './users/templates/login.html',
         './users/templates/logout.html',
