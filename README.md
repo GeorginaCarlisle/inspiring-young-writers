@@ -638,7 +638,7 @@ During the first iteration the following user stories and key tasks were complet
 ![Screen shot of the First iteration milestone showing closed issues - User stories 1, 7 and 64 plus key additional tasks](documentation/agile/first-iteration-closed.png)
 
 At the end of the iteration the following user stories remained un-completed and open:
-![Screen shot of the First iteration milestone showing open issues - User stories 5, 8, 9, 10, 11 and 17](documentation/agile/first-iteration-open.png)
+![Screen shot of the First iteration milestone showing open issues - User stories 5, 8, 9, 10, 11 and 17](documentation/agile/second-iteration-open.png)
 
 It is to be noted that the:
 
@@ -649,6 +649,25 @@ It is to be noted that the:
 </details>
 
 #### Second Iteration
+
+<details>
+<summary>
+See more
+</summary>
+
+During the second iteration the following user stories and key tasks were completed and closed:
+![Screen shot of the Second iteration milestone showing closed issues - User stories 5, 8, 12 and 19 plus a task and a bug](documentation/agile/second-iteration-closed-1.png)
+![Screen shot of the remaining closed issues - User stories 6, 9, 10 and 11 plus a bug](documentation/agile/second-iteration-closed-2.png)
+
+At the end of the iteration the following user stories remained un-completed and open:
+![Screen shot of the First iteration milestone showing open issues - User stories 5, 8, 9, 10, 11 and 17](documentation/agile/second-iteration-open.png)
+
+It is to be noted that the:
+
+- **Admin access to delete accounts** user story (#17) has an associated bug (#72) requiring additional support and 
+will therefore be completed in the next iteration.
+
+</details>
 
 #### Third Iteration
 
