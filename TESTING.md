@@ -41,15 +41,16 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | The title and introduction reassure me as to what the form is for | PASS | |
 | | | Clear labels indicate the information to be added to each input field | PASS | |
 | | | The button to submit is clear | PASS | |
-| | | When entering the wrong information I am prompted and informed what needs to be entered | FAIL | |
+| | | When entering the wrong information I am prompted and informed what needs to be entered | PASS | |
 | | | I am given clear success feedback on submission of the form | PASS | |
 | 6 | As the **site admin** user's question and concerns along with their contact details are passed to me | Submitted contact us data emailed to the site owner | PASS | |
 | 7 | As a **new user** I am provided with the name and contact links for the developer who created this platform | The name of the developer and year platform created are clearly visible at the bottom of every page. | PASS | |
 | | | On larger screens extra info is given to say that the platform was created for 'educational purposes only'. | PASS | |
 | | | Clear and easy to access links to take the user to the developer's LinkedIn and GitHub. | PASS | |
 | | | Clicking on links open relevant page in new tab. | PASS | |
-| 8 | As a **new user** I am informed when page link errors occur and provided with a link straight back to the landing page | | | |
-| | | | | |
+| 8 | As a **new user** I am informed when page link errors occur and provided with a link straight back to the landing page | Attempting to access a webpage that does not exist, has been moved, or has a dead or broken link takes me to a 404 page | PASS | |
+| | | I am taken to an error 500 page if the server encounters an unexpected condition that prevented it from fulfilling the request | PASS | |
+| | | Both pages provide links back to the platform | PASS | |
 | 9 | As a **new user** I can easily set up an account | I can navigate intuitively and easily to the sign-up page | PASS | |
 | | | The landing page contains a call to action providing a direct and clear link to sign-up | PASS | |
 | | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
@@ -85,8 +86,12 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | | | |
 | 18 | As the **parent of a registered user** I am informed via email if my child’s account has been removed including the reason why | | | |
 | | | | | |
-| 19 | As a **signed-in user** user once logged in I am taken to a home page for my account | | | |
-| | | | | |
+| 19 | As a **signed-in user** user once logged in I am taken to a home page for my account | The top left of the nav bar lets me know I am signed in to my account with wording unique to me "Pen name's inspiring writing" | PASS | |
+| | | The navigation bar provides links to all the registered user features |  PASS | |
+| | | It is easy and intuitive to navigate through the available features | PASS | |
+| | | A clear title welcomes me to my account | PASS | |
+| | | There are clear buttons to take me straight to important areas of the site | PASS | |
+| | | The page cannot be accessed unless logged in | PASS | |
 | 20 | As a **signed-in user** I am provided with tips on how I can use the platform when I first log in to my account | | | |
 | | | | | |
 | 21 | As a **signed-in user** I am informed when page link errors occur and provided with a link straight back to my account home page | | | |
@@ -221,6 +226,23 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | Pen name matches a registered username | Message displayed under login title: "Details given do not match a registered user" | |
 | Password | Required field | "Please fill in this field" notification pointed at input box | |
 | | Password matches password for pen name given | Message displayed under login title: "Details given do not match a registered user" | |
+
+
+### Contact us (New User Experience)
+
+| Input Field | Requirement | Error caught | Final check |
+| --- | ----- | ---- | -- |
+| First Name | Required field | "Please fill in this field" notification pointed at input box | |
+| | Maximum length 12 | Cannot physically enter more than 12 characters | |
+| Last Name | Required field | "Please fill in this field" notification pointed at input box | |
+| | Maximum length 20 | Cannot physically enter more than 20 characters | |
+| Email | Recognisable as an email address | "Please include an @ in the email address" notification pointed at input box | |
+| | | "Please enter a part following the @" notification pointed at input box | |
+| | | "Please enter a part followed by @" notification pointed at input box | |
+| | Maximum length 320 | Cannot physically enter more than 320 characters | |
+| Message | Required field | "Please fill in this field" notification pointed at input box | |
+| | Maximum length 1500 | Cannot physically enter more than 1500 characters | |
+
 
 ## Accessibility Testing
 
