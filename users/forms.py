@@ -55,6 +55,8 @@ https://www.youtube.com/watch?v=5qhlDC_bQsA
 
 class LoginForm(forms.ModelForm):
 
+    password = forms.CharField(widget=forms.PasswordInput)
+
     class Meta:
         model = User
         fields = ("username", "password")
