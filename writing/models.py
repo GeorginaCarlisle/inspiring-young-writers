@@ -17,7 +17,7 @@ class Writing(models.Model):
     reason_failed = models.TextField(null=True, blank=True)
 
     class Meta:
-        ordering = ['-data_approved']
+        ordering = ['-date_approved']
 
     def __str__(self):
         return self.title
