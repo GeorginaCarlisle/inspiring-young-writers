@@ -14,6 +14,7 @@ module.exports = {
         './account/templates/account_home.html',
         './users/templates/login.html',
         './users/templates/logout.html',
+        './writing/templates/create_writing.html',
     ],
     theme: {
         extend: {
