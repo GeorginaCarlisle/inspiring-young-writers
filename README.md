@@ -780,6 +780,10 @@ Python
 
 [Psycopg2 2.9](https://www.psycopg.org/docs/#) - A PostgreSQL database adapter for the Python programming language.
 
+[Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
+
+[profanity-check](https://github.com/vzhou842/profanity-check) - A fast, robust Python library to check for profanity or offensive language in strings.
+
 ## Tools and Technologies
 
 Tools and technologies are listed in order of use during the development of this project.
@@ -803,8 +807,6 @@ Tools and technologies are listed in order of use during the development of this
 [Heroku](https://www.heroku.com) - Used to host and deploy the project.
 
 [ElephantSQL](https://www.elephantsql.com) - Used to store the PostgreSQL database.
-
-[Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
 
 [Canva](https://www.canva.com) - Used to create the hero image.
 
@@ -891,11 +893,10 @@ Code Institute's Tutor support - Helped me to solve bug #3.
 
 [Django's documentation](https://docs.djangoproject.com/en/3.2) - Used throughout this project to check how to correctly use Django's inbuilt functions and models et.
 
-[ChatGPT](https://chat.openai.com/) - Used on occasion to speed up the development process and provide ideas for how to achieve certain requirements. Initial prompt and summary of information gained provided below.
+[ChatGPT](https://chat.openai.com/) - Used to speed up the development process, during iterations 3 and 4, by:
 
-| Prompt | Information gained |
-| --- | --- |
-| I am building a Django app using a form that will be displayed to users. When a user submits the form I want a message to pop up and a confirmation button so that the users have to confirm the action. How might I achieve this? | Suggestion to include a confirm variable in the form with the widget HiddenInput() and use JavaScript to call the additional step to confirm action. |
+- Pointing me towards 'profanity-check' as a way to validate my writing inputs to prevent swear words and helping me to implement (alongside reading the documentation for profanity-check and Django documentation around validators).
+
 
 ### Other projects
 

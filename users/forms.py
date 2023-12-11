@@ -28,6 +28,7 @@ class NewUserForm(UserCreationForm):
         fields = ('username', 'age', 'first_name', 'last_name', 'email',
                   'consent', 'password1', 'password2')
 
+    # Add borders around input boxes
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['username'].widget.attrs.update(
@@ -68,6 +69,7 @@ class LoginForm(forms.ModelForm):
             if not authenticate(username=username, password=password):
                 raise forms.ValidationError("Invalid Login")
 
+    # Add borders around input boxes
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['username'].widget.attrs.update(
