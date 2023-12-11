@@ -21,7 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls'), name=''),
     path('user/', include('users.urls'), name=''),
-    path('account/', include('account.urls'), name='')
+    path('account/', include('account.urls'), name=''),
+    path('writing/', include('writing.urls'), name='')
 ]
 
 # Error Pages

@@ -897,6 +897,8 @@ Code Institute's Tutor support - Helped me to solve bug #3.
 
 - Pointing me towards 'profanity-check' as a way to validate my writing inputs to prevent swear words and helping me to implement (alongside reading the documentation for profanity-check and Django documentation around validators).
 
+- Pointing me towards slugify as a way to create a slug, including giving an example of use.
+
 
 ### Other projects
 
