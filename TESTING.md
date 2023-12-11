@@ -82,10 +82,10 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | | | |
 | 16 | As the **parent of a registered user** I am informed of any profile changes my child makes and my consent to any changes is required | | | |
 | | | | | |
-| 17 | As the **site admin** I can remove accounts | As a site admin I can log in to the admin side of the site | | |
-| | | I can click to bring up a list of all registered users | | |
-| | | I can click to delete a selected user | | |
-| | | I am asked to confirm this action before it will be carried out | | |
+| 17 | As the **site admin** I can remove accounts | As a site admin I can log in to the admin side of the site | PASS | |
+| | | I can click to bring up a list of all registered users | PASS | |
+| | | I can click to delete a selected user | PASS | |
+| | | I am asked to confirm this action before it will be carried out | PASS | |
 | 18 | As the **parent of a registered user** I am informed via email if my child’s account has been removed including the reason why | | | |
 | | | | | |
 | 19 | As a **signed-in user** user once logged in I am taken to a home page for my account | The top left of the nav bar lets me know I am signed in to my account with wording unique to me "Pen name's inspiring writing" | PASS | |
