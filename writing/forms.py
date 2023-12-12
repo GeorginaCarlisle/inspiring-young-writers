@@ -19,14 +19,24 @@ If they are predicted to be offensive the string is given a value of 1, else a v
 class CreateWritingForm(forms.ModelForm):
 
     # Run field values through profanity validator
-    #title = forms.CharField(validator=[no_profanity])
-    #body = forms.Textarea(validator=[no_profanity])
+    title = forms.CharField(
+        #validator=[no_profanity]
+        widget=forms.TextInput(attrs={
+            'style': 'width: 85%;',
+            'placeholder': 'Draw others in. What is your writing about?'}))
+    body = forms.CharField(
+        #validator=[no_profanity],
+        widget=forms.Textarea(attrs={
+            'style': 'width: 100%;',
+            'placeholder': 'Your writing.....'})
+        )
+
 
     class Meta:
         model = Writing
         fields = ("title", "body")
 
-    # Add borders around input boxes
+    # Add borders around input boxes and .....
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['title'].widget.attrs.update(

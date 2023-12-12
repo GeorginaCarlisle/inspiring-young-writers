@@ -1,66 +1,78 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
 
 <!-- Page Background-->
-<div class="bg-blue-900 h-full flex justify-center p-8">
+<div class="bg-blue-900 h-fit pb-4 pt-16 lg:pt-20">
 
-  <!-- Container for form and all its info -->
-  <div
-    class="border border-black rounded bg-zinc-50 p-4 mt-16 lg:mt-20 relative max-w-sm sm:max-w-xl"
-  >
-    <!-- Form title and initial instruction -->
-    <div class="text-center mb-2 border-b-2 border-black">
-      <h1 class="text-3xl md:text-4xl mb-2 font-title text-orange-600">
-        Create Writing
-      </h1>
+    <!-- Heading showing user they are in the their work section of platform -->
+    {% include 'my_work_title.html' %}
 
-      <!-- When errors in submitted form instruction replaced by error message -->
-      {% if messages %}
-      <ul class="mb-4">
-        {% for message in messages %}
-        <li{% if message.tags %} class="text-blue-700"{% endif %}>
-            {{ message }}
-        </li>
-        {% endfor %}
-      </ul>
-      <!-- Form instruction when form first viewed -->
-      {% else %}
-      <p class="mb-4">
-        Message to inspire
-      </p>
-      {% endif %}
-      <!-- Specific error details -->
-      {% for field in new_user_form %}
-      <p>
-        {% for error in field.errors %}
-      <p class="text-blue-700">{{ error }}</p>
-      {% endfor %}
-      </p>
-      {% endfor %}
-      {% if new_user_form.non_field_errors %}
-      <p>{{new_user_form.non_field_errors}}</p>
-      {% endif %}
+    <div class="flex justify-center mt-4">
+    <!-- Container for form and all its info -->
+        <div class="border border-black rounded bg-zinc-50 p-4 relative w-80 sm:w-96 md:w-3/5 lg:w-2/5">
+        
+            <!-- Form title and initial instruction -->
+            <div class="text-center mb-4 border-b-2 border-black">
+                <h2 class="text-3xl md:text-4xl mb-2 font-title text-orange-600">
+                    Create Writing
+                </h2>
 
+                <!-- When errors in submitted form instruction replaced by error message -->
+                {% if messages %}
+                <ul class="mb-4">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="text-blue-700"{% endif %}>
+                        {{ message }}
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <!-- Form instruction when form first viewed -->
+                {% else %}
+                <p class="mb-4 md:text-lg">
+                    Start typing and let your creativity flow....
+                </p>
+                {% endif %}
+
+                <!-- Specific error details -->
+                {% for field in new_user_form %}
+                <p>
+                    {% for error in field.errors %}
+                <p class="text-blue-700">{{ error }}</p>
+                {% endfor %}
+                </p>
+                {% endfor %}
+                {% if new_user_form.non_field_errors %}
+                <p>{{new_user_form.non_field_errors}}</p>
+                {% endif %}
+            </div>
+
+            <!-- Signup form. NewUserForm passed in by view -->
+            <form action="{% url 'create' %}" method="post">
+            {% csrf_token %}
+
+                <!-- Title -->
+                <div class="mb-4">
+                    <label for="{{ create_writing_form.title.id_for_label }}" class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2">
+                        Title
+                    </label>
+                    {{ create_writing_form.title }}
+                </div>
+
+                <!-- Body -->
+                <div class="mb-12">
+                {{ create_writing_form.body }}
+                </div>
+
+            <!-- Submit the form -->
+            <input
+                type="submit"
+                value="Submit to be published"
+                id="submit-button"
+                class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-lg hover:cursor-pointer"
+            />
+            </form>
     </div>
-
-    <!-- Signup form. NewUserForm passed in by view -->
-    <form action="{% url 'create' %}" method="post">
-      {% csrf_token %}
-
-        <div class="mb-4">
-          {{ create_writing_form.title }}
-        </div>
-        <div class="mb-4">
-          {{ create_writing_form.body }}
-        </div>
-
-      <!-- Submit the form -->
-      <input
-        type="submit"
-        value="Submit to be published"
-        id="submit-button"
-        class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-lg hover:cursor-pointer"
-      />
-    </form>
-  </div>
 </div>
 {% endblock%}
