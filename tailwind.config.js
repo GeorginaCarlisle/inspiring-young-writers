@@ -16,6 +16,7 @@ module.exports = {
         './users/templates/logout.html',
         './writing/templates/create_writing.html',
         './writing/templates/my_work_title.html',
+        './writing/templates/my_work.html',
     ],
     theme: {
         extend: {

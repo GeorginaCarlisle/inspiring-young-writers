@@ -903,6 +903,8 @@ Code Institute's Tutor support - Helped me to solve bug #3.
 
 - Provided ideas for how to program two submit buttons for a form that would lead to different outcomes
 
+- Pointing me towards the date filter as a way to format data from a DateTimeField
+
 
 ### Other projects
 

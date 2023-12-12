@@ -1,0 +1,76 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+
+<!-- Page Background-->
+<div class="bg-blue-900 h-full pb-4 pt-16 lg:pt-20">
+
+    <!-- Heading showing user they are in the their work section of platform -->
+    {% include 'my_work_title.html' %}
+
+    <div class="flex justify-center mt-4">
+        <!-- Container for form and all its info -->
+        <div class="border border-black rounded bg-zinc-50 p-4 relative w-11/12 sm:max-w-xl h-96 overflow-auto">
+        
+            <!-- List of published work for user -->
+            <div class="mb-4 border-b-2 border-black">
+                <h2 class="text-2xl lg:text-3xl mb-2 font-title text-orange-600">
+                    My Published Work
+                </h2>
+                {% if published_work %}
+                {% for work in published_work %}
+                <p class="mb-4">
+                    <a>{{ work.title }}</a>
+                    <span>- published on {{ work.date_approved|date:"d M Y" }}</span>
+                </p>
+                {% endfor %}
+                {% else %}
+                <p class="mb-2">You have no published work</p>
+                {% endif %}
+            </div>
+
+            <!-- List of published work for user -->
+            <div class="mb-4 border-b-2 border-black">
+                <h2 class="text-2xl lg:text-3xl mb-2 font-title text-orange-600">
+                    My Work Awaiting Approval
+                </h2>
+                {% if awaiting_approval %}
+                {% for work in awaiting_approval %}
+                <p class="mb-4">
+                    <a>{{ work.title }}</a>
+                    <span>- submitted on {{ work.date_submitted|date:"d M Y" }}</span>
+                </p>
+                {% endfor %}
+                {% else %}
+                <p>You have no work awaiting approval</p>
+                {% endif %}
+            </div>
+
+            <!-- List of published work for user -->
+            <div>
+                <h2 class="text-2xl lg:text-3xl mb-2 font-title text-orange-600">
+                    My Drafts
+                </h2>
+                {% if drafts %}
+                {% for work in drafts %}
+                <p class="mb-4">
+                    <a>{{ work.title }}</a>
+                    <span>- last edited on {{ work.updated_on|date:"d M Y" }}</span>
+                </p>
+                {% endfor %}
+                {% else %}
+                <p class="mb-2">You have no drafts</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center mt-2">
+        <a class="p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
+            href="{% url 'create' %}">
+            Create new work
+        </a>
+    </div>
+</div>
+
+
+{% endblock%}

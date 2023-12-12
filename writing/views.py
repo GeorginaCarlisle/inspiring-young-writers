@@ -4,8 +4,11 @@ from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
 from django.utils import timezone
 from .forms import CreateWritingForm
+from .models import User
 
-
+"""
+View to create a new instance of writing
+"""
 @login_required
 def create_writing_view(request):
 
@@ -77,4 +80,24 @@ def create_writing_view(request):
 
     return render(request, 'create_writing.html', context)
 
+"""
+View for user to see all their saved writing
+"""
+@login_required
+def my_writing_view(request, user_id):
+
+    context = {}
+
+    user = User.objects.get(id=user_id)
+    work = user.writing.all()
+    published_work = work.filter(approved = True).order_by('-date_approved')
+    awaiting_approval = work.filter(pending_approval = True).order_by('-date_submitted')
+    draft = work.filter(approved = False, pending_approval = False).order_by('-updated_on')
+
+
+    context['published_work'] = published_work
+    context['awaiting_approval'] = awaiting_approval
+    context['drafts'] = draft
+
+    return render(request, 'my_work.html', context)
 
