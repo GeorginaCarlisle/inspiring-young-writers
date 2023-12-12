@@ -905,6 +905,8 @@ Code Institute's Tutor support - Helped me to solve bug #3.
 
 - Pointing me towards the date filter as a way to format data from a DateTimeField
 
+- Pointing me towards the ModelAdmin class and it's attributes to customise the Admin interface and provide access to more of the data.
+
 
 ### Other projects
 
