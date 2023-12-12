@@ -246,6 +246,18 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | Maximum length 1500 | Cannot physically enter more than 1500 characters | |
 
 
+### Create Writing
+
+| Input Field | Requirement | Error caught | Final check |
+| --- | ----- | ---- | -- |
+| Title | Required field | "Please fill in this field" notification pointed at input box | |
+| | Maximum length 50 | Cannot physically enter more than 50 characters | |
+| | Minimum length 5 | Message displayed under 'Create Writing' title: "Your title needs to more than 5 characters long to be published. Please add a little more." | |
+| Body | Required field | "Please fill in this field" notification pointed at input box | |
+| | Minimum length 50 | Message displayed under 'Create Writing' title: "Your writing needs to more than 50 characters long to be published. Please add a little more." | |
+
+
+
 ## Accessibility Testing
 
 [Return to contents list](#contents)

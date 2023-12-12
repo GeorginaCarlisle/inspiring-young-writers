@@ -20,6 +20,7 @@ class CreateWritingForm(forms.ModelForm):
 
     # Run field values through profanity validator
     title = forms.CharField(
+        max_length=50,
         #validator=[no_profanity]
         widget=forms.TextInput(attrs={
             'style': 'width: 85%;',
@@ -30,7 +31,6 @@ class CreateWritingForm(forms.ModelForm):
             'style': 'width: 100%;',
             'placeholder': 'Your writing.....'})
         )
-
 
     class Meta:
         model = Writing

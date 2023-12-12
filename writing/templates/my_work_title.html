@@ -8,19 +8,5 @@
             <span>{{ user.username }}'s</span> Work
         </h1>
         {% endif %}
-        
-        <!-- Space for any messages -->
-        {% if messages %}
-        <div class="font-body text-sm md:text-xl mt-4">
-            <ul class="mb-4">
-                {% for message in messages %}
-                <li{% if message.tags %} class="text-blue-800 text-lg" {% endif %}>
-                    {{ message }}
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
-
     </div>
 </div>

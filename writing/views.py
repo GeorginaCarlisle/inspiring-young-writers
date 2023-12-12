@@ -14,13 +14,29 @@ def create_writing_view(request):
     if request.POST:
         form = CreateWritingForm(request.POST)
         if form.is_valid():
-            title = title
-            body = body
+            title = form.cleaned_data['title']
+
+            if len(title) < 5:
+                messages.error(
+                    request, 
+                    'Your title needs to more than 5 characters long to be published. Please add a little more.')
+                context['create_writing_form'] = form
+                return render(request, 'create_writing.html', context)
+            
+            body = form.cleaned_data['body']
+
+            if len(body) <= 50:
+                messages.error(
+                    request, 
+                    'Your writing needs to more than 50 characters long to be published. Please add a little more.')
+                context['create_writing_form'] = form
+                return render(request, 'create_writing.html', context)
+            
             author = request.user
             slug = slugify(title)
             updated_on = timezone.now
             pending_approval = True
-            date_submitted = timezone.now
+            date_submitted = timezone.now()
             form.save(author=author, slug=slug, updated_on=updated_on, pending_approval=pending_approval, date_submitted=date_submitted)
             
             messages.success(request, "You have successfully submitted your writing to be published")
