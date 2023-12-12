@@ -188,9 +188,11 @@ The acceptance criteria for each user story has been checked on completion (1st 
 
 ## Form validation Testing
 
+The following documents all forms and any requirements needed, with details on how requirements are handled. 
+
 ### Sign-up form
 
-| Input Field | Requirement | Error caught | Final check |
+| Input Field | Requirement | How error caught | Final check |
 | --- | ----- | ---- | -- |
 | Pen name | Required field | "Please fill in this field" notification pointed at input box | |
 | | Unique name required | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "User with this Username already exists." | |
@@ -255,6 +257,8 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | Minimum length 5 | Message displayed under 'Create Writing' title: "Your title needs to more than 5 characters long to be published. Please add a little more." | |
 | Body | Required field | "Please fill in this field" notification pointed at input box | |
 | | Minimum length 50 | Message displayed under 'Create Writing' title: "Your writing needs to more than 50 characters long to be published. Please add a little more." | |
+
+This form also contains a confirmation check when the user submits to be published. On 'Submit to be published' a confirmation message is displayed to the user with a choice to confirm or save as draft.
 
 
 

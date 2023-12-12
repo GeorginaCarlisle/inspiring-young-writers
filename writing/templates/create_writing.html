@@ -30,9 +30,11 @@
 
                 <!-- Form instruction when form first viewed -->
                 {% else %}
+                {% if not confirmation_needed %}
                 <p class="mb-4 md:text-lg">
                     Start typing and let your creativity flow....
                 </p>
+                {% endif %}
                 {% endif %}
 
                 <!-- Specific error details -->
@@ -46,10 +48,31 @@
                 {% if new_user_form.non_field_errors %}
                 <p>{{new_user_form.non_field_errors}}</p>
                 {% endif %}
+
+                <!-- Confirmation needed message -->
+                {% if confirmation_needed %}
+
+                <div class="mb-2">
+                    <h3 class="text-blue-700 font-title text-2xl mb-2">Your writing is ready to be published</h3>
+                    <p class="text-blue-700">If you are happy for your work to be read by others please click to 
+                        <span class="font-bold">confirm</span>
+                    </p>
+                    <p class="text-blue-700">Otherwise please click to save your work as a 
+                        <span class="font-bold">draft</span>
+                    </p>
+                </div>
+
+                {% endif %}
             </div>
 
-            <!-- Signup form. NewUserForm passed in by view -->
+            <!-- Create Writing form -->
+            {% if confirmation_needed %}
+            <form action="{% url 'create' %}?confirm=True" method="post">
+
+            {% else %}
             <form action="{% url 'create' %}" method="post">
+            {% endif %}
+
             {% csrf_token %}
 
                 <!-- Title -->
@@ -65,14 +88,41 @@
                 {{ create_writing_form.body }}
                 </div>
 
-            <!-- Submit the form -->
-            <input
+                <!-- Submit the form with two choices -->
+                
+                <!-- Choice to save as draft -->
+                <input
+                type="submit"
+                value="Save as draft"
+                id="draft"
+                name="draft"
+                class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-lg hover:cursor-pointer"
+                />
+
+                {% if not confirmation_needed %}
+                <!-- Choice to submit to Publish -->
+                <input
                 type="submit"
                 value="Submit to be published"
-                id="submit-button"
+                id="publish"
+                name="publish"
                 class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-lg hover:cursor-pointer"
-            />
+                />
+                {% endif %}
+
+                {% if confirmation_needed %}
+                <!-- Choice to submit to Publish re-worded to confirm -->
+                <input
+                type="submit"
+                value="Confirm"
+                id="publish"
+                name="publish"
+                class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-lg hover:cursor-pointer"
+                />
+                {% endif %}
             </form>
+
+        </div>
     </div>
 </div>
 {% endblock%}

@@ -816,7 +816,7 @@ Tools and technologies are listed in order of use during the development of this
 
 [Code Anywhere](https://app.codeanywhere.com/) - One of the two editors in which this project has been built.
 
-[ChatGPT](https://chat.openai.com/) - ChatGPT was used to help resolve project bugs. This has then been clearly referenced in [Bugs and Fixes](#bugs-and-fixes). ChatGPT was also used on occasion to speed up the development process and provide ideas for how to achieve certain requirements. This has then been clearly referenced in [Acknowledgements](#acknowledgements).
+[ChatGPT](https://chat.openai.com/) - ChatGPT was used to help resolve project bugs. This has then been clearly referenced in [Bugs and Fixes](#bugs-and-fixes). ChatGPT was also used on occasion to speed up the development process and provide ideas and support in achieving certain requirements. This has then been clearly referenced in [Acknowledgements](#acknowledgements).
 
 [Return to contents list](#contents)
 
@@ -898,6 +898,10 @@ Code Institute's Tutor support - Helped me to solve bug #3.
 - Pointing me towards 'profanity-check' as a way to validate my writing inputs to prevent swear words and helping me to implement (alongside reading the documentation for profanity-check and Django documentation around validators).
 
 - Pointing me towards slugify as a way to create a slug, including giving an example of use.
+
+- Provided ideas for how to create a confirmation step when submitting writing to be published.
+
+- Provided ideas for how to program two submit buttons for a form that would lead to different outcomes
 
 
 ### Other projects

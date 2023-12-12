@@ -43,3 +43,28 @@ class CreateWritingForm(forms.ModelForm):
             {'class': 'border border-black'})
         self.fields['body'].widget.attrs.update(
             {'class': 'border border-black'})
+        
+    # Add additional fields to be generated on saving of the form
+    def save(self, commit=True, author=None, slug=None, updated_on=None, pending_approval=False, date_submitted=None):
+        writing = super().save(commit=False)
+
+        if author:
+             writing.author = author
+
+        if slug:
+             writing.slug = slug
+
+        if updated_on:
+            writing.updated_on = updated_on
+
+        if pending_approval:
+            writing.pending_approval = pending_approval
+            
+        if date_submitted:
+            writing.date_submitted = date_submitted
+
+        if commit:
+            writing.save()
+        return writing
+
+
