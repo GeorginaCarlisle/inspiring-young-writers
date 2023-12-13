@@ -17,6 +17,7 @@ module.exports = {
         './writing/templates/create_writing.html',
         './writing/templates/my_work_title.html',
         './writing/templates/my_work.html',
+        './writing/templates/edit_writing.html',
     ],
     theme: {
         extend: {

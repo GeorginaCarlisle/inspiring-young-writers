@@ -1,10 +1,10 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
 from django.utils import timezone
 from .forms import CreateWritingForm
-from .models import User
+from .models import User, Writing
 
 """
 View to create a new instance of writing
@@ -84,6 +84,7 @@ def create_writing_view(request):
 
     return render(request, 'create_writing.html', context)
 
+
 """
 View for user to see all their saved writing
 """
@@ -114,3 +115,32 @@ def my_writing_view(request, user_id):
 
     return render(request, 'my_work.html', context)
 
+
+"""
+View to edit an instance of writing
+"""
+@login_required
+def edit_writing_view(request, writing_id):
+    
+    writing = get_object_or_404(Writing, pk=writing_id)
+
+    context = {}
+
+    # Check that the logged in user id matches the user_id from the url
+    if request.user != writing.author:
+        messages.error(request, 'You have been returned to your account home page, \
+                       as you were trying to access a page you are not authorised to view.')
+        return redirect('account_home')
+    
+    
+
+    # If form has been submitted
+    if request.POST:
+        form = CreateWritingForm(request.POST)
+
+    else:
+        form = CreateWritingForm(instance=writing)
+        context['create_writing_form'] = form
+        context['writing'] = writing
+
+    return render(request, 'edit_writing.html', context)

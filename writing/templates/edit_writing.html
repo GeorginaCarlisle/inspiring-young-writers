@@ -10,12 +10,20 @@
 
     <div class="flex justify-center mt-4">
     <!-- Container for form and all its info -->
-        <div class="border border-black rounded bg-zinc-50 p-4 relative w-4/5 md:w-3/5 lg:w-2/5 mb-4">
+        <div class="border border-black rounded bg-zinc-50 p-4 relative w-4/5 md:w-2/3 lg:max-w-xl mb-4">
         
             <!-- Form title and initial instruction -->
             <div class="text-center mb-4 border-b-2 border-black">
                 <h2 class="text-3xl md:text-4xl mb-2 font-title text-orange-600">
-                    Create Writing
+                    {% if writing.approved %}
+                    Edit my published work
+                    {% elif writing.pending_approval %}
+                    Edit my work awaiting approval
+                    {% elif writing.failed_approval %}
+                    Edit my work not meeting requirements
+                    {% else %}
+                    Edit my draft work
+                    {% endif %}
                 </h2>
 
                 <!-- When errors in submitted form instruction replaced by error message -->
@@ -32,7 +40,7 @@
                 {% else %}
                 {% if not confirmation_needed %}
                 <p class="mb-4 md:text-lg">
-                    Start typing and let your creativity flow....
+                    Make any changes you need, then choose what you want to happen with your writing next.
                 </p>
                 {% endif %}
                 {% endif %}
@@ -52,15 +60,6 @@
                 <!-- Confirmation needed message -->
                 {% if confirmation_needed %}
 
-                <div class="mb-2">
-                    <h3 class="text-blue-700 font-title text-2xl mb-2">Your writing is ready to be published</h3>
-                    <p class="text-blue-700">If you are happy for your work to be read by others please click to 
-                        <span class="font-bold">confirm</span>
-                    </p>
-                    <p class="text-blue-700">Otherwise please click to save your work as a 
-                        <span class="font-bold">draft</span>
-                    </p>
-                </div>
 
                 {% endif %}
             </div>
@@ -84,16 +83,27 @@
                 </div>
 
                 <!-- Body -->
-                <div class="mb-12">
+                <div class="mb-4">
                     <label for="{{ create_writing_form.body.id_for_label }}" class="md:text-lg md:ml-2">
                         Your writing
                     </label>
                     {{ create_writing_form.body }}
                 </div>
 
-                <!-- Submit the form with two choices -->
-                
-                <!-- Choice to save as draft -->
+                <!-- Submit form choices  -->
+
+                <!-- Submit for publishing -->
+                <div class="flex justify-center mb-12 sm:mb-0">
+                    <input
+                    type="submit"
+                    value="Submit to be published"
+                    id="publish"
+                    name="publish"
+                    class="p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
+                    />
+                </div>
+
+                <!-- Save as draft -->
                 <input
                 type="submit"
                 value="Save as draft"
@@ -102,26 +112,19 @@
                 class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
                 />
 
-                {% if not confirmation_needed %}
-                <!-- Choice to submit to Publish -->
+                
+
+                <!-- Delete -->
                 <input
                 type="submit"
-                value="Submit to be published"
-                id="publish"
-                name="publish"
+                value="Delete writing"
+                id="delete"
+                name="delete"
                 class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
                 />
-                {% endif %}
 
                 {% if confirmation_needed %}
-                <!-- Choice to submit to Publish re-worded to confirm -->
-                <input
-                type="submit"
-                value="Confirm"
-                id="publish"
-                name="publish"
-                class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
-                />
+
                 {% endif %}
             </form>
 

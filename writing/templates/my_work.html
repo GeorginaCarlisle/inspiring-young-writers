@@ -74,7 +74,7 @@
                 {% if drafts %}
                 {% for work in drafts %}
                 <p class="mb-4">
-                    <a>{{ work.title }}</a>
+                    <a href="{% url 'edit' work.id %}">{{ work.title }}</a>
                     <span>- last edited on {{ work.updated_on|date:"d M Y" }}</span>
                 </p>
                 {% endfor %}
