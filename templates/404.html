@@ -10,12 +10,25 @@
             <p>The webpage you are trying to access does not exist</p>
             <p>or has a dead or broken link</p>
         </div>
+
+        {% if request.user.is_authenticated %}
+        <!-- Button to take user back to account_home if logged in -->
+        <a 
+        class="p-2 rounded border-orange-700 border-2 border-solid  bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-2xl hover:cursor-pointer"
+        href="{% url 'account_home' %}"
+        role="button">
+            Return to your account home page
+        </a>
+
+        {% else %}
+        <!-- Button to take user back to the landing page if not logged in -->
         <a 
         class="p-2 rounded border-orange-700 border-2 border-solid  bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-2xl hover:cursor-pointer"
         href="{% url 'home' %}"
         role="button">
             Return to the home page
         </a>
+        {% endif %}
     </div>
 
 </div>
