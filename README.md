@@ -907,6 +907,8 @@ Code Institute's Tutor support - Helped me to solve bug #3.
 
 - Pointing me towards the ModelAdmin class and it's attributes to customise the Admin interface and provide access to more of the data.
 
+- Providing an explanation of how to add a custom error message when the unique requirement is not met during form handling.
+
 
 ### Other projects
 

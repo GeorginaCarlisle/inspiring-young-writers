@@ -70,9 +70,13 @@ def create_writing_view(request):
                 return redirect('account_home')
             
         else:
-            messages.error(
-                request,
-                'There is an error with your title or writing')
+            form_errors = form.errors.get('title', None)
+            if form_errors:
+                messages.error(request, form_errors)
+            else:
+                messages.error(
+                    request,
+                    'There is an error with your title or writing')
             context['create_writing_form'] = form
     else:
         form = CreateWritingForm()

@@ -43,7 +43,21 @@ class CreateWritingForm(forms.ModelForm):
             {'class': 'border border-black'})
         self.fields['body'].widget.attrs.update(
             {'class': 'border border-black'})
+
+
+    # Check title is unique
+    def clean_title(self):
+        title = self.cleaned_data.get('title')
+
+        if Writing.objects.filter(title=title).exists():
+            raise forms.ValidationError(
+                'Your title must be unique and there is already work with this title. \
+                        Please make a change to your title and try again.'
+            )
         
+        return title
+
+
     # Add additional fields to be generated on saving of the form
     def save(self, commit=True, author=None, slug=None, updated_on=None, pending_approval=False, date_submitted=None):
         writing = super().save(commit=False)
