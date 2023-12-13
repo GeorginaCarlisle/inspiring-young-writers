@@ -3,7 +3,8 @@ from .models import Writing
 
 class WritingAdmin(admin.ModelAdmin):
     list_display = (
-        'title', 
+        'title',
+        'body',
         'author', 
         'updated_on', 
         'pending_approval', 
@@ -12,20 +13,24 @@ class WritingAdmin(admin.ModelAdmin):
         'date_approved',
         'failed_approval',
         'date_failed',
-        'reason_failed')
+        'reason_failed',
+        'featured'
+        )
     list_editable = (
         'pending_approval',  
         'approved', 
         'date_approved',
         'failed_approval',
         'date_failed',
-        'reason_failed'
-    )
+        'reason_failed',
+        'featured'
+        )
     list_filter = (
         'pending_approval',
         'approved',
-        'failed_approval'
-    )
+        'failed_approval',
+        'featured'
+        )
 
 
 admin.site.register(Writing, WritingAdmin)

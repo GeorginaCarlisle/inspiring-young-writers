@@ -15,6 +15,7 @@ class Writing(models.Model):
     failed_approval = models.BooleanField(default=False)
     date_failed = models.DateTimeField(null=True, blank=True)
     reason_failed = models.TextField(null=True, blank=True)
+    featured = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['-date_approved']
