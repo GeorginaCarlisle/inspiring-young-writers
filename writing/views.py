@@ -92,11 +92,14 @@ def my_writing_view(request, user_id):
     work = user.writing.all()
     published_work = work.filter(approved = True).order_by('-date_approved')
     awaiting_approval = work.filter(pending_approval = True).order_by('-date_submitted')
+    failed_approval = work.filter(failed_approval = True).order_by('-date_failed')
     draft = work.filter(approved = False, pending_approval = False).order_by('-updated_on')
+
 
 
     context['published_work'] = published_work
     context['awaiting_approval'] = awaiting_approval
+    context['failed_approval'] = failed_approval
     context['drafts'] = draft
 
     return render(request, 'my_work.html', context)

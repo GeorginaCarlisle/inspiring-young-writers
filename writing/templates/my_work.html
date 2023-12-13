@@ -29,7 +29,7 @@
                 {% endif %}
             </div>
 
-            <!-- List of published work for user -->
+            <!-- List of work awaiting approval for user -->
             <div class="mb-4 border-b-2 border-black">
                 <h2 class="text-2xl lg:text-3xl mb-2 font-title text-orange-600">
                     My Work Awaiting Approval
@@ -46,7 +46,27 @@
                 {% endif %}
             </div>
 
-            <!-- List of published work for user -->
+            <!-- Work that has failed approval plus reasoningand editing tips -->
+            {% if failed_approval %}
+            <div class="mb-4 border-b-2 border-black">
+                <h2 class="text-2xl lg:text-3xl mb-2 font-title text-blue-800">
+                    Submitted work that does not meet publishing requirements
+                </h2>
+                
+                {% for work in failed_approval %}
+                <p class="mb-1">
+                    <a>{{ work.title }}</a>
+                    <span>- reviewed on {{ work.date_failed|date:"d M Y" }}</span>
+                </p>
+                <p class="mb-4 text-blue-800">
+                    {{ work.reason_failed }}
+                </p>
+                {% endfor %}
+            </div>
+            {% endif %}
+            
+
+            <!-- List of draft work for user -->
             <div>
                 <h2 class="text-2xl lg:text-3xl mb-2 font-title text-orange-600">
                     My Drafts
