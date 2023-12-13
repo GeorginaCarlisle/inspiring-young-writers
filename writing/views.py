@@ -90,6 +90,12 @@ View for user to see all their saved writing
 @login_required
 def my_writing_view(request, user_id):
 
+    # Check that the logged in user id matches the user_id from the url
+    if request.user.id != user_id:
+        messages.error(request, 'You have been returned to your account home page, \
+                       as you were trying to access a page you are not authorised to view.')
+        return redirect('account_home')
+
     context = {}
 
     user = User.objects.get(id=user_id)
