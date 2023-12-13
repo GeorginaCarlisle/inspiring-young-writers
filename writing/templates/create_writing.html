@@ -85,7 +85,10 @@
 
                 <!-- Body -->
                 <div class="mb-12">
-                {{ create_writing_form.body }}
+                    <label for="{{ create_writing_form.body.id_for_label }}" class="md:text-lg md:ml-2">
+                        Your writing
+                    </label>
+                    {{ create_writing_form.body }}
                 </div>
 
                 <!-- Submit the form with two choices -->

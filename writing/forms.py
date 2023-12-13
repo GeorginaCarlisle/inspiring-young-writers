@@ -29,7 +29,7 @@ class CreateWritingForm(forms.ModelForm):
         #validator=[no_profanity],
         widget=forms.Textarea(attrs={
             'style': 'width: 100%;',
-            'placeholder': 'Your writing.....'})
+            'placeholder': 'A poem, a joke, a story, an article? It is up to you!'})
         )
 
     class Meta:
