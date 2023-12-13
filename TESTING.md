@@ -86,8 +86,8 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | I can click to bring up a list of all registered users | PASS | |
 | | | I can click to delete a selected user | PASS | |
 | | | I am asked to confirm this action before it will be carried out | PASS | |
-| 18 | As the **parent of a registered user** I am informed via email if my child’s account has been removed including the reason why | | | |
-| | | | | |
+| 18 | As the **parent of a registered user** I am informed via email if my child’s account has been removed including the reason why | As site Admin I can handle this manually | PASS | |
+| | | When deleting a user account I can see all the details I need: email address, first name and last name of the parent or guardian | PASS | |
 | 19 | As a **signed-in user** user once logged in I am taken to a home page for my account | The top left of the nav bar lets me know I am signed in to my account with wording unique to me "Pen name's inspiring writing" | PASS | |
 | | | The navigation bar provides links to all the registered user features |  PASS | |
 | | | It is easy and intuitive to navigate through the available features | PASS | |
@@ -102,20 +102,35 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | | | |
 | 23 | As the **parent of a signed-in user** I can also contact the site admin when my child is logged in | | | |
 | | | | | |
-| 24 | As a **signed-in user** I can navigate to a page where all my work is listed by status | | | |
-| | | | | |
+| 24 | As a **signed-in user** I can navigate to a page where all my work is listed by status | I can navigate to my work from the navigation bar | PASS | |
+| | | I can navigate to my work from a call to action button on my account home page | PASS | |
+| | | A title shows me that I am in the 'My Work' section of the platform | PASS | |
+| | | I am shown a list of all my saved work | PASS | |
+| | | The list is categorised by published work, work awaiting approval and drafts | PASS | |
+| | | There is a clear button that takes me to the create writing page | PASS | |
+| | | The page cannot be accessed unless logged in | PASS | |
+| | | Users cannot accidentally access someone else's work | PASS | |
 | 25 | As a **signed-in user** I am provided with tips and ideas for the sort of work I could create | | | |
 | | | | | |
-| 26 | As a **signed-in user** I can write and submit a piece of work with title | | | |
-| | | | | |
+| 26 | As a **signed-in user** I can write and submit a piece of work with title | From the account home page there is a clear button I can click that will take me directly to a page for inputting new work | PASS | |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
+| | | The title and placeholder text help me to navigate the process of submitting my work | PASS | |
+| | | The button to submit my work for publishing is clear | PASS | |
+| | | I am given feedback to ensure that I am filling in the form correctly | PASS | |
+| | | On clicking the submit button, I am asked to confirm that I would like to submit my work to be published. This includes a quick explanation of the process | PASS | |
+| | | I am given clear feedback to let me know I have successfully submitted my work to be published on the site | PASS | |
+| | | On submission I am redirected to the account_home page | PASS | |
 | 27 | As a **signed-in user** my writing is passed through validation tests before it is saved | | | |
 | | | | | |
 | 28 | As a **signed-in user** I can write a blurb for my writing | | | |
 | | | | | |
 | 29 | As a **signed-in user** I can attach a picture to my writing | | | |
 | | | | | |
-| 30 | As a **signed-in user** I can save a draft of my work | | | |
-| | | | | |
+| 30 | As a **signed-in user** I can save a draft of my work | When creating new work I have the option to save a draft version of my work | PASS | |
+| | | The button to save as a draft is clear | PASS | |
+| | | I am given feedback to ensure that I am filling in the form correctly | PASS | |
+| | | I am given clear feedback to let me know I have successfully saved my work as a draft | PASS | |
+| | | On submission I am redirected to the account_home page | PASS | |
 | 31 | As a **signed-in user** I can view my published work | | | |
 | | | | | |
 | 32 | As a **signed-in user** I can view and edit any work pending approval | | | |
@@ -124,16 +139,27 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | | | |
 | 34 | As a **signed-in user** I can delete my writing | | | |
 | | | | | |
-| 35 | As the **site admin** all stories need to be validated by me before they are posted to the page | | | |
-| | | | | |
+| 35 | As the **site admin** all stories need to be validated by me before they are posted to the page | I can view all instances of writing through the admin page | PASS | |
+| | | I can filter writing by pending_approval | PASS | |
+| | | I can read the title, body and author of each instance of writing | PASS | |
+| | | I can checkbox to change approved to True (default is False) and input the date | PASS | |
+| | | Only writing with approved True will be displayed in the library | | |
+| | | I can also checkbox to change featured to True (default is false) | PASS | |
+| | | Only writing with approved True and featured True will be displayed on the landing page for all visitors to read | | |
 | 36 | As the **site admin** I am informed when a child submits their writing for approval | | | |
 | | | | | |
-| 37 | As the **site admin** I can send a message to the user should their writing fail to meet approval guidelines, | | | |
-| | | | | |
-| 38 | As the **site admin** I can send parents an email sharing the submitted story and the reason why it failed to meet approval | | | |
-| | | | | |
-| 39 | As the **site admin** I can remove approved status from previously approved work | | | |
-| | | | | |
+| 37 | As the **site admin** I can send a message to the user should their writing fail to meet approval guidelines | When reviewing writing pending approval I can check the failed_approval box should the writing not meet requirements and add the date and time to date_failed | PASS | |
+| | | I can add details to the reason_failed field to be passed back to the user | PASS | |
+| | | Any writing failing approval is listed in the users "My Work page" under the heading "Submitted work that does not meet publishing requirements" | PASS | |
+| | | Message from reason_failed field is displayed under the title and date reviewed on | PASS | |
+| 38 | As the **site admin** I can send parents an email sharing the submitted story and the reason why it failed to meet approval | As site Admin I can handle this manually | PASS | |
+| | | When failing a submission I can see the author name for the writing being failed | PASS | |
+| | | I can locate the details for the author and find the information I need: email, first_name and last_name of parent/guardian | PASS | |
+| 39 | As the **site admin** I can remove approved status from previously approved work | I can view all instances of writing through the admin page | PASS | |
+| | | I can filter writing by approved | PASS | |
+| | | I can checkbox to change approved to False | PASS | |
+| | | Only writing with approved True will be displayed in the library | PASS | |
+| | | I can checkbox to change failed_approval to True (default is False) and add a date to date_failed | | |
 | 40 | As a **signed-in user** I can view work from other users | | | |
 | | | | | |
 | 41 | As a **signed-in user** I can filter work | | | |
@@ -255,10 +281,16 @@ The following documents all forms and any requirements needed, with details on h
 | Title | Required field | "Please fill in this field" notification pointed at input box | |
 | | Maximum length 50 | Cannot physically enter more than 50 characters | |
 | | Minimum length 5 | Message displayed under 'Create Writing' title: "Your title needs to more than 5 characters long to be published. Please add a little more." | |
+| | Unique | Message displayed under 'Create Writing' title: "Your title must be unique and there is already work with this title. Please make a change to your title and try again."| |
 | Body | Required field | "Please fill in this field" notification pointed at input box | |
 | | Minimum length 50 | Message displayed under 'Create Writing' title: "Your writing needs to more than 50 characters long to be published. Please add a little more." | |
 
 This form also contains a confirmation check when the user submits to be published. On 'Submit to be published' a confirmation message is displayed to the user with a choice to confirm or save as draft.
+
+| Trigger | Expected Response | 1st Check | Final Check |
+| Click to submit work to be published | Confirmation message and two buttons 'Confirm' 'save as draft' | PASS | |
+| Click to confirm | Redirect to account_home with "You have successfully submitted your writing to be published" message displayed. Writing correctly saved with pending_approval = True | PASS | |
+| Click to save as draft | Redirect to account_home with "You have successfully saved your writing as a draft" message displayed. Writing correctly saved with pending_approval = False | PASS | |
 
 
 

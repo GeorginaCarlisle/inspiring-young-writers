@@ -11,10 +11,10 @@ class WritingAdmin(admin.ModelAdmin):
         'date_submitted', 
         'approved', 
         'date_approved',
+        'featured',
         'failed_approval',
         'date_failed',
-        'reason_failed',
-        'featured'
+        'reason_failed'
         )
     list_editable = (
         'pending_approval',  
