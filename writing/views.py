@@ -22,10 +22,10 @@ def create_writing_view(request):
             body = form.cleaned_data['body']
 
             # Check title length
-            if len(title) < 5:
+            if len(title) < 3:
                 messages.error(
                     request, 
-                    'Your title needs to more than 5 characters long to be published. Please add a little more.')
+                    'Your title needs to more than 3 characters long to be published. Please add a little more.')
                 context['create_writing_form'] = form
                 return render(request, 'create_writing.html', context)
 

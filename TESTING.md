@@ -280,7 +280,7 @@ The following documents all forms and any requirements needed, with details on h
 | --- | ----- | ---- | -- |
 | Title | Required field | "Please fill in this field" notification pointed at input box | |
 | | Maximum length 50 | Cannot physically enter more than 50 characters | |
-| | Minimum length 5 | Message displayed under 'Create Writing' title: "Your title needs to more than 5 characters long to be published. Please add a little more." | |
+| | Minimum length 3 | Message displayed under 'Create Writing' title: "Your title needs to more than 3 characters long to be published. Please add a little more." | |
 | | Unique | Message displayed under 'Create Writing' title: "Your title must be unique and there is already work with this title. Please make a change to your title and try again."| |
 | Body | Required field | "Please fill in this field" notification pointed at input box | |
 | | Minimum length 50 | Message displayed under 'Create Writing' title: "Your writing needs to more than 50 characters long to be published. Please add a little more." | |
