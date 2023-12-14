@@ -52,7 +52,7 @@
                 {% if awaiting_approval %}
                 {% for work in awaiting_approval %}
                 <p class="mb-4">
-                    <a href="{% url 'edit' work.id %}" 
+                    <a href="{% url 'view' work.id %}" 
                     title="View writing">
                     {{ work.title }}</a>
                     <span>- submitted on {{ work.date_submitted|date:"d M Y" }}</span>

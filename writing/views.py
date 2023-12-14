@@ -174,9 +174,10 @@ def edit_writing_view(request, writing_id):
                 # If confirmation recieved proceed
                 else:
                     pending_approval = True
+                    approved = False
                     date_submitted = timezone.now()
                     updated_on = timezone.now()
-                    form.save(updated_on=updated_on, pending_approval=pending_approval, date_submitted=date_submitted)
+                    form.save(updated_on=updated_on, pending_approval=pending_approval, approved=approved, date_submitted=date_submitted)
                     
                     messages.success(request, "You have successfully submitted your writing to be published")
                     return redirect('my_work', user_id=request.user.id)
@@ -184,7 +185,9 @@ def edit_writing_view(request, writing_id):
             # Path if user clicked to Save as draft
             elif 'draft' in request.POST:
                 updated_on = timezone.now()
-                form.save()
+                approved = False
+                pending_approval = False
+                form.save(updated_on=updated_on, approved=approved, pending_approval=pending_approval)
                 messages.success(request, f'You have successfully saved "{writing.title}" as a draft.')
                 return redirect('my_work', user_id=request.user.id)
             
@@ -200,6 +203,7 @@ def edit_writing_view(request, writing_id):
         form = CreateWritingForm(instance=writing)
         context['create_writing_form'] = form
         context['work_id'] = writing_id
+        context['writing'] = writing
 
     return render(request, 'edit_writing.html', context)
 
@@ -224,3 +228,34 @@ def view_writing_view(request, writing_id):
     context['writing'] = writing
 
     return render(request, 'view_writing.html', context)
+
+
+"""
+View to delete an instance of writing
+called from view writing page
+"""
+@login_required
+def delete_writing_view(request, writing_id):
+        
+    writing = get_object_or_404(Writing, pk=writing_id)
+
+    context = {}
+
+    # Check that the logged in user id matches the user_id from the url
+    if request.user != writing.author:
+        messages.error(request, 'You have been returned to your account home page, \
+                       as you were trying to access a page you are not authorised to view.')
+        return redirect('account_home')
+    
+    # If confirmation not recieved ask for
+    if not request.GET.get('confirm_delete'):
+        context['confirmation_delete_needed'] = True
+        context['work_id'] = writing_id
+        context['writing'] = writing
+        return render(request, 'view_writing.html', context)
+
+    # If confirmation recieved proceed
+    else:
+        writing.delete()
+        messages.success(request, "You have successfully deleted your writing")
+        return redirect('my_work', user_id=request.user.id) 
