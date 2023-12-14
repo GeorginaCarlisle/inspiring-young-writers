@@ -179,7 +179,7 @@ def edit_writing_view(request, writing_id):
                     form.save(updated_on=updated_on, pending_approval=pending_approval, date_submitted=date_submitted)
                     
                     messages.success(request, "You have successfully submitted your writing to be published")
-                    return redirect('account_home')
+                    return redirect('my_work', user_id=request.user.id)
                     
             # Path if user clicked to Save as draft
             elif 'draft' in request.POST:
