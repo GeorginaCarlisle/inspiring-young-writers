@@ -712,6 +712,14 @@ video {
   height: 100vh;
 }
 
+.h-52 {
+  height: 13rem;
+}
+
+.h-3\/4 {
+  height: 75%;
+}
+
 .w-11\/12 {
   width: 91.666667%;
 }
@@ -739,6 +747,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-9\/12 {
+  width: 75%;
+}
+
+.w-5\/6 {
+  width: 83.333333%;
 }
 
 .max-w-2xl {
