@@ -56,7 +56,7 @@ def create_writing_view(request):
                     form.save(author=author, slug=slug, updated_on=updated_on, pending_approval=pending_approval, date_submitted=date_submitted)
                     
                     messages.success(request, "You have successfully submitted your writing to be published")
-                    return redirect('account_home')
+                    return redirect('my_work', user_id=request.user.id)
                     
             # Path if user clicked to Save as draft
             else:
@@ -67,7 +67,7 @@ def create_writing_view(request):
                 form.save(author=author, slug=slug, updated_on=updated_on)
                 
                 messages.success(request, "You have successfully saved your writing as a draft")
-                return redirect('account_home')
+                return redirect('my_work', user_id=request.user.id)
             
         else:
             form_errors = form.errors.get('title', None)
