@@ -11,7 +11,20 @@
     <div class="flex justify-center mt-4">
         <!-- Container for form and all its info -->
         <div class="border border-black rounded bg-zinc-50 p-4 relative w-11/12 sm:max-w-xl h-96 overflow-auto">
-        
+            
+            <!-- Space for messages -->
+            {% if messages %}
+            <div class="font-body text-sm md:text-xl mt-4">
+                <ul class="mb-4">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="text-blue-800 text-lg" {% endif %}>
+                        {{ message }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
             <!-- List of published work for user -->
             <div class="mb-4 border-b-2 border-black">
                 <h2 class="text-2xl lg:text-3xl mb-2 font-title text-orange-600">

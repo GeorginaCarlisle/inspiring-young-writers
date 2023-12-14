@@ -15,18 +15,10 @@
             <!-- Form title and initial instruction -->
             <div class="text-center mb-4 border-b-2 border-black">
                 <h2 class="text-3xl md:text-4xl mb-2 font-title text-orange-600">
-                    {% if writing.approved %}
-                    Edit my published work
-                    {% elif writing.pending_approval %}
-                    Edit my work awaiting approval
-                    {% elif writing.failed_approval %}
-                    Edit my work not meeting requirements
-                    {% else %}
-                    Edit my draft work
-                    {% endif %}
+                    Edit Writing
                 </h2>
 
-                <!-- When errors in submitted form instruction replaced by error message -->
+                <!-- Space for messages -->
                 {% if messages %}
                 <ul class="mb-4">
                     {% for message in messages %}
@@ -36,12 +28,31 @@
                     {% endfor %}
                 </ul>
 
-                <!-- Form instruction when form first viewed -->
+                <!-- Form instruction -->
                 {% else %}
                 {% if not confirmation_needed %}
+                {% if not confirmation_delete_needed%}
+                <!-- Normal instruction -->
                 <p class="mb-4 md:text-lg">
                     Make any changes you need, then choose what you want to happen with your writing next.
                 </p>
+                {% else %}
+                <!-- Instruction when confirmation delete needed -->
+                <p class="mb-4 md:text-lg text-blue-700">
+                    Are you sure you wish to delete your writing? Once delete you cannot get your writing back.
+                </p>
+                {% endif %}
+                {% else %}
+                <!-- Instruction when confirmation publish needed-->
+                <div class="mb-2">
+                    <h3 class="text-blue-700 font-title text-2xl mb-2">Your writing is ready to be published</h3>
+                    <p class="text-blue-700">If you are happy for your work to be read by others please click to 
+                        <span class="font-bold">confirm</span>
+                    </p>
+                    <p class="text-blue-700">Otherwise please click to save your work as a 
+                        <span class="font-bold">draft</span>
+                    </p>
+                </div>
                 {% endif %}
                 {% endif %}
 
@@ -56,20 +67,20 @@
                 {% if create_writing_form.non_field_errors %}
                 <p>{{create_writing_form.non_field_errors}}</p>
                 {% endif %}
-
-                <!-- Confirmation needed message -->
-                {% if confirmation_needed %}
-
-
-                {% endif %}
             </div>
 
             <!-- Create Writing form -->
             {% if confirmation_needed %}
-            <form action="{% url 'create' %}?confirm=True" method="post">
+            <!-- Form to confirm publish -->
+            <form action="{% url 'edit' work_id %}?confirm=True" method="post">
+
+            {% elif confirmation_delete_needed %}
+            <!-- Form to confirm delete-->
+            <form action="{% url 'edit' work_id %}?confirm_delete=True" method="post">
 
             {% else %}
-            <form action="{% url 'create' %}" method="post">
+            <!-- Form to edit -->
+            <form action="{% url 'edit' work_id %}" method="post">
             {% endif %}
 
             {% csrf_token %}
@@ -91,6 +102,10 @@
                 </div>
 
                 <!-- Submit form choices  -->
+                {% if not confirmation_delete_needed %}
+                {% if not confirmation_needed %}
+
+                <!-- Normal editing choices -->
 
                 <!-- Submit for publishing -->
                 <div class="flex justify-center mb-12 sm:mb-0">
@@ -112,9 +127,7 @@
                 class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
                 />
 
-                
-
-                <!-- Delete -->
+                <!-- Confirm delete -->
                 <input
                 type="submit"
                 value="Delete writing"
@@ -123,8 +136,48 @@
                 class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
                 />
 
-                {% if confirmation_needed %}
+                {% else %}
+                <!-- Confirmation publish pathway -->
 
+                <!-- Confirm submit to publish -->
+                <input
+                type="submit"
+                value="Submit to be published"
+                id="publish"
+                name="publish"
+                class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
+                />
+
+                <!-- Save as draft -->
+                <input
+                type="submit"
+                value="Save as draft"
+                id="draft"
+                name="draft"
+                class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
+                />
+                {% endif %}
+
+                {% else %}
+                <!-- Confirmation delete pathway -->
+
+                <!-- Confirm delete -->
+                <input
+                type="submit"
+                value="Delete writing"
+                id="delete"
+                name="delete"
+                class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
+                />
+
+                <!-- Don't delete -->                
+                <input
+                type="submit"
+                value="Keep writing"
+                id="keep"
+                name="keep"
+                class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
+                />
                 {% endif %}
             </form>
 

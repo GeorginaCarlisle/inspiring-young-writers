@@ -45,11 +45,11 @@ class CreateWritingForm(forms.ModelForm):
             {'class': 'border border-black'})
 
 
-    # Check title is unique
+    # Check title is unique but only when the writing is first created
     def clean_title(self):
         title = self.cleaned_data.get('title')
 
-        if Writing.objects.filter(title=title).exists():
+        if Writing.objects.filter(title=title).exclude(pk=self.instance.pk).exists():
             raise forms.ValidationError(
                 'Your title must be unique and there is already work with this title. \
                         Please make a change to your title and try again.'

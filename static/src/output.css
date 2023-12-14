@@ -982,6 +982,16 @@ video {
   color: rgb(194 65 12 / var(--tw-text-opacity));
 }
 
+.text-blue-300 {
+  --tw-text-opacity: 1;
+  color: rgb(147 197 253 / var(--tw-text-opacity));
+}
+
+.text-blue-900 {
+  --tw-text-opacity: 1;
+  color: rgb(30 58 138 / var(--tw-text-opacity));
+}
+
 /* Import Fonts from Google Fonts */
 
 .hover\:cursor-pointer:hover {
