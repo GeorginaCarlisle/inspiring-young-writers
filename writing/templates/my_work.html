@@ -34,7 +34,8 @@
                 {% for work in published_work %}
                 <p class="mb-4">
                     <a href="{% url 'view' work.id %}"
-                    title="View writing">
+                    title="View writing"
+                    class="font-bold hover:text-xl">
                     {{ work.title }}</a>
                     <span>- published on {{ work.date_approved|date:"d M Y" }}</span>
                 </p>
@@ -53,7 +54,8 @@
                 {% for work in awaiting_approval %}
                 <p class="mb-4">
                     <a href="{% url 'view' work.id %}" 
-                    title="View writing">
+                    title="View writing"
+                    class="font-bold hover:text-xl">
                     {{ work.title }}</a>
                     <span>- submitted on {{ work.date_submitted|date:"d M Y" }}</span>
                 </p>
@@ -73,7 +75,8 @@
                 {% for work in failed_approval %}
                 <p class="mb-1">
                     <a href="{% url 'edit' work.id %}"
-                    title="View and edit writing">
+                    title="View and edit writing"
+                    class="font-bold hover:text-xl">
                     {{ work.title }}</a>
                     <span>- reviewed on {{ work.date_failed|date:"d M Y" }}</span>
                 </p>
@@ -94,7 +97,8 @@
                 {% for work in drafts %}
                 <p class="mb-4">
                     <a href="{% url 'edit' work.id %}"
-                    title="View and edit writing">
+                    title="View and edit writing"
+                    class="font-bold hover:text-xl">
                     {{ work.title }}</a>
                     <span>- last edited on {{ work.updated_on|date:"d M Y" }}</span>
                 </p>
