@@ -580,10 +580,6 @@ video {
   top: 1rem;
 }
 
-.right-8 {
-  right: 2rem;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -594,10 +590,6 @@ video {
 
 .col-span-3 {
   grid-column: span 3 / span 3;
-}
-
-.m-auto {
-  margin: auto;
 }
 
 .mx-4 {
@@ -982,16 +974,6 @@ video {
   color: rgb(194 65 12 / var(--tw-text-opacity));
 }
 
-.text-blue-300 {
-  --tw-text-opacity: 1;
-  color: rgb(147 197 253 / var(--tw-text-opacity));
-}
-
-.text-blue-900 {
-  --tw-text-opacity: 1;
-  color: rgb(30 58 138 / var(--tw-text-opacity));
-}
-
 /* Import Fonts from Google Fonts */
 
 .hover\:cursor-pointer:hover {
@@ -1027,6 +1009,10 @@ video {
     grid-column: span 2 / span 2;
   }
 
+  .sm\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .sm\:mb-4 {
     margin-bottom: 1rem;
   }
@@ -1037,18 +1023,6 @@ video {
 
   .sm\:mr-2 {
     margin-right: 0.5rem;
-  }
-
-  .sm\:mb-2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .sm\:mb-0 {
-    margin-bottom: 0px;
-  }
-
-  .sm\:mb-1 {
-    margin-bottom: 0.25rem;
   }
 
   .sm\:block {
@@ -1110,12 +1084,12 @@ video {
     height: 3.5rem;
   }
 
-  .md\:w-3\/5 {
-    width: 60%;
-  }
-
   .md\:w-2\/3 {
     width: 66.666667%;
+  }
+
+  .md\:w-3\/5 {
+    width: 60%;
   }
 
   .md\:max-w-screen-md {
@@ -1179,14 +1153,6 @@ video {
 
   .lg\:w-60 {
     width: 15rem;
-  }
-
-  .lg\:w-2\/4 {
-    width: 50%;
-  }
-
-  .lg\:max-w-lg {
-    max-width: 32rem;
   }
 
   .lg\:max-w-xl {

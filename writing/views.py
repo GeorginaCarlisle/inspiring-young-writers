@@ -194,6 +194,7 @@ def edit_writing_view(request, writing_id):
                 'There is an error with your title or writing')
             context['create_writing_form'] = form
             context['work_id'] = writing_id
+            context['writing'] = writing
 
     else:
         form = CreateWritingForm(instance=writing)
@@ -201,3 +202,25 @@ def edit_writing_view(request, writing_id):
         context['work_id'] = writing_id
 
     return render(request, 'edit_writing.html', context)
+
+
+"""
+View to view an instance of writing 
+(Published or awaiting approval)
+"""
+@login_required
+def view_writing_view(request, writing_id):
+        
+    writing = get_object_or_404(Writing, pk=writing_id)
+
+    context = {}
+
+    # Check that the logged in user id matches the user_id from the url
+    if request.user != writing.author:
+        messages.error(request, 'You have been returned to your account home page, \
+                       as you were trying to access a page you are not authorised to view.')
+        return redirect('account_home')
+    
+    context['writing'] = writing
+
+    return render(request, 'view_writing.html', context)
