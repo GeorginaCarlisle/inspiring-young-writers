@@ -70,7 +70,7 @@
 
             <!-- Main body of writing -->
             <div class="border border-black h-52 overflow-auto mb-12">
-                {{ writing.body }}
+                {{ writing.body|linebreaksbr|safe }}
             </div>
 
             <!-- Links -->

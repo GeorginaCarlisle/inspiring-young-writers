@@ -911,6 +911,8 @@ Code Institute's Tutor support - Helped me to solve bug #3.
 
 - Tips for imporving accessibility on page links that are not obvious.
 
+- Pointed me towards using "|linebreaksbr|safe" to render the contents of my TextField with linebreaks intacted.
+
 
 ### Other projects
 
