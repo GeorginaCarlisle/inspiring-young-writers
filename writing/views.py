@@ -150,7 +150,7 @@ def edit_writing_view(request, writing_id):
             else:
                 writing.delete()
                 messages.success(request, "You have successfully deleted your writing")
-                return redirect('account_home')
+                return redirect('my_work', user_id=request.user.id)
             
         # Path is user clicks to NOT delete, only available if initially clicked to delete
         if 'keep' in request.POST:
