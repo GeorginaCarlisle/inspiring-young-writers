@@ -909,6 +909,8 @@ Code Institute's Tutor support - Helped me to solve bug #3.
 
 - Providing an explanation of how to add a custom error message when the unique requirement is not met during form handling.
 
+- Tips for imporving accessibility on page links that are not obvious.
+
 
 ### Other projects
 

@@ -12,6 +12,14 @@
     <!-- Container for form and all its info -->
         <div class="border border-black rounded bg-zinc-50 p-4 relative w-4/5 md:w-2/3 lg:max-w-xl mb-4">
         
+            <!-- Back buttom to return user to my work -->
+            <a
+            href="{% url 'my_work' user.id %}"
+            title="Return to My Work"
+            class="absolute top-4 right-4">
+                <i class="fa-solid fa-x text-4xl" aria-hidden="true"></i>
+            </a>
+            
             <!-- Form title and initial instruction -->
             <div class="text-center mb-4 border-b-2 border-black">
                 <h2 class="text-3xl md:text-4xl mb-2 font-title text-orange-600">
