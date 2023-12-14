@@ -285,14 +285,46 @@ The following documents all forms and any requirements needed, with details on h
 | Body | Required field | "Please fill in this field" notification pointed at input box | |
 | | Minimum length 50 | Message displayed under 'Create Writing' title: "Your writing needs to more than 50 characters long to be published. Please add a little more." | |
 
-This form also contains a confirmation check when the user submits to be published. On 'Submit to be published' a confirmation message is displayed to the user with a choice to confirm or save as draft.
+#### Create writing confirms 'submit to be published'
 
 | Trigger | Expected Response | 1st Check | Final Check |
 | Click to submit work to be published | Confirmation message and two buttons 'Confirm' 'save as draft' | PASS | |
-| Click to confirm | Redirect to account_home with "You have successfully submitted your writing to be published" message displayed. Writing correctly saved with pending_approval = True | PASS | |
-| Click to save as draft | Redirect to account_home with "You have successfully saved your writing as a draft" message displayed. Writing correctly saved with pending_approval = False | PASS | |
+| Click to confirm | Redirect to 'My Work' with "You have successfully submitted your writing to be published" message displayed. Writing correctly saved with pending_approval = True | PASS | |
+| Click to save as draft | Redirect to 'My Work' with "You have successfully saved your writing as a draft" message displayed. Writing correctly saved with pending_approval = False | PASS | |
 
 
+### Edit Writing
+
+| Input Field | Requirement | Error caught | Final check |
+| --- | ----- | ---- | -- |
+| Title | Required field | "Please fill in this field" notification pointed at input box | |
+| | Maximum length 50 | Cannot physically enter more than 50 characters | |
+| | Minimum length 3 | Message displayed under 'Create Writing' title: "Your title needs to more than 3 characters long to be published. Please add a little more." | |
+| Body | Required field | "Please fill in this field" notification pointed at input box | |
+| | Minimum length 50 | Message displayed under 'Create Writing' title: "Your writing needs to more than 50 characters long to be published. Please add a little more." | |
+
+#### Edit writing confirms 'submit to be published'
+
+| Trigger | Expected Response | 1st Check | Final Check |
+| Click to submit work to be published | Confirmation message and two buttons 'Confirm' 'save as draft' | PASS | |
+| Click to confirm | Redirect to 'My Work' with "You have successfully submitted your writing to be published" message displayed. Writing correctly saved with pending_approval = True | PASS | |
+| Click to save as draft | Redirect to 'My Work' with "You have successfully saved your writing as a draft" message displayed. Writing correctly saved with pending_approval = False | PASS | |
+
+#### Edit writing confirms 'delete writing'
+
+| Trigger | Expected Response | 1st Check | Final Check |
+| Click to 'Delete Writing' | Confirmation message and two buttons 'Keep writing' and 'Delete writing' | PASS | |
+| Click to 'Delete writing'| Redirect to 'My Work' with "You have successfully deleted your writing" message displayed. Writing has been deleted from the data base | PASS | |
+| Click to 'Keep writing' | Redirect back to 'Edit Writing' | PASS | |
+
+### View writing
+
+#### View writing confirm 'delete writing'
+
+| Trigger | Expected Response | 1st Check | Final Check |
+| Click to 'Delete Writing' | Confirmation message and two buttons 'Keep writing' and 'Delete writing' | PASS | |
+| Click to 'Delete writing'| Redirect to 'My Work' with "You have successfully deleted your writing" message displayed. Writing has been deleted from the data base | PASS | |
+| Click to 'Keep writing' | Redirect back to 'View Writing' | PASS | |
 
 ## Accessibility Testing
 

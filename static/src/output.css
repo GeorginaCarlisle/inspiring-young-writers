@@ -990,6 +990,11 @@ video {
   color: rgb(194 65 12 / var(--tw-text-opacity));
 }
 
+.text-blue-100 {
+  --tw-text-opacity: 1;
+  color: rgb(219 234 254 / var(--tw-text-opacity));
+}
+
 /* Import Fonts from Google Fonts */
 
 .hover\:cursor-pointer:hover {

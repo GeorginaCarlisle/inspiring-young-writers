@@ -45,18 +45,6 @@
                 {% endif %}
                 {% endif %}
 
-                <!-- Specific error details -->
-                {% for field in create_writing_form %}
-                <p>
-                    {% for error in field.errors %}
-                <p class="text-blue-700">{{ error }}</p>
-                {% endfor %}
-                </p>
-                {% endfor %}
-                {% if create_writing_form.non_field_errors %}
-                <p>{{create_writing_form.non_field_errors}}</p>
-                {% endif %}
-
                 <!-- Confirmation needed message -->
                 {% if confirmation_needed %}
 

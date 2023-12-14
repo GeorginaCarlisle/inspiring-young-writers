@@ -160,6 +160,24 @@ def edit_writing_view(request, writing_id):
 
         # Save as draft and submit to publish pathways
         if form.is_valid():
+            title = form.cleaned_data['title']
+            body = form.cleaned_data['body']
+
+            # Check title length
+            if len(title) < 3:
+                messages.error(
+                    request, 
+                    'Your title needs to more than 3 characters long to be published. Please add a little more.')
+                context['create_writing_form'] = form
+                return render(request, 'create_writing.html', context)
+
+            # Check body length
+            if len(body) <= 50:
+                messages.error(
+                    request, 
+                    'Your writing needs to more than 50 characters long to be published. Please add a little more.')
+                context['create_writing_form'] = form
+                return render(request, 'create_writing.html', context)
 
             # Path if user clicked to Publish
             if 'publish' in request.POST:
