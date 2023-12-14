@@ -39,8 +39,6 @@
                 <!-- Form instruction -->
                 {% else %}
 
-
-
                 {% if not confirmation_needed %}
                 {% if not confirmation_delete_needed%}
 
@@ -52,10 +50,15 @@
 
                 <!-- Special instructions if work awaiting approval to be published -->
                 {% elif writing.pending_approval %}
+                {% if writing.failed_approval %}
+                <p class="text-blue-700 mb-4">
+                    {{ writing.reason_failed}}
+                </p>
+                {% else %}
                 <p class="text-blue-700 mb-4">
                     Your work is currently awaiting approval to be  published. Editing will stop this process and any changes will need to be submitted again for approval.
                 </p>
-
+                {% endif %}
                 {% else %}
                 <!-- Normal instruction -->
                 <p class="mb-4 md:text-lg">

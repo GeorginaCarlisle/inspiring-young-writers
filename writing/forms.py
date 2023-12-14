@@ -59,7 +59,7 @@ class CreateWritingForm(forms.ModelForm):
 
 
     # Add additional fields to be generated on saving of the form
-    def save(self, commit=True, author=None, slug=None, updated_on=None, pending_approval=None, date_submitted=None, approved=None):
+    def save(self, commit=True, author=None, slug=None, updated_on=None, pending_approval=None, date_submitted=None, approved=None, failed_approval=None):
         writing = super().save(commit=False)
 
         if author:
@@ -79,6 +79,9 @@ class CreateWritingForm(forms.ModelForm):
 
         if approved is not None:
             writing.approved = approved
+
+        if failed_approval is not None:
+            writing.failed_approval = failed_approval
 
         if commit:
             writing.save()

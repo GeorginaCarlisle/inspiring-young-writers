@@ -195,7 +195,12 @@ def edit_writing_view(request, writing_id):
                     approved = False
                     date_submitted = timezone.now()
                     updated_on = timezone.now()
-                    form.save(updated_on=updated_on, pending_approval=pending_approval, approved=approved, date_submitted=date_submitted)
+                    failed_approval = False
+                    form.save(updated_on=updated_on, 
+                              pending_approval=pending_approval, 
+                              approved=approved, 
+                              date_submitted=date_submitted, 
+                              failed_approval=failed_approval)
                     
                     messages.success(request, "You have successfully submitted your writing to be published")
                     return redirect('my_work', user_id=request.user.id)
@@ -205,7 +210,11 @@ def edit_writing_view(request, writing_id):
                 updated_on = timezone.now()
                 approved = False
                 pending_approval = False
-                form.save(updated_on=updated_on, approved=approved, pending_approval=pending_approval)
+                failed_approval = False
+                form.save(updated_on=updated_on, 
+                          approved=approved, 
+                          pending_approval=pending_approval,
+                          failed_approval=failed_approval)
                 messages.success(request, f'You have successfully saved "{writing.title}" as a draft.')
                 return redirect('my_work', user_id=request.user.id)
             

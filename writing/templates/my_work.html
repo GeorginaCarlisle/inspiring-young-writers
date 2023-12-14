@@ -14,7 +14,7 @@
             
             <!-- Space for messages -->
             {% if messages %}
-            <div class="font-body text-sm md:text-xl mt-4">
+            <div class="font-body text-sm md:text-xl my-4 border-b-2 border-black">
                 <ul class="mb-4">
                     {% for message in messages %}
                     <li{% if message.tags %} class="text-blue-800 text-lg" {% endif %}>
@@ -72,7 +72,9 @@
                 
                 {% for work in failed_approval %}
                 <p class="mb-1">
-                    <a>{{ work.title }}</a>
+                    <a href="{% url 'edit' work.id %}"
+                    title="View and edit writing">
+                    {{ work.title }}</a>
                     <span>- reviewed on {{ work.date_failed|date:"d M Y" }}</span>
                 </p>
                 <p class="mb-4 text-blue-800">
