@@ -96,8 +96,7 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | The page cannot be accessed unless logged in | PASS | |
 | 20 | As a **signed-in user** I am provided with tips on how I can use the platform when I first log in to my account | | | |
 | | | | | |
-| 21 | As a **signed-in user** I am informed when page link errors occur and provided with a link straight back to my account home page | | | |
-| | | | | |
+| 21 | As a **signed-in user** I am informed when page link errors occur and provided with a link straight back to my account home page | When I am logged in the link from the 404 page takes me back to my account_home page | PASS | |
 | 22 | As the **parent of a signed-in user** I can also access the information for parents when my child is logged in | | | |
 | | | | | |
 | 23 | As the **parent of a signed-in user** I can also contact the site admin when my child is logged in | | | |
@@ -131,14 +130,35 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | I am given feedback to ensure that I am filling in the form correctly | PASS | |
 | | | I am given clear feedback to let me know I have successfully saved my work as a draft | PASS | |
 | | | On submission I am redirected to the account_home page | PASS | |
-| 31 | As a **signed-in user** I can view my published work | | | |
-| | | | | |
-| 32 | As a **signed-in user** I can view and edit any work pending approval | | | |
-| | | | | |
-| 33 | As a **signed-in user** I can view and edit my draft work | | | |
-| | | | | |
-| 34 | As a **signed-in user** I can delete my writing | | | |
-| | | | | |
+| 31 | As a **signed-in user** I can view my published work | When in 'My Work' clicking on the title of a piece of writing listed under 'My Published Work' will take me to a view_work page | PASS | |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
+| | | 'title', 'date published' and 'writing' all displayed and easy to read | PASS | |
+| | | A back button (x) to return to 'My Work' | PASS | |
+| | | There are two clear options - edit writing and delete writing | PASS | |
+| | | Clicking 'edit writing' takes me to the edit_writing page with a message unique to editing published work | PASS | |
+| | | Clicking to 'delete' my writing passes all user story USER STORY #34 criteria | PASS | |
+| 32 | As a **signed-in user** I can view and edit any work pending approval | When in 'My Work' clicking on the title of a piece of writing listed under 'My Work Awaiting Approval' will take me to a view page | PASS | |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
+| | | The view work page displays the 'title', 'date submitted', 'writing' and a message | PASS | |
+| | | An x in the top right of the container takes me back to 'My Work' | PASS | |
+| | | The view work page has two buttons 'edit writing' and 'delete writing' | PASS | |
+| | | Clicking to 'edit writing' takes me into the edit view with a message specific to work pending approval | PASS | |
+| | | Editing my work passes all user story #33 criteria | PASS | |
+| | | Clicking to 'delete' my writing passes all user story USER STORY #34 criteria | PASS | |
+| 33 | As a **signed-in user** I can view and edit my draft work | When in 'My Work' clicking on the title of a piece of writing listed under 'My Drafts' will take me to an edit page | PASS | |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
+| | | The draft work is displayed in a form allowing me to edit the title and or the writing | PASS | |
+| | | The form title and introduction help me to navigate the process of editing my work | PASS | |
+| | | There are three clear options - save draft, submit for publishing, delete writing | PASS | |
+| | | Save draft and submit for publishing function as per user stories #26 and #30 | PASS | |
+| | | Delete writing as per user story #34 | PASS | |
+| | | An x in the top right of the container takes me back to 'My Work' | PASS | |
+| | | On clicking the x I am asked to confirm that there are no changes I wish to save | FAIL | |
+| 34 | As a **signed-in user** I can delete my writing | Delete is an option I can access when editing or viewing my writing | PASS | |
+| | | I am reminded that once deleted I cannot get my writing back | PASS | |
+| | | I can confirm to delete or choose to keep | PASS | |
+| | | On choosing to delete my writing is deleted and I am returned to 'My work' with a success message | PASS | |
+| | | On choosing to keep I am return to editing or viewing my writing | | |
 | 35 | As the **site admin** all stories need to be validated by me before they are posted to the page | I can view all instances of writing through the admin page | PASS | |
 | | | I can filter writing by pending_approval | PASS | |
 | | | I can read the title, body and author of each instance of writing | PASS | |
@@ -186,8 +206,10 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | | | |
 | 52 | As a **signed-in user** I can view feedback given to me by other users | | | |
 | | | | | |
-| 53 | As a **signed-in user** I can edit my published work | | | |
-| | | | | |
+| 53 | As a **signed-in user** I can edit my published work | When viewing my published work I can click a button to 'Edit writing' | PASS | |
+| | | Clicking to 'Edit writing' takes me to the Edit Writing page | PASS | |
+| | | I am given a message specific to editing published work | PASS | |
+| | | Editing my work passes all user story #33 criteria | PASS | |
 | 54 | As a **signed-in user** I can delete feedback given to me by other users | | | |
 | | | | | |
 | 55 | As a **signed-in user** I can click a help button should I see something in the feedback that worries me | | | |
