@@ -2,7 +2,7 @@
 when writing the code in this file:
 https://github.com/GeorginaCarlisle/brobonds-movember-hackathon"""
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from django.core.mail import send_mail
 from writing.models import Writing
@@ -10,14 +10,19 @@ import os
 
 
 class Index(TemplateView):
-    """ View for the landing page """
+    # View for the landing page
     template_name = 'index.html'
 
-    """ Ensure future functions are called every time this view is """
+    # Ensure future functions are called every time this view is
     def get(self, request, *args, **kwargs):
+        # If a logged in user ends up in this view redirect to account_home
+        if request.user:
+            return redirect('account_home')
+
+
         return super().get(request, *args, **kwargs)
 
-    """ Function to pass the featured writing through """
+    # Function to pass the featured writing through
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         featured_writing = Writing.objects.filter(featured = True)
@@ -27,7 +32,7 @@ class Index(TemplateView):
 
 
 class Contact(TemplateView):
-    """ View for the contact page """
+    # View for the contact page
     template_name = 'contact.html'
 
     def post(self, request, *args, **kwargs):
