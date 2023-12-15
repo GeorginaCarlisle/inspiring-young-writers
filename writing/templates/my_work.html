@@ -6,7 +6,23 @@
 <div class="bg-blue-900 h-full pb-4 pt-16 lg:pt-20">
 
     <!-- Heading showing user they are in the their work section of platform -->
-    {% include 'my_work_title.html' %}
+    <div class="flex justify-center h-fit">
+        <div class="text-center px-4 py-2 bg-horange my-4 h-fit rounded border border-black">
+            
+            <h1 class="text-3xl md:text-4xl font-title text-black mb-2">
+                My Work
+            </h1>
+            {% if request.user.writing %}
+            <p>
+                Click on your work to view and edit
+            </p>
+            {% else %}
+            <p>
+                No saved writing. Time to get creating.
+            </p>
+            {% endif %}
+        </div>
+    </div>
 
     <div class="flex justify-center mt-4">
         <!-- Container for page information -->
@@ -17,7 +33,7 @@
             <div class="font-body text-sm md:text-xl my-4 border-b-2 border-black">
                 <ul class="mb-4">
                     {% for message in messages %}
-                    <li{% if message.tags %} class="text-blue-800 text-lg" {% endif %}>
+                    <li{% if message.tags %} class="text-blue-700 text-lg" {% endif %}>
                         {{ message }}
                     </li>
                     {% endfor %}
@@ -35,7 +51,7 @@
                 <p class="mb-4">
                     <a href="{% url 'view' work.id %}"
                     title="View writing"
-                    class="font-bold hover:text-xl">
+                    class="font-bold hover:text-blue-700">
                     {{ work.title }}</a>
                     <span>- published on {{ work.date_approved|date:"d M Y" }}</span>
                 </p>
@@ -55,7 +71,7 @@
                 <p class="mb-4">
                     <a href="{% url 'view' work.id %}" 
                     title="View writing"
-                    class="font-bold hover:text-xl">
+                    class="font-bold hover:text-blue-700">
                     {{ work.title }}</a>
                     <span>- submitted on {{ work.date_submitted|date:"d M Y" }}</span>
                 </p>
@@ -68,7 +84,7 @@
             <!-- Work that has failed approval plus reasoning and editing tips -->
             {% if failed_approval %}
             <div class="mb-4 border-b-2 border-black">
-                <h2 class="text-2xl lg:text-3xl mb-2 font-title text-blue-800">
+                <h2 class="text-2xl lg:text-3xl mb-2 font-title text-orange-600">
                     Submitted work that does not meet publishing requirements
                 </h2>
                 
@@ -76,7 +92,7 @@
                 <p class="mb-1">
                     <a href="{% url 'edit' work.id %}"
                     title="View and edit writing"
-                    class="font-bold hover:text-xl">
+                    class="font-bold hover:text-blue-700">
                     {{ work.title }}</a>
                     <span>- reviewed on {{ work.date_failed|date:"d M Y" }}</span>
                 </p>
@@ -98,7 +114,7 @@
                 <p class="mb-4">
                     <a href="{% url 'edit' work.id %}"
                     title="View and edit writing"
-                    class="font-bold hover:text-xl">
+                    class="font-bold hover:text-blue-700">
                     {{ work.title }}</a>
                     <span>- last edited on {{ work.updated_on|date:"d M Y" }}</span>
                 </p>
