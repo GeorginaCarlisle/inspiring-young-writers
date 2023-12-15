@@ -5,7 +5,7 @@
 <!-- Page Background-->
 <div class="bg-blue-900 h-full pb-4 pt-16 lg:pt-20">
 
-    <!-- Heading showing user they are in the their work section of platform -->
+    <!-- Heading showing user they are in the library section of platform -->
     {% include 'library_title.html' %}
 
     <div class="flex justify-center mt-4">
@@ -25,24 +25,25 @@
             </div>
             {% endif %}
 
-            <!-- List of published work -->
+            <!-- Title and key info for each piece of published writing -->
+            {% if published_work %}
+            {% for work in published_work %}
             <div class="mb-4 border-b-2 border-black">
-                {% if published_work %}
-                {% for work in published_work %}
-                <p class="mb-4">
-                    <a href=""
+                <p class="mb-1">
+                    <a href="{% url 'read' work.id %}"
                     title="Read writing"
-                    class="font-bold hover:text-xl">
+                    class="hover:font-bold text-xl text-orange-700">
                     {{ work.title }}</a>
-                    <span> - by {{ work.author }}</span>
-                    <span> - age {{ work.author.age }}</span>
-                    <span> - published on {{ work.date_approved|date:"d M Y" }}</span>
+                    <span> written by {{ work.author }}</span>
+                    <span> aged {{ work.author.age }}</span>
                 </p>
+                <p class="mb-4"> - published on {{ work.date_approved|date:"d M Y" }}</p>
+                
                 {% endfor %}
                 {% else %}
-                <p class="mb-2">There is no published work</p>
-                {% endif %}
+                <p class="mb-2">There is no published work. Somebody needs to get writing!</p>
             </div>
+            {% endif %}
 
         </div>
     </div>
