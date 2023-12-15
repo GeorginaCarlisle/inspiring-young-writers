@@ -25,11 +25,34 @@
         <p class="mb-6">Whatever you feel inspired to write!</p>
         <a class="p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-xl hover:cursor-pointer"
             href="{% url 'signup' %}">
-            Sign up and become an inspiring young writer
+            Become an inspiring young writer
         </a>
         {% endif %}
     </div>
   </div>
 </div>
 
+<!-- Featured Writing Container-->
+<div class="bg-horange">
+  <div class="p-8">
+    <h2>This week's featured writing:</h2>
+
+    <!-- Featured Writing -->
+    {% if featured_writing %}
+    <p>Hellooooooo</p>
+    {% endif %}
+
+    {% for writing in featured_writing %}
+    <article>
+      <h3>
+        {{ writing.title }} by {{ writing.author }} aged {{ writing.author.age }}
+      </h3>
+      <div class="border border-black h-60 overflow-auto mb-4 bg-zinc-50">
+        {{ writing.body|linebreaksbr|safe }}
+    </div>
+    </article>
+    {% endfor %}
+
+</div>
 {% endblock%}
+
