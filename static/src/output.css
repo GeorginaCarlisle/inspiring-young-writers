@@ -695,6 +695,14 @@ video {
   height: 7rem;
 }
 
+.h-3\/4 {
+  height: 75%;
+}
+
+.h-52 {
+  height: 13rem;
+}
+
 .h-96 {
   height: 24rem;
 }
@@ -710,14 +718,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-52 {
-  height: 13rem;
-}
-
-.h-3\/4 {
-  height: 75%;
 }
 
 .w-11\/12 {
@@ -747,14 +747,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-9\/12 {
-  width: 75%;
-}
-
-.w-5\/6 {
-  width: 83.333333%;
 }
 
 .max-w-2xl {
@@ -990,11 +982,6 @@ video {
   color: rgb(194 65 12 / var(--tw-text-opacity));
 }
 
-.text-blue-100 {
-  --tw-text-opacity: 1;
-  color: rgb(219 234 254 / var(--tw-text-opacity));
-}
-
 /* Import Fonts from Google Fonts */
 
 .hover\:cursor-pointer:hover {
@@ -1028,16 +1015,6 @@ video {
 .hover\:text-zinc-50:hover {
   --tw-text-opacity: 1;
   color: rgb(250 250 250 / var(--tw-text-opacity));
-}
-
-.hover\:text-blue-700:hover {
-  --tw-text-opacity: 1;
-  color: rgb(29 78 216 / var(--tw-text-opacity));
-}
-
-.hover\:text-orange-700:hover {
-  --tw-text-opacity: 1;
-  color: rgb(194 65 12 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
