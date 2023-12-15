@@ -157,7 +157,7 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | Save draft and submit for publishing function as per user stories #26 and #30 | PASS | |
 | | | Delete writing as per user story #34 | PASS | |
 | | | An x in the top right of the container takes me back to 'My Work' | PASS | |
-| | | On clicking the x I am asked to confirm that there are no changes I wish to save | FAIL | |
+| | | On clicking the x I am asked to confirm that there are no changes I wish to save | PASS | |
 | 34 | As a **signed-in user** I can delete my writing | Delete is an option I can access when editing or viewing my writing | PASS | |
 | | | I am reminded that once deleted I cannot get my writing back | PASS | |
 | | | I can confirm to delete or choose to keep | PASS | |
