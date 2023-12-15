@@ -1,0 +1,51 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+
+<!-- Page Background-->
+<div class="bg-blue-900 h-full pb-4 pt-16 lg:pt-20">
+
+    <!-- Heading showing user they are in the their work section of platform -->
+    {% include 'library_title.html' %}
+
+    <div class="flex justify-center mt-4">
+        <!-- Container for page information -->
+        <div class="border border-black rounded bg-zinc-50 p-4 relative w-11/12 sm:max-w-xl h-96 overflow-auto">
+            
+            <!-- Space for messages -->
+            {% if messages %}
+            <div class="font-body text-sm md:text-xl my-4 border-b-2 border-black">
+                <ul class="mb-4">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="text-blue-800 text-lg" {% endif %}>
+                        {{ message }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            <!-- List of published work -->
+            <div class="mb-4 border-b-2 border-black">
+                {% if published_work %}
+                {% for work in published_work %}
+                <p class="mb-4">
+                    <a href=""
+                    title="Read writing"
+                    class="font-bold hover:text-xl">
+                    {{ work.title }}</a>
+                    <span> - by {{ work.author }}</span>
+                    <span> - age {{ work.author.age }}</span>
+                    <span> - published on {{ work.date_approved|date:"d M Y" }}</span>
+                </p>
+                {% endfor %}
+                {% else %}
+                <p class="mb-2">There is no published work</p>
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock%}
