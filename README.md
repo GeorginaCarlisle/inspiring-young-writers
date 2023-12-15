@@ -782,8 +782,6 @@ Python
 
 [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
 
-[profanity-check](https://github.com/vzhou842/profanity-check) - A fast, robust Python library to check for profanity or offensive language in strings.
-
 ## Tools and Technologies
 
 Tools and technologies are listed in order of use during the development of this project.
