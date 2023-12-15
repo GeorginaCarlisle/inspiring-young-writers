@@ -38,11 +38,12 @@
                     <span> aged {{ work.author.age }}</span>
                 </p>
                 <p class="mb-4"> - published on {{ work.date_approved|date:"d M Y" }}</p>
-                
+            </div>
                 {% endfor %}
                 {% else %}
+            
                 <p class="mb-2">There is no published work. Somebody needs to get writing!</p>
-            </div>
+            
             {% endif %}
 
         </div>
