@@ -257,6 +257,7 @@ The following documents all forms and any requirements needed, with details on h
 | | Unique name required | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "User with this Username already exists." | |
 | | Text only no numbers | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Only letters and spaces are allowed in your Pen name" | |
 | | Maximum length 20 | Cannot physically enter more than 20 characters | |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
 | Age | Required field | "Please fill in this field" notification pointed at input box | |
 | | Age must be between and including 8 and 12 | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Ensure this value is greater than or equal to 8." | |
 | | | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Ensure this value is less than or equal to 12." | |
@@ -315,8 +316,10 @@ The following documents all forms and any requirements needed, with details on h
 | | Maximum length 50 | Cannot physically enter more than 50 characters | |
 | | Minimum length 3 | Message displayed under 'Create Writing' title: "Your title needs to more than 3 characters long to be published. Please add a little more." | |
 | | Unique | Message displayed under 'Create Writing' title: "Your title must be unique and there is already work with this title. Please make a change to your title and try again."| |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
 | Body | Required field | "Please fill in this field" notification pointed at input box | |
 | | Minimum length 50 | Message displayed under 'Create Writing' title: "Your writing needs to more than 50 characters long to be published. Please add a little more." | |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
 
 #### Create writing confirms 'submit to be published'
 
@@ -333,8 +336,10 @@ The following documents all forms and any requirements needed, with details on h
 | Title | Required field | "Please fill in this field" notification pointed at input box | |
 | | Maximum length 50 | Cannot physically enter more than 50 characters | |
 | | Minimum length 3 | Message displayed under 'Create Writing' title: "Your title needs to more than 3 characters long to be published. Please add a little more." | |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
 | Body | Required field | "Please fill in this field" notification pointed at input box | |
 | | Minimum length 50 | Message displayed under 'Create Writing' title: "Your writing needs to more than 50 characters long to be published. Please add a little more." | |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
 
 #### Edit writing confirms 'submit to be published'
 

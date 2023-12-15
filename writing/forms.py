@@ -2,6 +2,18 @@ from django import forms
 from django.core.exceptions import ValidationError
 from .models import Writing
 
+"""
+Code for validation against swear words copied and adapted from an example given by Chatgpt
+"""
+SWEAR_WORD_LIST = ['fuck', 'shit', 'crap', 'bollocks', 'bitch', 'cock', 'cunt', 'cum', 'fucker', 'dick']
+
+def validate_no_swearing(value):
+    for swear_word in SWEAR_WORD_LIST:
+        if swear_word.lower() in value.lower():
+            raise forms.ValidationError(
+                f"Swear word '{swear_word}' is not allowed. Please remove."
+            )
+
 
 class CreateWritingForm(forms.ModelForm):
 
@@ -10,11 +22,14 @@ class CreateWritingForm(forms.ModelForm):
         max_length=50,
         widget=forms.TextInput(attrs={
             'style': 'width: 85%;',
-            'placeholder': 'Draw others in. What is your writing about?'}))
+            'placeholder': 'Draw others in. What is your writing about?'}),
+        validators=[validate_no_swearing]
+        )
     body = forms.CharField(
         widget=forms.Textarea(attrs={
             'style': 'width: 100%;',
-            'placeholder': 'A poem, a joke, a story, an article? It is up to you!'})
+            'placeholder': 'A poem, a joke, a story, an article? It is up to you!'}),
+        validators=[validate_no_swearing]
         )
 
     class Meta:
