@@ -24,7 +24,8 @@
             <a
             href="{% url 'my_work' user.id %}"
             title="Return to My Work"
-            class="absolute top-4 right-4">
+            class="absolute top-4 right-4"
+            id="back-button">
                 <i class="fa-solid fa-x text-4xl" aria-hidden="true"></i>
             </a>
 
@@ -33,6 +34,20 @@
                 <h2 class="text-3xl md:text-4xl mb-2 font-title text-orange-600">
                     Create Writing
                 </h2>
+
+                <!-- Confirm back handled by JavaScript function closeConfirmNeeded-->
+                <div class="hidden border border-black rounded bg-zinc-50 p-4 w-full mb-4 relative bottom-7" id="confirm-modal">
+                    <p class="text-blue-700 mb-12">Are you sure you want to head back? Any changes you have made will not be saved.</p>
+                    <button 
+                        class="absolute left-4 bottom-4 p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
+                        id="keep-writing">
+                        Keep creating
+                    </button>
+                    <a class="absolute right-4 bottom-4 p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
+                        href="{% url 'my_work' user.id %}">
+                        Head back
+                    </a>
+                </div>
 
                 <!-- When errors in submitted form instruction replaced by error message -->
                 {% if messages %}
@@ -43,6 +58,9 @@
                     </li>
                     {% endfor %}
                 </ul>
+
+                <!-- Confirm back handled by JavaScript -->
+                <p id="confirm-message" class="text-blue-700"></p>
 
                 <!-- Form instruction when form first viewed -->
                 {% else %}
