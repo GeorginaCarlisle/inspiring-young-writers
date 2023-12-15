@@ -20,7 +20,7 @@ class Index(TemplateView):
     """ Function to pass the featured writing through """
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        featured_writing = Writing.objects.filter(approved = True)
+        featured_writing = Writing.objects.filter(featured = True)
 
         context['featured_writing'] = featured_writing
         return context
