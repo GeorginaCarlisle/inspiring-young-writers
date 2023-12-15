@@ -15,21 +15,15 @@ class Index(TemplateView):
 
     """ Ensure future functions are called every time this view is """
     def get(self, request, *args, **kwargs):
-        print("Index view was called!")
-        self.featured_writing(request)
         return super().get(request, *args, **kwargs)
 
-    """ Function to render the featured writing """
-    def featured_writing(self, request):
-        context = {}
+    """ Function to pass the featured writing through """
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
         featured_writing = Writing.objects.filter(approved = True)
 
-         # Print the count of featured writings
-        print("Count of Featured Writings:", featured_writing.count())
-
         context['featured_writing'] = featured_writing
-        print("Context:", context)
-        return render(request, 'index.html', context)
+        return context
 
 
 class Contact(TemplateView):

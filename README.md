@@ -913,6 +913,8 @@ Code Institute's Tutor support - Helped me to solve bug #3.
 
 - Pointed me towards using "|linebreaksbr|safe" to render the contents of my TextField with linebreaks intacted.
 
+- Providing an explanation of how to construct my class Index(TemplateView) to ensure the context I was generating was passed through to index.html
+
 
 ### Other projects
 
