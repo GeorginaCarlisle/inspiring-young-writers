@@ -31,7 +31,11 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | A hero image shows children at laptops creating stories and poems | PASS | | 
 | | | The platform name "Inspiring young writers" is clearly displayed on the left of the nav bar | PASS | |
 | | | A short introduction tells me exactly what the platform is for. | PASS | |
-| 2 | As a **new user** I can read work written by another child | | | |
+| 2 | As a **new user** I can read work written by another child | When first landing on the site I can read a piece of published writing from the platform | PASS | |
+| | | The writing is displayed directly under the platform title and call to action, so that I don't miss it | PASS | |
+| | | Only writing specifically chosen to be featured is displayed | PASS | |
+| | | The writing is referenced under a heading 'This week's featured article:' | PASS | |
+| | | The writing includes title, author, author's age and the writing | PASS | |
 | 3 | As a **new user** I am given clear information on what registered users can do | | | |
 | | | | | |
 | 4 | As the **parent of a new user** I am provided with information which details how the site works | | | |
@@ -163,9 +167,9 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | I can filter writing by pending_approval | PASS | |
 | | | I can read the title, body and author of each instance of writing | PASS | |
 | | | I can checkbox to change approved to True (default is False) and input the date | PASS | |
-| | | Only writing with approved True will be displayed in the library | | |
+| | | Only writing with approved True will be displayed in the library | PASS| |
 | | | I can also checkbox to change featured to True (default is false) | PASS | |
-| | | Only writing with approved True and featured True will be displayed on the landing page for all visitors to read | | |
+| | | Only writing with approved True and featured True will be displayed on the landing page for all visitors to read | PASS | |
 | 36 | As the **site admin** I am informed when a child submits their writing for approval | | | |
 | | | | | |
 | 37 | As the **site admin** I can send a message to the user should their writing fail to meet approval guidelines | When reviewing writing pending approval I can check the failed_approval box should the writing not meet requirements and add the date and time to date_failed | PASS | |
@@ -179,9 +183,16 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | I can filter writing by approved | PASS | |
 | | | I can checkbox to change approved to False | PASS | |
 | | | Only writing with approved True will be displayed in the library | PASS | |
-| | | I can checkbox to change failed_approval to True (default is False) and add a date to date_failed | | |
-| 40 | As a **signed-in user** I can view work from other users | | | |
-| | | | | |
+| | | I can checkbox to change failed_approval to True (default is False) and add a date to date_failed | PASS | |
+| 40 | As a **signed-in user** I can view work from other users | I can navigate to the library of inspiration from the navigation bar | PASS | |
+| | | I can navigate to the library from a call to action button on my account home page | PASS | |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
+| | | A title shows me that I am in the 'Library of inspiration' section of the platform | PASS | |
+| | | I am shown a list of all published work | PASS | |
+| | | For each piece of work I can read the 'title', 'author', 'age of author' and 'date published' | PASS | |
+| | | The list is ordered by most recent first | PASS | |
+| | | Clicking on the title brings the writing up so that I can read it | PASS | |
+| | | In the read view I can click an x to take me back to the library | PASS | |
 | 41 | As a **signed-in user** I can filter work | | | |
 | | | | | |
 | 42 | As a **signed-in user** I can click a help button should I see/read something I don’t like | | | |

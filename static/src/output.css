@@ -724,6 +724,10 @@ video {
   height: 100vh;
 }
 
+.max-h-96 {
+  max-height: 24rem;
+}
+
 .w-11\/12 {
   width: 91.666667%;
 }
