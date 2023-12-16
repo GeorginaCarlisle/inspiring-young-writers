@@ -671,6 +671,19 @@ will therefore be completed in the next iteration.
 
 #### Third Iteration
 
+<details>
+<summary>
+See more
+</summary>
+
+During the third iteration I was able to increase my team velocity, completing all the initial user stories set for the interation (40 story points worth) and adding more. There were no open user stories at the end of the iteration.
+
+![Screen shot of the Third iteration milestone showing closed issues - User stories 2, 24, 27, 33, 40 plus a task](documentation/agile/third-iteration-closed-1.png)
+![Screen shot of more closed issues - User stories 18, 21, 31, 32, 34, 35, 38, 39 and 53](documentation/agile/third-iteration-closed-2.png)
+![Screen shot of the remaining closed issues - User stories 26, 30 and 37 plus a bug](documentation/agile/third-iteration-closed-3.png)
+
+</details>
+
 #### Fourth Iteration
 
 ### MoSCoW Prioritisation
