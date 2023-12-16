@@ -70,13 +70,15 @@ def create_writing_view(request):
                 return redirect('my_work', user_id=request.user.id)
             
         else:
-            form_errors = form.errors.get('title', None)
-            if form_errors:
-                messages.error(request, form_errors)
-            else:
-                messages.error(
-                    request,
-                    'There is an error with your title or writing')
+            # Check for errors and return as a message
+            title_form_errors = form.errors.get('title', None)
+            body_form_errors = form.errors.get('body', None)
+
+
+            if title_form_errors:
+                messages.error(request, title_form_errors)
+            if body_form_errors:
+                messages.error(request, body_form_errors)
             context['create_writing_form'] = form
     else:
         form = CreateWritingForm()

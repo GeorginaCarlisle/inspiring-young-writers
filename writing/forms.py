@@ -56,6 +56,12 @@ class CreateWritingForm(forms.ModelForm):
             )
         
         return title
+    
+    # Make sure body is cleaned
+    def clean_body(self):
+        body = self.cleaned_data.get('body')
+
+        return body
 
 
     # Add additional fields to be generated on saving of the form
