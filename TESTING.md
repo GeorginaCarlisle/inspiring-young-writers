@@ -123,8 +123,9 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | On clicking the submit button, I am asked to confirm that I would like to submit my work to be published. This includes a quick explanation of the process | PASS | |
 | | | I am given clear feedback to let me know I have successfully submitted my work to be published on the site | PASS | |
 | | | On submission I am redirected to the account_home page | PASS | |
-| 27 | As a **signed-in user** my writing is passed through validation tests before it is saved | | | |
-| | | | | |
+| 27 | As a **signed-in user** my writing is passed through validation tests before it is saved | An error message is raised when a swear word is entered in the pen-name field | PASS | |
+| | | An error message is raised when a swear word is entered in the title field both during writing creation and editing | PASS | |
+| | | An error message is raised when a swear word is entered in the body field both during writing creation and editing | PASS | |
 | 28 | As a **signed-in user** I can write a blurb for my writing | | | |
 | | | | | |
 | 29 | As a **signed-in user** I can attach a picture to my writing | | | |
