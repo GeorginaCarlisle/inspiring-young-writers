@@ -325,10 +325,18 @@ The following documents all forms and any requirements needed, with details on h
 #### Create writing confirms 'submit to be published'
 
 | Trigger | Expected Response | 1st Check | Final Check |
+| --- | --- | --- | --- |
 | Click to submit work to be published | Confirmation message and two buttons 'Confirm' 'save as draft' | PASS | |
 | Click to confirm | Redirect to 'My Work' with "You have successfully submitted your writing to be published" message displayed. Writing correctly saved with pending_approval = True | PASS | |
 | Click to save as draft | Redirect to 'My Work' with "You have successfully saved your writing as a draft" message displayed. Writing correctly saved with pending_approval = False | PASS | |
 
+#### Create writing confirms 'back' button
+
+| Trigger | Expected Response | 1st Check | Final Check |
+| --- | --- | --- | --- |
+| Clicking the 'x' to come out of the create view | Confirmation message and two buttons 'keep creating' and 'head back' | PASS | |
+| Clicking 'keep creating' | In the create view with the confirmation message and associated buttons gone and no changes to writing lost | PASS | |
+| Clicking 'Head back' | Returned to the My Work view | PASS | |
 
 ### Edit Writing
 
@@ -345,6 +353,7 @@ The following documents all forms and any requirements needed, with details on h
 #### Edit writing confirms 'submit to be published'
 
 | Trigger | Expected Response | 1st Check | Final Check |
+| --- | --- | --- | --- |
 | Click to submit work to be published | Confirmation message and two buttons 'Confirm' 'save as draft' | PASS | |
 | Click to confirm | Redirect to 'My Work' with "You have successfully submitted your writing to be published" message displayed. Writing correctly saved with pending_approval = True | PASS | |
 | Click to save as draft | Redirect to 'My Work' with "You have successfully saved your writing as a draft" message displayed. Writing correctly saved with pending_approval = False | PASS | |
@@ -352,15 +361,25 @@ The following documents all forms and any requirements needed, with details on h
 #### Edit writing confirms 'delete writing'
 
 | Trigger | Expected Response | 1st Check | Final Check |
+| --- | --- | --- | --- |
 | Click to 'Delete Writing' | Confirmation message and two buttons 'Keep writing' and 'Delete writing' | PASS | |
 | Click to 'Delete writing'| Redirect to 'My Work' with "You have successfully deleted your writing" message displayed. Writing has been deleted from the data base | PASS | |
 | Click to 'Keep writing' | Redirect back to 'Edit Writing' | PASS | |
+
+#### Edit writing confirms 'back' button
+
+| Trigger | Expected Response | 1st Check | Final Check |
+| --- | --- | --- | --- |
+| Clicking the 'x' to come out of the edit view | Confirmation message and two buttons 'keep editing' and 'head back' | PASS | |
+| Clicking 'keep editing' | In the edit view with the confirmation message and associated buttons gone and no changes to writing lost | PASS | |
+| Clicking 'Head back' | Returned to the My Work view | PASS | |
 
 ### View writing
 
 #### View writing confirm 'delete writing'
 
 | Trigger | Expected Response | 1st Check | Final Check |
+| --- | --- | --- | --- |
 | Click to 'Delete Writing' | Confirmation message and two buttons 'Keep writing' and 'Delete writing' | PASS | |
 | Click to 'Delete writing'| Redirect to 'My Work' with "You have successfully deleted your writing" message displayed. Writing has been deleted from the data base | PASS | |
 | Click to 'Keep writing' | Redirect back to 'View Writing' | PASS | |
