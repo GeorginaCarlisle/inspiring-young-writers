@@ -22,6 +22,9 @@ module.exports = {
         './library/templates/library.html',
         './library/templates/library_title.html',
         './library/templates/read.html',
+        './templates/password_reset.html',
+        './templates/password_reset_sent.html',
+        './templates/password_reset_complete.html',
     ],
     theme: {
         extend: {

@@ -715,6 +715,10 @@ video {
   height: 24rem;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .h-fit {
   height: -moz-fit-content;
   height: fit-content;

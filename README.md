@@ -872,6 +872,10 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 [ChatGPT](https://chat.openai.com/) - Code for validation against swear words copied and adapted slightly from an example given by Chatgpt.
 
+[Password Reset and Password Change (Django) by CodingWithMitch](https://www.youtube.com/watch?v=W5PyXUTjwS4) - One of the Youtube tutorials followed in order to create password reset functionality.
+
+[Password Reset Email | Django (3.0) Crash Course Tutorials (pt 20) by Dennis Ivy](https://www.youtube.com/watch?v=sFPcd6myZrY) - One of the Youtube tutorials followed in order to create password reset functionality.
+
 ### Images
 
 [boys-using-silver-macbook](https://www.pexels.com/photo/boy-using-silver-macbook-indoors-3401403/) by Agung Pandit Wiguna - Used to create Hero Image.
@@ -906,7 +910,7 @@ Code Institute's Tutor support - Helped me to solve bug #3.
 
 [Django's documentation](https://docs.djangoproject.com/en/3.2) - Used throughout this project to check how to correctly use Django's inbuilt functions and models et.
 
-[ChatGPT](https://chat.openai.com/) - Used to speed up the development process, during iterations 3, by:
+[ChatGPT](https://chat.openai.com/) - Used to speed up the development process, during iterations 3 by:
 
 - Pointing me towards 'profanity-check' as a way to validate my writing inputs to prevent swear words and helping me to implement (alongside reading the documentation for profanity-check and Django documentation around validators).
 
