@@ -872,9 +872,8 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 [ChatGPT](https://chat.openai.com/) - Code for validation against swear words copied and adapted slightly from an example given by Chatgpt.
 
-[Password Reset and Password Change (Django) by CodingWithMitch](https://www.youtube.com/watch?v=W5PyXUTjwS4) - One of the Youtube tutorials followed in order to create password reset functionality.
+[Password Reset and Password Change (Django) by CodingWithMitch](https://www.youtube.com/watch?v=W5PyXUTjwS4) - Youtube tutorial followed in order to create password reset functionality.
 
-[Password Reset Email | Django (3.0) Crash Course Tutorials (pt 20) by Dennis Ivy](https://www.youtube.com/watch?v=sFPcd6myZrY) - One of the Youtube tutorials followed in order to create password reset functionality.
 
 ### Images
 
@@ -966,5 +965,8 @@ The following websites, articles and tutorials are listed in order of use during
 [Python / Django - How to create regex (RegexValidator) which allows only letters and spaces?](https://stackoverflow.com/questions/33334907/python-django-how-to-create-regex-regexvalidator-which-allows-only-letters) - This StackOverflow question provided me with a context in which to understand how to use the RegexValidator.
 
 [How to Easily Style Your Django Form Fields With Django Widget Tweaks by Pretty Printed](https://www.youtube.com/watch?v=ynToND_xOAM) - This tutorial gave me some insight into how to add widgets to provide classes to my form input fields.
+
+
+[Password Reset Email | Django (3.0) Crash Course Tutorials (pt 20) by Dennis Ivy](https://www.youtube.com/watch?v=sFPcd6myZrY) - Youtube tutorial watched in order to assist in getting the password reset functionality working
 
 [Return to contents list](#contents)

@@ -78,8 +78,12 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | 12 | As a **signed-in user** I can easily logout of my account | I can logout out easily and intuitively | PASS | |
 | | | I am given clear success feedback on logging out of my account | PASS | |
 | | | On logging out I am redirected to the home page | PASS | |
-| 13 | As a **registered user** (with the help of my parent) I can reset my password using a link sent to my parent’s email | | | |
-| | | | | |
+| 13 | As a **registered user** (with the help of my parent) I can reset my password using a link sent to my parent’s email | The login page has a clear link for 'Forgotten Password' | PASS | |
+| | | Clicking on 'Forgotten Password' takes me to a 'Password reset' page where I can enter the email address linked to my account | PASS | |
+| | | On submitting I am taken to a success message | PASS | |
+| | | I also receive an email with a link to reset my password | PASS | |
+| | | Clicking on the link takes me to the platform and a form to reset my password | PASS | |
+| | | On reseting my password I receive a success message with a link to login | PASS | |
 | 14 | As a **signed-in user** I can edit my profile | | | |
 | | | | | |
 | 15 | As a **signed-in user** I can delete my account | | | |
@@ -383,6 +387,25 @@ The following documents all forms and any requirements needed, with details on h
 | Click to 'Delete Writing' | Confirmation message and two buttons 'Keep writing' and 'Delete writing' | PASS | |
 | Click to 'Delete writing'| Redirect to 'My Work' with "You have successfully deleted your writing" message displayed. Writing has been deleted from the data base | PASS | |
 | Click to 'Keep writing' | Redirect back to 'View Writing' | PASS | |
+
+
+### Send password reset email
+
+| Input Field | Requirement | Error caught | Final check |
+| --- | ----- | ---- | -- |
+| Email | Required field | "Please fill in this field" notification pointed at input box | |
+
+### Reset password
+
+| Input Field | Requirement | Error caught | Final check |
+| --- | ----- | ---- | -- |
+| Password1 | Required field | "Please fill in this field" notification pointed at input box | |
+| | Can't be too similar to other personal information | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "The password is too similar to the username." | |
+| | Must contain at least 8 characters | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is too short. It must contain at least 8 characters." | |
+| | Can't be a commonly used password | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is too common." | |
+| | Can't be entirely numeric | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is entirely numeric." | |
+| Password2 | Required field | "Please fill in this field" notification pointed at input box | |
+| | Must match password1 | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "The two password fields didn’t match." | |
 
 ## Accessibility Testing
 
