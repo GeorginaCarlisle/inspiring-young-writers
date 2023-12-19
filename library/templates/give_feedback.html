@@ -1,0 +1,164 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+
+<!-- Pull in parent_info modal -->
+{% include 'parent_info.html' %}
+
+<!-- Page Background-->
+<div class="bg-blue-900 h-full pb-4 pt-16 lg:pt-20">
+
+    <!-- Heading showing user they are in the library section of platform -->
+    <div class="flex justify-center h-fit">
+        <div class="text-center px-4 py-2 bg-horange my-4 h-fit rounded border border-black">
+            
+            <h1 class="text-3xl md:text-4xl font-title text-black mb-2">
+                Library of inspiration
+            </h1>
+            
+        </div>
+    </div>
+
+    <div class="flex justify-center mt-4">
+        <!-- Container for page information -->
+        <div class="border border-black rounded bg-zinc-50 p-4 relative w-11/12 sm:max-w-xl h-3/4">
+            
+            <!-- Back buttom to return user to my work -->
+            <a
+            href="{% url 'library' %}"
+            title="Return to the inspirational library."
+            class="absolute top-4 right-4">
+                <i class="fa-solid fa-x text-4xl" aria-hidden="true"></i>
+            </a>
+
+            <!-- Key Details: Work title, author and author age -->
+            <div class="text-center mb-4">
+                <div class="flex justify-center">
+                    <h2 class="text-2xl md:text-2xl mb-2 w-4/5 font-title text-orange-600">
+                        {{ writing.title }}
+                    </h2>
+                </div>
+                <p class="mb-2">
+                    Written by {{ writing.author }} aged {{ writing.author.age }}
+                </p>
+            </div>
+
+            <!-- Space for messages -->
+            {% if messages %}
+            <div class="font-body text-sm md:text-xl mt-4">
+                <ul class="mb-4">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="text-blue-800 text-lg" {% endif %}>
+                        {{ message }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            <!-- Main body of writing -->
+            <div class="border border-black h-32 overflow-auto mb-4">
+                {{ writing.body|linebreaksbr|safe }}
+            </div>
+
+            <!-- Give Feedback -->
+            <h3 class="text-2xl text-center mb-2 font-title text-orange-600">Give Feedback </h3>
+
+            <!-- When errors in submitted form -->
+            {% if messages %}
+            <ul class="mb-4">
+                {% for message in messages %}
+                <li{% if message.tags %} class="text-blue-700"{% endif %}>
+                    {{ message }}
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            <!-- Confirmation needed message -->
+            {% if confirmation_needed %}
+            <div class="mb-2">
+                <h3 class="text-blue-700 font-title text-2xl mb-2">Your feedback is ready to submitted</h3>
+                <p class="text-blue-700">If you are happy for your feedback to be read by others please click to 
+                    <span class="font-bold">confirm</span>
+                </p>
+                <p class="text-blue-700">Otherwise please click to  
+                    <span class="font-bold">cancel</span>
+                </p>
+            </div>
+            {% endif %}
+
+            <div class="border border-black relative">
+
+                <!-- Give feedback form -->
+                {% if confirmation_needed %}
+                <form action="{% url 'give_feedback' writing_id=writing.id %}?confirm=True" method="post">
+
+                {% else %}
+                <form action="{% url 'give_feedback' writing_id=writing.id %}" method="post">
+                {% endif %}
+
+                {% csrf_token %}
+                
+                    <!-- Star one -->
+                    <div class="mb-4">
+                        <label for="{{ give_feedback_form.star_one.id_for_label }}" class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2">
+                            Star One
+                        </label>
+                        {{ give_feedback_form.star_one }}
+                    </div>
+
+                    <!-- Star two -->
+                    <div class="mb-4">
+                        <label for="{{ give_feedback_form.star_two.id_for_label }}" class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2">
+                            Star Two
+                        </label>
+                        {{ give_feedback_form.star_two }}
+                    </div>
+
+                    <!-- Wish -->
+                    <div class="mb-16">
+                        <label for="{{ give_feedback_form.wish.id_for_label }}" class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2">
+                            Wish
+                        </label>
+                        {{ give_feedback_form.wish }}
+                    </div>
+
+                    {% if not confirmation_needed %}
+                    <!-- Submit form to give feedback -->
+                    <input
+                    type="submit"
+                    value="Submit feedback"
+                    id="give_feedback"
+                    name="give_feedback"
+                    class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
+                    />
+
+                    {% endif %}
+
+                    {% if confirmation_needed %}
+                    <!-- Choice to confirm and submit -->
+                    <input
+                    type="submit"
+                    value="Confirm"
+                    id="confirm"
+                    name="confirm"
+                    class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
+                    />
+
+                    <!-- Choice to cancel -->
+                    <input
+                    type="submit"
+                    value="Cancel"
+                    id="cancel"
+                    name="cancel"
+                    class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
+                    />
+                    {% endif %}
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% endblock%}
