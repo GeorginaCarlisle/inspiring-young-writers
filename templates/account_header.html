@@ -32,7 +32,11 @@
           <a href="{% url 'library' %}">Library</a>
         </li>
         <li class="hover:font-bold hover:cursor-pointer">
-          <a>Parents</a>
+          <button
+            id="parent-info-open"
+            aria-label="open information for parents">
+            Parents
+          </button>
         </li>
         <li class="hover:font-bold hover:cursor-pointer">
           <a>Contact</a>
@@ -60,6 +64,7 @@
         class="hidden absolute top-0 right-0 p-4 bg-white w-36"
         id="mobile-nav"
         aria-label="close navigation"
+        aria-hidden="true"
       >
       <button class="absolute top-4 right-4" id="nav-closed">
         <i class="fa-solid fa-x text-4xl"></i>
@@ -69,7 +74,7 @@
           <li class="mb-4"><a  href="{% url 'library' %}">Library</a></li>
           <li class="mb-4">
             <button
-              id="parent-info-open"
+              id="info-parent-open"
               aria-label="open information for parents">
               Parents
             </button></li>
