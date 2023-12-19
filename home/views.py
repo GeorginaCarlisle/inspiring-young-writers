@@ -16,10 +16,8 @@ class Index(TemplateView):
     # Ensure future functions are called every time this view is
     def get(self, request, *args, **kwargs):
         # If a logged in user ends up in this view redirect to account_home
-        if request.user:
+        if request.user.is_authenticated:
             return redirect('account_home')
-
-
         return super().get(request, *args, **kwargs)
 
     # Function to pass the featured writing through
