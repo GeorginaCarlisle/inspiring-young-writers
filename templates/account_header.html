@@ -61,13 +61,18 @@
         id="mobile-nav"
         aria-label="close navigation"
       >
-        <button class="absolute top-4 right-4" id="nav-closed">
-          <i class="fa-solid fa-x text-4xl"></i>
-        </button>
+      <button class="absolute top-4 right-4" id="nav-closed">
+        <i class="fa-solid fa-x text-4xl"></i>
+      </button>
         <ul class="flex flex-col justify-around font-body text-xl mt-10">
           <li class="mb-4"><a  href="{% url 'my_work' user.id %}">My Work</a></li>
           <li class="mb-4"><a  href="{% url 'library' %}">Library</a></li>
-          <li class="mb-4"><a>Parents</a></li>
+          <li class="mb-4">
+            <button
+              id="parent-info-open"
+              aria-label="open information for parents">
+              Parents
+            </button></li>
           <li class="mb-4"><a>Contact</a></li>
           <li class="mb-4"><a>My Profile</a></li>
           <li class="mb-4"><a href="{% url 'logout' %}">Logout</a></li>

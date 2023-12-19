@@ -584,8 +584,20 @@ video {
   top: 1rem;
 }
 
+.top-7 {
+  top: 1.75rem;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
 .z-10 {
   z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .col-span-1 {
@@ -594,6 +606,10 @@ video {
 
 .col-span-3 {
   grid-column: span 3 / span 3;
+}
+
+.m-auto {
+  margin: auto;
 }
 
 .mx-4 {

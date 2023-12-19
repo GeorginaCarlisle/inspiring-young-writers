@@ -22,9 +22,11 @@ module.exports = {
         './library/templates/library.html',
         './library/templates/library_title.html',
         './library/templates/read.html',
-        './templates/password_reset.html',
-        './templates/password_reset_sent.html',
-        './templates/password_reset_complete.html',
+        './templates/password_reset/password_reset.html',
+        './templates/password_reset/password_reset_sent.html',
+        './templates/password_reset/password_reset_complete.html',
+        './templates/password_reset/password_reset_form.html',
+        './templates/parent_info.html',
     ],
     theme: {
         extend: {

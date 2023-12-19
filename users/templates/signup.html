@@ -3,6 +3,9 @@
 <!-- Pull in hero image -->
 {% include 'hero.html' %}
 
+<!-- Pull in parent_info modal -->
+{% include 'parent_info.html' %}
+
 <div class="flex justify-center p-8 bg-blue-900">
   <!-- Container for form and all its info -->
   <div
@@ -106,7 +109,12 @@
         </div>
         <p class="mb-4 text-sm">
           Please see the
-          <a>information for parents</a>
+          <button
+            id="open-parent-info"
+            aria-label="open information for parents"
+            class="text-blue-700">
+            Information for parents
+          </button>
           to find out more about what signing up will mean for your child and
           the steps that are in place to increase safety. If you have any
           questions of concerns please
