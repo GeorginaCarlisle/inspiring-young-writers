@@ -1,9 +1,11 @@
+{% load static %}
+
 <!-- Parent info modal handled by JavaScript function parentInfo -->
-<div class="hidden fixed top-10 z-20 justify-center w-full"
+<div class="hidden fixed top-10 z-20 justify-center w-full h-4/5"
     id="parent-info-modal"
     aria-hidden="true">
 
-    <div class="relative border border-black rounded bg-zinc-50 p-4 w-11/12 mb-4">
+    <div class="relative border border-black rounded bg-white p-4 w-11/12 max-w-5xl mb-4 overflow-auto">
 
         <!-- Close Modal Button -->
         <button id="parent-info-closed" 
@@ -13,6 +15,104 @@
         </button>
         
         <!-- Modal info -->
-        <h2>Information for Parents</h2>
+
+        <!-- Title and introduction -->
+        <div class="mb-4 border-b-2 border-black">
+        <h2 class="text-2xl md:text-3xl mb-2 font-title text-orange-600 text-center">
+            Information for Parents</h2>
+        <p class="mb-4">Please read through the information below to see how this platform works, the steps we have put in place to increase safety, and what you and your child can do to keep themselves and others safe on the platform.</p>
+        </div>
+
+        <!-- Child's profile -->
+        <div class="mb-4 border-b-2 border-black md:grid md:grid-cols-2 p-2">
+            <div class="mb-2">
+                <h3 class="text-xl md:text-2xl mb-4 text-orange-600 text-center underline">
+                    Your child's profile
+                </h3>
+                <p>
+                    When using the platform, your child will be referenced by their pen name and age. No other identifying information will be used on the platform.
+                </p>
+                <p>
+                    Their pen name should not be their real name.
+                </p>
+                <p>
+                    Your child's age will be used so that other children using the platform are able to identify the writing produced by someone older or younger than them and respond appropriately.
+                </p>
+            </div>
+            <div class="w-full sm:flex sm:justify-center md:items-center my-4">
+                <img src="{% static 'images/parent-info/published-work.png' %}" 
+                    alt="Screenshot showing a published piece of writing referenced by pen name and age" 
+                    class="w-full border-2 border-blue-800 rounded sm:w-4/5 md:w-80 md:h-40 lg:w-96 lg:h-48"/>
+            </div>
+        </div>
+
+        <!-- Signing up and logging in -->
+        <div class="mb-4 border-b-2 border-black md:grid md:grid-cols-2 p-2">
+            <div class="mb-2 md:order-2">
+                <h3 class="text-xl md:text-2xl mb-4 text-orange-600 text-center underline">
+                    Signing up and logging in
+                </h3>
+                <p>
+                    Only you and your child will be able to access their account using their pen name and a password.                </p>
+                <p>
+                    Please help your child to create a strong password.
+                </p>
+                <p>
+                    When signing up, you will need to provide your (not your child's) first name and last name as well as your email address. This is so that we can contact you should the need arise.
+                </p>
+            </div>
+            <div class="w-full sm:flex sm:justify-center md:items-center my-4 md:order-1">
+                <img src="{% static 'images/parent-info/sign-up.png' %}" 
+                    alt="Screenshot of the sign-up page showing details required" 
+                    class="w-full border-2 border-blue-800 rounded sm:w-4/5 md:w-80 md:h-60 lg:w-96 lg:h-72"/>
+            </div>
+        </div>
+
+        <!-- Published Work -->
+        <div class="mb-4 border-b-2 border-black md:grid md:grid-cols-2 p-2">
+            <div class="mb-2">
+                <h3 class="text-xl md:text-2xl mb-4 text-orange-600 text-center underline">
+                    Published work
+                </h3>
+                <p>
+                    Your child will have the option to submit their writing to be published on the platform for other children to read.
+                </p>
+                <p>
+                    When submitted their work will be sent to be approved by our Admin, who will read through and check that it is suitable to be read by other children.
+                </p>
+                <p class="font-bold">
+                    Nothing can be published to the platform without the approval of our Admin.
+                </p>
+                <p>
+                    We would appreciate it, if you could have a quick glance over anything your child writes before they submit. Please also support your child to understand that it may take a few days before their work is published.
+                </p>
+                <p>
+                    If any changes to their work are needed before approval can be granted, then a message will appear within the 'My Work' section of their account and you will alsoe be notified by email. PWe would appreciate if you could then support your child in understanding any changes to be made.
+                </p>
+            </div>
+            <div class="w-full sm:flex sm:justify-center md:items-center my-4">
+                <div class="sm:w-4/5 md:w-fit">
+                    <img src="{% static 'images/parent-info/submitted-work.png' %}" 
+                        alt="Screenshot showing a published piece of writing referenced by pen name and age" 
+                        class="mb-2 md:mb-10 w-full border-2 border-blue-800 rounded md:w-80 md:h-40 lg:w-96 lg:h-48"/>
+                    <img src="{% static 'images/parent-info/failed-work.png' %}" 
+                    alt="Screenshot showing a published piece of writing referenced by pen name and age" 
+                    class="w-full border-2 border-blue-800 rounded md:w-80 md:max-h-32 lg:w-96 lg:h-36"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- Raising concern -->
+        <div class="mb-4 p-2">
+            <div class="mb-2">
+                <h3 class="text-xl md:text-2xl mb-4 text-orange-600 text-center underline">
+                    Raising Concern
+                </h3>
+                <p class="text-center">
+                    If you should have any concerns then please contact us using the contact form.
+                </p>
+            </div>
+
+        </div>
     </div>
 </div>
