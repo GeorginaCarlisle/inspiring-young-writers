@@ -38,8 +38,15 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | The writing includes title, author, author's age and the writing | PASS | |
 | 3 | As a **new user** I am given clear information on what registered users can do | | | |
 | | | | | |
-| 4 | As the **parent of a new user** I am provided with information which details how the site works | | | |
-| | | | | |
+| 4 | As the **parent of a new user** I am provided with information which details how the site works | I can navigate to 'Information for parents' from the navigation bar | | |
+| | | I can navigate to 'Information for parents' from the sign-up page | | |
+| | | 'Information for parents' available across the full platform | | |
+| | | 'Information for parents' opens up in a modal | | |
+| | | A title makes it clear the information is targeted towards parents | | |
+| | | An introduction quickly explains what information is contained in this section | | |
+| | | The information is split into clear sections each with a title and picture | | |
+| | | The layout and styling of the information makes it easy to scan and pick out information of interest | | |
+| | | A clear back button can be used to re-hide the information | | |
 | 5 | As the **parent of a new user** I can contact the site admin | I can navigate intuitively and easily to the contact page | PASS | |
 | | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
 | | | The title and introduction reassure me as to what the form is for | PASS | |
