@@ -18,6 +18,20 @@ def validate_no_swearing(value):
 
 
 """
+Custom validator passing through clear messaging when age requirements are not met
+"""
+def validate_age(value):
+    if value < 8:
+        raise forms.ValidationError(
+            "Sorry but this platform has been specifically designed for children aged 8 to 12"
+        )
+    if value > 12:
+        raise forms.ValidationError(
+            "Sorry but this platform has been specifically designed for children aged 8 to 12"
+        )
+
+
+"""
 The following Tutorial was followed and adapted when creating the NewUserForm
 Register New Users with Django Custom User by CodingWithMitch
 https://www.youtube.com/watch?v=sbCd52JiCU4
@@ -29,7 +43,8 @@ class NewUserForm(UserCreationForm):
         widget=forms.TextInput(attrs={'style': 'border-color: black'}),
         validators=[validate_no_swearing])
     age = forms.IntegerField(
-        widget=forms.NumberInput(attrs={'style': 'width: 40px'}))
+        widget=forms.NumberInput(attrs={'style': 'width: 40px'}),
+        validators=[validate_age])
     first_name = forms.CharField(max_length=12)
     last_name = forms.CharField(max_length=20)
     email = forms.EmailField()
