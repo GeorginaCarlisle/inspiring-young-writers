@@ -20,20 +20,20 @@ class GiveFeedbackForm(forms.ModelForm):
     # Run field values through profanity validator
     star_one = forms.CharField(
         max_length=400,
-        widget=forms.TextInput(attrs={
-            'style': 'width: 100%; height: 3.5rem;'}),
+        widget=forms.Textarea(attrs={
+            'style': 'width: 100%; height: 3.5rem; padding: 4px'}),
         validators=[validate_no_swearing]
         )
     star_two = forms.CharField(
         max_length=400,
-        widget=forms.TextInput(attrs={
-            'style': 'width: 100%; height: 3.5rem;'}),
+        widget=forms.Textarea(attrs={
+            'style': 'width: 100%; height: 3.5rem; padding: 4px'}),
         validators=[validate_no_swearing]
         )
     wish = forms.CharField(
         max_length=400,
-        widget=forms.TextInput(attrs={
-            'style': 'width: 100%; height: 3.5rem;'}),
+        widget=forms.Textarea(attrs={
+            'style': 'width: 100%; height: 3.5rem; padding: 4px'}),
         validators=[validate_no_swearing]
         )
     

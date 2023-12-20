@@ -27,7 +27,7 @@ class CreateWritingForm(forms.ModelForm):
         )
     body = forms.CharField(
         widget=forms.Textarea(attrs={
-            'style': 'width: 100%;',
+            'style': 'width: 100%; padding: 4px',
             'placeholder': 'A poem, a joke, a story, an article? It is up to you!'}),
         validators=[validate_no_swearing]
         )
