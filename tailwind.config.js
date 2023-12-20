@@ -29,6 +29,7 @@ module.exports = {
         './templates/parent_info.html',
         './library/templates/give_feedback.html',
         './writing/templates/view_my_feedback.html',
+        './library/templates/read_feedback.html',
     ],
     theme: {
         extend: {

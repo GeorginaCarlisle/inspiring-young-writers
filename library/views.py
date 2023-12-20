@@ -129,3 +129,22 @@ def give_feedback_view(request, writing_id):
         context['give_feedback_form'] = form
 
     return render(request, 'give_feedback.html', context)
+
+
+"""
+View to view the feedback asscoiated with an instance of writing
+Called from read page
+"""
+@login_required
+def read_feedback_view(request, writing_id):
+        
+    writing = get_object_or_404(Writing, pk=writing_id)
+
+    feedback_received = writing.received_feedback.all().filter(approved = True)
+
+    context = {}
+    
+    context['writing'] = writing
+    context['feedback_received'] = feedback_received
+
+    return render(request, 'read_feedback.html', context)
