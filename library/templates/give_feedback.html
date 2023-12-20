@@ -43,19 +43,6 @@
                 </p>
             </div>
 
-            <!-- Space for messages -->
-            {% if messages %}
-            <div class="font-body text-sm md:text-xl mt-4">
-                <ul class="mb-4">
-                    {% for message in messages %}
-                    <li{% if message.tags %} class="text-blue-800 text-lg" {% endif %}>
-                        {{ message }}
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endif %}
-
             <!-- Main body of writing -->
             <div class="border border-black h-40 overflow-auto mb-4 p-2">
                 {{ writing.body|linebreaksbr|safe }}
