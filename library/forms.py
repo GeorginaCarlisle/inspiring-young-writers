@@ -70,7 +70,7 @@ class GiveFeedbackForm(forms.ModelForm):
         return wish
 
     # Add additional fields to be generated on saving of the form
-    def save(self, commit=True, giver=None, writing=None, date_created=None, date_last_edit=None):
+    def save(self, commit=True, giver=None, writing=None, date_created=None, date_last_edit=None, approved=None):
         feedback = super().save(commit=False)
 
         if giver:
@@ -84,6 +84,9 @@ class GiveFeedbackForm(forms.ModelForm):
 
         if date_last_edit:
             feedback.date_last_edit = date_last_edit
+
+        if approved:
+            feedback.approved = approved
 
         if commit:
             feedback.save()
