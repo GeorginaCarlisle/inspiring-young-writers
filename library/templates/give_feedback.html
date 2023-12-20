@@ -64,32 +64,30 @@
             <!-- Give Feedback -->
             <h3 class="text-2xl text-center mb-2 font-title text-orange-600">Give Feedback </h3>
 
-            <!-- When errors in submitted form -->
-            {% if messages %}
-            <ul class="mb-4">
-                {% for message in messages %}
-                <li{% if message.tags %} class="text-blue-700"{% endif %}>
-                    {{ message }}
-                </li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-
-            <!-- Confirmation needed message -->
-            {% if confirmation_needed %}
-            <div class="mb-2">
-                <h3 class="text-blue-700 font-title text-2xl mb-2">Your feedback is ready to submitted</h3>
-                <p class="text-blue-700">If you are happy for your feedback to be read by others please click to 
-                    <span class="font-bold">confirm</span>
-                </p>
-                <p class="text-blue-700">Otherwise please click to  
-                    <span class="font-bold">cancel</span>
-                </p>
-            </div>
-            {% endif %}
-
             <div class="border border-black relative p-2">
                 
+                <!-- Confirmation needed message -->
+                {% if confirmation_needed %}
+                <div class="mb-2">
+                    <h3 class="text-blue-700 font-title text-2xl mb-2">Your feedback is ready to submitted</h3>
+                    <p class="text-blue-700">If you are happy for your feedback to be read by others please click to 
+                        <span class="font-bold">confirm</span>
+                    </p>
+                    <p class="text-blue-700">Otherwise please click to  
+                        <span class="font-bold">cancel</span>
+                    </p>
+                </div>
+                {% else %}
+                <!-- When errors in submitted form -->
+                {% if messages %}
+                <ul class="mb-4">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="text-blue-700"{% endif %}>
+                        {{ message }}
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
                 <!-- Feedback instruction -->
                 <p class="mb-2">
                     Complete each of the sentences below to give two stars and a wish to {{ writing.author }}.
@@ -97,6 +95,8 @@
                 <p class="mb-4">
                     Remember to keep your feedback positive and encouraging.
                 </p>
+                {% endif %}
+                {% endif %}
 
                 <!-- Give feedback form -->
                 {% if confirmation_needed %}
