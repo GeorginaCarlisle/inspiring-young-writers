@@ -439,13 +439,6 @@ The following documents all forms and any requirements needed, with details on h
 | Click to confirm | Redirect to 'Library of inspiration' with "You have successfully submitted your feedback for "". It may take a couple of days to be approved." message displayed. | PASS | |
 | Click to cancel | Return to normal give feedback view with form input still there | PASS | |
 
-#### Create writing confirms 'back' button
-
-| Trigger | Expected Response | 1st Check | Final Check |
-| --- | --- | --- | --- |
-| Clicking the 'x' to come out of the create view | Confirmation message and two buttons 'keep creating' and 'head back' | PASS | |
-| Clicking 'keep creating' | In the create view with the confirmation message and associated buttons gone and no changes to writing lost | PASS | |
-| Clicking 'Head back' | Returned to the My Work view | PASS | |
 
 ## Accessibility Testing
 
