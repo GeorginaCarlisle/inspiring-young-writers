@@ -13,6 +13,9 @@ class Feedback(models.Model):
     date_last_edit = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
     date_approved = models.DateTimeField(null=True, blank=True)
+    failed_approval = models.BooleanField(default=False)
+    date_failed = models.DateTimeField(null=True, blank=True)
+    reason_failed = models.TextField(null=True, blank=True)
 
     class Meta:
         ordering = ['-date_approved']
