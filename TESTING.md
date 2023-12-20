@@ -439,6 +439,12 @@ The following documents all forms and any requirements needed, with details on h
 | Click to confirm | Redirect to 'Library of inspiration' with "You have successfully submitted your feedback for "". It may take a couple of days to be approved." message displayed. | PASS | |
 | Click to cancel | Return to normal give feedback view with form input still there | PASS | |
 
+#### Give feedback prevented if user is the author of the writing
+
+| Trigger | Expected Response | 1st Check | Final Check |
+| --- | --- | --- | --- |
+| Click to give feedback | No form to give feedback. Instead a message "You can't give feedback for yourself!" | PASS | |
+
 
 ## Accessibility Testing
 

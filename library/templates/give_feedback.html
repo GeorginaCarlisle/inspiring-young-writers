@@ -53,6 +53,15 @@
 
             <div class="border border-black relative p-2">
                 
+                <!-- Prevent user for giving feedback for their own writing -->
+                {% ifequal user.username writing.author.username %}
+                <p class="mb-12">You can't give feedback for yourself!</p>
+                <a class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
+                href="{% url 'read' writing_id=writing.id %}">
+                    Return
+                </a>
+
+                {% else %}
                 <!-- Confirmation needed message -->
                 {% if confirmation_needed %}
                 <div class="mb-2">
@@ -164,6 +173,8 @@
                     {% endif %}
 
                 </form>
+                {% endifequal %}
+
             </div>
         </div>
     </div>
