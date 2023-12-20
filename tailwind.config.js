@@ -28,6 +28,7 @@ module.exports = {
         './templates/password_reset/password_reset_form.html',
         './templates/parent_info.html',
         './library/templates/give_feedback.html',
+        './writing/templates/view_my_feedback.html',
     ],
     theme: {
         extend: {

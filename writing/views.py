@@ -288,3 +288,28 @@ def delete_writing_view(request, writing_id):
         writing.delete()
         messages.success(request, "You have successfully deleted your writing")
         return redirect('my_work', user_id=request.user.id) 
+
+
+"""
+View to view the feedback asscoiated with an instance of published writing
+Called from view writing page
+"""
+@login_required
+def view_my_feedback(request, writing_id):
+        
+    writing = get_object_or_404(Writing, pk=writing_id)
+
+    feedback_received = writing.received_feedback.all().filter(approved = True)
+
+    context = {}
+
+    # Check that the logged in user id matches the user_id from the url
+    if request.user != writing.author:
+        messages.error(request, 'You have been returned to your account home page, \
+                       as you were trying to access a page you are not authorised to view.')
+        return redirect('account_home')
+    
+    context['writing'] = writing
+    context['feedback_received'] = feedback_received
+
+    return render(request, 'view_my_feedback.html', context)
