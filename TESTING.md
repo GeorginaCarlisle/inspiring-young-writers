@@ -431,13 +431,13 @@ The following documents all forms and any requirements needed, with details on h
 | | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your wish" | |
 | | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
 
-#### Create writing confirms 'submit to be published'
+#### Give feedback confirms 'submit feedback'
 
 | Trigger | Expected Response | 1st Check | Final Check |
 | --- | --- | --- | --- |
-| Click to submit work to be published | Confirmation message and two buttons 'Confirm' 'save as draft' | PASS | |
-| Click to confirm | Redirect to 'My Work' with "You have successfully submitted your writing to be published" message displayed. Writing correctly saved with pending_approval = True | PASS | |
-| Click to save as draft | Redirect to 'My Work' with "You have successfully saved your writing as a draft" message displayed. Writing correctly saved with pending_approval = False | PASS | |
+| Click to submit feedback | Confirmation message and two buttons 'Confirm' 'Cancel' | PASS | |
+| Click to confirm | Redirect to 'Library of inspiration' with "You have successfully submitted your feedback for "". It may take a couple of days to be approved." message displayed. | PASS | |
+| Click to cancel | Return to normal give feedback view with form input still there | PASS | |
 
 #### Create writing confirms 'back' button
 

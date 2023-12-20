@@ -103,7 +103,7 @@ def give_feedback_view(request, writing_id):
                     
                     messages.success(
                         request,
-                        f'You have successfully submitted your feedback for "{writing}". It may take a couple of days to be approved')
+                        f'You have successfully submitted your feedback for "{writing}". It may take a couple of days to be approved.')
                     return redirect('library')
                 
                 # If submit cancelled
