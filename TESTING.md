@@ -443,8 +443,16 @@ The following documents all forms and any requirements needed, with details on h
 
 | Trigger | Expected Response | 1st Check | Final Check |
 | --- | --- | --- | --- |
-| Click to give feedback | No form to give feedback. Instead a message "You can't give feedback for yourself!" | PASS | |
+| Click to give feedback | No form to give feedback. Instead a message "You can't give feedback for yourself!" and an option to return | PASS | |
+| Click return | Return to read view | PASS | |
 
+#### Give feedback prevented if feedback already given
+
+| Trigger | Expected Response | 1st Check | Final Check |
+| --- | --- | --- | --- |
+| Click to give feedback | No form to give feedback. Instead a message "You have already given feedback for this writing." and options to return or read feedback | PASS | |
+| Click return | Return to read view | PASS | |
+| Click read feedback | Taken to read_feedback view | PASS | |
 
 ## Accessibility Testing
 

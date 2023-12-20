@@ -54,12 +54,25 @@
             <div class="border border-black relative p-2">
                 
                 <!-- Prevent user for giving feedback for their own writing -->
-                {% ifequal user.username writing.author.username %}
+                {% if user.username == writing.author.username %}
                 <p class="mb-12">You can't give feedback for yourself!</p>
                 <a class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
                 href="{% url 'read' writing_id=writing.id %}">
                     Return
                 </a>
+
+                <!-- Prevent user for giving more than one lot of feedback per instance of published writing -->
+                {% elif user.username in given_feedback %}
+                <p class="mb-14">You have already given feedback for this writing. Click to 
+                    <span class="font-bold">read feedback</span> to see the feedback you gave.</p>
+                <a class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
+                href="{% url 'read' writing_id=writing.id %}">
+                    Return
+                </a>
+                <a class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
+                href="{% url 'read_feedback' writing_id=writing.id %}">
+                    Read Feedback
+                </a>    
 
                 {% else %}
                 <!-- Confirmation needed message -->
@@ -173,7 +186,7 @@
                     {% endif %}
 
                 </form>
-                {% endifequal %}
+                {% endif %}
 
             </div>
         </div>

@@ -46,9 +46,17 @@ def give_feedback_view(request, writing_id):
 
     writing = get_object_or_404(Writing, pk=writing_id)
 
+    # create a list of all users who have given feedback
+    feedback_received = writing.received_feedback.all()
+    given_feedback = []
+    for feedback in feedback_received:
+        giver = feedback.giver.username
+        given_feedback.append(giver)
+
     context = {}
 
     context['writing'] = writing
+    context['given_feedback'] = given_feedback
 
     # If form has been submitted
     if request.POST:
