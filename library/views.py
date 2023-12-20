@@ -101,7 +101,9 @@ def give_feedback_view(request, writing_id):
                     
                     form.save(giver=giver, writing=writing, date_last_edit=date_last_edit, date_created=date_created)
                     
-                    messages.success(request, "You have successfully submitted your feedback. It may take a couple of days to be approved")
+                    messages.success(
+                        request,
+                        f'You have successfully submitted your feedback for "{writing}". It may take a couple of days to be approved')
                     return redirect('library')
                 
                 # If submit cancelled

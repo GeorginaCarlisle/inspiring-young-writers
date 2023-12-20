@@ -414,6 +414,39 @@ The following documents all forms and any requirements needed, with details on h
 | Password2 | Required field | "Please fill in this field" notification pointed at input box | |
 | | Must match password1 | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "The two password fields didn’t match." | |
 
+### Give Feedback
+
+| Input Field | Requirement | Error caught | Final check |
+| --- | ----- | ---- | -- |
+| Star one | Required field | "Please fill in this field" notification pointed at input box | |
+| | Maximum length 400 | Cannot physically enter more than 400 characters | |
+| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your first star" | |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
+| Star two | Required field | "Please fill in this field" notification pointed at input box | |
+| | Maximum length 400 | Cannot physically enter more than 400 characters | |
+| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your second star" | |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
+| Wish | Required field | "Please fill in this field" notification pointed at input box | |
+| | Maximum length 400 | Cannot physically enter more than 400 characters | |
+| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your wish" | |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
+
+#### Create writing confirms 'submit to be published'
+
+| Trigger | Expected Response | 1st Check | Final Check |
+| --- | --- | --- | --- |
+| Click to submit work to be published | Confirmation message and two buttons 'Confirm' 'save as draft' | PASS | |
+| Click to confirm | Redirect to 'My Work' with "You have successfully submitted your writing to be published" message displayed. Writing correctly saved with pending_approval = True | PASS | |
+| Click to save as draft | Redirect to 'My Work' with "You have successfully saved your writing as a draft" message displayed. Writing correctly saved with pending_approval = False | PASS | |
+
+#### Create writing confirms 'back' button
+
+| Trigger | Expected Response | 1st Check | Final Check |
+| --- | --- | --- | --- |
+| Clicking the 'x' to come out of the create view | Confirmation message and two buttons 'keep creating' and 'head back' | PASS | |
+| Clicking 'keep creating' | In the create view with the confirmation message and associated buttons gone and no changes to writing lost | PASS | |
+| Clicking 'Head back' | Returned to the My Work view | PASS | |
+
 ## Accessibility Testing
 
 [Return to contents list](#contents)
