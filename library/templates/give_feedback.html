@@ -57,7 +57,7 @@
             {% endif %}
 
             <!-- Main body of writing -->
-            <div class="border border-black h-32 overflow-auto mb-4">
+            <div class="border border-black h-40 overflow-auto mb-4 p-2">
                 {{ writing.body|linebreaksbr|safe }}
             </div>
 
@@ -88,40 +88,60 @@
             </div>
             {% endif %}
 
-            <div class="border border-black relative">
+            <div class="border border-black relative p-2">
+                
+                <!-- Feedback instruction -->
+                <p class="mb-2">
+                    Complete each of the sentences below to give two stars and a wish to {{ writing.author }}.
+                </p>
+                <p class="mb-4">
+                    Remember to keep your feedback positive and encouraging.
+                </p>
 
                 <!-- Give feedback form -->
                 {% if confirmation_needed %}
-                <form action="{% url 'give_feedback' writing_id=writing.id %}?confirm=True" method="post">
+                <form action="{% url 'give_feedback' writing_id=writing.id %}?confirm=True" method="post" class="p-2">
 
                 {% else %}
-                <form action="{% url 'give_feedback' writing_id=writing.id %}" method="post">
+                <form action="{% url 'give_feedback' writing_id=writing.id %}" method="post" class="p-2">
                 {% endif %}
 
                 {% csrf_token %}
                 
                     <!-- Star one -->
-                    <div class="mb-4">
-                        <label for="{{ give_feedback_form.star_one.id_for_label }}" class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2">
-                            Star One
+                    <div class="mb-4 grid grid-cols-6 sm:grid-cols-8">
+                        <label for="{{ give_feedback_form.star_one.id_for_label }}" 
+                            class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2 col-span-1 flex items-center h-24">
+                            <i class="fa-regular fa-star text-4xl" aria-label="star one"></i>
                         </label>
-                        {{ give_feedback_form.star_one }}
+                        <div class="border border-black col-span-5 sm:col-span-7 p-2">
+                            <p>I loved it when ...</p>
+                            {{ give_feedback_form.star_one }}
+                        </div>
                     </div>
 
                     <!-- Star two -->
-                    <div class="mb-4">
-                        <label for="{{ give_feedback_form.star_two.id_for_label }}" class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2">
-                            Star Two
+                    <div class="mb-4 grid grid-cols-6 sm:grid-cols-8">
+                        <label for="{{ give_feedback_form.star_two.id_for_label }}" 
+                            class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2 col-span-1 flex items-center h-24">
+                            <i class="fa-regular fa-star text-4xl" aria-label="star two"></i>
                         </label>
-                        {{ give_feedback_form.star_two }}
+                        <div class="border border-black col-span-5 sm:col-span-7 p-2">
+                            <p>I love how you ...</p>
+                            {{ give_feedback_form.star_two }}
+                        </div>
                     </div>
 
                     <!-- Wish -->
-                    <div class="mb-16">
-                        <label for="{{ give_feedback_form.wish.id_for_label }}" class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2">
-                            Wish
+                    <div class="mb-16 grid grid-cols-6 sm:grid-cols-8">
+                        <label for="{{ give_feedback_form.wish.id_for_label }}" 
+                            class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2 col-span-1 flex items-center h-24">
+                            <i class="fa-regular fa-lightbulb text-4xl" aria-label="idea"></i>
                         </label>
-                        {{ give_feedback_form.wish }}
+                        <div class="border border-black col-span-5 sm:col-span-7 p-2">
+                            <p>It would be great if ...</p>
+                            {{ give_feedback_form.wish }}
+                        </div>
                     </div>
 
                     {% if not confirmation_needed %}
