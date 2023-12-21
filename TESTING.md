@@ -112,8 +112,8 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | 20 | As a **signed-in user** I am provided with tips on how I can use the platform when I first log in to my account | | | |
 | | | | | |
 | 21 | As a **signed-in user** I am informed when page link errors occur and provided with a link straight back to my account home page | When I am logged in the link from the 404 page takes me back to my account_home page | PASS | |
-| 22 | As the **parent of a signed-in user** I can also access the information for parents when my child is logged in | | | |
-| | | | | |
+| 22 | As the **parent of a signed-in user** I can also access the information for parents when my child is logged in | 'Parent' link is available when logged in as well as when not | PASS | |
+| | | Clicking on 'Parent' in the header brings up the parent information | PASS | |
 | 23 | As the **parent of a signed-in user** I can also contact the site admin when my child is logged in | | | |
 | | | | | |
 | 24 | As a **signed-in user** I can navigate to a page where all my work is listed by status | I can navigate to my work from the navigation bar | PASS | |
@@ -215,27 +215,45 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | | | |
 | 45 | As the **site admin** I am alerted immediately to any raised concerns | | | |
 | | | | | |
-| 46 | As a **signed-in user** I can give feedback to other users | When reading published writing in the library there is a clear button to 'Give Feedback' | | |
-| | | Clicking 'Give Feedback' brings up a form to submit feedback | | |
-| | | The form title and introduction help me to navigate the process of submitting feedback | | |
-| | | Sentence starters help me to submit positive and constructive feedback | | |
-| | | The button to submit my feedback is clear | | |
-| | | I receive clear feedback to ensure I have correctly filled in the form | | |
-| | | On clicking the submit button, I am asked to confirm that I would like to submit my feedback. This includes a quick explanation of the process | | |
-| | | I am given clear feedback to let me know I have successfully submitted my feedback | | |
-| | | On submission I am redirected back to the library of inspiration | | |
-| 47 | As a **signed-in user** I can view all feedback associated with a piece of work | | | |
-| | | | | |
-| 48 | As a **signed-in user** my feedback is passed through validation tests | | | |
-| | | | | |
-| 49 | As a **signed-in user** I can edit my feedback | | | |
-| | | | | |
-| 50 | As a **signed-in user** I can delete my feedback | | | |
-| | | | | |
+| 46 | As a **signed-in user** I can give feedback to other users | When reading published writing in the library there is a clear button to 'Give Feedback' | PASS | |
+| | | Clicking 'Give Feedback' brings up a form to submit feedback | PASS | |
+| | | The form title and introduction help me to navigate the process of submitting feedback | PASS | |
+| | | Sentence starters help me to submit positive and constructive feedback | PASS | |
+| | | The button to submit my feedback is clear | PASS | |
+| | | I receive clear feedback to ensure I have correctly filled in the form | PASS | |
+| | | On clicking the submit button, I am asked to confirm that I would like to submit my feedback. This includes a quick explanation of the process | PASS | |
+| | | I am given clear feedback to let me know I have successfully submitted my feedback | PASS | |
+| | | On submission I am redirected back to the library of inspiration | PASS | |
+| 47 | As a **signed-in user** I can view all feedback associated with a piece of work | When reading a story for the library there is a clear button to 'View feedback' | PASS | |
+| | | On clicking 'View feedback' I can see any published feedback associated with the work I am reading | PASS | |
+| | | If there is no feedback a message explains this to me | PASS | |
+| | | The layout of the feedback makes it easy to read | PASS | |
+| | | There is a clear button to 'Hide feedback' on smaller screens | PASS | |
+| | | Clicking to hide feedback takes me back to the normal view of my published work | PASS | |
+| | | There is a clear button to give feedback | PASS | |
+| | | Clicking to give feedback takes me to the give feedback view | PASS | |
+| 48 | As a **signed-in user** my feedback is passed through validation tests | An error message is raised when a swear word is entered in any of the input fields. | PASS | |
+| 49 | As a **signed-in user** I can edit my feedback | When viewing feedback I have given to another user there is a clear option to edit feedback | PASS | |
+| | | Clicking to 'edit feedback' takes me to an edit page | PASS | |
+| | | My feedback is displayed in a form allowing me to edit | PASS | |
+| | | There are two clear options - submit feedback or return | PASS | |
+| | | Clicking to return takes me back to the read feedback view | PASS | |
+| | | Clicking to submit feedback brings up a confirmation message with a choice to 'confirm' or 'cancel' | PASS | |
+| | | Clicking to cancel takes me back to the edit feedback page with any changes intacked | PASS | |
+| | | Clicking to confirm takes me back to the library with a displayed success message | PASS | |
+| 50 | As a **signed-in user** I can delete my feedback | Delete is an option I can access when reading feedback I have given | PASS | |
+| | | I am reminded that once deleted I cannot get the feedback back | PASS | |
+| | | I can confirm to delete or choose to keep | PASS | |
+| | | On choosing to delete, my feedback is deleted and I am returned to 'Read feedback' with a success message | PASS | |
+| | | On choosing to keep I am returned to editing or reading feedback | PASS | |
 | 51 | As a **signed-in user** I am alerted to any new feedback on my published work | | | |
 | | | | | |
-| 52 | As a **signed-in user** I can view feedback given to me by other users | | | |
-| | | | | |
+| 52 | As a **signed-in user** I can view feedback given to me by other users | When viewing a published item of work there is a clear button to 'View feedback' | PASS | |
+| | | On clicking 'View feedback' I can see any feedback associated with the work I am viewing | PASS | |
+| | | If no feedback has been submitted and approved a message explains this to me | PASS | |
+| | | The layout of the feedback makes it easy to read | PASS | |
+| | | There is a clear button to 'Hide feedback' when on smaller screens | PASS | |
+| | | Clicking to hide feedback takes me back to the normal view of my published work | PASS | |
 | 53 | As a **signed-in user** I can edit my published work | When viewing my published work I can click a button to 'Edit writing' | PASS | |
 | | | Clicking to 'Edit writing' takes me to the Edit Writing page | PASS | |
 | | | I am given a message specific to editing published work | PASS | |
@@ -250,10 +268,19 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | | | |
 | 58 | As the **site admin** I am alerted immediately to any raised concerns about feedback | | | |
 | | | | | |
-| 59 | As the **site admin** I can remove inappropriate feedback | | | |
-| | | | | |
-| 60 | As the **site admin** I can send parents an email sharing posted feedback and the reason it has been removed  | | | |
-| | | | | |
+| 59 | As the **site admin** I can remove inappropriate feedback | I can view all instances of feedback through the admin page | PASS | |
+| | | I can filter feedback by approved | PASS | |
+| | | I can checkbox to change approved to False | PASS | |
+| | | Only feedback with approved True will be displayed for other users to see | PASS | |
+| | | I can also fully delete feedback | PASS | | 
+| 60 | As the **site admin** I can send parents an email sharing posted feedback and the reason it has been removed | As site Admin I can handle this manually | PASS | |
+| | | When removing feedback or choosing to not approved it I can see the giver of the feedback | PASS | |
+| | | I can find the giver of the feedback within users and there see all the details I need: email address, first name and last name of the parent or guardian | PASS | |
+
+### Extra user stories added during development
+
+| # | User Story | Acceptance Criteria | 1st Check | Final Check |
+| -- | ---- | ---- | -- | -- |
 | 64 | As a **user** I can navigate intuitively through the site | The navigation links display clearly across the top of the page for larger screens. | PASS | |
 | | | The navigation links display clearly in a dropdown menu on smaller screens. | PASS | |
 | | | On smaller screens I can click a hamburger icon allowing me to open the mobile nav. | PASS | |
@@ -261,6 +288,11 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | The platform name "Inspiring young writers" is clearly displayed on the left of the nav bar. This directs back to the home page. | PASS | |
 | | | When hovering over a link there is clear visual feedback. | PASS | |
 | | | All navigation links take you to the correct destination when clicked. | PASS | |
+| 75 | As the site admin I can approve feedback | I can view all instances of feedback through the admin page | PASS | |
+| | | I can filter by approved and find all submitted feedback that hasn't been approved | PASS | |
+| | | I can read the giver's name, writing title, star_one, star_two, wish, date_created, date_last_edit, approved and date_approved of each instance of feedback | PASS | |
+| | | I can checkbox to change approved to True (default is False) and input the date | PASS | |
+| | | Only feedback with approved True will be displayed on the platform for others to see | PASS | |
 
 [Return to contents list](#contents)
 
@@ -460,6 +492,32 @@ The following documents all forms and any requirements needed, with details on h
 | Click to give feedback | No form to give feedback. Instead a message "You have already given feedback for this writing." and options to return or read feedback | PASS | |
 | Click return | Return to read view | PASS | |
 | Click read feedback | Taken to read_feedback view | PASS | |
+
+### Edit Feedback
+
+| Input Field | Requirement | Error caught | Final check |
+| --- | ----- | ---- | -- |
+| Star one | Required field | "Please fill in this field" notification pointed at input box | |
+| | Maximum length 400 | Cannot physically enter more than 400 characters | |
+| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your first star" | |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
+| Star two | Required field | "Please fill in this field" notification pointed at input box | |
+| | Maximum length 400 | Cannot physically enter more than 400 characters | |
+| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your second star" | |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
+| Wish | Required field | "Please fill in this field" notification pointed at input box | |
+| | Maximum length 400 | Cannot physically enter more than 400 characters | |
+| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your wish" | |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
+
+#### Edit feedback confirms 'submit feedback'
+
+| Trigger | Expected Response | 1st Check | Final Check |
+| --- | --- | --- | --- |
+| Click to submit feedback | Confirmation message and two buttons 'Confirm' 'Cancel' | PASS | |
+| Click to confirm | Redirect to 'Library of inspiration' with "You have successfully submitted your feedback for "". It may take a couple of days to be approved." message displayed. | PASS | |
+| Click to cancel | Return to normal give feedback view with form input still there | PASS | |
+
 
 ## Accessibility Testing
 
