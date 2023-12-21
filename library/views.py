@@ -152,9 +152,9 @@ def read_feedback_view(request, writing_id):
 
     context = {}
 
-    # locate any instances of feedback for the logged in user that have failed or awaiting approval
-    unapproved_feedback = writing.received_feedback.all().filter(approved = False)
-    for feedback in unapproved_feedback:
+    # locate any instances of feedback for the logged in user
+    all_feedback = writing.received_feedback.all()
+    for feedback in all_feedback:
         if feedback.giver.username == request.user.username:
             user_feedback = feedback
             context['user_feedback'] = user_feedback
@@ -266,3 +266,47 @@ def edit_feedback_view(request, feedback_id):
     return render(request, 'edit_feedback.html', context)
 
     
+"""
+View to delete an instance of feedback
+"""
+@login_required
+def delete_feedback_view(request, feedback_id):
+        
+    feedback = get_object_or_404(Feedback, pk=feedback_id)
+
+    context = {}
+
+    # Check that the logged in user id matches the user_id from the url
+    if request.user != feedback.giver:
+        messages.error(request, 'You have been returned to your account home page, \
+                       as you were trying to access a page you are not authorised to view.')
+        return redirect('account_home')
+    
+
+    # If confirmation not recieved ask for
+    if not request.GET.get('confirm_delete'):
+
+        # Gather all info needed to refresh the read_feedback page with confirmation message
+        writing_id = feedback.writing.id
+        writing = get_object_or_404(Writing, pk=writing_id)
+        approved_feedback = writing.received_feedback.all().filter(approved = True)
+
+        # locate any instances of feedback for the logged in user
+        all_feedback = writing.received_feedback.all()
+        for feedback in all_feedback:
+            if feedback.giver.username == request.user.username:
+                user_feedback = feedback
+                context['user_feedback'] = user_feedback
+
+        context['writing'] = writing
+        context['feedback_received'] = approved_feedback
+        context['confirmation_delete_needed'] = True
+
+        return render(request, 'read_feedback.html', context)
+
+    # If confirmation recieved proceed
+    else:
+        feedback.delete()
+        writing_id = feedback.writing.id
+        messages.success(request, "You have successfully deleted your feedback")
+        return redirect('read_feedback', writing_id=writing_id) 

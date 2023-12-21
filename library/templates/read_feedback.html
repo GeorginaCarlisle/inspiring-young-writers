@@ -51,14 +51,38 @@
             <!-- Read Feedback -->
             <h3 class="text-2xl text-center mb-2 font-title text-orange-600">Read Feedback </h3>
 
+            <!-- Space for messages (feedback edited, feedback deleted)-->
+            {% if messages %}
+            <div class="font-body text-sm md:text-xl my-4">
+                <ul class="mb-4">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="text-blue-700 text-lg" {% endif %}>
+                        {{ message }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            <!-- Feedback container -->
             <div class="border border-black relative p-2 mb-12 max-h-52 overflow-auto">
 
-                <!-- Render feedback back user has given that hasn't been approved yet -->
+                <!-- Render feedback back user has given  -->
                 {% if user_feedback %}
 
                 <div class="border border-black p-2 relative">
-                    {% if user_feedback.failed_approval %}
 
+                    {% if user_feedback.approved %}
+                    <!-- Title and extra info for published feedback -->
+                    <h4 class="font-bold text-lg text-blue-700">
+                        Your published feedback
+                    </h4>
+                    <p>
+                        If you choose to edit, your feedback will need to be re-approved.
+                    </p>
+                    {% endif %}
+
+                    {% if user_feedback.failed_approval %}
                     <!-- Title and extra info for failed feedback -->
                     <h4 class="font-bold text-lg text-blue-700">
                         Your feedback needs editing
@@ -74,6 +98,23 @@
                     </h4>
                     {% endif %}
 
+                    <!-- Confirm delete for users unapproved feedback -->
+                    {% if confirmation_delete_needed %}
+                    <p class="mb-12 md:text-lg text-blue-700">
+                        Are you sure you wish to delete your feedback? Once deleted you cannot get it back.
+                    </p>
+                    <!-- Confirm delete links -->
+                    <a class="absolute left-4 bottom-4 p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
+                    href="{% url 'read_feedback' writing_id=writing.id %}">
+                        Keep feedback
+                    </a>
+        
+                    <a class="absolute right-4 bottom-4 p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
+                    href="{% url 'delete_feedback' feedback_id=user_feedback.id %}?confirm_delete=True">
+                        Delete feedback
+                    </a>
+
+                    {% else %}
                     <!-- Star one -->
                     <div class="mb-2 grid grid-cols-6 sm:grid-cols-8">
                         <div class="col-span-1 flex justify-center">
@@ -108,7 +149,7 @@
                     <div class="flex justify-center mt-4">
                         <!-- Delete feedback -->
                         <a class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
-                        href="">
+                        href="{% url 'delete_feedback' feedback_id=user_feedback.id %}">
                             Delete Feedback
                         </a>
                         <!-- Edit feedback -->
@@ -117,25 +158,22 @@
                             Edit Feedback
                         </a>
                     </div>
+                    {% endif %}
                 </div>
                 {% endif %}
 
                 <!-- Render Approved feedback-->
                 {% if feedback_received %}
-
                 {% for feedback in feedback_received %}
+
+                <!-- User's feedback not rendered here as already rendered above -->
+                {% ifnotequal user.username feedback.giver.username %}
                 <div class="border border-black p-2">
-                    {% ifequal user.username feedback.giver.username %}
-                    <!-- Feedback title if user created the feedback -->
-                    <h4 class="font-bold text-lg text-blue-700">
-                        You said:
-                    </h4>
-                    {% else %}
+
                     <!-- Normal feedback title -->
                     <h4 class="font-bold text-lg">
                         {{ feedback.giver }} says:
                     </h4>
-                    {% endifequal %}
 
                     <!-- Star one -->
                     <div class="mb-2 grid grid-cols-6 sm:grid-cols-8">
@@ -167,28 +205,15 @@
                         </p>   
                     </div>
                 </div>
-                {% ifequal user.username feedback.giver.username %}
-                <!-- Options -->
-                <div class="flex justify-center mt-4">
-                    <!-- Delete feedback -->
-                    <a class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
-                    href="">
-                        Delete Feedback
-                    </a>
-                    <!-- Edit feedback -->
-                    <a class="absolute right-4 bottom-4 p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
-                    href="{% url 'edit_feedback' feedback_id=feedback.id %}">
-                        Edit Feedback
-                    </a>
-                </div>
-                {% endifequal %}
+                {% endifnotequal %}
                 {% endfor %}
                 {% else %}
 
                 <!-- No feedback yet -->
                 {% if not user_feedback %}
-                <p>There is no approved feedback yet for {{ writing.title }}</p>
-                <p>Perhaps you could be the first to give feedback</p>
+                <p class="mb-1">There is no approved feedback yet for 
+                    <span class="font-bold">{{ writing.title }}</span>.</p>
+                <p>Perhaps you could be the first to give feedback.</p>
                 {% endif %}
                 {% endif %}
             </div>
