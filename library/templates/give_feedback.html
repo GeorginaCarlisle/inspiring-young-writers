@@ -125,36 +125,39 @@
                         
                             <!-- Star one -->
                             <div class="mb-4 grid grid-cols-6 sm:grid-cols-8">
-                                <label for="{{ give_feedback_form.star_one.id_for_label }}" 
-                                    class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2 col-span-1 flex items-center h-24">
+                                <div class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2 col-span-1 flex items-center h-24">
                                     <i class="fa-regular fa-star text-4xl" aria-label="star one"></i>
-                                </label>
+                                </div>
                                 <div class="border border-black col-span-5 sm:col-span-7 p-2">
-                                    <p>I loved it when ...</p>
+                                    <label for="{{ give_feedback_form.star_one.id_for_label }}" >
+                                        I loved it when ...
+                                    </label>
                                     {{ give_feedback_form.star_one }}
                                 </div>
                             </div>
 
                             <!-- Star two -->
                             <div class="mb-4 grid grid-cols-6 sm:grid-cols-8">
-                                <label for="{{ give_feedback_form.star_two.id_for_label }}" 
-                                    class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2 col-span-1 flex items-center h-24">
+                                <div class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2 col-span-1 flex items-center h-24">
                                     <i class="fa-regular fa-star text-4xl" aria-label="star two"></i>
-                                </label>
+                                </div>
                                 <div class="border border-black col-span-5 sm:col-span-7 p-2">
-                                    <p>I love how you ...</p>
+                                    <label for="{{ give_feedback_form.star_two.id_for_label }}" >
+                                        I love how you ...
+                                    </label>
                                     {{ give_feedback_form.star_two }}
                                 </div>
                             </div>
 
                             <!-- Wish -->
                             <div class="mb-16 grid grid-cols-6 sm:grid-cols-8">
-                                <label for="{{ give_feedback_form.wish.id_for_label }}" 
-                                    class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2 col-span-1 flex items-center h-24">
-                                    <i class="fa-regular fa-lightbulb text-4xl" aria-label="idea"></i>
-                                </label>
+                                <div class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2 col-span-1 flex items-center h-24">
+                                    <i class="fa-regular fa-star text-4xl" aria-label="wish"></i>
+                                </div>
                                 <div class="border border-black col-span-5 sm:col-span-7 p-2">
-                                    <p>It would be great if ...</p>
+                                    <label for="{{ give_feedback_form.wish.id_for_label }}" >
+                                        It would be great if ...
+                                    </label>
                                     {{ give_feedback_form.wish }}
                                 </div>
                             </div>
