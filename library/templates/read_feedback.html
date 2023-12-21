@@ -209,19 +209,20 @@
                                     It would be great if {{ feedback.wish }}
                                 </p>   
                             </div>
-                        
-                            {% endifnotequal %}
-                            {% endfor %}
-                            {% else %}
-
-                            <!-- No feedback yet -->
-                            {% if not user_feedback %}
-                            <p class="mb-1">There is no approved feedback yet for 
-                                <span class="font-bold">{{ writing.title }}</span>.</p>
-                            <p>Perhaps you could be the first to give feedback.</p>
-                            {% endif %}
-                            {% endif %}
                         </div>
+                        {% endifnotequal %}  
+                        {% endfor %}
+
+                        {% else %}
+
+                        <!-- No feedback yet -->
+                        {% if not user_feedback %}
+                        <p class="mb-1">There is no approved feedback yet for 
+                            <span class="font-bold">{{ writing.title }}</span>.</p>
+                        <p>Perhaps you could be the first to give feedback.</p>
+                    
+                        {% endif %}
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -237,7 +238,7 @@
                 href="{% url 'give_feedback' writing_id=writing.id %}">
                     Give Feedback
                 </a>
-            </div>    
+            </div> 
         </div>
     </div>
 </div>

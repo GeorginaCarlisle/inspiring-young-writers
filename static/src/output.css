@@ -798,14 +798,6 @@ video {
   height: 100vh;
 }
 
-.h-72 {
-  height: 18rem;
-}
-
-.h-3\/5 {
-  height: 60%;
-}
-
 .max-h-52 {
   max-height: 13rem;
 }
@@ -893,10 +885,6 @@ video {
 
 .overflow-auto {
   overflow: auto;
-}
-
-.overflow-scroll {
-  overflow: scroll;
 }
 
 .rounded {
@@ -1016,10 +1004,6 @@ video {
 
 .pt-16 {
   padding-top: 4rem;
-}
-
-.pt-4 {
-  padding-top: 1rem;
 }
 
 .text-center {
@@ -1332,20 +1316,16 @@ video {
     position: static;
   }
 
-  .lg\:mt-20 {
-    margin-top: 5rem;
+  .lg\:mb-4 {
+    margin-bottom: 1rem;
   }
 
   .lg\:mt-2 {
     margin-top: 0.5rem;
   }
 
-  .lg\:mb-4 {
-    margin-bottom: 1rem;
-  }
-
-  .lg\:mt-4 {
-    margin-top: 1rem;
+  .lg\:mt-20 {
+    margin-top: 5rem;
   }
 
   .lg\:block {
@@ -1376,40 +1356,12 @@ video {
     height: 18rem;
   }
 
-  .lg\:h-40 {
-    height: 10rem;
-  }
-
-  .lg\:h-3\/4 {
-    height: 75%;
-  }
-
-  .lg\:h-3\/5 {
-    height: 60%;
-  }
-
-  .lg\:h-auto {
-    height: auto;
-  }
-
-  .lg\:h-2\/4 {
-    height: 50%;
-  }
-
-  .lg\:h-60 {
-    height: 15rem;
-  }
-
   .lg\:h-80 {
     height: 20rem;
   }
 
   .lg\:h-96 {
     height: 24rem;
-  }
-
-  .lg\:h-full {
-    height: 100%;
   }
 
   .lg\:max-h-none {
@@ -1420,6 +1372,10 @@ video {
     width: 40%;
   }
 
+  .lg\:w-5\/6 {
+    width: 83.333333%;
+  }
+
   .lg\:w-60 {
     width: 15rem;
   }
@@ -1428,16 +1384,12 @@ video {
     width: 24rem;
   }
 
-  .lg\:w-5\/6 {
-    width: 83.333333%;
+  .lg\:max-w-none {
+    max-width: none;
   }
 
   .lg\:max-w-xl {
     max-width: 36rem;
-  }
-
-  .lg\:max-w-none {
-    max-width: none;
   }
 
   .lg\:grid-cols-2 {
@@ -1450,15 +1402,6 @@ video {
 
   .lg\:border {
     border-width: 1px;
-  }
-
-  .lg\:border-b-2 {
-    border-bottom-width: 2px;
-  }
-
-  .lg\:border-black {
-    --tw-border-opacity: 1;
-    border-color: rgb(0 0 0 / var(--tw-border-opacity));
   }
 
   .lg\:p-6 {
@@ -1519,10 +1462,6 @@ video {
 
   .\32xl\:col-span-3 {
     grid-column: span 3 / span 3;
-  }
-
-  .\32xl\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .\32xl\:grid-cols-5 {
