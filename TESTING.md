@@ -364,6 +364,7 @@ The following documents all forms and any requirements needed, with details on h
 | Message | Required field | "Please fill in this field" notification pointed at input box | |
 | | Maximum length 1500 | Cannot physically enter more than 1500 characters | |
 
+
 ### Create Writing
 
 | Input Field | Requirement | Error caught | Final check |
