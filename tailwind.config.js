@@ -31,6 +31,7 @@ module.exports = {
         './writing/templates/view_my_feedback.html',
         './library/templates/read_feedback.html',
         './library/templates/edit_feedback.html',
+        './account/templates/account_contact.html',
     ],
     theme: {
         extend: {

@@ -39,10 +39,7 @@
           </button>
         </li>
         <li class="hover:font-bold hover:cursor-pointer">
-          <a>Contact</a>
-        </li>
-        <li class="hover:font-bold hover:cursor-pointer">
-          <a>My Profile</a>
+          <a href="{% url 'account_contact' %}">Contact</a>
         </li>
         <li class="hover:font-bold hover:cursor-pointer">
           <a href="{% url 'logout' %}">Logout</a>
@@ -78,8 +75,7 @@
               aria-label="open information for parents">
               Parents
             </button></li>
-          <li class="mb-4"><a>Contact</a></li>
-          <li class="mb-4"><a>My Profile</a></li>
+          <li class="mb-4"><a href="{% url 'account_contact' %}">Contact</a></li>
           <li class="mb-4"><a href="{% url 'logout' %}">Logout</a></li>
         </ul>
       </div>
