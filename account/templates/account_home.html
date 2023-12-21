@@ -4,10 +4,10 @@
 {% include 'parent_info.html' %}
 
 <!-- Page Background-->
-<div class="bg-blue-900 h-full">
+<div class="bg-blue-900 h-full pb-4 pt-16 lg:pt-20 relative">
 
     <!-- Title and site introduction -->
-    <div class="flex justify-center mt-16 lg:mt-20 h-fit">
+    <div class="flex justify-center h-fit">
         <div class="text-center p-4 bg-horange my-4 h-fit rounded border border-black max-w-2xl mx-4">
             <h1 class="text-3xl md:text-4xl font-title text-black">
             Welcome to your account
@@ -43,7 +43,30 @@
             href="{% url 'my_work' user.id%}">
             View your writing
         </a>
+    </div>
 
+    <!-- Hero Image -->
+    <div class="absolute bottom-0">
+        <!-- Small Screens -->
+        <img 
+        src="{% static 'images/hero-image-small.webp' %}" 
+        alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
+        class="sm:hidden"/>
+        <!-- Medium Screens -->
+        <img 
+        src="{% static 'images/hero-image-medium.webp' %}" 
+        alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
+        class="hidden sm:block lg:hidden"/>
+        <!-- Large Screens -->
+        <img 
+        src="{% static 'images/hero-image-large.webp' %}" 
+        alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
+        class="hidden lg:block xl:hidden"/>
+        <!-- Extra Large Screens -->
+        <img 
+        src="{% static 'images/hero-image-extra-large.webp' %}" 
+        alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
+        class="hidden xl:block"/>
     </div>
 </div>
 
