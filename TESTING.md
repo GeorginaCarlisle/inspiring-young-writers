@@ -215,8 +215,15 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | | | |
 | 45 | As the **site admin** I am alerted immediately to any raised concerns | | | |
 | | | | | |
-| 46 | As a **signed-in user** I can give feedback to other users | | | |
-| | | | | |
+| 46 | As a **signed-in user** I can give feedback to other users | When reading published writing in the library there is a clear button to 'Give Feedback' | | |
+| | | Clicking 'Give Feedback' brings up a form to submit feedback | | |
+| | | The form title and introduction help me to navigate the process of submitting feedback | | |
+| | | Sentence starters help me to submit positive and constructive feedback | | |
+| | | The button to submit my feedback is clear | | |
+| | | I receive clear feedback to ensure I have correctly filled in the form | | |
+| | | On clicking the submit button, I am asked to confirm that I would like to submit my feedback. This includes a quick explanation of the process | | |
+| | | I am given clear feedback to let me know I have successfully submitted my feedback | | |
+| | | On submission I am redirected back to the library of inspiration | | |
 | 47 | As a **signed-in user** I can view all feedback associated with a piece of work | | | |
 | | | | | |
 | 48 | As a **signed-in user** my feedback is passed through validation tests | | | |

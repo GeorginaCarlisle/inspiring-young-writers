@@ -21,7 +21,7 @@
 
     <div class="flex justify-center mt-4">
         <!-- Container for page information -->
-        <div class="border border-black rounded bg-zinc-50 p-4 relative w-11/12 sm:max-w-xl h-3/4">
+        <div class="border border-black rounded bg-zinc-50 p-4 relative w-11/12 sm:max-w-xl lg:max-w-none lg:w-5/6 h-3/4">
             
             <!-- Back buttom to return user to my work -->
             <a
@@ -43,139 +43,146 @@
                 </p>
             </div>
 
-            <!-- Main body of writing -->
-            <div class="border border-black h-40 overflow-auto mb-4 p-2">
-                {{ writing.body|linebreaksbr|safe }}
-            </div>
+            <!-- container to control change of layout depending on screensize -->
+            <div class="lg:grid lg:grid-cols-2 h-fit 2xl:grid-cols-5">
 
-            <!-- Edit Feedback -->
-            <h3 class="text-2xl text-center mb-2 font-title text-orange-600">Edit Feedback </h3>
-
-            <div class="border border-black relative p-2">
-
-                <!-- Confirmation needed message -->
-                {% if confirmation_needed %}
-                <div class="mb-2">
-                    <h3 class="text-blue-700 font-title text-2xl mb-2">Your feedback is ready to submitted</h3>
-                    <p class="text-blue-700">
-                        If you are happy for your feedback to be read by others please click to 
-                        <span class="font-bold">confirm.</span>
-                         Otherwise please click to  
-                        <span class="font-bold">cancel.</span>
-                    </p>
+                <!-- Main body of writing -->
+                <div class="border border-black h-40 lg:h-96 overflow-auto mb-4 p-2 2xl:col-span-3">
+                    {{ writing.body|linebreaksbr|safe }}
                 </div>
-                {% else %}
-                <!-- When errors in submitted form -->
-                {% if messages %}
-                <ul class="mb-4">
-                    {% for message in messages %}
-                    <li{% if message.tags %} class="text-blue-700"{% endif %}>
-                        {{ message }}
-                    </li>
-                    {% endfor %}
-                </ul>
-                {% else %}
-                <!-- Feedback instruction -->
-                {% if feedback.approved %}
-                <p class="mb-4">
-                    If any changes are made your feedback will need to be approved again
-                </p>
-                {% else %}
-                <p class="mb-4">
-                    Make any changes then click to submit feedback
-                </p>
-                {% endif %}
-                {% endif %}
-                {% endif %}
 
-                <!-- Edit feedback form -->
-                {% if confirmation_needed %}
-                <form action="{% url 'edit_feedback' feedback_id=feedback.id %}?confirm=True" method="post" class="p-2">
+                <!-- Container to keep all feedback together -->
+                <div class="lg:border border-black lg:h-96 lg:pt-4 2xl:col-span-2">
 
-                {% else %}
-                <form action="{% url 'edit_feedback' feedback_id=feedback.id %}" method="post" class="p-2">
-                {% endif %}
+                    <!-- Edit Feedback -->
+                    <h3 class="text-2xl text-center mb-2 lg:mb-4 font-title text-orange-600">Edit Feedback </h3>
 
-                {% csrf_token %}
-                
-                    <!-- Star one -->
-                    <div class="mb-4 grid grid-cols-6 sm:grid-cols-8">
-                        <label for="{{ give_feedback_form.star_one.id_for_label }}" 
-                            class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2 col-span-1 flex items-center h-24">
-                            <i class="fa-regular fa-star text-4xl" aria-label="star one"></i>
-                        </label>
-                        <div class="border border-black col-span-5 sm:col-span-7 p-2">
-                            <p>I loved it when ...</p>
-                            {{ edit_feedback_form.star_one }}
+                    <div class="border border-black p-2 lg:h-80 lg:overflow-scroll">
+
+                        <!-- Confirmation needed message -->
+                        {% if confirmation_needed %}
+                        <div class="mb-2">
+                            <h3 class="text-blue-700 font-title text-2xl mb-2">Your feedback is ready to submitted</h3>
+                            <p class="text-blue-700">
+                                If you are happy for your feedback to be read by others please click to 
+                                <span class="font-bold">confirm.</span>
+                                Otherwise please click to  
+                                <span class="font-bold">cancel.</span>
+                            </p>
                         </div>
+                        {% else %}
+                        <!-- When errors in submitted form -->
+                        {% if messages %}
+                        <ul class="mb-4">
+                            {% for message in messages %}
+                            <li{% if message.tags %} class="text-blue-700"{% endif %}>
+                                {{ message }}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <!-- Feedback instruction -->
+                        {% if feedback.approved %}
+                        <p class="mb-4">
+                            If any changes are made your feedback will need to be approved again
+                        </p>
+                        {% else %}
+                        <p class="mb-4">
+                            Make any changes then click to submit feedback
+                        </p>
+                        {% endif %}
+                        {% endif %}
+                        {% endif %}
+
+                        <!-- Edit feedback form -->
+                        {% if confirmation_needed %}
+                        <form action="{% url 'edit_feedback' feedback_id=feedback.id %}?confirm=True" method="post" class="p-2 relative">
+
+                        {% else %}
+                        <form action="{% url 'edit_feedback' feedback_id=feedback.id %}" method="post" class="p-2 relative">
+                        {% endif %}
+
+                        {% csrf_token %}
+                        
+                            <!-- Star one -->
+                            <div class="mb-4 grid grid-cols-6 sm:grid-cols-8">
+                                <label for="{{ give_feedback_form.star_one.id_for_label }}" 
+                                    class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2 col-span-1 flex items-center h-24">
+                                    <i class="fa-regular fa-star text-4xl" aria-label="star one"></i>
+                                </label>
+                                <div class="border border-black col-span-5 sm:col-span-7 p-2">
+                                    <p>I loved it when ...</p>
+                                    {{ edit_feedback_form.star_one }}
+                                </div>
+                            </div>
+
+                            <!-- Star two -->
+                            <div class="mb-4 grid grid-cols-6 sm:grid-cols-8">
+                                <label for="{{ give_feedback_form.star_two.id_for_label }}" 
+                                    class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2 col-span-1 flex items-center h-24">
+                                    <i class="fa-regular fa-star text-4xl" aria-label="star two"></i>
+                                </label>
+                                <div class="border border-black col-span-5 sm:col-span-7 p-2">
+                                    <p>I love how you ...</p>
+                                    {{ edit_feedback_form.star_two }}
+                                </div>
+                            </div>
+
+                            <!-- Wish -->
+                            <div class="mb-16 grid grid-cols-6 sm:grid-cols-8">
+                                <label for="{{ give_feedback_form.wish.id_for_label }}" 
+                                    class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2 col-span-1 flex items-center h-24">
+                                    <i class="fa-regular fa-lightbulb text-4xl" aria-label="idea"></i>
+                                </label>
+                                <div class="border border-black col-span-5 sm:col-span-7 p-2">
+                                    <p>It would be great if ...</p>
+                                    {{ edit_feedback_form.wish }}
+                                </div>
+                            </div>
+
+                            {% if not confirmation_needed %}
+                            <!-- Submit form to give feedback -->
+                            <input
+                            type="submit"
+                            value="Submit feedback"
+                            id="give_feedback"
+                            name="give_feedback"
+                            class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
+                            />
+
+                            <!-- Return -->
+                            <a class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
+                            href="{% url 'read_feedback' writing_id=writing.id %}">
+                                Return
+                            </a>
+
+                            {% endif %}
+
+                            {% if confirmation_needed %}
+                            <!-- Choice to confirm and submit -->
+                            <input
+                            type="submit"
+                            value="Confirm"
+                            id="confirm"
+                            name="confirm"
+                            class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
+                            />
+
+                            <!-- Choice to cancel -->
+                            <input
+                            type="submit"
+                            value="Cancel"
+                            id="cancel"
+                            name="cancel"
+                            class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
+                            />
+                            {% endif %}
+
+                        </form>
                     </div>
-
-                    <!-- Star two -->
-                    <div class="mb-4 grid grid-cols-6 sm:grid-cols-8">
-                        <label for="{{ give_feedback_form.star_two.id_for_label }}" 
-                            class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2 col-span-1 flex items-center h-24">
-                            <i class="fa-regular fa-star text-4xl" aria-label="star two"></i>
-                        </label>
-                        <div class="border border-black col-span-5 sm:col-span-7 p-2">
-                            <p>I love how you ...</p>
-                            {{ edit_feedback_form.star_two }}
-                        </div>
-                    </div>
-
-                    <!-- Wish -->
-                    <div class="mb-16 grid grid-cols-6 sm:grid-cols-8">
-                        <label for="{{ give_feedback_form.wish.id_for_label }}" 
-                            class="mr-0.5 sm:mr-2 md:text-lg md:mr-1 md:ml-2 col-span-1 flex items-center h-24">
-                            <i class="fa-regular fa-lightbulb text-4xl" aria-label="idea"></i>
-                        </label>
-                        <div class="border border-black col-span-5 sm:col-span-7 p-2">
-                            <p>It would be great if ...</p>
-                            {{ edit_feedback_form.wish }}
-                        </div>
-                    </div>
-
-                    {% if not confirmation_needed %}
-                    <!-- Submit form to give feedback -->
-                    <input
-                    type="submit"
-                    value="Submit feedback"
-                    id="give_feedback"
-                    name="give_feedback"
-                    class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
-                    />
-
-                    <!-- Return -->
-                    <a class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
-                    href="{% url 'read_feedback' writing_id=writing.id %}">
-                        Return
-                    </a>
-
-                    {% endif %}
-
-                    {% if confirmation_needed %}
-                    <!-- Choice to confirm and submit -->
-                    <input
-                    type="submit"
-                    value="Confirm"
-                    id="confirm"
-                    name="confirm"
-                    class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
-                    />
-
-                    <!-- Choice to cancel -->
-                    <input
-                    type="submit"
-                    value="Cancel"
-                    id="cancel"
-                    name="cancel"
-                    class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer"
-                    />
-                    {% endif %}
-
-                </form>
-
+                </div>
             </div>
         </div>
     </div>
-
-    {% endblock%}
+</div>
+{% endblock%}
