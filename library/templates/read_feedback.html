@@ -85,9 +85,8 @@
                             <p>
                                 If you choose to edit, your feedback will need to be re-approved.
                             </p>
-                            {% endif %}
 
-                            {% if user_feedback.failed_approval %}
+                            {% elif user_feedback.failed_approval %}
                             <!-- Title and extra info for failed feedback -->
                             <h4 class="font-bold text-lg text-blue-700">
                                 Your feedback needs editing
