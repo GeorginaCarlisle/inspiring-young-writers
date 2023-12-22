@@ -1,21 +1,19 @@
 {% load static %}
 
-<header>
-  <div
-    class="fixed top-0 z-10 grid grid-cols-4 md:grid-cols-5 xl:grid-cols-6 h-16 lg:h-20 w-full border-b-2 border-black bg-zinc-50"
-  >
+<header class="fixed top-0 z-10 w-full grid grid-cols-4 md:grid-cols-5 xl:grid-cols-6 h-16 lg:h-20 border-b-2 border-black bg-zinc-50">
+
     <!-- Logo -->
     <div class="w-40 lg:w-60 col-span-1">
-      <div class="p-1.5">
-        <a
-          class="inline-block text-center w-full font-title text-2xl lg:text-3xl leading-none text-orange-600 hover:text-black hover:cursor-pointer"
-          href="{% url 'home' %}"
-          aria-label="return to the home page"
-        >
-          <span class="text-orange-600">Inspiring Young</span>
-          <span class="text-orange-600">Writers</span>
-        </a>
-      </div>
+        <div class="p-1.5">
+            <a
+            class="inline-block text-center w-full font-title text-2xl lg:text-3xl leading-none text-orange-600 hover:text-black hover:cursor-pointer"
+            href="{% url 'home' %}"
+            aria-label="return to the home page"
+            >
+                <span class="text-orange-600">Inspiring Young</span>
+                <span class="text-orange-600">Writers</span>
+            </a>
+        </div>
     </div>
 
     <!-- Additional space between logo and nav for larger screens-->
@@ -23,57 +21,58 @@
 
     <!-- Navigation-->
     <nav class="col-span-3 p-5 lg:p-6 font-body">
-      <!-- Desktop Navigation -->
-      <ul class="hidden md:flex flex-row justify-around lg:text-xl">
-        <li class="hover:font-bold hover:cursor-pointer">
-          <button
-            id="parent-info-open"
-            aria-label="open information for parents">
-            Parents
-          </button></li>
-        <li class="hover:font-bold hover:cursor-pointer">
-          <a href="{% url 'contact' %}">Contact</a>
-        </li>
-        <li class="hover:font-bold hover:cursor-pointer">
-          <a href="{% url 'signup' %}">Sign-up</a>
-        </li>
-        <li class="hover:font-bold hover:cursor-pointer">
-          <a href="{% url 'login' %}">Login</a>
-        </li>
-      </ul>
-
-      <!-- Mobile Navigation -->
-      <!-- Nav Closed -->
-      <button
-        class="absolute top-4 right-4 md:hidden"
-        id="nav-open"
-        aria-label="open navigation"
-      >
-        <i class="fa-solid fa-bars text-4xl"></i>
-      </button>
-
-      <!-- Nav Open -->
-      <div
-        class="hidden absolute top-0 right-0 p-4 bg-white w-36"
-        id="mobile-nav"
-        aria-label="close navigation"
-        aria-hidden="true"
-      >
-        <button class="absolute top-4 right-4" id="nav-closed">
-          <i class="fa-solid fa-x text-4xl"></i>
-        </button>
-        <ul class="flex flex-col justify-around font-body text-xl mt-10">
-          <li class="mb-4">
-            <button
-              id="info-parent-open"
-              aria-label="open information for parents">
-              Parents
-            </button></li>
-          <li class="mb-4"><a href="{% url 'contact' %}">Contact</a></li>
-          <li class="mb-4"><a href="{% url 'signup' %}">Sign-up</a></li>
-          <li><a href="{% url 'login' %}">Login</a></li>
+    <!-- Desktop Navigation -->
+        <ul class="hidden md:flex flex-row justify-around lg:text-xl">
+            <li class="hover:font-bold hover:cursor-pointer">
+                <button
+                    id="parent-info-open"
+                    aria-label="open information for parents">
+                    Parents
+                </button>
+            </li>
+            <li class="hover:font-bold hover:cursor-pointer">
+                <a href="{% url 'contact' %}">Contact</a>
+            </li>
+            <li class="hover:font-bold hover:cursor-pointer">
+                <a href="{% url 'signup' %}">Sign-up</a>
+            </li>
+            <li class="hover:font-bold hover:cursor-pointer">
+                <a href="{% url 'login' %}">Login</a>
+            </li>
         </ul>
-      </div>
-    </nav>
-  </div>
+
+        <!-- Mobile Navigation -->
+        <!-- Nav Closed -->
+        <button
+            class="absolute top-4 right-4 md:hidden"
+            id="nav-open"
+            aria-label="open navigation"
+        >
+            <i class="fa-solid fa-bars text-4xl"></i>
+        </button>
+
+        <!-- Nav Open -->
+        <div
+            class="hidden absolute top-0 right-0 p-4 bg-white w-36"
+            id="mobile-nav"
+            aria-label="close navigation"
+            aria-hidden="true"
+        >
+            <button class="absolute top-4 right-4" id="nav-closed">
+                <i class="fa-solid fa-x text-4xl"></i>
+            </button>
+            <ul class="flex flex-col justify-around font-body text-xl mt-10">
+                <li class="mb-4">
+                    <button
+                    id="info-parent-open"
+                    aria-label="open information for parents">
+                    Parents
+                    </button></li>
+                <li class="mb-4"><a href="{% url 'contact' %}">Contact</a></li>
+                <li class="mb-4"><a href="{% url 'signup' %}">Sign-up</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+            </ul>
+
+        </nav>
+    </div>
 </header>

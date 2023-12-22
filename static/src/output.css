@@ -855,6 +855,10 @@ video {
   width: 100%;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -1187,6 +1191,10 @@ video {
 
   .sm\:w-4\/5 {
     width: 80%;
+  }
+
+  .sm\:w-auto {
+    width: auto;
   }
 
   .sm\:max-w-xl {

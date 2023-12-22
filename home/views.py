@@ -33,6 +33,15 @@ class Contact(TemplateView):
     # View for the contact page
     template_name = 'contact.html'
 
+    def get(self, request, *args, **kwargs):
+    # Check if the user is logged in
+        if request.user.is_authenticated:
+            # Redirect to a different view for logged-in users
+            return redirect('account_contact')
+
+        return super().get(request, *args, **kwargs)
+
+
     def post(self, request, *args, **kwargs):
         """
         This function was created while following

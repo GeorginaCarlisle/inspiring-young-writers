@@ -1,84 +1,87 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
-<div class="bg-blue-900 h-full">
-    <!-- Pull in hero image -->
-    {% include 'hero.html' %}
+<div class="bg-blue-900 h-full pt-16 lg:pt-20">
 
-    <!-- Pull in parent_info modal -->
-    {% include 'parent_info.html' %}
+<!-- Pull in hero image -->
+{% include 'hero.html' %}
 
-    <div class="flex justify-center p-8">
-        <!-- Container for form and all its info -->
-        <div class="border border-black rounded bg-zinc-50 p-4 relative max-w-sm">
-            
-            <!-- Form title and initial instruction -->
-            <div class="text-center mb-2 border-b-2 border-black h-auto">
-                <h1 class="text-3xl md:text-4xl mb-2 font-title text-orange-600">
-                    Login
-                </h1>
+<!-- Pull in parent_info modal -->
+{% include 'parent_info.html' %}
 
-                <!-- When errors in submitted form instruction replaced by error message -->
-                {% if messages %}
-                <ul class="mb-4">
-                    {% for message in messages %}
-                    <li{% if message.tags %} class="text-blue-700" {% endif %}>
-                        {{ message }}
-                        </li>
-                        {% endfor %}
-                </ul>
+<div class="flex justify-center p-8">
+    <!-- Container for form and all its info -->
+    <div class="border border-black rounded bg-zinc-50 p-4 relative max-w-sm">
+        
+        <!-- Form title and initial instruction -->
+        <div class="text-center mb-2 border-b-2 border-black h-auto">
+            <h1 class="text-3xl md:text-4xl mb-2 font-title text-orange-600">
+                Login
+            </h1>
 
-                <!-- Form instruction when form first viewed -->
-                {% else %}
-                <p class="mb-2">
-                    Enter your pen name and password to log in to your account.
-                </p>
-                {% endif %}
-                <!-- Specific error details -->
-                {% for field in login_form %}
-                <p>
-                    {% for error in field.errors %}
-                <p class="text-blue-700">{{ error }}</p>
-                {% endfor %}
-                </p>
-                {% endfor %}
-                {% if login_form.non_field_errors %}
-                <p>{{login_form.non_field_errors}}</p>
-                {% endif %}
-                <p class="mb-4">
-                    If you don't have an account. Please
-                    <a href="{% url 'signup' %}" class="text-blue-700 hover:font-bold">Sign up</a>
-                </p>
+            <!-- When errors in submitted form instruction replaced by error message -->
+            {% if messages %}
+            <ul class="mb-4">
+                {% for message in messages %}
+                <li{% if message.tags %} class="text-blue-700" {% endif %}>
+                    {{ message }}
+                    </li>
+                    {% endfor %}
+            </ul>
+
+            <!-- Form instruction when form first viewed -->
+            {% else %}
+            <p class="mb-2">
+                Enter your pen name and password to log in to your account.
+            </p>
+            {% endif %}
+            <!-- Specific error details -->
+            {% for field in login_form %}
+            <p>
+                {% for error in field.errors %}
+            <p class="text-blue-700">{{ error }}</p>
+            {% endfor %}
+            </p>
+            {% endfor %}
+            {% if login_form.non_field_errors %}
+            <p>{{login_form.non_field_errors}}</p>
+            {% endif %}
+            <p class="mb-4">
+                If you don't have an account. Please
+                <a href="{% url 'signup' %}" class="text-blue-700 hover:font-bold">Sign up</a>
+            </p>
+        </div>
+
+        <!-- Login form. LoginForm passed in by view -->
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+
+            <div class="flex flex-col mt-4 mb-12">
+                <div class="mb-4">
+                    <label for="{{ login_form.username.id_for_label }}" class="">
+                        Pen Name
+                    </label>
+                    {{ login_form.username }}
+                </div>
+                <div>
+                    <label for="{{ login_form.password.id_for_label }}">
+                        Password
+                    </label>
+                    {{ login_form.password }}
+                </div>
             </div>
 
-            <!-- Login form. LoginForm passed in by view -->
-            <form action="{% url 'login' %}" method="post">
-                {% csrf_token %}
-
-                <div class="flex flex-col mt-4 mb-12">
-                    <div class="mb-4">
-                        <label for="{{ login_form.username.id_for_label }}" class="">
-                            Pen Name
-                        </label>
-                        {{ login_form.username }}
-                    </div>
-                    <div>
-                        <label for="{{ login_form.password.id_for_label }}">
-                            Password
-                        </label>
-                        {{ login_form.password }}
-                    </div>
-                </div>
-
-                <!-- Submit the form -->
-                <input type="submit" value="Login" id="submit-button"
-                    class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-lg hover:cursor-pointer" />
-            </form>
-            <!-- Reset Password Button -->
-            <a class="absolute left-4 bottom-4 p-1 mt-6 text-blue-700 hover:font-bold"
-                href="{% url 'password_reset' %}">
-                    Forgotten Password
-                </a>
-        </div>
+            <!-- Submit the form -->
+            <input type="submit" value="Login" id="submit-button"
+                class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-lg hover:cursor-pointer" />
+        </form>
+        <!-- Reset Password Button -->
+        <a class="absolute left-4 bottom-4 p-1 mt-6 text-blue-700 hover:font-bold"
+            href="{% url 'password_reset' %}">
+                Forgotten Password
+            </a>
     </div>
 </div>
+
 {% endblock%}
