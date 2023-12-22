@@ -629,16 +629,11 @@ Developement of the project was split into four time boxes/iterations. Each iter
 
 #### First Iteration
 
-<details>
-<summary>
-See more
-</summary>
-
 During the first iteration the following user stories and key tasks were completed and closed:
 ![Screen shot of the First iteration milestone showing closed issues - User stories 1, 7 and 64 plus key additional tasks](documentation/agile/first-iteration-closed.png)
 
 At the end of the iteration the following user stories remained un-completed and open:
-![Screen shot of the First iteration milestone showing open issues - User stories 5, 8, 9, 10, 11 and 17](documentation/agile/second-iteration-open.png)
+![Screen shot of the First iteration milestone showing open issues - User stories 5, 8, 9, 10, 11 and 17](documentation/agile/first-iteration-open.png)
 
 It is to be noted that the:
 
@@ -646,14 +641,8 @@ It is to be noted that the:
 - **Page link errors** (#8) user story cannot be fully completed until authorisation is in place.
 - **Contact form data passed to Admin** (#6) user story despite not being part of this iteration has also been partially completed.
 
-</details>
 
 #### Second Iteration
-
-<details>
-<summary>
-See more
-</summary>
 
 During the second iteration the following user stories and key tasks were completed and closed:
 ![Screen shot of the Second iteration milestone showing closed issues - User stories 5, 8, 12 and 19 plus a task and a bug](documentation/agile/second-iteration-closed-1.png)
@@ -667,14 +656,8 @@ It is to be noted that the:
 - **Admin access to delete accounts** user story (#17) has an associated bug (#72) requiring additional support and 
 will therefore be completed in the next iteration.
 
-</details>
 
 #### Third Iteration
-
-<details>
-<summary>
-See more
-</summary>
 
 During the third iteration I was able to increase my team velocity, completing all the initial user stories set for the interation (40 story points worth) and adding more. There were no open user stories at the end of the iteration.
 
@@ -682,9 +665,27 @@ During the third iteration I was able to increase my team velocity, completing a
 ![Screen shot of more closed issues - User stories 18, 21, 31, 32, 34, 35, 38, 39 and 53](documentation/agile/third-iteration-closed-2.png)
 ![Screen shot of the remaining closed issues - User stories 26, 30 and 37 plus a bug](documentation/agile/third-iteration-closed-3.png)
 
-</details>
 
 #### Fourth Iteration
+
+Due to increasing my time velocity during the third iteration, a larger number of story points were added to this iteration. As the fourth iteration was the final iteration only a few of these were marked as must haves, with the majority being should or could. Over the course of the iteration a final stopping place was decided on based on available time left.
+
+The following user stories and key tasks were completed and closed:
+![Screen shot of the Third iteration milestone showing closed issues - User stories 4, 13, 23, 47, 49, 50 and 52](documentation/agile/fourth-iteration-closed-1.png)
+![Screen shot of more closed issues - User stories 22, 46, 48, 59, 60 and 75 and two tasks](documentation/agile/fourth-iteration-closed-2.png)
+
+At the end of the iteration the following user stories remained un-completed and open. With a decision to leave these as future features along with the remaining backlog:
+![Screen shot of the Fourth iteration milestone showing open issues - User stories 3, 14, 15, 51 and 54](documentation/agile/fourth-iteration-open.png)
+
+
+#### Final Backlog
+
+After the completion of iteration four, the following user stories remained in the backlog to be implemented in the future. Please see [Future Features](#future-features) for more details.
+
+![Screen shot of the Backlog showing open issues - User stories 36, 41, 42, 43, 44 and 45](documentation/agile/backlog-1.png)
+![Screen shot of the Backlog showing open issues - User stories 3, 16, 20, 25, 28, 29, 55, 56, 57 and 58](documentation/agile/backlog-2.png)
+![Screen shot of the Backlog showing open issues - User stories 14, 15, 51 and 54](documentation/agile/backlog-3.png)
+
 
 ### MoSCoW Prioritisation
 
