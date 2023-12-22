@@ -1,59 +1,63 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
-<!-- Pull in hero image -->
-{% include 'hero.html' %}
+<div class="bg-horange h-full pt-16 lg:pt-20">
 
-<!-- Pull in parent_info modal -->
-{% include 'parent_info.html' %}
+    <!-- Pull in hero image -->
+    {% include 'hero.html' %}
 
-<!-- Title and site introduction -->
-<div class="flex justify-center bg-neutral-50">
-  <div class="text-center p-8">
-    <h1 class="text-3xl md:text-4xl mb-4 font-title text-orange-600">
-      Inspiring Young Writers aged 8 -12
-    </h1>
-    <div class="font-body text-sm md:text-xl">
-        <!-- Space for successful log out message -->
-        {% if messages %}
-        <ul class="mb-4">
-            {% for message in messages %}
-            <li{% if message.tags %} class="text-blue-700" {% endif %}>
-                {{ message }}
-                </li>
-                {% endfor %}
-        </ul>
-        <!-- Original introduction -->
-        {% else %}
-        <p>Write and share stories, poetry or non-fiction text.</p>
-        <p class="mb-6">Whatever you feel inspired to write!</p>
-        <a class="p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-xl hover:cursor-pointer"
-            href="{% url 'signup' %}">
-            Become an Inspiring Writer
-        </a>
-        {% endif %}
+    <!-- Pull in parent_info modal -->
+    {% include 'parent_info.html' %}
+
+    <!-- Title and site introduction -->
+    <div class="flex justify-center bg-neutral-50">
+        <div class="text-center p-8">
+            <h1 class="text-3xl md:text-4xl mb-4 font-title text-orange-600">
+                Inspiring Young Writers aged 8 -12
+            </h1>
+            <div class="font-body text-sm md:text-xl">
+                <!-- Space for successful log out message -->
+                {% if messages %}
+                <ul class="mb-4">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="text-blue-700" {% endif %}>
+                        {{ message }}
+                    </li>
+                    {% endfor %}
+                </ul>
+                <!-- Original introduction -->
+                {% else %}
+                <p>Write and share stories, poetry or non-fiction text.</p>
+                <p class="mb-6">Whatever you feel inspired to write!</p>
+                <a class="p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-xl hover:cursor-pointer"
+                    href="{% url 'signup' %}">
+                    Become an Inspiring Writer
+                </a>
+                {% endif %}
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-<!-- Featured Writing Container-->
-<div class="bg-horange">
-  <div class="p-2">
-    <h2 class="md:text-lg">This week's featured writing:</h2>
+    <!-- Featured Writing Container-->
+    <div class="bg-horange">
+        <div class="p-2">
+            <h2 class="md:text-lg">This week's featured writing:</h2>
 
-    <!-- Featured Writing -->
-    {% for writing in featured_writing %}
-    <div class="flex justify-center">
-      <article class="p-4 max-w-4xl">
-        <h3 class="text-center mb-2 font-bold text-xl lg:text-2xl">
-          {{ writing.title }} by {{ writing.author }} aged {{ writing.author.age }}
-        </h3>
-        <div class="border border-black h-60 overflow-auto mb-4 bg-zinc-50 p-2">
-          {{ writing.body|linebreaksbr|safe }}
-      </div>
-      </article>
+            <!-- Featured Writing -->
+            {% for writing in featured_writing %}
+            <div class="flex justify-center">
+                <article class="p-4 max-w-4xl">
+                    <h3 class="text-center mb-2 font-bold text-xl lg:text-2xl">
+                        {{ writing.title }} by {{ writing.author }} aged {{ writing.author.age }}
+                    </h3>
+                    <div class="border border-black h-60 overflow-auto mb-4 bg-zinc-50 p-2">
+                        {{ writing.body|linebreaksbr|safe }}
+                    </div>
+                </article>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-
 </div>
 {% endblock%}
 
