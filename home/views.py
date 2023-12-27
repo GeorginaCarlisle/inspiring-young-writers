@@ -36,9 +36,6 @@ class Index(TemplateView):
         return context
 
 
-The functions 'get' and 'get_context_data' within the class Index (the view rendering the landing page) were copied and adapted from example code given by chatgpt when searching for a way to ensure that the context data I had generated (featured writing) would be passed through and used in the rendering of index.html.
-
-
 class Contact(TemplateView):
     # View for the contact page
     template_name = 'contact.html'
