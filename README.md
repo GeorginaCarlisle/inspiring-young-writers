@@ -923,35 +923,38 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 [Code Institute](https://codeinstitute.net) - "I think therefore I Blog" walkthrough followed when installing dependencies and deploying to Heroku.
 
-[BroBonds](https://github.com/GeorginaCarlisle/brobonds-movember-hackathon)
-
-- Influenced how I chose to structure the apps, folders and files in this project.
-- Used as a reference point when creating views
+[BroBonds](https://github.com/GeorginaCarlisle/brobonds-movember-hackathon) - Heavily influenced how I chose to structure the apps, folders and files in this project. It was also used as a reference point when creating views.
 
 [How To Send Email With Django by Codemy.com](https://www.youtube.com/watch?v=xNqnHmXIuzU) - Youtube tutorial followed and adapted so that on submission of the contact us form an email is sent to the site owner.
 
-[Custom User Model with email login (DJANGO) by CodingWithMitch](https://www.youtube.com/watch?v=SFarxlTzVX4) - Youtube tutorial followed and adapted in order to create the User model.
+[Custom User Model with email login (DJANGO) by CodingWithMitch](https://www.youtube.com/watch?v=SFarxlTzVX4) - Youtube tutorial followed and adapted in order to create the User model and associated CustomAccountManager.
 
-[Register New Users with Django Custom User by CodingWithMitch](https://www.youtube.com/watch?v=sbCd52JiCU4) - Youtube tutorial followed and adapted in order to create NewUserForm and signup.html and associated view.
+[Register New Users with Django Custom User by CodingWithMitch](https://www.youtube.com/watch?v=sbCd52JiCU4) - Youtube tutorial followed and adapted in order to create NewUserForm and sign_up_view.
 
-[Login and Logout with Django by CodingWithMitch](https://www.youtube.com/watch?v=5qhlDC_bQsA) - Youtube tutorial followed and adapted in order to create LoginForm and associated view.
+[Login and Logout with Django by CodingWithMitch](https://www.youtube.com/watch?v=5qhlDC_bQsA) - Youtube tutorial followed and adapted in order to create LoginForm, login_view and logout_view.
 
-[ChatGPT](https://chat.openai.com/) - Code for validation against swear words copied and adapted slightly from an example given by Chatgpt.
+[ChatGPT](https://chat.openai.com/) - Code for adding a custom error message when the 'unique' requirement is not met in the CreateWritingForm was copied and adapted from an example given by chatGPT.
 
-[Password Reset and Password Change (Django) by CodingWithMitch](https://www.youtube.com/watch?v=W5PyXUTjwS4) - Youtube tutorial followed in order to create password reset functionality.
+[ChatGPT](https://chat.openai.com/) - The functions 'get' and 'get_context_data' within the class Index (the view rendering the landing page) were copied and adapted from example code given by chatgpt when searching for a way to ensure that the context data I had generated (featured writing) would be passed through and used in the rendering of index.html.
+
+[ChatGPT](https://chat.openai.com/) - Code for validation against swear words copied and adapted slightly from an example given by Chatgpt. Used in the CreateWritingForm, NewUserForm and GiveFeedbackForm.
+
+[Password Reset and Password Change (Django) by CodingWithMitch](https://www.youtube.com/watch?v=W5PyXUTjwS4) - Youtube tutorial followed in order to create password reset functionality. Associated url paths in the main urls file were copied and adapted. Templates in the password_reset folder were created while following along to the tutorial.
 
 [Favicon](https://favicon.io/emoji-favicons/pencil/) - Code used to link to Favicon images copied from here with href attributes adapted.
 
 
 ### Images
 
-[boys-using-silver-macbook](https://www.pexels.com/photo/boy-using-silver-macbook-indoors-3401403/) by Agung Pandit Wiguna - Used to create Hero Image.
+The following images were used to create the hero image displayed on all New User Experience pages and the account home page. The images were combined using [Canva](https://www.canva.com) with back ground and text added by myself.
 
-[girl-watching-movie-on-laptop](https://www.pexels.com/photo/little-girl-watching-movie-on-laptop-4017428/) by Gustavo Fring - Used to create Hero Image.
+- [boys-using-silver-macbook](https://www.pexels.com/photo/boy-using-silver-macbook-indoors-3401403/) by Agung Pandit Wiguna.
 
-[girl-typing-on laptop](https://www.pexels.com/photo/focused-asian-girl-typing-on-laptop-at-home-5905969/) by Katerina Holmes - Used to create Hero Image.
+- [girl-watching-movie-on-laptop](https://www.pexels.com/photo/little-girl-watching-movie-on-laptop-4017428/) by Gustavo Fring.
 
-[young-woman-sitting-on-the-carpet-while-using-laptop](https://www.pexels.com/photo/a-young-woman-sitting-on-the-carpet-while-using-her-laptop-5998826/) by cottonbro studio - Used to create Hero Image.
+- [girl-typing-on laptop](https://www.pexels.com/photo/focused-asian-girl-typing-on-laptop-at-home-5905969/) by Katerina Holmes.
+
+- [young-woman-sitting-on-the-carpet-while-using-laptop](https://www.pexels.com/photo/a-young-woman-sitting-on-the-carpet-while-using-her-laptop-5998826/) by cottonbro studio.
 
 [Favicon](https://favicon.io/emoji-favicons/pencil/) from Favicon.io where the emoji graphics are from the open source project [Twemoji](https://twemoji.twitter.com). The graphics are copyright 2020 Twitter, Inc and other contributors. The graphics are licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
@@ -967,39 +970,25 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 [Font Awesome icons](https://fontawesome.com/) - Used for the mobile nav and also in the footer.
 
+### Platform content
+
+All platform content has been generated either by myself as 'Publisher' or by family and friends using the site.
+
 [Return to contents list](#contents)
 
 ## Acknowledgements
 
+Family and friends - Completing this project would not have been possible without the support of my family and friends. Family members and friends also took time to become registered users and create real content for the platform.
+
 [Code Institute](https://codeinstitute.net) - The majority of the coding skills, knowledge and understanding showcased in this project have been learnt through the 'Diploma of Full stack software development' that I am completing with Code Institute.
 
-Code Institute's Slack community - Provided me with support and key insight into issues I was facing. Where specific support was gained, this has been noted either in [credits](#credits) or in [bugs](#bugs-and-fixes) as appropriate.
+Code Institute's Slack community - Provided me with support and key insight into issues I was facing. Specific support was gained in solving [bug #1](#bugs-and-fixes). 
 
-Code Institute's Tutor support - Helped me to solve bug #3.
+Code Institute's Tutor support - Helped me to solve [bugs #3 and #5](#bugs-and-fixes).
 
-[Django's documentation](https://docs.djangoproject.com/en/3.2) - Used throughout this project to check how to correctly use Django's inbuilt functions and models et.
+My mentor Gurjot - Provided support and guidance during this project.
 
-[ChatGPT](https://chat.openai.com/) - Used to speed up the development process, during iterations 3 by:
-
-- Pointing me towards 'profanity-check' as a way to validate my writing inputs to prevent swear words and helping me to implement (alongside reading the documentation for profanity-check and Django documentation around validators).
-
-- Pointing me towards slugify as a way to create a slug, including giving an example of use.
-
-- Provided ideas for how to create a confirmation step when submitting writing to be published.
-
-- Provided ideas for how to program two submit buttons for a form that would lead to different outcomes
-
-- Pointing me towards the date filter as a way to format data from a DateTimeField
-
-- Pointing me towards the ModelAdmin class and it's attributes to customise the Admin interface and provide access to more of the data.
-
-- Providing an explanation of how to add a custom error message when the unique requirement is not met during form handling.
-
-- Tips for imporving accessibility on page links that are not obvious.
-
-- Pointed me towards using "|linebreaksbr|safe" to render the contents of my TextField with linebreaks intacted.
-
-- Providing an explanation of how to construct my class Index(TemplateView) to ensure the context I was generating was passed through to index.html
+[Django's documentation](https://docs.djangoproject.com/en/3.2) - Used throughout this project to check how to correctly use Django's inbuilt functions and models etc.
 
 
 ### Other projects
@@ -1038,5 +1027,28 @@ The following websites, articles and tutorials are listed in order of use during
 
 
 [Password Reset Email | Django (3.0) Crash Course Tutorials (pt 20) by Dennis Ivy](https://www.youtube.com/watch?v=sFPcd6myZrY) - Youtube tutorial watched in order to assist in getting the password reset functionality working
+
+### ChatGPT
+
+Throughout the development of this project I have pushed beyond the knowledge gained from my course with Code Institute, initially utilising google searches to find articles and tutorials (acknowledged above) and time spent searching through and reading the Django documentation to aid my learning and allow me to include features I did not have the knowledge and skill to write the code needed at the beginning of this project, but do now.
+This was often a very time consuming process and so in my third iteration I explored how I could use chatgpt to aid my learning and thus speed up the development of the project.
+
+Where I have directly used example code provided by chatgpt this has been credited in [Credits](#credits). Where I have utilised chatgpt in the solving of bugs, this has been acknowledged in [bugs and fixes](#bugs-and-fixes). All other instances where I have used chatgpt to aid my learning and in turn the building of this project are covered below with a clear description of what I gained from Chatgpt. 
+
+[Chatgpt](https://chat.openai.com/):
+
+- Pointed me towards slugify as a way to create a slug, including aiding my understanding by giving an example of use. I then used this understanding when creating a variable for the slug field in create_writing_view and passing this variable into the model in CreateWritingForm.
+
+- Provided ideas for how to create a confirmation step when submitting writing to be published. I further explored the initial ideas given (drawing on my own knowledge as well as responses back from chatgpt and Django's documentation) arriving at a final decision to use a combination of view code and html code utilising messages, context, if statements and adding '?confirm=True' into the url of the form action. Final code was written by myself, utilising the knowledge and understanding gained with no code being copied. The initial code written can be seen in create_writing.html and create_writing_view. This code was then used to influence all other instances where confirmation was needed.
+
+- Provided confirmation that you can program two submit buttons for a form and an explantion of how you could give the submit buttons each a unique name, which could then be checked by the view code to see if that name was in the post request. Two submit buttons were used in create_writing.html linking with create_writing_view. This code was written by myself drawing on the knowledge gained from chatgpt.
+
+- Pointed me towards the date filter (|date:"d M Y") as a way to pull just the date from a datetimefield, including providing an example of use. I then used this knowledge when rendering the date in my_work.html.
+
+- Provided me with an explanation of the attributes that are part of the ModelAdmin class and what they can be used for. I then used this knowledge when writing my admin files in order to customise the Admin interface.
+
+- Provided tips for improving accessibility where I have elements with event listeners that open and close modals - mobile nav and parent information. I then used the knowledge gained to go back into my code and add aria-label and aria-hidden attributes where I felt they were needed.
+
+- Pointed me towards using "|linebreaksbr|safe" to render the contents of my TextField with linebreaks intacted. I then used this knowledge when rendering the body field of an instance of writing in view_writing.html and read.html.
 
 [Return to contents list](#contents)

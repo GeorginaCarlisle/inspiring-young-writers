@@ -49,6 +49,7 @@ class CreateWritingForm(forms.ModelForm):
     def clean_title(self):
         title = self.cleaned_data.get('title')
 
+        # The following statement was adapted from an example provided by Chatgpt.
         if Writing.objects.filter(title=title).exclude(pk=self.instance.pk).exists():
             raise forms.ValidationError(
                 'Your title must be unique and there is already work with this title. \
