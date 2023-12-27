@@ -1,4 +1,4 @@
-{% load compress %} {% load static %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,20 +16,17 @@
         />
         {% endblock %}
 
-        <!-- Fonts. Credit to https://fonts.google.com/ for the code below. See readme for full credit information on fonts used. -->
+        <!-- Fonts -->
         {% block core_css %}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-        href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap"
-        rel="stylesheet"
-        />
-        {% endblock %}
-
+          href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap"
+          rel="stylesheet" />
+    
         <!-- CSS -->
-        {% compress css %}
         <link rel="stylesheet" href="{% static 'src/output.css' %}" />
-        {% endcompress %}
+        {% endblock %}
 
         <!-- Favicon. Credit to https://favicon.io for the code below. See readme for full credit information on images. -->
         <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
