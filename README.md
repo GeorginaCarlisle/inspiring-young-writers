@@ -894,6 +894,8 @@ Tools and technologies are listed in order of use during the development of this
 
 [ChatGPT](https://chat.openai.com/) - ChatGPT was used to help resolve project bugs. This has then been clearly referenced in [Bugs and Fixes](#bugs-and-fixes). ChatGPT was also used on occasion to speed up the development process and provide ideas and support in achieving certain requirements. This has then been clearly referenced in [Acknowledgements](#acknowledgements).
 
+[Jshint](https://jshint.com/) - Used to validate the JavaScript code.
+
 [Return to contents list](#contents)
 
 ## Testing and Validation

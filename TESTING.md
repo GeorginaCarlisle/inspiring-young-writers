@@ -65,6 +65,10 @@ Include screenshots of any warnings here
 
 ### JavaScript Validation
 
+No errors or warnings when script.js passed into [Jshint](https://jshint.com/):
+
+![Screenshot showing validation of script.js](documentation/testing/javascript-validation.png)
+
 ### Python Validation
 
 Intro Python Validation
