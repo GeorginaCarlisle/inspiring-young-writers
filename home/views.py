@@ -13,20 +13,30 @@ class Index(TemplateView):
     # View for the landing page
     template_name = 'index.html'
 
-    # Ensure future functions are called every time this view is
+    """
+    Ensure the get_context_data function is called every time this view is
+    Main shell of function copied and adapted from example code given by chatgpt
+    and check if there is a logged in user redirecting to account_home if so
+    """
     def get(self, request, *args, **kwargs):
         # If a logged in user ends up in this view redirect to account_home
         if request.user.is_authenticated:
             return redirect('account_home')
         return super().get(request, *args, **kwargs)
 
-    # Function to pass the featured writing through
+    """ 
+    Function to pass the featured writing through to index.html
+    Copied and adapted from example code provided by chatgpt
+    """
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         featured_writing = Writing.objects.filter(featured = True)
 
         context['featured_writing'] = featured_writing
         return context
+
+
+The functions 'get' and 'get_context_data' within the class Index (the view rendering the landing page) were copied and adapted from example code given by chatgpt when searching for a way to ensure that the context data I had generated (featured writing) would be passed through and used in the rendering of index.html.
 
 
 class Contact(TemplateView):

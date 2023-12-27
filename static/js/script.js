@@ -17,7 +17,7 @@ window.onload = function() {
 
     // Call function to check if html being loaded is sign-up form
     inSignup();
-    }
+    };
   
 /**
  * Called when the hamburger is clicked. Click event Listener activated on load.
@@ -103,7 +103,7 @@ function closeConfirmNeeded() {
                 // re-hide modal
                 confirmModal.style.display = "none";
                 confirmModal.setAttribute('aria-hidden', 'true');
-                })
+                });
             });
         }
     }
