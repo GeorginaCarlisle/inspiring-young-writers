@@ -2,58 +2,63 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    {% block meta %}
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Inspiring Young Writers is a platform specifically designed for children aged 8 - 12 to share their writing and give and gain feedback."
-    />
-    <meta
-      name="keywords"
-      content="young writers, children's writing, writing for children, creative writing, sharing writing"
-    />
-    {% endblock %}
+    <head>
+        {% block meta %}
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+        name="description"
+        content="Inspiring Young Writers is a platform specifically designed for children aged 8 - 12 to share their writing and give and gain feedback."
+        />
+        <meta
+        name="keywords"
+        content="young writers, children's writing, writing for children, creative writing, sharing writing"
+        />
+        {% endblock %}
 
-    <!-- Fonts -->
-    {% block core_css %}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    {% endblock %}
+        <!-- Fonts -->
+        {% block core_css %}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet"
+        />
+        {% endblock %}
 
-    <!-- CSS -->
-    {% compress css %}
-    <link rel="stylesheet" href="{% static 'src/output.css' %}" />
-    {% endcompress %}
+        <!-- CSS -->
+        {% compress css %}
+        <link rel="stylesheet" href="{% static 'src/output.css' %}" />
+        {% endcompress %}
 
-    <!-- JavaScript -->
-    {% block corejs %}
-    <script src="{% static 'js/script.js' %}"></script>
-    {% endblock %}
+        <!-- Favicon credit to Favicon.io -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
 
-    <title>Inspiring Young Writers{% block extra_title %}{% endblock %}</title>
-  </head>
-  <body class="flex flex-col h-screen">
-    {% if request.user.is_authenticated %}
-    <!-- Header for when logged in -->
-    {% include 'account_header.html' %} {% else %}
-    <!-- Header for un authorised user -->
-    {% include 'header.html' %} {% endif %}
+        <!-- JavaScript -->
+        {% block corejs %}
+        <script src="{% static 'js/script.js' %}"></script>
+        {% endblock %}
 
-    <main class="grow font-body">{% block content %} {% endblock %}</main>
-    {% include 'footer.html' %}
+        <title>Inspiring Young Writers{% block extra_title %}{% endblock %}</title>
+    </head>
+    <body class="flex flex-col h-screen">
+        {% if request.user.is_authenticated %}
+        <!-- Header for when logged in -->
+        {% include 'account_header.html' %} {% else %}
+        <!-- Header for un authorised user -->
+        {% include 'header.html' %} {% endif %}
 
-    <!-- Script for fontawesome icons, copied from https://fontawesome.com/ -->
-    {% block extra_js %} {% endblock %}
-    <script
-      src="https://kit.fontawesome.com/ab3127d928.js"
-      crossorigin="anonymous"
-    ></script>
-    {% block postloadjs %} {% endblock %}
-  </body>
+        <main class="grow font-body">{% block content %} {% endblock %}</main>
+        {% include 'footer.html' %}
+
+        <!-- Script for fontawesome icons, copied from https://fontawesome.com/ -->
+        {% block extra_js %} {% endblock %}
+        <script
+        src="https://kit.fontawesome.com/ab3127d928.js"
+        crossorigin="anonymous"></script>
+        {% block postloadjs %} {% endblock %}
+    </body>
 </html>

@@ -940,6 +940,8 @@ See [TESTING.md](TESTING.md) for all testing and validation
 
 [Password Reset and Password Change (Django) by CodingWithMitch](https://www.youtube.com/watch?v=W5PyXUTjwS4) - Youtube tutorial followed in order to create password reset functionality.
 
+[Favicon](https://favicon.io/emoji-favicons/pencil/) - Code used to link to Favicon images copied from here with href attributes adapted.
+
 
 ### Images
 
@@ -950,6 +952,8 @@ See [TESTING.md](TESTING.md) for all testing and validation
 [girl-typing-on laptop](https://www.pexels.com/photo/focused-asian-girl-typing-on-laptop-at-home-5905969/) by Katerina Holmes - Used to create Hero Image.
 
 [young-woman-sitting-on-the-carpet-while-using-laptop](https://www.pexels.com/photo/a-young-woman-sitting-on-the-carpet-while-using-her-laptop-5998826/) by cottonbro studio - Used to create Hero Image.
+
+[Favicon](https://favicon.io/emoji-favicons/pencil/) from Favicon.io where the emoji graphics are from the open source project [Twemoji](https://twemoji.twitter.com). The graphics are copyright 2020 Twitter, Inc and other contributors. The graphics are licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ### Font
 
