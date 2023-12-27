@@ -30,14 +30,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
     'inspiring-young-writers-0f3170377dc7.herokuapp.com',
     'localhost',
-    '8001-georginacarlisle-inspiri-8obw9gciep.us2.codeanyapp.com',
-    '8000-georginacarlisle-inspiri-8obw9gciep.us2.codeanyapp.com']
+    ]
 
 # Application definition
 
@@ -92,16 +90,10 @@ WSGI_APPLICATION = 'inspiringyw.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
-#DATABASES = {
-#    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-#}
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -151,11 +143,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-COMPRESS_ROOT = BASE_DIR / 'static'
-
-COMPRESS_ENABLED = True
-
-STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
 # Link Authentication to custom user model
 
