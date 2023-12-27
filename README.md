@@ -721,6 +721,70 @@ GitHub projects was utilised as a kanban board for this project.
 
 ### Existing Features
 
+#### New User Experience EPIC
+
+##### Landing Page
+
+##### New User Navigation
+
+##### Information For Parents
+
+##### Contact Us
+
+##### Error Pages
+
+#### Authentication EPIC
+
+##### Sign - up
+
+##### Login
+
+##### Logout
+
+##### Forgotten Password
+
+#### Account Home EPIC
+
+##### Account Home Page
+
+##### Account Navigation
+
+##### Error Pages
+
+#### My Work EPIC
+
+##### My Work
+
+##### Create work
+
+##### View work
+
+##### View feedback for my work
+
+##### Edit work
+
+##### Delete work
+
+#### Library of Published Work EPIC
+
+##### Library of inspiration
+
+##### Read work
+
+#### Feedback EPIC
+
+##### View feedback
+
+##### Give feedback
+
+##### Edit feedback
+
+##### Delete feedback
+
+#### ADMIN (covers Approval of writing EPIC plus more)
+
+
+
 #### 404 Error Page
 
 Attempting to access a webpage that does not exist, has been moved, or has a dead or broken link takes the user to a 404 page. A clear button provides a link back to the main site.
