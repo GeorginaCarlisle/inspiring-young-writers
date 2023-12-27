@@ -12,9 +12,7 @@
 
     <div class="flex justify-center p-8">
     <!-- Container for form and all its info -->
-        <div
-            class="border border-black rounded bg-zinc-50 p-4 relative max-w-sm sm:max-w-xl"
-        >
+        <div class="border border-black rounded bg-zinc-50 p-4 relative max-w-sm sm:max-w-xl">
             <!-- Form title and initial instruction -->
             <div class="text-center mb-2 border-b-2 border-black">
                 <h1 class="text-3xl md:text-4xl mb-2 font-title text-orange-600">
@@ -40,8 +38,8 @@
                 {% for field in new_user_form %}
                 <p>
                     {% for error in field.errors %}
-                <p class="text-blue-700">{{ error }}</p>
-                {% endfor %}
+                    <p class="text-blue-700">{{ error }}</p>
+                    {% endfor %}
                 </p>
                 {% endfor %}
                 {% if new_user_form.non_field_errors %}
@@ -87,35 +85,32 @@
                             {{ new_user_form.first_name }}
                         </div>
                         <div>
-                            <label
-                            for="{{ new_user_form.last_name.id_for_label }}"
-                            class="sm:ml-4"
-                            >
-                            Last Name
+                            <label for="{{ new_user_form.last_name.id_for_label }}"
+                            class="sm:ml-4">
+                                Last Name
                             </label>
                             {{ new_user_form.last_name }}
                         </div>
                     </div>
                     <div class="mb-4">
-                        <label for="{{ new_user_form.email.id_for_label }}" class="form-item"
-                            >Email Address</label
-                        >
+                        <label for="{{ new_user_form.email.id_for_label }}" class="form-item">
+                            Email Address
+                        </label>
                         {{ new_user_form.email }}
                     </div>
                     <div class="mb-4">
-                        <label
-                            for="{{ new_user_form.consent.id_for_label }}"
-                            class="form-item"
-                            >I consent to my child using this site</label
-                        >
+                        <label for="{{ new_user_form.consent.id_for_label }}"
+                        class="form-item">
+                            I consent to my child using this site
+                        </label>
                         {{ new_user_form.consent }}
                     </div>
                     <p class="mb-4 text-sm">
-                    Please see the
+                        Please see the
                         <button
-                            id="open-parent-info"
-                            aria-label="open information for parents"
-                            class="text-blue-700">
+                        id="open-parent-info"
+                        aria-label="open information for parents"
+                        class="text-blue-700">
                             Information for parents
                         </button>
                         to find out more about what signing up will mean for your child and
@@ -144,11 +139,10 @@
 
                 <!-- Submit the form -->
                 <input
-                    type="submit"
-                    value="Sign-up"
-                    id="submit-button"
-                    class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-lg hover:cursor-pointer"
-                />
+                type="submit"
+                value="Sign-up"
+                id="submit-button"
+                class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-lg hover:cursor-pointer">
             </form>
         </div>
     </div>

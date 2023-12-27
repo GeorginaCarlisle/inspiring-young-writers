@@ -24,8 +24,7 @@
         <div class="border border-black rounded bg-zinc-50 p-4 relative w-4/5 md:w-3/5 lg:w-2/5 mb-4">
         
             <!-- Back buttom to return user to my work -->
-            <a
-            href="{% url 'my_work' user.id %}"
+            <a href="{% url 'my_work' user.id %}"
             title="Return to My Work"
             class="absolute top-4 right-4"
             id="back-button">
@@ -41,13 +40,12 @@
                 <!-- Confirm back handled by JavaScript function closeConfirmNeeded-->
                 <div class="hidden border border-black rounded bg-zinc-50 p-4 w-full mb-4 relative bottom-7" id="confirm-modal" aria-hidden="true">
                     <p class="text-blue-700 mb-12">Are you sure you want to head back? Any changes you have made will not be saved.</p>
-                    <button 
-                        class="absolute left-4 bottom-4 p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
-                        id="keep-writing">
+                    <button class="absolute left-4 bottom-4 p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
+                    id="keep-writing">
                         Keep creating
                     </button>
                     <a class="absolute right-4 bottom-4 p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
-                        href="{% url 'my_work' user.id %}">
+                    href="{% url 'my_work' user.id %}">
                         Head back
                     </a>
                 </div>
@@ -124,8 +122,7 @@
                 value="Save as draft"
                 id="draft"
                 name="draft"
-                class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-sm sm:text-lg hover:cursor-pointer"
-                />
+                class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-sm sm:text-lg hover:cursor-pointer">
 
                 {% if not confirmation_needed %}
                 <!-- Choice to submit to Publish -->
@@ -134,8 +131,7 @@
                 value="Submit to be published"
                 id="publish"
                 name="publish"
-                class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-sm sm:text-lg hover:cursor-pointer"
-                />
+                class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-sm sm:text-lg hover:cursor-pointer">
                 {% endif %}
 
                 {% if confirmation_needed %}
@@ -145,8 +141,7 @@
                 value="Confirm"
                 id="publish"
                 name="publish"
-                class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-sm sm:text-lg hover:cursor-pointer"
-                />
+                class="absolute right-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-sm sm:text-lg hover:cursor-pointer">
                 {% endif %}
             </form>
 

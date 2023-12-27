@@ -34,15 +34,15 @@
     <!-- Call to action buttons -->
     <div class="flex flex-col sm:flex-row justify-around items-center sm:items-none mx-4 md:m-auto md:max-w-screen-md">
         <a class="p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
-            href="{% url 'create' %}">
+        href="{% url 'create' %}">
             Create new work
         </a>
         <a class="p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
-            href="{% url 'library' %}">
+        href="{% url 'library' %}">
             Head to the inspirational library
         </a>
         <a class="p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
-            href="{% url 'my_work' user.id%}">
+        href="{% url 'my_work' user.id%}">
             View your writing
         </a>
     </div>
@@ -53,22 +53,22 @@
         <img 
         src="{% static 'images/hero-image-small.webp' %}" 
         alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
-        class="sm:hidden"/>
+        class="sm:hidden">
         <!-- Medium Screens -->
         <img 
         src="{% static 'images/hero-image-medium.webp' %}" 
         alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
-        class="hidden sm:block lg:hidden"/>
+        class="hidden sm:block lg:hidden">
         <!-- Large Screens -->
         <img 
         src="{% static 'images/hero-image-large.webp' %}" 
         alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
-        class="hidden lg:block xl:hidden"/>
+        class="hidden lg:block xl:hidden">
         <!-- Extra Large Screens -->
         <img 
         src="{% static 'images/hero-image-extra-large.webp' %}" 
         alt="Across the bottom of the picture are children typing away at their laptops. Above are snippets of their writing." 
-        class="hidden xl:block"/>
+        class="hidden xl:block">
     </div>
 </div>
 

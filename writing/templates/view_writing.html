@@ -11,11 +11,9 @@
     <!-- Heading showing user they are in the their work section of platform -->
     <div class="flex justify-center h-fit">
         <div class="text-center px-4 py-2 bg-horange my-4 h-fit rounded border border-black">
-            
             <h1 class="text-3xl md:text-4xl font-title text-black mb-2">
                 My Work
             </h1>
-
         </div>
     </div>
 
@@ -24,8 +22,7 @@
         <div class="border border-black rounded bg-zinc-50 p-4 relative w-11/12 sm:max-w-xl h-3/4">
             
             <!-- Back buttom to return user to my work -->
-            <a
-            href="{% url 'my_work' user.id %}"
+            <a href="{% url 'my_work' user.id %}"
             title="Return to My Work. Any changes will not be saved."
             class="absolute top-4 right-4">
                 <i class="fa-solid fa-x text-4xl" aria-hidden="true"></i>
@@ -71,7 +68,7 @@
             <div class="font-body text-sm md:text-xl mt-4">
                 <ul class="mb-4">
                     {% for message in messages %}
-                    <li{% if message.tags %} class="text-blue-800 text-lg" {% endif %}>
+                    <li {% if message.tags %} class="text-blue-800 text-lg" {% endif %}>
                         {{ message }}
                     </li>
                     {% endfor %}
@@ -122,5 +119,5 @@
             {% endif %}
         </div>
     </div>
-
-    {% endblock%}
+</div>
+{% endblock%}

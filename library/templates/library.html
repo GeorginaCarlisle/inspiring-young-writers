@@ -11,7 +11,6 @@
     <!-- Heading showing user they are in the library section of platform -->
     <div class="flex justify-center h-fit">
         <div class="text-center px-4 py-2 bg-horange my-4 h-fit rounded border border-black">
-            
             <h1 class="text-3xl md:text-4xl font-title text-black mb-2">
                 Library of inspiration
             </h1>
@@ -46,7 +45,8 @@
                     <a href="{% url 'read' work.id %}"
                     title="Read writing"
                     class="hover:font-bold text-xl text-orange-700">
-                    {{ work.title }}</a>
+                        {{ work.title }}
+                    </a>
                     <span> written by {{ work.author }}</span>
                     <span> aged {{ work.author.age }}</span>
                 </p>
@@ -54,9 +54,8 @@
             </div>
                 {% endfor %}
                 {% else %}
-            
+                <!-- Message to be displayed if there is no published work -->
                 <p class="mb-2">There is no published work. Somebody needs to get writing!</p>
-            
             {% endif %}
 
         </div>

@@ -31,7 +31,7 @@
                 <p>Write and share stories, poetry or non-fiction text.</p>
                 <p class="mb-6">Whatever you feel inspired to write!</p>
                 <a class="p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white text-xl hover:cursor-pointer"
-                    href="{% url 'signup' %}">
+                href="{% url 'signup' %}">
                     Become an Inspiring Writer
                 </a>
                 {% endif %}
@@ -55,9 +55,11 @@
                         {{ writing.body|linebreaksbr|safe }}
                     </div>
                 </article>
+            </div>
         </div>
         {% endfor %}
     </div>
+
 </div>
 {% endblock%}
 
