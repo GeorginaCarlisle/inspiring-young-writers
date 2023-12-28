@@ -753,6 +753,33 @@ They can also read work written by another child, inspiring them to write and sh
 
 ##### Information For Parents
 
+For the parents of new users they can read about how the platform works, the steps in place to protect their child and what they and their child can do to increase safety (user story 4).
+This information:
+
+- can be accessed directly from the main navigation
+
+- can also be accessed as a link from the sign-up page, where parents are asked to give their consent.
+
+- opens up in a modal so that it can always be accessed without disrupting anything esle taking place, such as filling in the sign-up form.
+
+- has a title and navigation link making it clear the information is targeted towards parents.
+
+- has an introduction that quickly explains what information is contained in the section.
+
+- is split into clear sections each with a title and picture.
+
+- has been style to make it easy to scan and pick out information of interest.
+
+- has a clear back button can be used to re-hide the information.
+
+![First screenshot of the parent information](documentation/features/parent-info-chrome-1.png)
+
+![Second screenshot of the parent information](documentation/features/parent-info-chrome-2.png)
+
+![Third screenshot of the parent information](documentation/features/parent-info-chrome-3.png)
+
+![Fourth screenshot of the parent information](documentation/features/parent-info-chrome-4.png)
+
 ##### Contact Us
 
 ##### Error Pages

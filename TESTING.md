@@ -118,9 +118,8 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | Only writing specifically chosen to be featured is displayed | PASS | PASS |
 | | | The writing is referenced under a heading 'This week's featured article:' | PASS | PASS |
 | | | The writing includes title, author, author's age and the writing | PASS | PASS |
-| 3 | As a **new user** I am given clear information on what registered users can do | | | |
-| | | | | |
-| 4 | As the **parent of a new user** I am provided with information which details how the site works | I can navigate to 'Information for parents' from the navigation bar | PASS | |
+| 3 | As a **new user** I am given clear information on what registered users can do | Future Feature | | |
+| 4 | As the **parent of a new user** I am provided with information which details how the site works | I can navigate to 'Information for parents' from the navigation bar | PASS | PASS |
 | | | I can navigate to 'Information for parents' from the sign-up page | PASS | |
 | | | 'Information for parents' available across the full platform | PASS | |
 | | | 'Information for parents' opens up in a modal | PASS | |
