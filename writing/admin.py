@@ -1,15 +1,16 @@
 from django.contrib import admin
 from .models import Writing
 
+
 class WritingAdmin(admin.ModelAdmin):
     list_display = (
         'title',
         'body',
-        'author', 
-        'updated_on', 
-        'pending_approval', 
-        'date_submitted', 
-        'approved', 
+        'author',
+        'updated_on',
+        'pending_approval',
+        'date_submitted',
+        'approved',
         'date_approved',
         'featured',
         'failed_approval',
@@ -17,8 +18,8 @@ class WritingAdmin(admin.ModelAdmin):
         'reason_failed'
         )
     list_editable = (
-        'pending_approval',  
-        'approved', 
+        'pending_approval',
+        'approved',
         'date_approved',
         'failed_approval',
         'date_failed',
@@ -34,4 +35,3 @@ class WritingAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Writing, WritingAdmin)
-

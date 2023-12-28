@@ -3,9 +3,12 @@ from django.core.exceptions import ValidationError
 from .models import Feedback
 
 """
-Code for validation against swear words copied and adapted from an example given by Chatgpt
+Code for validation against swear words copied and adapted
+from an example given by Chatgpt
 """
-SWEAR_WORD_LIST = ['fuck', 'shit', 'crap', 'bollocks', 'bitch', 'cock', 'cunt', 'cum', 'fucker', 'dick']
+SWEAR_WORD_LIST = ['fuck', 'shit', 'crap', 'bollocks', 'bitch', 'cock',
+                   'cunt', 'cum', 'fucker', 'dick']
+
 
 def validate_no_swearing(value):
     for swear_word in SWEAR_WORD_LIST:
@@ -36,7 +39,7 @@ class GiveFeedbackForm(forms.ModelForm):
             'style': 'width: 100%; height: 3.5rem; padding: 4px'}),
         validators=[validate_no_swearing]
         )
-    
+
     class Meta:
         model = Feedback
         fields = ("star_one", "star_two", "wish")
@@ -50,7 +53,7 @@ class GiveFeedbackForm(forms.ModelForm):
             {'class': 'border border-black'})
         self.fields['wish'].widget.attrs.update(
             {'class': 'border border-black'})
-    
+
     # Make sure star_one is cleaned
     def clean_star_one(self):
         star_one = self.cleaned_data.get('star_one')
@@ -62,7 +65,7 @@ class GiveFeedbackForm(forms.ModelForm):
         star_two = self.cleaned_data.get('star_two')
 
         return star_two
-    
+
     # Make sure wish is cleaned
     def clean_wish(self):
         wish = self.cleaned_data.get('wish')
@@ -70,14 +73,21 @@ class GiveFeedbackForm(forms.ModelForm):
         return wish
 
     # Add additional fields to be generated on saving of the form
-    def save(self, commit=True, giver=None, writing=None, date_created=None, date_last_edit=None, approved=None):
+    def save(
+            self,
+            commit=True,
+            giver=None,
+            writing=None,
+            date_created=None,
+            date_last_edit=None,
+            approved=None):
         feedback = super().save(commit=False)
 
         if giver:
-             feedback.giver = giver
+            feedback.giver = giver
 
         if writing:
-             feedback.writing = writing
+            feedback.writing = writing
 
         if date_created:
             feedback.date_created = date_created

@@ -15,7 +15,8 @@ https://www.youtube.com/watch?v=sbCd52JiCU4
 def sign_up_view(request, *args, **kwargs):
     user = request.user
     if user.is_authenticated:
-        return HttpResponse(f"You are already authenticated as {user.username}")
+        return HttpResponse(
+            f"You are already authenticated as {user.username}")
 
     context = {}
     if request.POST:
@@ -45,6 +46,7 @@ The following Tutorial was followed and adapted when creating the
 views to Login and Logout with Django by CodingWithMitch
 https://www.youtube.com/watch?v=5qhlDC_bQsA
 """
+
 
 def logout_view(request):
     logout(request)

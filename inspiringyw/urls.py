@@ -26,23 +26,28 @@ urlpatterns = [
     path('writing/', include('writing.urls'), name=''),
     path('library/', include('library.urls'), name=''),
 
-    
-    # Password reset links copied from 'Password Reset and Password Change (Django)' tutorial
+
+    # Password reset links copied from
+    # 'Password Reset and Password Change (Django)' tutorial
     # by CodeWithMitch https://www.youtube.com/watch?v=W5PyXUTjwS4
     path('password_reset/',
-         auth_views.PasswordResetView.as_view(template_name='password_reset/password_reset.html'),
-         name='password_reset'),    
-    
+         auth_views.PasswordResetView.as_view(
+            template_name='password_reset/password_reset.html'),
+         name='password_reset'),
+
     path('password_reset/done/',
-         auth_views.PasswordResetCompleteView.as_view(template_name='password_reset/password_reset_sent.html'),
+         auth_views.PasswordResetCompleteView.as_view(
+            template_name='password_reset/password_reset_sent.html'),
          name='password_reset_done'),
-    
+
     path('reset/<uidb64>/<token>/',
-         auth_views.PasswordResetConfirmView.as_view(template_name='password_reset/password_reset_form.html'),
+         auth_views.PasswordResetConfirmView.as_view(
+            template_name='password_reset/password_reset_form.html'),
          name='password_reset_confirm'),
-  
+
     path('reset/done/',
-         auth_views.PasswordResetCompleteView.as_view(template_name='password_reset/password_reset_complete.html'),
+         auth_views.PasswordResetCompleteView.as_view(
+            template_name='password_reset/password_reset_complete.html'),
          name='password_reset_complete'),
 ]
 

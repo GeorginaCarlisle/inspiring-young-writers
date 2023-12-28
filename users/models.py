@@ -1,7 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
+from django.contrib.auth.models import (
+    AbstractBaseUser, PermissionsMixin, BaseUserManager
+)
 from django.utils import timezone
-from django.core.validators import MinValueValidator, MaxValueValidator, RegexValidator
+from django.core.validators import (
+    MinValueValidator, MaxValueValidator, RegexValidator
+)
 
 
 """
@@ -75,7 +79,8 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     # Specifc validators for username, first_name and last_name
     validUsername = RegexValidator(
-        r'^[a-zA-Z ]+$', 'Only letters and spaces are allowed in your Pen name')
+        r'^[a-zA-Z ]+$',
+        'Only letters and spaces are allowed in your Pen name')
     validFirstName = RegexValidator(
         r'^[a-zA-Z ]+$',
         'Only letters and spaces are allowed in your First name')
@@ -86,7 +91,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(
         max_length=20, unique=True, validators=[validUsername])
     age = models.IntegerField(
-        validators=[MinValueValidator(8), MaxValueValidator(12),],)
+        validators=[MinValueValidator(8), MaxValueValidator(12)], )
     first_name = models.CharField(max_length=12, validators=[validFirstName])
     last_name = models.CharField(max_length=20, validators=[validSecondName])
     email = models.EmailField(max_length=320)

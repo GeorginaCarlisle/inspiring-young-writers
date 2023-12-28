@@ -5,9 +5,12 @@ from .models import User
 
 
 """
-Code for validation against swear words copied and adapted from an example given by Chatgpt
+Code for validation against swear words copied and adapted from
+an example given by Chatgpt
 """
-SWEAR_WORD_LIST = ['fuck', 'shit', 'crap', 'bollocks', 'bitch', 'cock', 'cunt', 'cum', 'fucker', 'dick']
+SWEAR_WORD_LIST = ['fuck', 'shit', 'crap', 'bollocks', 'bitch', 'cock',
+                   'cunt', 'cum', 'fucker', 'dick']
+
 
 def validate_no_swearing(value):
     for swear_word in SWEAR_WORD_LIST:
@@ -17,26 +20,30 @@ def validate_no_swearing(value):
             )
 
 
-"""
-Custom validator passing through clear messaging when age requirements are not met
-"""
 def validate_age(value):
+    """
+    Custom validator passing through clear messaging when age requirements
+    are not met
+    """
     if value < 8:
         raise forms.ValidationError(
-            "Sorry but this platform has been specifically designed for children aged 8 to 12"
+            "Sorry but this platform has been specifically designed \
+                for children aged 8 to 12"
         )
     if value > 12:
         raise forms.ValidationError(
-            "Sorry but this platform has been specifically designed for children aged 8 to 12"
+            "Sorry but this platform has been specifically designed \
+                for children aged 8 to 12"
         )
 
 
-"""
-The following Tutorial was followed and adapted when creating the NewUserForm
-Register New Users with Django Custom User by CodingWithMitch
-https://www.youtube.com/watch?v=sbCd52JiCU4
-"""
 class NewUserForm(UserCreationForm):
+    """
+    The following Tutorial was followed and adapted when creating
+    the NewUserForm:
+    Register New Users with Django Custom User by CodingWithMitch
+    https://www.youtube.com/watch?v=sbCd52JiCU4
+    """
 
     username = forms.CharField(
         max_length=20,

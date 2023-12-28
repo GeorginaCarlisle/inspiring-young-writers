@@ -5,10 +5,12 @@ from django.utils.decorators import method_decorator
 from django.core.mail import send_mail
 import os
 
+
 @method_decorator(login_required, name='dispatch')
 class AccountHome(TemplateView):
     """ View for the landing page """
     template_name = 'account_home.html'
+
 
 @method_decorator(login_required, name='dispatch')
 class AccountContact(TemplateView):

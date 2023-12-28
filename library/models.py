@@ -4,8 +4,14 @@ from writing.models import Writing
 
 
 class Feedback(models.Model):
-    giver = models.ForeignKey(User, on_delete=models.CASCADE, related_name="given_feedback")
-    writing = models.ForeignKey(Writing, on_delete=models.CASCADE, related_name="received_feedback")
+    giver = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name="given_feedback")
+    writing = models.ForeignKey(
+        Writing,
+        on_delete=models.CASCADE,
+        related_name="received_feedback")
     star_one = models.TextField()
     star_two = models.TextField()
     wish = models.TextField()
@@ -22,4 +28,3 @@ class Feedback(models.Model):
 
     def __str__(self):
         return f'Feedback for {self.writing} by {self.giver}'
-    

@@ -7,5 +7,6 @@ urlpatterns = [
     path('edit/<int:writing_id>', views.edit_writing_view, name='edit'),
     path('view/<int:writing_id>', views.view_writing_view, name='view'),
     path('delete/<int:writing_id>', views.delete_writing_view, name='delete'),
-    path('my_feedback/<int:writing_id>', views.view_my_feedback, name='my_feedback'),
+    path('my_feedback/<int:writing_id>', views.view_my_feedback,
+         name='my_feedback'),
 ]
