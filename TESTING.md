@@ -72,7 +72,7 @@ Each individual pythoon file created or edited by me has been passed through the
 
 | App/folder | Python file | Result | Extra notes |
 | --- | --- | --- | --- |
-| inspiringyw | settings.py | 1 error/warning | See screenshot and discussion below |
+| inspiringyw | settings.py | | |
 | | urls.py | Clear | |
 | | views.py | | |
 | home | urls.py | Clear | |
