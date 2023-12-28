@@ -55,7 +55,8 @@
                     <a href="{% url 'view' work.id %}"
                     title="View writing"
                     class="font-bold hover:text-blue-700">
-                    {{ work.title }}</a>
+                        {{ work.title }}
+                    </a>
                     <span>- published on {{ work.date_approved|date:"d M Y" }}</span>
                 </p>
                 {% endfor %}
@@ -75,7 +76,8 @@
                     <a href="{% url 'view' work.id %}" 
                     title="View writing"
                     class="font-bold hover:text-blue-700">
-                    {{ work.title }}</a>
+                        {{ work.title }}
+                    </a>
                     <span>- submitted on {{ work.date_submitted|date:"d M Y" }}</span>
                 </p>
                 {% endfor %}
@@ -96,7 +98,8 @@
                     <a href="{% url 'edit' work.id %}"
                     title="View and edit writing"
                     class="font-bold hover:text-blue-700">
-                    {{ work.title }}</a>
+                        {{ work.title }}
+                    </a>
                     <span>- reviewed on {{ work.date_failed|date:"d M Y" }}</span>
                 </p>
                 <p class="mb-4 text-blue-800">
@@ -118,7 +121,8 @@
                     <a href="{% url 'edit' work.id %}"
                     title="View and edit writing"
                     class="font-bold hover:text-blue-700">
-                    {{ work.title }}</a>
+                        {{ work.title }}
+                    </a>
                     <span>- last edited on {{ work.updated_on|date:"d M Y" }}</span>
                 </p>
                 {% endfor %}
@@ -130,7 +134,7 @@
     </div>
     <div class="flex justify-center mt-2">
         <a class="p-1 mt-6 rounded border-orange-700 border-2 border-solid bg-zinc-50 hover:bg-orange-700 text-orange-700 hover:text-white text-lg md:text-xl hover:cursor-pointer w-fit"
-            href="{% url 'create' %}">
+        href="{% url 'create' %}">
             Create new work
         </a>
     </div>

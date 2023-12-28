@@ -1,21 +1,27 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
+from django.contrib.auth.models import (
+    AbstractBaseUser, PermissionsMixin, BaseUserManager
+)
 from django.utils import timezone
-from django.core.validators import MinValueValidator, MaxValueValidator, RegexValidator
-
-
-"""
-The following Tutorial was followed and adapted when creating:
-the user model and manager
-Custom User Model with email login (DJANGO) by CodingWithMitch
-https://www.youtube.com/watch?v=SFarxlTzVX4
-"""
+from django.core.validators import (
+    MinValueValidator, MaxValueValidator, RegexValidator
+)
 
 
 class CustomAccountManager(BaseUserManager):
+    """
+    Custom Account manager that works alongside the user model to
+    create two distinct user types: a normal user and a superuser.
+    The following Tutorial was followed and adapted:
+    Custom User Model with email login (DJANGO) by CodingWithMitch
+    https://www.youtube.com/watch?v=SFarxlTzVX4
+    """
 
     def create_user(self, username, age, first_name, last_name,
                     email, consent, password=None):
+        """
+        Function to create a normal user
+        """
 
         # Add validation
         if not username:
@@ -52,6 +58,9 @@ class CustomAccountManager(BaseUserManager):
 
     def create_superuser(self, username, email, first_name, last_name,
                          password):
+        """
+        Function to create a super user
+        """
 
         super_user = self.create_user(
             username=username,
@@ -70,12 +79,19 @@ class CustomAccountManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
+    """
+    Model for user data.
+    The following Tutorial was followed and adapted:
+    Custom User Model with email login (DJANGO) by CodingWithMitch
+    https://www.youtube.com/watch?v=SFarxlTzVX4
+    """
 
     __name__ = 'CustomUser'
 
     # Specifc validators for username, first_name and last_name
     validUsername = RegexValidator(
-        r'^[a-zA-Z ]+$', 'Only letters and spaces are allowed in your Pen name')
+        r'^[a-zA-Z ]+$',
+        'Only letters and spaces are allowed in your Pen name')
     validFirstName = RegexValidator(
         r'^[a-zA-Z ]+$',
         'Only letters and spaces are allowed in your First name')
@@ -86,7 +102,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(
         max_length=20, unique=True, validators=[validUsername])
     age = models.IntegerField(
-        validators=[MinValueValidator(8), MaxValueValidator(12),],)
+        validators=[MinValueValidator(8), MaxValueValidator(12)], )
     first_name = models.CharField(max_length=12, validators=[validFirstName])
     last_name = models.CharField(max_length=20, validators=[validSecondName])
     email = models.EmailField(max_length=320)
@@ -109,8 +125,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.username
 
-    def has_perm(self, per, obj=None):
+    def has_perm(self, perm, obj=None):
         return self.is_admin
 
-    def has_module_perms(self, app_Label):
+    def has_module_perms(self, app_label):
         return True

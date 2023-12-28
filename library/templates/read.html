@@ -10,12 +10,10 @@
 
     <!-- Heading showing user they are in the library section of platform -->
     <div class="flex justify-center h-fit">
-        <div class="text-center px-4 py-2 bg-horange my-4 h-fit rounded border border-black">
-            
+        <div class="text-center px-4 py-2 bg-horange my-4 h-fit rounded border border-black">    
             <h1 class="text-3xl md:text-4xl font-title text-black mb-2">
                 Library of inspiration
             </h1>
-            
         </div>
     </div>
 
@@ -48,7 +46,7 @@
             <div class="font-body text-sm md:text-xl mt-4">
                 <ul class="mb-4">
                     {% for message in messages %}
-                    <li{% if message.tags %} class="text-blue-800 text-lg" {% endif %}>
+                    <li {% if message.tags %} class="text-blue-800 text-lg" {% endif %}>
                         {{ message }}
                     </li>
                     {% endfor %}
@@ -73,5 +71,5 @@
             </a>
         </div>
     </div>
-
+</div>
 {% endblock%}

@@ -25,8 +25,8 @@
         <ul class="hidden md:flex flex-row justify-around lg:text-xl">
             <li class="hover:font-bold hover:cursor-pointer">
                 <button
-                    id="parent-info-open"
-                    aria-label="open information for parents">
+                id="parent-info-open"
+                aria-label="open information for parents">
                     Parents
                 </button>
             </li>
@@ -44,21 +44,18 @@
         <!-- Mobile Navigation -->
         <!-- Nav Closed -->
         <button
-            class="absolute top-4 right-4 md:hidden"
-            id="nav-open"
-            aria-label="open navigation"
-        >
+        class="absolute top-4 right-4 md:hidden"
+        id="nav-open"
+        aria-label="open navigation">
             <i class="fa-solid fa-bars text-4xl"></i>
         </button>
 
         <!-- Nav Open -->
         <div
-            class="hidden absolute top-0 right-0 p-4 bg-white w-36"
-            id="mobile-nav"
-            aria-label="close navigation"
-            aria-hidden="true"
-        >
-            <button class="absolute top-4 right-4" id="nav-closed">
+        class="hidden absolute top-0 right-0 p-4 bg-white w-36"
+        id="mobile-nav"
+        aria-hidden="true">
+            <button class="absolute top-4 right-4" id="nav-closed" aria-label="close navigation">
                 <i class="fa-solid fa-x text-4xl"></i>
             </button>
             <ul class="flex flex-col justify-around font-body text-xl mt-10">
@@ -72,7 +69,6 @@
                 <li class="mb-4"><a href="{% url 'signup' %}">Sign-up</a></li>
                 <li><a href="{% url 'login' %}">Login</a></li>
             </ul>
-
-        </nav>
-    </div>
+        </div>
+    </nav>
 </header>
