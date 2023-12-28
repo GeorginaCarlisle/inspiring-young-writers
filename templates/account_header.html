@@ -1,83 +1,79 @@
 {% load static %}
 
 <header>
-  <div
-    class="fixed top-0 z-10 grid grid-cols-4 md:grid-cols-6 xl:grid-cols-6 h-16 lg:h-20 w-full border-b-2 border-black bg-zinc-50"
-  >
-    <!-- Logo -->
-    <div class="flex justify-start col-span-3 sm:col-span-2">
-      <div class="p-1.5 lg:py-1">
-        <a
-          class="inline-block text-center w-full font-title text-2xl lg:text-3xl leading-none text-orange-600 hover:text-black hover:cursor-pointer"
-          href="{% url 'account_home' %}"
-          aria-label="return to the home page"
-        >
-          <!-- User specific logo title -->
-          {% if user.username %}
-          <span>{{ user.username }}'s</span>
-          <span>Inspiring Writing</span>
-          {% endif %}
-        </a>
-      </div>
-    </div>
+    <div class="fixed top-0 z-10 grid grid-cols-4 md:grid-cols-6 xl:grid-cols-6 h-16 lg:h-20 w-full border-b-2 border-black bg-zinc-50">
+        <!-- Logo -->
+        <div class="flex justify-start col-span-3 sm:col-span-2">
+            <div class="p-1.5 lg:py-1">
+                {% if user.username %}
+                <a
+                class="inline-block text-center w-full font-title text-2xl lg:text-3xl leading-none text-orange-600 hover:text-black hover:cursor-pointer"
+                href="{% url 'account_home' %}"
+                aria-label="{{ user.username }}'s Inspiring Writing home page">
+                    <!-- User specific logo title -->
+                    <span>{{ user.username }}'s</span>
+                    <span>Inspiring Writing</span>
+                </a>
+                {% endif %}
+            </div>
+        </div>
 
-    <!-- Navigation-->
-    <nav class="col-span-1 md:col-span-4 p-5 lg:p-6 font-body">
-      <!-- Desktop Navigation -->
-      <ul class="hidden md:flex flex-row justify-around lg:text-xl">
-        <li class="hover:font-bold hover:cursor-pointer">
-          <a href="{% url 'my_work' user.id %}">My Work</a>
-        </li>
-        <li class="hover:font-bold hover:cursor-pointer">
-          <a href="{% url 'library' %}">Library</a>
-        </li>
-        <li class="hover:font-bold hover:cursor-pointer">
-          <button
-            id="parent-info-open"
-            aria-label="open information for parents">
-            Parents
-          </button>
-        </li>
-        <li class="hover:font-bold hover:cursor-pointer">
-          <a href="{% url 'account_contact' %}">Contact</a>
-        </li>
-        <li class="hover:font-bold hover:cursor-pointer">
-          <a href="{% url 'logout' %}">Logout</a>
-        </li>
-      </ul>
+        <!-- Navigation-->
+        <nav class="col-span-1 md:col-span-4 p-5 lg:p-6 font-body">
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex flex-row justify-around lg:text-xl">
+                <li class="hover:font-bold hover:cursor-pointer">
+                    <a href="{% url 'my_work' user.id %}">My Work</a>
+                </li>
+                <li class="hover:font-bold hover:cursor-pointer">
+                    <a href="{% url 'library' %}">Library</a>
+                </li>
+                <li class="hover:font-bold hover:cursor-pointer">
+                    <button
+                    id="parent-info-open"
+                    aria-label="open information for parents">
+                        Parents
+                    </button>
+                </li>
+                <li class="hover:font-bold hover:cursor-pointer">
+                    <a href="{% url 'account_contact' %}">Contact</a>
+                </li>
+                <li class="hover:font-bold hover:cursor-pointer">
+                    <a href="{% url 'logout' %}">Logout</a>
+                </li>
+            </ul>
 
-      <!-- Mobile Navigation -->
-      <!-- Nav Closed -->
-      <button
-        class="absolute top-4 right-4 md:hidden"
-        id="nav-open"
-        aria-label="open navigation"
-      >
-        <i class="fa-solid fa-bars text-4xl"></i>
-      </button>
-
-      <!-- Nav Open -->
-      <div
-        class="hidden absolute top-0 right-0 p-4 bg-white w-36"
-        id="mobile-nav"
-        aria-hidden="true"
-      >
-      <button class="absolute top-4 right-4" id="nav-closed" aria-label="close navigation">
-        <i class="fa-solid fa-x text-4xl"></i>
-      </button>
-        <ul class="flex flex-col justify-around font-body text-xl mt-10">
-          <li class="mb-4"><a  href="{% url 'my_work' user.id %}">My Work</a></li>
-          <li class="mb-4"><a  href="{% url 'library' %}">Library</a></li>
-          <li class="mb-4">
+            <!-- Mobile Navigation -->
+            <!-- Nav Closed -->
             <button
-              id="info-parent-open"
-              aria-label="open information for parents">
-              Parents
-            </button></li>
-          <li class="mb-4"><a href="{% url 'account_contact' %}">Contact</a></li>
-          <li class="mb-4"><a href="{% url 'logout' %}">Logout</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+            class="absolute top-4 right-4 md:hidden"
+            id="nav-open"
+            aria-label="open navigation">
+                <i class="fa-solid fa-bars text-4xl"></i>
+            </button>
+
+            <!-- Nav Open -->
+            <div
+            class="hidden absolute top-0 right-0 p-4 bg-white w-36"
+            id="mobile-nav"
+            aria-hidden="true">
+                <button class="absolute top-4 right-4" id="nav-closed" aria-label="close navigation">
+                    <i class="fa-solid fa-x text-4xl"></i>
+                </button>
+                <ul class="flex flex-col justify-around font-body text-xl mt-10">
+                    <li class="mb-4"><a  href="{% url 'my_work' user.id %}">My Work</a></li>
+                    <li class="mb-4"><a  href="{% url 'library' %}">Library</a></li>
+                    <li class="mb-4">
+                        <button
+                        id="info-parent-open"
+                        aria-label="open information for parents">
+                        Parents
+                        </button>
+                    </li>
+                    <li class="mb-4"><a href="{% url 'account_contact' %}">Contact</a></li>
+                    <li class="mb-4"><a href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 </header>
