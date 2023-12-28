@@ -31,8 +31,8 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | | account_header.html | | |
 | | 404.html | | |
 | | 500.html | | |
-| | hero.html | PASS | Tested as part of the landing page|
-| | parent_info.html | | |
+| | hero.html | PASS | Tested as part of the landing page |
+| | parent_info.html | PASS | Tested as part of the landing page |
 | templates/password_reset | password_reset.html | | |
 | | password_reset_sent.html | | |
 | | password_reset_complete.html | | |
@@ -72,7 +72,7 @@ Each individual pythoon file created or edited by me has been passed through the
 
 | App/folder | Python file | Result | Extra notes |
 | --- | --- | --- | --- |
-| inspiringyw | settings.py | | |
+| inspiringyw | settings.py | Two errors | See below for further details |
 | | urls.py | Clear | |
 | | views.py | | |
 | home | urls.py | Clear | |
@@ -97,7 +97,9 @@ Each individual pythoon file created or edited by me has been passed through the
 
 #### Python warnings
 
-Testing of settings.py generated an 'E501 line too long (80 > 79 characters)' error. I searched for ways to reduce this line length but attempts to split up the string 'cloudinary_storage.storage.StaticHashedCloudinaryStorage' lead to errors when running the program as it was then unable to correctly link to cloudinary.
+Testing of settings.py generated:
+- a 'E501 line too long (80 > 79 characters)' error for line 146. I searched for ways to reduce this line length but attempts to split up the string 'cloudinary_storage.storage.StaticHashedCloudinaryStorage' lead to errors when running the program as it was then unable to correctly link to cloudinary.
+- a 'E501 line too long (86 > 79 characters)' error for line 103. Initial attempts to split up the string 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator' lead to a 500 error when navigating to the sign-up page. I was unable to find an alternative solution for shorting the line length.
 
 ![Screenshot of the Error and associated code](documentation/testing/python-error-settings.png)
 
@@ -120,14 +122,14 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | The writing includes title, author, author's age and the writing | PASS | PASS |
 | 3 | As a **new user** I am given clear information on what registered users can do | Future Feature | | |
 | 4 | As the **parent of a new user** I am provided with information which details how the site works | I can navigate to 'Information for parents' from the navigation bar | PASS | PASS |
-| | | I can navigate to 'Information for parents' from the sign-up page | PASS | |
-| | | 'Information for parents' available across the full platform | PASS | |
-| | | 'Information for parents' opens up in a modal | PASS | |
-| | | A title makes it clear the information is targeted towards parents | PASS | |
-| | | An introduction quickly explains what information is contained in this section | PASS | |
-| | | The information is split into clear sections each with a title and picture | PASS | |
-| | | The layout and styling of the information makes it easy to scan and pick out information of interest | PASS | |
-| | | A clear back button can be used to re-hide the information | PASS | |
+| | | I can navigate to 'Information for parents' from the sign-up page | PASS | PASS |
+| | | 'Information for parents' available across the full platform | PASS | PASS |
+| | | 'Information for parents' opens up in a modal | PASS | PASS |
+| | | A title makes it clear the information is targeted towards parents | PASS | PASS |
+| | | An introduction quickly explains what information is contained in this section | PASS | PASS |
+| | | The information is split into clear sections each with a title and picture | PASS | PASS |
+| | | The layout and styling of the information makes it easy to scan and pick out information of interest | PASS | PASS |
+| | | A clear back button can be used to re-hide the information | PASS | PASS |
 | 5 | As the **parent of a new user** I can contact the site admin | I can navigate intuitively and easily to the contact page | PASS | |
 | | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
 | | | The title and introduction reassure me as to what the form is for | PASS | |
@@ -386,33 +388,33 @@ The following documents all forms and any requirements needed, with details on h
 
 | Input Field | Requirement | How error caught | Final check |
 | --- | ----- | ---- | -- |
-| Pen name | Required field | "Please fill in this field" notification pointed at input box | |
-| | Unique name required | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "User with this Username already exists." | |
-| | Text only no numbers | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Only letters and spaces are allowed in your Pen name" | |
-| | Maximum length 20 | Cannot physically enter more than 20 characters | |
-| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
-| Age | Required field | "Please fill in this field" notification pointed at input box | |
-| | Age must be between and including 8 and 12 | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Ensure this value is greater than or equal to 8." | |
-| | | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Ensure this value is less than or equal to 12." | |
-| First name | Required field | "Please fill in this field" notification pointed at input box | |
-| | Text only no numbers | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Only letters and spaces are allowed in your First name" | |
-| | Maximum length 12 | Cannot physically enter more than 12 characters | |
-| Second name | Required field | "Please fill in this field" notification pointed at input box | |
-| | Text only no numbers | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Only letters and spaces are allowed in your Second name" | |
-| | Maximum length 20 | Cannot physically enter more than 20 characters | |
-| Email | Recognisable as a real email address | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Enter a valid email address." | |
-| | | "Please include an @ in the email address" notification pointed at input box | |
-| | | "Please enter a part following the @" notification pointed at input box | |
-| | | "Please enter a part followed by @" notification pointed at input box | |
-| | Maximum length 320 | Cannot physically enter more than 320 characters | |
-| Consent | Must be checked | "Please tick this box if you want to proceed" notification pointed at input box | |
-| Password1 | Required field | "Please fill in this field" notification pointed at input box | |
-| | Can't be too similar to other personal information | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "The password is too similar to the username." | |
-| | Must contain at least 8 characters | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is too short. It must contain at least 8 characters." | |
-| | Can't be a commonly used password | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is too common." | |
-| | Can't be entirely numeric | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is entirely numeric." | |
-| Password2 | Required field | "Please fill in this field" notification pointed at input box | |
-| | Must match password1 | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "The two password fields didn’t match." | |
+| Pen name | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Unique name required | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "User with this Username already exists." | PASS |
+| | Text only no numbers | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Only letters and spaces are allowed in your Pen name" | PASS |
+| | Maximum length 20 | Cannot physically enter more than 20 characters | PASS |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | PASS |
+| Age | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Age must be between and including 8 and 12 | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Sorry but this platform has been specifically designed for children aged 8 to 12" | PASS |
+| First name | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Text only no numbers | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Only letters and spaces are allowed in your First name" | PASS |
+| | Maximum length 12 | Cannot physically enter more than 12 characters | PASS |
+| Second name | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Text only no numbers | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Only letters and spaces are allowed in your Second name" | PASS |
+| | Maximum length 20 | Cannot physically enter more than 20 characters | PASS |
+| Email | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Recognisable as a real email address | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Enter a valid email address." | |
+| | | On chrome: "Please include an @ in the email address" On Safari: "Enter an email address" notification pointed at input box | PASS |
+| | | On chrome: "Please enter a part following the @" On Safari: "Enter an email address" notification pointed at input box | PASS |
+| | | On chrome: "Please enter a part followed by @" On Safari: "Enter an email address" notification pointed at input box | PASS |
+| | Maximum length 320 | Cannot physically enter more than 320 characters | PASS |
+| Consent | Must be checked | "Please tick this box if you want to proceed" notification pointed at input box | PASS |
+| Password1 | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Can't be too similar to other personal information | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "The password is too similar to the username." | PASS |
+| | Must contain at least 8 characters | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is too short. It must contain at least 8 characters." | PASS |
+| | Can't be a commonly used password | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is too common." | PASS |
+| | Can't be entirely numeric | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is entirely numeric." | PASS |
+| Password2 | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Must match password1 | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "The two password fields didn’t match." | PASS |
 
 
 ### Login form
@@ -632,6 +634,10 @@ Note: The alerts are linked to longer alt text for the hero-images. Longer text 
 
 ### Information For Parents
 
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-parent-information.png)
+
+Note: The alerts are linked to longer alt text for the hero-images. Longer text was written purposefully in order to provide more detail for those unable to see the image.
+
 ### Contact Us (New User Experience)
 
 ### 404 Error Page
@@ -679,8 +685,6 @@ Results for desktop:
 Results for mobile:
 ![Screenshot showing performance 77, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-landing-page-mobile.png)
 
-### Information For Parents
-
 ### Contact Us (New User Experience)
 
 ### 404 Error Page
@@ -719,6 +723,42 @@ Results for mobile:
 
 ## Responsive Testing
 
+The platform has been fully tested across a range of screen sizes, from 350px upto 1920px. Screenshots that show how the pages change across different screen sizes have been included below.
+
+### Landing Page
+
+#### Mobile first (< 640px )
+
+![screenshot of the landing page](documentation/features/landing-page-mobile.PNG)
+
+#### Small screens ( 640px - 768px )
+
+![screenshot of the landing page](documentation/features/landing-page-devtools-small.png)
+
+#### Medium screens ( 768px - 1024px )
+
+![screenshot of the landing page](documentation/features/landing-page-devtools-medium.png)
+
+#### Large screens ( 1024px - 1280px )
+
+![screenshot of the landing page](documentation/features/landing-page-safari-large.png)
+
+### Parent information
+
+#### Mobile first (< 640px )
+
+![screenshot of the parent info page](documentation/features/parent-info-mobile-1.PNG)
+
+![screenshot of the parent info page](documentation/features/parent-info-mobile-2.PNG)
+
+#### Medium screens ( 768px - 1024px )
+
+![screenshot of the parent info page](documentation/features/parent-info-devtools-medium.png)
+
+#### Large screens ( 1024px - 1280px )
+
+![screenshot of the parent info page](documentation/features/parent-info-chrome-1.png)
+
 
 ### Mobile first (< 640px )
 
@@ -728,19 +768,13 @@ All pages have been tested and respond well for screens as small as 350px. A sel
 
 A selection of screenshots have been taken from Chrome dev tools, showing the responsiveness of the platform for small screens:
 
-![screenshot of the landing page](documentation/features/landing-page-devtools-small.png)
-
 ### Medium screens ( 768px - 1024px )
 
 A selection of screenshots have been taken from Chrome dev tools, showing the responsiveness of the platform for medium screens:
 
-![screenshot of the landing page](documentation/features/landing-page-devtools-medium.png)
-
 ### Large screens ( 1024px - 1280px )
 
 A selection of screenshots from a safari browser on a 13-inch screen have been added below:
-
-![screenshot of the landing page](documentation/features/landing-page-safari-large.png)
 
 ### Extra large screens ( > 1280px)
 
@@ -755,7 +789,7 @@ Intro
 
 ### Safari
 
-The platform has been fully tested on a Safari browser on both a MacBook Air and an iPhone 12 mini. Screenshots can be seen within the features section of the readme and the reponsive testing.
+The platform has been fully tested on a Safari browser on both a MacBook Air and an iPhone 12 mini.
 
 ### Firefox
 
