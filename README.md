@@ -753,7 +753,7 @@ They can also read work written by another child, inspiring them to write and sh
 
 ##### Information For Parents
 
-For the parents of new users they can read about how the platform works, the steps in place to protect their child and what they and their child can do to increase safety (user story 4).
+Parents of new users can read about how the platform works, the steps in place to protect their child and what they and their child can do to increase safety (user story 4).
 This information:
 
 - can be accessed directly from the main navigation
@@ -781,6 +781,23 @@ This information:
 ![Fourth screenshot of the parent information](documentation/features/parent-info-chrome-4.png)
 
 ##### Contact Us
+
+Parents of a new user can contact the site admin so that they can raise any concerns or ask any questions about the platform (user story 5) with the details they enter in the form being directly emailed to the site owner (user story 6).
+
+The contact form:
+- can be navigated to intuitively and easily from the main nav and also from links within the sign-up form and parent information.
+- has clear labels indicating the information to be added to each input field.
+- A clear submit button.
+- Clear prompts are given should the form not be correctly completed.
+- A clear success message is given upon submission of the form.
+
+![Screenshot of the contact page on desktop](documentation/features/contact-devtools-medium.png)
+
+![Screenshot of the contact page on mobile](documentation/features/contact-mobile.PNG)
+
+![Screenshot of the contact success message on mobile](documentation/features/contact-success-mobile.PNG)
+
+![Screenshot of the email received following submission of the contact form](documentation/features/contact-form-email.PNG)
 
 ##### Error Pages
 

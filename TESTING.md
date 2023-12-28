@@ -37,8 +37,8 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | | password_reset_sent.html | | |
 | | password_reset_complete.html | | |
 | | password_reset_form.html | | |
-| home | index.html | | |
-| | contact.html | | |
+| home | index.html | PASS | |
+| | contact.html | PASS | |
 | users | signup.html | | |
 | | login.html | | |
 | account | account_home.html | | |
@@ -130,14 +130,14 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | The information is split into clear sections each with a title and picture | PASS | PASS |
 | | | The layout and styling of the information makes it easy to scan and pick out information of interest | PASS | PASS |
 | | | A clear back button can be used to re-hide the information | PASS | PASS |
-| 5 | As the **parent of a new user** I can contact the site admin | I can navigate intuitively and easily to the contact page | PASS | |
-| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
-| | | The title and introduction reassure me as to what the form is for | PASS | |
-| | | Clear labels indicate the information to be added to each input field | PASS | |
-| | | The button to submit is clear | PASS | |
-| | | When entering the wrong information I am prompted and informed what needs to be entered | PASS | |
-| | | I am given clear success feedback on submission of the form | PASS | |
-| 6 | As the **site admin** user's question and concerns along with their contact details are passed to me | Submitted contact us data emailed to the site owner | PASS | |
+| 5 | As the **parent of a new user** I can contact the site admin | I can navigate intuitively and easily to the contact page | PASS | PASS |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | PASS |
+| | | The title and introduction reassure me as to what the form is for | PASS | PASS |
+| | | Clear labels indicate the information to be added to each input field | PASS | PASS |
+| | | The button to submit is clear | PASS | PASS |
+| | | When entering the wrong information I am prompted and informed what needs to be entered | PASS | PASS |
+| | | I am given clear success feedback on submission of the form | PASS | PASS |
+| 6 | As the **site admin** user's question and concerns along with their contact details are passed to me | Submitted contact us data emailed to the site owner | PASS | PASS |
 | 7 | As a **new user** I am provided with the name and contact links for the developer who created this platform | The name of the developer and year platform created are clearly visible at the bottom of every page. | PASS | |
 | | | On larger screens extra info is given to say that the platform was created for 'educational purposes only'. | PASS | |
 | | | Clear and easy to access links to take the user to the developer's LinkedIn and GitHub. | PASS | |
@@ -431,16 +431,17 @@ The following documents all forms and any requirements needed, with details on h
 
 | Input Field | Requirement | Error caught | Final check |
 | --- | ----- | ---- | -- |
-| First Name | Required field | "Please fill in this field" notification pointed at input box | |
-| | Maximum length 12 | Cannot physically enter more than 12 characters | |
-| Last Name | Required field | "Please fill in this field" notification pointed at input box | |
-| | Maximum length 20 | Cannot physically enter more than 20 characters | |
-| Email | Recognisable as an email address | "Please include an @ in the email address" notification pointed at input box | |
-| | | "Please enter a part following the @" notification pointed at input box | |
-| | | "Please enter a part followed by @" notification pointed at input box | |
-| | Maximum length 320 | Cannot physically enter more than 320 characters | |
-| Message | Required field | "Please fill in this field" notification pointed at input box | |
-| | Maximum length 1500 | Cannot physically enter more than 1500 characters | |
+| First Name | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Maximum length 12 | Cannot physically enter more than 12 characters | PASS |
+| Last Name | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Maximum length 20 | Cannot physically enter more than 20 characters | PASS |
+| Email | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Recognisable as a real email address | On chrome: "Please include an @ in the email address" On Safari: "Enter an email address" notification pointed at input box | PASS |
+| | | On chrome: "Please enter a part following the @" On Safari: "Enter an email address" notification pointed at input box | PASS |
+| | | On chrome: "Please enter a part followed by @" On Safari: "Enter an email address" notification pointed at input box | PASS |
+| | Maximum length 320 | Cannot physically enter more than 320 characters | PASS |
+| Message | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Maximum length 1500 | Cannot physically enter more than 1500 characters | PASS |
 
 
 ### Contact us (Logged in User)
@@ -640,6 +641,10 @@ Note: The alerts are linked to longer alt text for the hero-images. Longer text 
 
 ### Contact Us (New User Experience)
 
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-contact-page.png)
+
+Note: The alerts are linked to longer alt text for the hero-images. Longer text was written purposefully in order to provide more detail for those unable to see the image.
+
 ### 404 Error Page
 
 ### 500 Error Page
@@ -687,6 +692,11 @@ Results for mobile:
 
 ### Contact Us (New User Experience)
 
+Results for desktop:
+![Screenshot showing performance 97, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-contact-page-desktop.png)
+Results for mobile:
+![Screenshot showing performance 92, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-contact-page-mobile.png)
+
 ### 404 Error Page
 
 ### 500 Error Page
@@ -727,38 +737,48 @@ The platform has been fully tested across a range of screen sizes, from 350px up
 
 ### Landing Page
 
-#### Mobile first (< 640px )
+#### Mobile first
 
 ![screenshot of the landing page](documentation/features/landing-page-mobile.PNG)
 
-#### Small screens ( 640px - 768px )
+#### Small screens
 
 ![screenshot of the landing page](documentation/features/landing-page-devtools-small.png)
 
-#### Medium screens ( 768px - 1024px )
+#### Medium screens
 
 ![screenshot of the landing page](documentation/features/landing-page-devtools-medium.png)
 
-#### Large screens ( 1024px - 1280px )
+#### Large screens
 
 ![screenshot of the landing page](documentation/features/landing-page-safari-large.png)
 
 ### Parent information
 
-#### Mobile first (< 640px )
+#### Mobile first
 
 ![screenshot of the parent info page](documentation/features/parent-info-mobile-1.PNG)
 
 ![screenshot of the parent info page](documentation/features/parent-info-mobile-2.PNG)
 
-#### Medium screens ( 768px - 1024px )
+#### Medium screens
 
 ![screenshot of the parent info page](documentation/features/parent-info-devtools-medium.png)
 
-#### Large screens ( 1024px - 1280px )
+#### Large screens
 
 ![screenshot of the parent info page](documentation/features/parent-info-chrome-1.png)
 
+
+### Contact Us (New User Experience)
+
+#### Mobile first
+
+![Screenshot of the contact us page](documentation/features/contact-mobile.PNG)
+
+#### Medium screens
+
+![Screenshot of the contact us page](documentation/features/contact-devtools-medium.png)
 
 ### Mobile first (< 640px )
 
