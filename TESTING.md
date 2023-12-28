@@ -21,17 +21,17 @@
 
 ### HTML Validation
 
-Intro explaining how HTML code was validated
+The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all html code with the results shown in the table below. In order to test the final generated html code, chrome dev tools was utilised to show the source code for the page currently being viewed with this code then being copied and checked using the validator. Screenshots have only been taken where the validator showed warnings or errors.
 
 | App/folder | HTML file | Result | Extra notes |
 | --- | --- | --- | --- |
-| templates | base.html | | |
-| | footer.html | | |
-| | header.html | | |
+| templates | base.html | PASS | Tested as part of the landing page |
+| | footer.html | PASS | Tested as part of the landing page |
+| | header.html | PASS | Tested as part of the landing page |
 | | account_header.html | | |
 | | 404.html | | |
 | | 500.html | | |
-| | hero.html | | |
+| | hero.html | PASS | Tested as part of the landing page|
 | | parent_info.html | | |
 | templates/password_reset | password_reset.html | | |
 | | password_reset_sent.html | | |
@@ -41,17 +41,14 @@ Intro explaining how HTML code was validated
 | | contact.html | | |
 | users | signup.html | | |
 | | login.html | | |
-| | logout.html | | |
 | account | account_home.html | | |
 | | account_contact.html | | |
 | writing | create_writing.html | | |
-| | my_work_title.html | | |
 | | my_work.html | | |
 | | edit_writing.html | | |
 | | view_writing.html | | |
 | | view_my_feedback.html | | |
 | library | library.html | | |
-| | library_title.html | | |
 | | read.html | | |
 | | give_feedback.html | | |
 | | read_feedback.html | | |
@@ -71,15 +68,15 @@ No errors or warnings when script.js passed into [Jshint](https://jshint.com/):
 
 ### Python Validation
 
-Intro Python Validation
+Each individual pythoon file created or edited by me has been passed through the [CI Python Linter](https://pep8ci.herokuapp.com/). All results are recorded below. Screenshots have only been taken where the Linter has brought up warnings/errors.
 
 | App/folder | Python file | Result | Extra notes |
 | --- | --- | --- | --- |
-| inspiringyw | settings.py | | |
-| | urls.py | | |
+| inspiringyw | settings.py | 1 error/warning | See screenshot and discussion below |
+| | urls.py | Clear | |
 | | views.py | | |
-| home | urls.py | | |
-| | views.py | | |
+| home | urls.py | Clear | |
+| | views.py | Clear | |
 | users | admin.py | | |
 | | forms.py | | |
 | | models.py | | |
@@ -100,7 +97,9 @@ Intro Python Validation
 
 #### Python warnings
 
-Include screenshots of any warnings here
+Testing of settings.py generated an 'E501 line too long (80 > 79 characters)' error. I searched for ways to reduce this line length but attempts to split up the string 'cloudinary_storage.storage.StaticHashedCloudinaryStorage' lead to errors when running the program as it was then unable to correctly link to cloudinary.
+
+![Screenshot of the Error and associated code](documentation/testing/python-error-settings.png)
 
 [Return to contents list](#contents)
 
@@ -110,15 +109,15 @@ The acceptance criteria for each user story has been checked on completion (1st 
 
 | # | User Story | Acceptance Criteria | 1st Check | Final Check |
 | -- | ---- | ---- | -- | -- |
-| 1 | As a **new user** the website is clearly geared towards children age 8 - 12 and sharing writing | I am drawn to a clear title "Inspiring Young Writers aged 8 - 12" | PASS | |
-| | | A hero image shows children at laptops creating stories and poems | PASS | | 
-| | | The platform name "Inspiring young writers" is clearly displayed on the left of the nav bar | PASS | |
-| | | A short introduction tells me exactly what the platform is for. | PASS | |
-| 2 | As a **new user** I can read work written by another child | When first landing on the site I can read a piece of published writing from the platform | PASS | |
-| | | The writing is displayed directly under the platform title and call to action, so that I don't miss it | PASS | |
-| | | Only writing specifically chosen to be featured is displayed | PASS | |
-| | | The writing is referenced under a heading 'This week's featured article:' | PASS | |
-| | | The writing includes title, author, author's age and the writing | PASS | |
+| 1 | As a **new user** the website is clearly geared towards children age 8 - 12 and sharing writing | I am drawn to a clear title "Inspiring Young Writers aged 8 - 12" | PASS | PASS |
+| | | A hero image shows children at laptops creating stories and poems | PASS | PASS | 
+| | | The platform name "Inspiring young writers" is clearly displayed on the left of the nav bar | PASS | PASS |
+| | | A short introduction tells me exactly what the platform is for. | PASS | PASS |
+| 2 | As a **new user** I can read work written by another child | When first landing on the site I can read a piece of published writing from the platform | PASS | PASS |
+| | | The writing is displayed directly under the platform title and call to action, so that I don't miss it | PASS | PASS |
+| | | Only writing specifically chosen to be featured is displayed | PASS | PASS |
+| | | The writing is referenced under a heading 'This week's featured article:' | PASS | PASS |
+| | | The writing includes title, author, author's age and the writing | PASS | PASS |
 | 3 | As a **new user** I am given clear information on what registered users can do | | | |
 | | | | | |
 | 4 | As the **parent of a new user** I am provided with information which details how the site works | I can navigate to 'Information for parents' from the navigation bar | PASS | |
@@ -620,9 +619,17 @@ The following documents all forms and any requirements needed, with details on h
 
 ## Accessibility Testing
 
-Intro
+Chrome's extension [wave](https://wave.webaim.org/) was used to test accessibility along with:
+- [Lighthouse](#lighthouse) click to see all testing
+- [WebAim contrast checker](https://webaim.org/resources/contrastchecker/) this information is within the surface plane section of design within the readme.
+
+Wave testing screenshots are displayed below:
 
 ### Landing Page
+
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-landing-page.png)
+
+Note: The alerts are linked to longer alt text for the hero-images. Longer text was written purposefully in order to provide more detail for those unable to see the image.
 
 ### Information For Parents
 
@@ -664,9 +671,14 @@ Intro
 
 ## Lighthouse
 
-Intro
+Chrome developer tools Lighthouse was used to test the performance, accessibility, best practices and SEO of all pages within the platform. The results are shown below:
 
 ### Landing Page
+
+Results for desktop:
+![Screenshot showing performance 97, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-landing-page-desktop.png)
+Results for mobile:
+![Screenshot showing performance 77, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-landing-page-mobile.png)
 
 ### Information For Parents
 
@@ -708,19 +720,31 @@ Intro
 
 ## Responsive Testing
 
-Intro
 
 ### Mobile first (< 640px )
 
+All pages have been tested and respond well for screens as small as 350px. A selection of screenshots from an iPhone 12 mini with a screen size of 360px by 780px have been added below:
+
 ### Small screens ( 640px - 768px )
+
+A selection of screenshots have been taken from Chrome dev tools, showing the responsiveness of the platform for small screens:
+
+![screenshot of the landing page](documentation/features/landing-page-devtools-small.png)
 
 ### Medium screens ( 768px - 1024px )
 
+A selection of screenshots have been taken from Chrome dev tools, showing the responsiveness of the platform for medium screens:
+
+![screenshot of the landing page](documentation/features/landing-page-devtools-medium.png)
+
 ### Large screens ( 1024px - 1280px )
 
-### Extra large screens ( 1280px - 1536px )
+A selection of screenshots from a safari browser on a 13-inch screen have been added below:
 
-### Extra extra large screens ( > 1536px )
+![screenshot of the landing page](documentation/features/landing-page-safari-large.png)
+
+### Extra large screens ( > 1280px)
+
 
 [Return to contents list](#contents)
 
@@ -731,6 +755,8 @@ Intro
 ### Chrome
 
 ### Safari
+
+The platform has been fully tested on a Safari browser on both a MacBook Air and an iPhone 12 mini. Screenshots can be seen within the features section of the readme and the reponsive testing.
 
 ### Firefox
 

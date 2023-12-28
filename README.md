@@ -725,6 +725,30 @@ GitHub projects was utilised as a kanban board for this project.
 
 ##### Landing Page
 
+For new users first visiting the platform, it is instantly obvious that the platform is geared towards children aged 8 - 12 and sharing writing (User Story 1). They are presented with:
+
+- A clear title "Inspiring Young Writers aged 8 - 12"
+
+- A hero image showing children at laptops creating stories, poems, jokes ...
+
+- The platform name "Inspiring young writers" clearly displayed on the left of the nav bar
+
+- A short introduction telling them exactly what the platform is for.
+
+![screenshot of the landing page](documentation/features/landing-page-chrome-1.png)
+
+They can also read work written by another child, inspiring them to write and share their writing (user story 2):
+
+- The writing is displayed directly under the platform title and call to action, so that it isn't missed.
+
+- Only writing specifically chosen to be featured is displayed.
+
+- The writing is referenced under a heading 'This week's featured article:'.
+
+- The writing includes title, author, author's age and the writing.
+
+![screenshot of the landing page](documentation/features/landing-page-chrome-2.png)
+
 ##### New User Navigation
 
 ##### Information For Parents
@@ -838,6 +862,13 @@ Additional screenshots showing mobile and browser compatibility
 [Return to contents list](#contents)
 
 ### Future Features
+
+#### New User Experience
+
+On the landing page, a section below the featured writing will be added to give futher information about the platform. This covers user story #3:
+
+"As a new user I am given clear information on what registered users can do, so that I know what signing up will allow me to see and do."
+
 
 [Return to contents list](#contents)
 
