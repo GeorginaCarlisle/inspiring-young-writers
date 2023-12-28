@@ -1,26 +1,30 @@
 from django import forms
-from django.core.exceptions import ValidationError
 from .models import Feedback
 
-"""
-Code for validation against swear words copied and adapted
-from an example given by Chatgpt
-"""
+
 SWEAR_WORD_LIST = ['fuck', 'shit', 'crap', 'bollocks', 'bitch', 'cock',
-                   'cunt', 'cum', 'fucker', 'dick']
+                   'cunt', 'cum', 'fucker', 'dick', 'bastard']
 
 
 def validate_no_swearing(value):
+    """
+    Custom validator checking for any of the listed swear words and
+    should any be found inform the user that the word in question
+    is not allowed. Code copied and adapted from an example given
+    by chatgpt.
+    """
     for swear_word in SWEAR_WORD_LIST:
         if swear_word.lower() in value.lower():
             raise forms.ValidationError(
                 f"Swear word '{swear_word}' is not allowed. Please remove."
             )
 
-
 class GiveFeedbackForm(forms.ModelForm):
+    """
+    Form to handle creating a new instance of feedback.
+    Including form styling and validation
+    """
 
-    # Run field values through profanity validator
     star_one = forms.CharField(
         max_length=400,
         widget=forms.Textarea(attrs={
@@ -44,8 +48,10 @@ class GiveFeedbackForm(forms.ModelForm):
         model = Feedback
         fields = ("star_one", "star_two", "wish")
 
-    # Add borders around input boxes
     def __init__(self, *args, **kwargs):
+        """
+        Function to add borders around input boxes
+        """
         super().__init__(*args, **kwargs)
         self.fields['star_one'].widget.attrs.update(
             {'class': 'border border-black'})
@@ -54,20 +60,26 @@ class GiveFeedbackForm(forms.ModelForm):
         self.fields['wish'].widget.attrs.update(
             {'class': 'border border-black'})
 
-    # Make sure star_one is cleaned
     def clean_star_one(self):
+        """
+        Function to clean and validate star one
+        """
         star_one = self.cleaned_data.get('star_one')
 
         return star_one
 
-    # Make sure star_two is cleaned
     def clean_star_two(self):
+        """
+        Function to clean and validate star two
+        """
         star_two = self.cleaned_data.get('star_two')
 
         return star_two
 
-    # Make sure wish is cleaned
     def clean_wish(self):
+        """
+        Function to clean and validate the wish
+        """
         wish = self.cleaned_data.get('wish')
 
         return wish
@@ -81,6 +93,11 @@ class GiveFeedbackForm(forms.ModelForm):
             date_created=None,
             date_last_edit=None,
             approved=None):
+        """
+        Function to save the form and therefore create a new instance of
+        feedback also passing in data created within the view
+        """
+
         feedback = super().save(commit=False)
 
         if giver:

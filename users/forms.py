@@ -4,15 +4,17 @@ from django.contrib.auth import authenticate
 from .models import User
 
 
-"""
-Code for validation against swear words copied and adapted from
-an example given by Chatgpt
-"""
 SWEAR_WORD_LIST = ['fuck', 'shit', 'crap', 'bollocks', 'bitch', 'cock',
-                   'cunt', 'cum', 'fucker', 'dick']
+                   'cunt', 'cum', 'fucker', 'dick', 'bastard']
 
 
 def validate_no_swearing(value):
+    """
+    Custom validator checking for any of the listed swear words and
+    should any be found inform the user that the word in question
+    is not allowed. Code copied and adapted from an example given
+    by chatgpt.
+    """
     for swear_word in SWEAR_WORD_LIST:
         if swear_word.lower() in value.lower():
             raise forms.ValidationError(
@@ -39,6 +41,7 @@ def validate_age(value):
 
 class NewUserForm(UserCreationForm):
     """
+    Form to handle creating a new instance of the User model.
     The following Tutorial was followed and adapted when creating
     the NewUserForm:
     Register New Users with Django Custom User by CodingWithMitch
@@ -62,8 +65,10 @@ class NewUserForm(UserCreationForm):
         fields = ('username', 'age', 'first_name', 'last_name', 'email',
                   'consent', 'password1', 'password2')
 
-    # Add borders around input boxes
     def __init__(self, *args, **kwargs):
+        """
+        Function to add borders around each of the input boxes
+        """
         super().__init__(*args, **kwargs)
         self.fields['username'].widget.attrs.update(
             {'class': 'border border-black'})
@@ -81,14 +86,13 @@ class NewUserForm(UserCreationForm):
             {'class': 'border border-black'})
 
 
-"""
-The following Tutorial was followed and adapted when creating the LoginForm
-Login and Logout with Django by CodingWithMitch
-https://www.youtube.com/watch?v=5qhlDC_bQsA
-"""
-
-
 class LoginForm(forms.ModelForm):
+    """
+    Form to handle a user logging in
+    The following Tutorial was followed and adapted when creating
+    the LoginForm: Login and Logout with Django by CodingWithMitch
+    https://www.youtube.com/watch?v=5qhlDC_bQsA
+    """
 
     password = forms.CharField(widget=forms.PasswordInput)
 
@@ -97,14 +101,20 @@ class LoginForm(forms.ModelForm):
         fields = ("username", "password")
 
     def clean(self):
+        """
+        Function to clean the form data and check it is valid
+        If data is not valid a Validation error is raised.
+        """
         if self.is_valid():
             username = self.cleaned_data['username']
             password = self.cleaned_data['password']
             if not authenticate(username=username, password=password):
                 raise forms.ValidationError("Invalid Login")
 
-    # Add borders around input boxes
     def __init__(self, *args, **kwargs):
+        """
+        Function to add borders around each of the input boxes
+        """
         super().__init__(*args, **kwargs)
         self.fields['username'].widget.attrs.update(
             {'class': 'border border-black'})

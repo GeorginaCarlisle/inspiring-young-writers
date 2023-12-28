@@ -1,23 +1,29 @@
+import os
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.core.mail import send_mail
-import os
 
 
 @method_decorator(login_required, name='dispatch')
 class AccountHome(TemplateView):
-    """ View for the landing page """
+    """
+    View for the account_home page
+    """
     template_name = 'account_home.html'
 
 
 @method_decorator(login_required, name='dispatch')
 class AccountContact(TemplateView):
-    # View for the contact page
+    """
+    View for the contact page that handles the contact form data and
+    pulls the parent contact details from the user object
+    sending these via email to the site owner.
+    """
     template_name = 'account_contact.html'
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request):
         """
         This function was created while following
         a YouTube tutorial by Codemy.com:

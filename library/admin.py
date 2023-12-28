@@ -3,6 +3,11 @@ from .models import Feedback
 
 
 class FeedbackAdmin(admin.ModelAdmin):
+    """
+    Specifies which data fields from the Feedback model will be displayed
+    on the admin page (list display), which the admin can edit (list editable)
+    and which the admin can use to filter the displayed data with (list filter)
+    """
     list_display = (
         'giver',
         'writing',

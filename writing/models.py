@@ -3,6 +3,9 @@ from users.models import User
 
 
 class Writing(models.Model):
+    """
+    Model for writing data
+    """
     title = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     author = models.ForeignKey(

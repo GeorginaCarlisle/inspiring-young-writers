@@ -3,6 +3,11 @@ from .models import Writing
 
 
 class WritingAdmin(admin.ModelAdmin):
+    """
+    Specifies which data fields from the Writing model will be displayed
+    on the admin page (list display), which the admin can edit (list editable)
+    and which the admin can use to filter the displayed data with (list filter)
+    """
     list_display = (
         'title',
         'body',

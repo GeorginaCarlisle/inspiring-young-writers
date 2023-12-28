@@ -1,16 +1,18 @@
 from django import forms
-from django.core.exceptions import ValidationError
 from .models import Writing
 
-"""
-Code for validation against swear words copied and adapted from
-an example given by Chatgpt
-"""
+
 SWEAR_WORD_LIST = ['fuck', 'shit', 'crap', 'bollocks', 'bitch', 'cock',
-                   'cunt', 'cum', 'fucker', 'dick']
+                   'cunt', 'cum', 'fucker', 'dick', 'bastard']
 
 
 def validate_no_swearing(value):
+    """
+    Custom validator checking for any of the listed swear words and
+    should any be found inform the user that the word in question
+    is not allowed. Code copied and adapted from an example given
+    by chatgpt.
+    """
     for swear_word in SWEAR_WORD_LIST:
         if swear_word.lower() in value.lower():
             raise forms.ValidationError(
@@ -19,8 +21,11 @@ def validate_no_swearing(value):
 
 
 class CreateWritingForm(forms.ModelForm):
+    """
+    Form to handle creating a new instance of writing.
+    Including form styling and validation
+    """
 
-    # Run field values through profanity validator
     title = forms.CharField(
         max_length=50,
         widget=forms.TextInput(attrs={
@@ -41,7 +46,9 @@ class CreateWritingForm(forms.ModelForm):
         fields = ("title", "body")
 
     def __init__(self, *args, **kwargs):
-        # Add borders around input boxes
+        """
+        Function to add borders around input boxes
+        """
         super().__init__(*args, **kwargs)
         self.fields['title'].widget.attrs.update(
             {'class': 'border border-black'})
@@ -49,13 +56,13 @@ class CreateWritingForm(forms.ModelForm):
             {'class': 'border border-black'})
 
     def clean_title(self):
-        # Check title is unique but only when the writing is first created
+        """
+        Function to check title is unique
+        but only when the writing is first created
+        """
         title = self.cleaned_data.get('title')
 
-        """
-        The following statement was adapted from an example provided
-        by Chatgpt.
-        """
+        # The following statement was adapted from example code by Chatgpt.
         if Writing.objects.filter(title=title) \
                 .exclude(pk=self.instance.pk).exists():
             raise forms.ValidationError(
@@ -66,7 +73,9 @@ class CreateWritingForm(forms.ModelForm):
         return title
 
     def clean_body(self):
-        # Make sure body is cleaned
+        """
+        Function to make sure body is cleaned and validated
+        """
         body = self.cleaned_data.get('body')
 
         return body
@@ -74,7 +83,10 @@ class CreateWritingForm(forms.ModelForm):
     def save(self, commit=True, author=None, slug=None, updated_on=None,
              pending_approval=None, date_submitted=None, approved=None,
              failed_approval=None):
-        # Add additional fields to be generated on saving of the form
+        """
+        Function to save the form and therefore create a new instance of
+        writing also passing in data created within the view
+        """
 
         writing = super().save(commit=False)
 

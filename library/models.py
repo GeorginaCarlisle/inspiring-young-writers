@@ -4,6 +4,9 @@ from writing.models import Writing
 
 
 class Feedback(models.Model):
+    """
+    Model for feedback data
+    """
     giver = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
