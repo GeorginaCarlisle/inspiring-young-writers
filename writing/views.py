@@ -162,16 +162,18 @@ def edit_writing_view(request, writing_id):
 
             # If confirmation recieved proceed
             else:
-                writing.delete()
-                messages.success(request, "You have successfully \
-                                 deleted your writing")
-                return redirect('my_work', user_id=request.user.id)
 
-        # Path if user clicks to NOT delete, following initial click to delete
-        if 'keep' in request.POST:
-            context['create_writing_form'] = form
-            context['work_id'] = writing_id
-            return render(request, 'edit_writing.html', context)
+                # Path if user clicks to NOT delete, following initial click to delete
+                if 'keep' in request.POST:
+                    context['create_writing_form'] = form
+                    context['work_id'] = writing_id
+                    return render(request, 'edit_writing.html', context)
+        
+                else:
+                    writing.delete()
+                    messages.success(request, "You have successfully \
+                                    deleted your writing")
+                    return redirect('my_work', user_id=request.user.id)
 
         # Save as draft and submit to publish pathways
         if form.is_valid():
@@ -185,7 +187,7 @@ def edit_writing_view(request, writing_id):
                     'Your title needs to more than 3 characters long to be \
                         published. Please add a little more.')
                 context['create_writing_form'] = form
-                return render(request, 'create_writing.html', context)
+                return render(request, 'edit_writing.html', context)
 
             # Check body length
             if len(body) <= 50:
@@ -194,7 +196,7 @@ def edit_writing_view(request, writing_id):
                     'Your writing needs to more than 50 characters long to be \
                         published. Please add a little more.')
                 context['create_writing_form'] = form
-                return render(request, 'create_writing.html', context)
+                return render(request, 'edit_writing.html', context)
 
             # Path if user clicked to Publish
             if 'publish' in request.POST:
