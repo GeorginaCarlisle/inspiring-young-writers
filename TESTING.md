@@ -45,7 +45,7 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | writing | create_writing.html | PASS | |
 | | my_work.html | PASS | |
 | | edit_writing.html | | |
-| | view_writing.html | | |
+| | view_writing.html | PASS | |
 | | view_my_feedback.html | | |
 | library | library.html | | |
 | | read.html | | |
@@ -228,18 +228,18 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | I am given feedback to ensure that I am filling in the form correctly | PASS | PASS |
 | | | I am given clear feedback to let me know I have successfully saved my work as a draft | PASS | PASS |
 | | | On submission I am redirected to the my work page | PASS | |
-| 31 | As a **signed-in user** I can view my published work | When in 'My Work' clicking on the title of a piece of writing listed under 'My Published Work' will take me to a view_work page | PASS | |
-| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
-| | | 'title', 'date published' and 'writing' all displayed and easy to read | PASS | |
-| | | A back button (x) to return to 'My Work' | PASS | |
-| | | There are two clear options - edit writing and delete writing | PASS | |
+| 31 | As a **signed-in user** I can view my published work | When in 'My Work' clicking on the title of a piece of writing listed under 'My Published Work' will take me to a view_work page | PASS | PASS |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | PASS |
+| | | 'title', 'date published' and 'writing' all displayed and easy to read | PASS | PASS |
+| | | A back button (x) to return to 'My Work' | PASS | PASS |
+| | | There are three clear options - edit writing, delete writing and view feedback | PASS | PASS  |
 | | | Clicking 'edit writing' takes me to the edit_writing page with a message unique to editing published work | PASS | |
 | | | Clicking to 'delete' my writing passes all user story USER STORY #34 criteria | PASS | |
-| 32 | As a **signed-in user** I can view and edit any work pending approval | When in 'My Work' clicking on the title of a piece of writing listed under 'My Work Awaiting Approval' will take me to a view page | PASS | |
-| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
-| | | The view work page displays the 'title', 'date submitted', 'writing' and a message | PASS | |
-| | | An x in the top right of the container takes me back to 'My Work' | PASS | |
-| | | The view work page has two buttons 'edit writing' and 'delete writing' | PASS | |
+| 32 | As a **signed-in user** I can view and edit any work pending approval | When in 'My Work' clicking on the title of a piece of writing listed under 'My Work Awaiting Approval' will take me to a view page | PASS | PASS |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | PASS |
+| | | The view work page displays the 'title', 'date submitted', 'writing' and a message | PASS | PASS |
+| | | An x in the top right of the container takes me back to 'My Work' | PASS | PASS |
+| | | The view work page has two buttons 'edit writing' and 'delete writing' | PASS | PASS |
 | | | Clicking to 'edit writing' takes me into the edit view with a message specific to work pending approval | PASS | |
 | | | Editing my work passes all user story #33 criteria | PASS | |
 | | | Clicking to 'delete' my writing passes all user story USER STORY #34 criteria | PASS | |
@@ -706,6 +706,8 @@ Note: Alert is linked to the back confirmation repeating the link to return to t
 
 ### View work
 
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-view-work.png)
+
 ### View feedback for my work
 
 ### Edit work
@@ -825,6 +827,14 @@ Results for mobile:
 ![Screenshot showing performance 91, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-create-writing-mobile.png)
 
 ### View work
+
+Results for desktop:
+
+![Screenshot showing performance 97, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-view-work-desktop.png)
+
+Results for mobile:
+
+![Screenshot showing performance 85, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-view-work-mobile.png)
 
 ### View feedback for my work
 
@@ -974,6 +984,16 @@ Screenshots that show how the pages change across different screen sizes have be
 #### Large screens
 
 ![Screenshot from a safari browser showing create writing](documentation/features/create-writing.png)
+
+### View Writing
+
+#### Mobile first
+
+![Screenshot from an iPhone showing View Writing](documentation/features/view-writing-mobile.PNG)
+
+#### Large screens
+
+![Screenshot from a safari browser showing view writing](documentation/features/view-published-work.png)
 
 [Return to contents list](#contents)
 ## Compatibility Testing

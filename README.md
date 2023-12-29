@@ -958,6 +958,19 @@ Users can create a piece of writing (user stories 26, 27 and 30):
 
 ##### View work
 
+Users can click on an item of 'published work' or 'work awaiting approval' and view it (user stories 31 and 32).
+
+Key features:
+- 'title', 'date published' or 'date submitted' and 'writing' all displayed and easy to read
+- A back button (x) to return to 'My Work'
+- For work awaiting approval, two clear options: 'edit writing' and 'delete writing'.
+- For published work, three clear options:
+'edit writing', 'delete writing' and 'view feedback'.
+
+![Screenshot showing view of published work](documentation/features/view-published-work.png)
+
+![Screenshot showing view of work awaiting approval](documentation/features/view-work-awaiting-approval.png)
+
 ##### View feedback for my work
 
 ##### Edit work
