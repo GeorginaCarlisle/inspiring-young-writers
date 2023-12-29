@@ -42,7 +42,7 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | | login.html | PASS | |
 | account | account_home.html | PASS | |
 | | account_contact.html | PASS | |
-| writing | create_writing.html | | |
+| writing | create_writing.html | PASS | |
 | | my_work.html | PASS | |
 | | edit_writing.html | | |
 | | view_writing.html | | |
@@ -208,26 +208,26 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | Users cannot accidentally access someone else's work | PASS | PASS |
 | 25 | As a **signed-in user** I am provided with tips and ideas for the sort of work I could create | | | |
 | | | | | |
-| 26 | As a **signed-in user** I can write and submit a piece of work with title | From the account home page there is a clear button I can click that will take me directly to a page for inputting new work | PASS | |
-| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
-| | | The title and placeholder text help me to navigate the process of submitting my work | PASS | |
-| | | The button to submit my work for publishing is clear | PASS | |
-| | | I am given feedback to ensure that I am filling in the form correctly | PASS | |
-| | | On clicking the submit button, I am asked to confirm that I would like to submit my work to be published. This includes a quick explanation of the process | PASS | |
-| | | I am given clear feedback to let me know I have successfully submitted my work to be published on the site | PASS | |
-| | | On submission I am redirected to the account_home page | PASS | |
-| 27 | As a **signed-in user** my writing is passed through validation tests before it is saved | An error message is raised when a swear word is entered in the pen-name field | PASS | |
-| | | An error message is raised when a swear word is entered in the title field both during writing creation and editing | PASS | |
-| | | An error message is raised when a swear word is entered in the body field both during writing creation and editing | PASS | |
+| 26 | As a **signed-in user** I can write and submit a piece of work with title | From the account home page there is a clear button I can click that will take me directly to a page for inputting new work | PASS | PASS |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | PASS |
+| | | The title and placeholder text help me to navigate the process of submitting my work | PASS | PASS |
+| | | The button to submit my work for publishing is clear | PASS | PASS |
+| | | I am given feedback to ensure that I am filling in the form correctly | PASS | PASS |
+| | | On clicking the submit button, I am asked to confirm that I would like to submit my work to be published. This includes a quick explanation of the process | PASS | PASS |
+| | | I am given clear feedback to let me know I have successfully submitted my work to be published on the site | PASS | PASS |
+| | | On submission I am redirected to the my work page | PASS | PASS |
+| 27 | As a **signed-in user** my writing is passed through validation tests before it is saved | An error message is raised when a swear word is entered in the pen-name field | PASS | PASS |
+| | | An error message is raised when a swear word is entered in the title field both during writing creation and editing | PASS | PASS |
+| | | An error message is raised when a swear word is entered in the body field both during writing creation and editing | PASS | PASS |
 | 28 | As a **signed-in user** I can write a blurb for my writing | | | |
 | | | | | |
 | 29 | As a **signed-in user** I can attach a picture to my writing | | | |
 | | | | | |
-| 30 | As a **signed-in user** I can save a draft of my work | When creating new work I have the option to save a draft version of my work | PASS | |
-| | | The button to save as a draft is clear | PASS | |
-| | | I am given feedback to ensure that I am filling in the form correctly | PASS | |
-| | | I am given clear feedback to let me know I have successfully saved my work as a draft | PASS | |
-| | | On submission I am redirected to the account_home page | PASS | |
+| 30 | As a **signed-in user** I can save a draft of my work | When creating new work I have the option to save a draft version of my work | PASS | PASS |
+| | | The button to save as a draft is clear | PASS | PASS |
+| | | I am given feedback to ensure that I am filling in the form correctly | PASS | PASS |
+| | | I am given clear feedback to let me know I have successfully saved my work as a draft | PASS | PASS |
+| | | On submission I am redirected to the my work page | PASS | |
 | 31 | As a **signed-in user** I can view my published work | When in 'My Work' clicking on the title of a piece of writing listed under 'My Published Work' will take me to a view_work page | PASS | |
 | | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
 | | | 'title', 'date published' and 'writing' all displayed and easy to read | PASS | |
@@ -454,30 +454,30 @@ The following documents all forms and any requirements needed, with details on h
 
 | Input Field | Requirement | Error caught | Final check |
 | --- | ----- | ---- | -- |
-| Title | Required field | "Please fill in this field" notification pointed at input box | |
-| | Maximum length 50 | Cannot physically enter more than 50 characters | |
-| | Minimum length 3 | Message displayed under 'Create Writing' title: "Your title needs to more than 3 characters long to be published. Please add a little more." | |
-| | Unique | Message displayed under 'Create Writing' title: "Your title must be unique and there is already work with this title. Please make a change to your title and try again."| |
-| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
-| Body | Required field | "Please fill in this field" notification pointed at input box | |
-| | Minimum length 50 | Message displayed under 'Create Writing' title: "Your writing needs to more than 50 characters long to be published. Please add a little more." | |
-| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
+| Title | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Maximum length 50 | Cannot physically enter more than 50 characters | PASS |
+| | Minimum length 3 | Message displayed under 'Create Writing' title: "Your title needs to more than 3 characters long to be published. Please add a little more." | PASS |
+| | Unique | Message displayed under 'Create Writing' title: "Your title must be unique and there is already work with this title. Please make a change to your title and try again."| PASS |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | PASS |
+| Body | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Minimum length 50 | Message displayed under 'Create Writing' title: "Your writing needs to more than 50 characters long to be published. Please add a little more." | PASS |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | PASS |
 
 #### Create writing confirms 'submit to be published'
 
 | Trigger | Expected Response | 1st Check | Final Check |
 | --- | --- | --- | --- |
-| Click to submit work to be published | Confirmation message and two buttons 'Confirm' 'save as draft' | PASS | |
-| Click to confirm | Redirect to 'My Work' with "You have successfully submitted your writing to be published" message displayed. Writing correctly saved with pending_approval = True | PASS | |
-| Click to save as draft | Redirect to 'My Work' with "You have successfully saved your writing as a draft" message displayed. Writing correctly saved with pending_approval = False | PASS | |
+| Click to submit work to be published | Confirmation message and two buttons 'Confirm' 'save as draft' | PASS | PASS |
+| Click to confirm | Redirect to 'My Work' with "You have successfully submitted your writing to be published" message displayed. Writing correctly saved with pending_approval = True | PASS | PASS |
+| Click to save as draft | Redirect to 'My Work' with "You have successfully saved your writing as a draft" message displayed. Writing correctly saved with pending_approval = False | PASS | PASS |
 
 #### Create writing confirms 'back' button
 
 | Trigger | Expected Response | 1st Check | Final Check |
 | --- | --- | --- | --- |
 | Clicking the 'x' to come out of the create view | Confirmation message and two buttons 'keep creating' and 'head back' | PASS | |
-| Clicking 'keep creating' | In the create view with the confirmation message and associated buttons gone and no changes to writing lost | PASS | |
-| Clicking 'Head back' | Returned to the My Work view | PASS | |
+| Clicking 'keep creating' | In the create view with the confirmation message and associated buttons gone and no changes to writing lost | PASS | PASS |
+| Clicking 'Head back' | Returned to the My Work view | PASS | PASS |
 
 ### Edit Writing
 
@@ -700,6 +700,10 @@ Note: The alerts are linked to longer alt text for image. Longer text was writte
 
 ### Create work
 
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-create-writing.png)
+
+Note: Alert is linked to the back confirmation repeating the link to return to the my work page. This will be looked at in future iterations of the project.
+
 ### View work
 
 ### View feedback for my work
@@ -811,6 +815,14 @@ Results for mobile:
 ![Screenshot showing performance 85, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-mywork-mobile.png)
 
 ### Create work
+
+Results for desktop:
+
+![Screenshot showing performance 98, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-create-writing-desktop.png)
+
+Results for mobile:
+
+![Screenshot showing performance 91, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-create-writing-mobile.png)
 
 ### View work
 
@@ -952,6 +964,16 @@ Screenshots that show how the pages change across different screen sizes have be
 #### Large screens
 
 ![Screenshot from a safari browser showing my work](documentation/features/mywork-desktop-1.png)
+
+### Create Writing
+
+#### Mobile first
+
+![Screenshot from an iPhone showing Create Writing](documentation/features/create-writing-mobile.PNG)
+
+#### Large screens
+
+![Screenshot from a safari browser showing create writing](documentation/features/create-writing.png)
 
 [Return to contents list](#contents)
 ## Compatibility Testing

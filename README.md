@@ -939,6 +939,23 @@ Key features:
 
 ##### Create work
 
+Users can create a piece of writing (user stories 26, 27 and 30):
+- From the account home page there is a clear button that takes them directly to a page for creating work.
+- From the my work page there is also a clear button that takes them directly to a page for creating work.
+- The title and placeholder text help users navigate the process of creating new work.
+- There are two clear buttons. One for submitting the work and one for saing it as a draft.
+- Feedback is given to ensure the form is filled in correctly.
+- Confirmation is sort before work is submitted to be published.
+- A success message is given on saving as draft or submitting to be published.
+- The user is redirected to the my work page.
+- A back button allows users to return to the my work page, confirmation is sort to ensure work is not left unsaved.
+
+![Screenshot showing the 'Create work' page](documentation/features/create-writing.png)
+
+![Screenshot showing the submit writing conformation](documentation/features/create-writing-submission-confirmation.png)
+
+![Screenshot showing the back confirmation](documentation/features/create-writing-back-conformation.png)
+
 ##### View work
 
 ##### View feedback for my work
@@ -990,7 +1007,7 @@ On the landing page, a section below the featured writing will be added to give 
 #### Tips and ideas
 
 Throughout the logged in user side of the platform will be tips and ideas to aid the user. These will be presented as small images that will also make the platform visually more appealing. These will be added to the:
-- account home page (user story 20)
+- account home page (user stories 20, 25)
 
 #### Profile control
 
