@@ -973,6 +973,17 @@ Key features:
 
 ##### View feedback for my work
 
+Users can view any feedback given to them when viewing an item of their published work (user story 52).
+
+Key features:
+- When viewing a published item of work there is a clear button to 'View feedback'
+- On clicking 'View feedback' users can see any feedback associated with the work they are viewing.
+- If no feedback has been submitted and approved a message explains this.
+- There is a clear button to 'Hide feedback' on smaller screens.
+- Clicking to hide feedback takes the user back to the normal view of their published work.
+
+![Screenshot showing view of feedback associated with published work](documentation/features/view-my-feedback.png)
+
 ##### Edit work
 
 Users can click to edit their work (user stories 32, 33 and 53). 

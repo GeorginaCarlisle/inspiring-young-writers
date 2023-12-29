@@ -28,7 +28,7 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | templates | base.html | PASS | Tested as part of the landing page |
 | | footer.html | PASS | Tested as part of the landing page |
 | | header.html | PASS | Tested as part of the landing page |
-| | account_header.html | | |
+| | account_header.html | PASS | Tested as part of account home |
 | | 404.html | PASS | |
 | | hero.html | PASS | Tested as part of the landing page |
 | | parent_info.html | PASS | Tested as part of the landing page |
@@ -46,16 +46,12 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | | my_work.html | PASS | |
 | | edit_writing.html | PASS | |
 | | view_writing.html | PASS | |
-| | view_my_feedback.html | | |
+| | view_my_feedback.html | PASS | |
 | library | library.html | PASS | |
 | | read.html | PASS | |
 | | give_feedback.html | PASS | |
 | | read_feedback.html | PASS | |
 | | edit_feedback.html | PASS | |
-
-#### HTML warnings
-
-Include screenshots of any warnings here
 
 ### CSS Validation
 
@@ -330,12 +326,12 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | On choosing to keep I am returned to editing or reading feedback | PASS | PASS |
 | 51 | As a **signed-in user** I am alerted to any new feedback on my published work | | | |
 | | | | | |
-| 52 | As a **signed-in user** I can view feedback given to me by other users | When viewing a published item of work there is a clear button to 'View feedback' | PASS | |
-| | | On clicking 'View feedback' I can see any feedback associated with the work I am viewing | PASS | |
-| | | If no feedback has been submitted and approved a message explains this to me | PASS | |
-| | | The layout of the feedback makes it easy to read | PASS | |
-| | | There is a clear button to 'Hide feedback' when on smaller screens | PASS | |
-| | | Clicking to hide feedback takes me back to the normal view of my published work | PASS | |
+| 52 | As a **signed-in user** I can view feedback given to me by other users | When viewing a published item of work there is a clear button to 'View feedback' | PASS | PASS |
+| | | On clicking 'View feedback' I can see any feedback associated with the work I am viewing | PASS | PASS |
+| | | If no feedback has been submitted and approved a message explains this to me | PASS | PASS |
+| | | The layout of the feedback makes it easy to read | PASS | PASS |
+| | | There is a clear button to 'Hide feedback' when on smaller screens | PASS | PASS |
+| | | Clicking to hide feedback takes me back to the normal view of my published work | PASS | PASS |
 | 53 | As a **signed-in user** I can edit my published work | When viewing my published work I can click a button to 'Edit writing' | PASS | PASS |
 | | | Clicking to 'Edit writing' takes me to the Edit Writing page | PASS | PASS |
 | | | I am given a message specific to editing published work | PASS | PASS |
@@ -706,9 +702,11 @@ Note: Alert is linked to the back confirmation repeating the link to return to t
 
 ### View work
 
-![screenshot of wave test results showing no errors detected](documentation/testing/wave-view-work.png)
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-view-my-feedback.png)
 
 ### View feedback for my work
+
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-view-work.png)
 
 ### Edit work
 
@@ -851,6 +849,14 @@ Results for mobile:
 ![Screenshot showing performance 85, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-view-work-mobile.png)
 
 ### View feedback for my work
+
+Results for desktop:
+
+![Screenshot showing performance 92, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-view-my-feedback-desktop.png)
+
+Results for mobile:
+
+![Screenshot showing performance 82, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-view-my-feedback-mobile.png)
 
 ### Edit work
 
