@@ -41,7 +41,7 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | users | signup.html | PASS | |
 | | login.html | PASS | |
 | account | account_home.html | PASS | |
-| | account_contact.html | | |
+| | account_contact.html | PASS | |
 | writing | create_writing.html | | |
 | | my_work.html | | |
 | | edit_writing.html | | |
@@ -193,11 +193,11 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | The page cannot be accessed unless logged in | PASS | PASS |
 | 20 | As a **signed-in user** I am provided with tips on how I can use the platform when I first log in to my account | Future Feature | | |
 | 21 | As a **signed-in user** I am informed when page link errors occur and provided with a link straight back to my account home page | When I am logged in the link from the 404 and 500 pages takes me back to my account_home page | PASS | PASS |
-| 22 | As the **parent of a signed-in user** I can also access the information for parents when my child is logged in | 'Parent' link is available when logged in as well as when not | PASS | |
-| | | Clicking on 'Parent' in the header brings up the parent information | PASS | |
-| 23 | As the **parent of a signed-in user** I can also contact the site admin when my child is logged in | I can easily navigate to the contact page when logged in | PASS | |
-| | | I do not need to add in my name or email address as this can be gained from my user data | PASS | |
-| | | A clear message explains this | PASS | |
+| 22 | As the **parent of a signed-in user** I can also access the information for parents when my child is logged in | 'Parent' link is available when logged in as well as when not | PASS | PASS |
+| | | Clicking on 'Parent' in the header brings up the parent information | PASS | PASS |
+| 23 | As the **parent of a signed-in user** I can also contact the site admin when my child is logged in | I can easily navigate to the contact page when logged in | PASS | PASS |
+| | | I do not need to add in my name or email address as this can be gained from my user data | PASS | PASS |
+| | | A clear message explains this | PASS | PASS |
 | 24 | As a **signed-in user** I can navigate to a page where all my work is listed by status | I can navigate to my work from the navigation bar | PASS | |
 | | | I can navigate to my work from a call to action button on my account home page | PASS | |
 | | | A title shows me that I am in the 'My Work' section of the platform | PASS | |
@@ -444,8 +444,10 @@ The following documents all forms and any requirements needed, with details on h
 
 ### Contact us (Logged in User)
 
-| Message | Required field | "Please fill in this field" notification pointed at input box | |
-| | Maximum length 1500 | Cannot physically enter more than 1500 characters | |
+| Input Field | Requirement | Error caught | Final check |
+| --- | ----- | ---- | -- |
+| Message | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Maximum length 1500 | Cannot physically enter more than 1500 characters | PASS |
 
 
 ### Create Writing
@@ -688,6 +690,10 @@ Note: There are four alerts given for all pages above that are linked to longer 
 
 Note: The alerts are linked to longer alt text for image. Longer text was written purposefully in order to provide more detail for those unable to see the image.
 
+### Account contact
+
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-account-contact.png)
+
 ### My Work
 
 ### Create work
@@ -781,6 +787,16 @@ Results for desktop:
 Results for mobile:
 
 ![Screenshot showing performance 78, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-account-home-mobile.png)
+
+### Account contact
+
+Results for desktop:
+
+![Screenshot showing performance 96, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-account-contact.png)
+
+Results for mobile:
+
+![Screenshot showing performance 87, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-account-contact-mobile.png)
 
 ### My Work
 
@@ -907,6 +923,15 @@ Screenshots that show how the pages change across different screen sizes have be
 
 ![Screenshot from a safari browser showing the account home page](documentation/features/account-home-desktop.png)
 
+### Contact Us (Logged in user)
+
+#### Mobile first
+
+![Screenshot from an iPhone showing the contact us page when logged in](documentation/features/contact-account-mobile.PNG)
+
+#### Large screens
+
+![Screenshot from a safari browser showing the contact us page when logged in](documentation/features/contact-account-desktop.png)
 
 [Return to contents list](#contents)
 ## Compatibility Testing
