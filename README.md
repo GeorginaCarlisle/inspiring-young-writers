@@ -923,6 +923,17 @@ Key features:
 
 #### ADMIN (covers Approval of writing EPIC plus more)
 
+The site admin can:
+- delete users and all their associated writing and feedback (user story 17)
+- approve writing to be published, no writing is viewable to other users until approved by the admin (user story 35)
+- approved status can be removed at any time (user story 39)
+- write a message to be displayed to a user explaining why their writing has not been approved (user story 37)
+- delete an instance of writing
+- approve feedback to be published, no feedback is viewable to other users until approved by the admin. Approved satatus can be removed at any time (user story 75)
+- delete an instance of feedback (user story 59)
+- locate the parent details for a user in order to directly contact the parent/guardian should need arise (user stories 18, 38, 60)
+
+![Screenshot showing the main page of the admin interface](documentation/features/admin-site.png)
 
 [Return to contents list](#contents)
 
@@ -945,6 +956,11 @@ Currently users can create an account, but cannot then edit or delete their user
 "As the parent of a registered user I am informed of any profile changes my child makes and my consent to any changes is required, so that I can continue to support my child."
 
 These user stories were left for future development of the project due to time constraits and the need to prioritise other features. Should a user wish to delete their details then they will be able to directly contact the site owner via the contact form, with the site owner then being able to remove their account via the admin interface.
+
+#### Admin interface
+
+The current admin interface is the default interface provided by Django with only very basic customisation. In future a custom interface will be built making it easier for the admin to carry out their tasks as well as adding further functionality to automise some of the processes. This has been left for future development due to the large amount of work needed to achieve this and the small initial gain when the platform has very few users.
+
 
 [Return to contents list](#contents)
 

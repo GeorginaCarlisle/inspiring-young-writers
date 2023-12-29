@@ -83,12 +83,12 @@ Each individual pythoon file created or edited by me has been passed through the
 | | views.py | PASS | |
 | account | urls.py | | |
 | | views.py | | |
-| writing | admin.py | | |
+| writing | admin.py | PASS | |
 | | forms.py | | |
 | | models.py | | |
 | | urls.py | | |
 | | views.py | | |
-| library | admin.py | | |
+| library | admin.py | PASS | |
 | | forms.py | | |
 | | models.py | | |
 | | urls.py | | |
@@ -179,12 +179,12 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | | | |
 | 16 | As the **parent of a registered user** I am informed of any profile changes my child makes and my consent to any changes is required | | | |
 | | | | | |
-| 17 | As the **site admin** I can remove accounts | As a site admin I can log in to the admin side of the site | PASS | |
-| | | I can click to bring up a list of all registered users | PASS | |
-| | | I can click to delete a selected user | PASS | |
-| | | I am asked to confirm this action before it will be carried out | PASS | |
-| 18 | As the **parent of a registered user** I am informed via email if my child’s account has been removed including the reason why | As site Admin I can handle this manually | PASS | |
-| | | When deleting a user account I can see all the details I need: email address, first name and last name of the parent or guardian | PASS | |
+| 17 | As the **site admin** I can remove accounts | As a site admin I can log in to the admin side of the site | PASS | PASS |
+| | | I can click to bring up a list of all registered users | PASS | PASS |
+| | | I can click to delete a selected user | PASS | PASS |
+| | | I am asked to confirm this action before it will be carried out | PASS | PASS |
+| 18 | As the **parent of a registered user** I am informed via email if my child’s account has been removed including the reason why | As site Admin I can handle this manually | PASS | PASS |
+| | | When deleting a user account I can see all the details I need: email address, first name and last name of the parent or guardian | PASS | PASS |
 | 19 | As a **signed-in user** user once logged in I am taken to a home page for my account | The top left of the nav bar lets me know I am signed in to my account with wording unique to me "Pen name's inspiring writing" | PASS | |
 | | | The navigation bar provides links to all the registered user features |  PASS | |
 | | | It is easy and intuitive to navigate through the available features | PASS | |
@@ -258,27 +258,27 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | I can confirm to delete or choose to keep | PASS | |
 | | | On choosing to delete my writing is deleted and I am returned to 'My work' with a success message | PASS | |
 | | | On choosing to keep I am return to editing or viewing my writing | | |
-| 35 | As the **site admin** all stories need to be validated by me before they are posted to the page | I can view all instances of writing through the admin page | PASS | |
-| | | I can filter writing by pending_approval | PASS | |
-| | | I can read the title, body and author of each instance of writing | PASS | |
-| | | I can checkbox to change approved to True (default is False) and input the date | PASS | |
-| | | Only writing with approved True will be displayed in the library | PASS| |
-| | | I can also checkbox to change featured to True (default is false) | PASS | |
-| | | Only writing with approved True and featured True will be displayed on the landing page for all visitors to read | PASS | |
+| 35 | As the **site admin** all stories need to be validated by me before they are posted to the page | I can view all instances of writing through the admin page | PASS | PASS |
+| | | I can filter writing by pending_approval | PASS | PASS |
+| | | I can read the title, body and author of each instance of writing | PASS | PASS |
+| | | I can checkbox to change approved to True (default is False) and input the date | PASS | PASS |
+| | | Only writing with approved True will be displayed in the library | PASS| PASS |
+| | | I can also checkbox to change featured to True (default is false) | PASS | PASS |
+| | | Only writing with approved True and featured True will be displayed on the landing page for all visitors to read | PASS | PASS |
 | 36 | As the **site admin** I am informed when a child submits their writing for approval | | | |
 | | | | | |
-| 37 | As the **site admin** I can send a message to the user should their writing fail to meet approval guidelines | When reviewing writing pending approval I can check the failed_approval box should the writing not meet requirements and add the date and time to date_failed | PASS | |
-| | | I can add details to the reason_failed field to be passed back to the user | PASS | |
-| | | Any writing failing approval is listed in the users "My Work page" under the heading "Submitted work that does not meet publishing requirements" | PASS | |
-| | | Message from reason_failed field is displayed under the title and date reviewed on | PASS | |
-| 38 | As the **site admin** I can send parents an email sharing the submitted story and the reason why it failed to meet approval | As site Admin I can handle this manually | PASS | |
-| | | When failing a submission I can see the author name for the writing being failed | PASS | |
-| | | I can locate the details for the author and find the information I need: email, first_name and last_name of parent/guardian | PASS | |
-| 39 | As the **site admin** I can remove approved status from previously approved work | I can view all instances of writing through the admin page | PASS | |
-| | | I can filter writing by approved | PASS | |
-| | | I can checkbox to change approved to False | PASS | |
-| | | Only writing with approved True will be displayed in the library | PASS | |
-| | | I can checkbox to change failed_approval to True (default is False) and add a date to date_failed | PASS | |
+| 37 | As the **site admin** I can send a message to the user should their writing fail to meet approval guidelines | When reviewing writing pending approval I can check the failed_approval box should the writing not meet requirements and add the date and time to date_failed | PASS | PASS |
+| | | I can add details to the reason_failed field to be passed back to the user | PASS | PASS |
+| | | Any writing failing approval is listed in the users "My Work page" under the heading "Submitted work that does not meet publishing requirements" | PASS | PASS |
+| | | Message from reason_failed field is displayed under the title and date reviewed on | PASS | PASS |
+| 38 | As the **site admin** I can send parents an email sharing the submitted story and the reason why it failed to meet approval | As site Admin I can handle this manually | PASS | PASS |
+| | | When failing a submission I can see the author name for the writing being failed | PASS | PASS |
+| | | I can locate the details for the author and find the information I need: email, first_name and last_name of parent/guardian | PASS | PASS |
+| 39 | As the **site admin** I can remove approved status from previously approved work | I can view all instances of writing through the admin page | PASS | PASS |
+| | | I can filter writing by approved | PASS | PASS |
+| | | I can checkbox to change approved to False | PASS | PASS |
+| | | Only writing with approved True will be displayed in the library | PASS | PASS |
+| | | I can checkbox to change failed_approval to True (default is False) and add a date to date_failed | PASS | PASS |
 | 40 | As a **signed-in user** I can view work from other users | I can navigate to the library of inspiration from the navigation bar | PASS | |
 | | | I can navigate to the library from a call to action button on my account home page | PASS | |
 | | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
@@ -351,14 +351,14 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | | | |
 | 58 | As the **site admin** I am alerted immediately to any raised concerns about feedback | | | |
 | | | | | |
-| 59 | As the **site admin** I can remove inappropriate feedback | I can view all instances of feedback through the admin page | PASS | |
-| | | I can filter feedback by approved | PASS | |
-| | | I can checkbox to change approved to False | PASS | |
-| | | Only feedback with approved True will be displayed for other users to see | PASS | |
-| | | I can also fully delete feedback | PASS | | 
-| 60 | As the **site admin** I can send parents an email sharing posted feedback and the reason it has been removed | As site Admin I can handle this manually | PASS | |
-| | | When removing feedback or choosing to not approved it I can see the giver of the feedback | PASS | |
-| | | I can find the giver of the feedback within users and there see all the details I need: email address, first name and last name of the parent or guardian | PASS | |
+| 59 | As the **site admin** I can remove inappropriate feedback | I can view all instances of feedback through the admin page | PASS | PASS |
+| | | I can filter feedback by approved | PASS | PASS |
+| | | I can checkbox to change approved to False | PASS | PASS |
+| | | Only feedback with approved True will be displayed for other users to see | PASS | PASS |
+| | | I can also fully delete feedback | PASS | PASS | 
+| 60 | As the **site admin** I can send parents an email sharing posted feedback and the reason it has been removed | As site Admin I can handle this manually | PASS | PASS |
+| | | When removing feedback or choosing to not approved it I can see the giver of the feedback | PASS | PASS |
+| | | I can find the giver of the feedback within users and there see all the details I need: email address, first name and last name of the parent or guardian | PASS | PASS |
 
 ### Extra user stories added during development
 
@@ -371,11 +371,11 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | The platform name "Inspiring young writers" is clearly displayed on the left of the nav bar. This directs back to the home page. | PASS | |
 | | | When hovering over a link there is clear visual feedback. | PASS | |
 | | | All navigation links take you to the correct destination when clicked. | PASS | |
-| 75 | As the site admin I can approve feedback | I can view all instances of feedback through the admin page | PASS | |
-| | | I can filter by approved and find all submitted feedback that hasn't been approved | PASS | |
-| | | I can read the giver's name, writing title, star_one, star_two, wish, date_created, date_last_edit, approved and date_approved of each instance of feedback | PASS | |
-| | | I can checkbox to change approved to True (default is False) and input the date | PASS | |
-| | | Only feedback with approved True will be displayed on the platform for others to see | PASS | |
+| 75 | As the site admin I can approve feedback | I can view all instances of feedback through the admin page | PASS | PASS |
+| | | I can filter by approved and find all submitted feedback that hasn't been approved | PASS | PASS |
+| | | I can read the giver's name, writing title, star_one, star_two, wish, date_created, date_last_edit, approved and date_approved of each instance of feedback | PASS | PASS |
+| | | I can checkbox to change approved to True (default is False) and input the date | PASS | PASS |
+| | | Only feedback with approved True will be displayed on the platform for others to see | PASS | PASS |
 
 [Return to contents list](#contents)
 
