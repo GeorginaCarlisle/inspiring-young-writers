@@ -50,7 +50,7 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | library | library.html | PASS | |
 | | read.html | PASS | |
 | | give_feedback.html | PASS | |
-| | read_feedback.html | | |
+| | read_feedback.html | PASS | |
 | | edit_feedback.html | | |
 
 #### HTML warnings
@@ -306,14 +306,14 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | On clicking the submit button, I am asked to confirm that I would like to submit my feedback. This includes a quick explanation of the process | PASS | PASS |
 | | | I am given clear feedback to let me know I have successfully submitted my feedback | PASS | PASS |
 | | | On submission I am redirected back to the library of inspiration | PASS | PASS |
-| 47 | As a **signed-in user** I can view all feedback associated with a piece of work | When reading a story for the library there is a clear button to 'View feedback' | PASS | |
-| | | On clicking 'View feedback' I can see any published feedback associated with the work I am reading | PASS | |
-| | | If there is no feedback a message explains this to me | PASS | |
-| | | The layout of the feedback makes it easy to read | PASS | |
-| | | There is a clear button to 'Hide feedback' on smaller screens | PASS | |
-| | | Clicking to hide feedback takes me back to the normal view of my published work | PASS | |
-| | | There is a clear button to give feedback | PASS | |
-| | | Clicking to give feedback takes me to the give feedback view | PASS | |
+| 47 | As a **signed-in user** I can view all feedback associated with a piece of work | When reading a story for the library there is a clear button to 'View feedback' | PASS | PASS |
+| | | On clicking 'View feedback' I can see any published feedback associated with the work I am reading | PASS | PASS |
+| | | If there is no feedback a message explains this to me | PASS | PASS |
+| | | The layout of the feedback makes it easy to read | PASS | PASS |
+| | | There is a clear button to 'Hide feedback' on smaller screens | PASS | PASS |
+| | | Clicking to hide feedback takes me back to the normal view of my published work | PASS | PASS |
+| | | There is a clear button to give feedback | PASS | PASS |
+| | | Clicking to give feedback takes me to the give feedback view | PASS | PASS |
 | 48 | As a **signed-in user** my feedback is passed through validation tests | An error message is raised when a swear word is entered in any of the input fields. | PASS | |
 | 49 | As a **signed-in user** I can edit my feedback | When viewing feedback I have given to another user there is a clear option to edit feedback | PASS | |
 | | | Clicking to 'edit feedback' takes me to an edit page | PASS | |
@@ -726,6 +726,8 @@ Note: Alert is linked to the back confirmation repeating the link to return to t
 
 ### Read feedback
 
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-read-feedback.png)
+
 ### Give feedback
 
 ![screenshot of wave test results showing no errors detected](documentation/testing/wave-give-feedback.png)
@@ -879,6 +881,14 @@ Results for mobile:
 ![Screenshot showing performance 86, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-read-writing-mobile.png)
 
 ### Read feedback
+
+Results for desktop:
+
+![Screenshot showing performance 98, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-read-feedback-desktop.png)
+
+Results for mobile:
+
+![Screenshot showing performance 80, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-read-feedback-mobile.png)
 
 ### Give feedback
 
@@ -1088,6 +1098,25 @@ Screenshots that show how the pages change across different screen sizes have be
 #### Large screens
 
 ![screenshot of give feedback on a large screen](documentation/features/give-feedback-large.png)
+
+### Read feedback
+
+#### Mobile first
+
+![screenshot of read feedback on a mobile](documentation/features/read-feedback-mobile.PNG)
+
+
+#### Small screens
+
+![screenshot of read feedback on a small screen](documentation/features/read-feedback-small.png)
+
+#### Medium screens
+
+![screenshot of read feedback on a medium screen](documentation/features/read-feedback-medium.png)
+
+#### Large screens
+
+![screenshot of read feedback on a large screen](documentation/features/read-feedback-large.png)
 
 ## Compatibility Testing
 

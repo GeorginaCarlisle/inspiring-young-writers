@@ -1030,6 +1030,19 @@ Key features:
 
 ##### View feedback
 
+Logged in users can view feedback given for published work (user story 47).
+
+Key features:
+- When reading work from the library there is a clear button to 'View feedback'.
+- On clicking 'View feedback' users see any feedback associated with the work they are reading.
+- If there is no feedback a message explains this.
+- There is a clear button to 'Hide feedback' on smaller screens.
+- Clicking to hide feedback takes me back to the normal view of the published work.
+- There is a clear button to give feedback
+- Clicking to give feedback takes users to the give feedback view.
+
+![Screenshot showing reading feedback](documentation/features/read-feedback-large.png)
+
 ##### Give feedback
 
 Logged in users can give feedback on published work (user story 46).
