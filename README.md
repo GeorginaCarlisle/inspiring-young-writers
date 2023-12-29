@@ -1085,6 +1085,19 @@ Key features:
 
 ##### Delete feedback
 
+Logged in users can delete feedback they have created (user story 50).
+
+Key features:
+- Delete is an option users can access when reading feedback they have given.
+- Users are reminded that once deleted they cannot get the feedback back.
+- They can confirm to delete or choose to keep.
+- On choosing to delete, feedback is deleted and the user is returned to 'Read feedback' with a success message.
+- On choosing to keep the user is returned to reading feedback.
+
+![Screenshot showing confirm delete](documentation/features/delete-feedback-confirm.png)
+
+![Screenshot showing successful delete](documentation/features/delete-feedback-success.png)
+
 #### ADMIN (covers Approval of writing EPIC plus more)
 
 The site admin can:

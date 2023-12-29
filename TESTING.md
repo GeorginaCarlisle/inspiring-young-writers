@@ -323,11 +323,11 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | Clicking to submit feedback brings up a confirmation message with a choice to 'confirm' or 'cancel' | PASS | PASS |
 | | | Clicking to cancel takes me back to the edit feedback page with any changes intacked | PASS | PASS |
 | | | Clicking to confirm takes me back to the library with a displayed success message | PASS | PASS |
-| 50 | As a **signed-in user** I can delete my feedback | Delete is an option I can access when reading feedback I have given | PASS | |
-| | | I am reminded that once deleted I cannot get the feedback back | PASS | |
-| | | I can confirm to delete or choose to keep | PASS | |
-| | | On choosing to delete, my feedback is deleted and I am returned to 'Read feedback' with a success message | PASS | |
-| | | On choosing to keep I am returned to editing or reading feedback | PASS | |
+| 50 | As a **signed-in user** I can delete my feedback | Delete is an option I can access when reading feedback I have given | PASS | PASS |
+| | | I am reminded that once deleted I cannot get the feedback back | PASS | PASS |
+| | | I can confirm to delete or choose to keep | PASS | PASS |
+| | | On choosing to delete, my feedback is deleted and I am returned to 'Read feedback' with a success message | PASS | PASS |
+| | | On choosing to keep I am returned to editing or reading feedback | PASS | PASS |
 | 51 | As a **signed-in user** I am alerted to any new feedback on my published work | | | |
 | | | | | |
 | 52 | As a **signed-in user** I can view feedback given to me by other users | When viewing a published item of work there is a clear button to 'View feedback' | PASS | |
@@ -615,9 +615,9 @@ The following documents all forms and any requirements needed, with details on h
 
 | Trigger | Expected Response | 1st Check | Final Check |
 | --- | --- | --- | --- |
-| Click to 'Delete feedback' | Confirmation message and two buttons 'Keep feedback' and 'Delete feedback' | PASS | |
-| Click to 'Delete feedback'| Redirect to 'Read Feedback' with "You have successfully deleted your feedback" message displayed. Feedback has been deleted from the data base | PASS | |
-| Click to 'Keep feedback' | Redirect back to 'Read Feedback' | PASS | |
+| Click to 'Delete feedback' | Confirmation message and two buttons 'Keep feedback' and 'Delete feedback' | PASS | PASS |
+| Click to 'Delete feedback'| Redirect to 'Read Feedback' with "You have successfully deleted your feedback" message displayed. Feedback has been deleted from the data base | PASS | PASS |
+| Click to 'Keep feedback' | Redirect back to 'Read Feedback' | PASS | PASS |
 
 ## Accessibility Testing
 
