@@ -857,6 +857,13 @@ Key features:
 
 ##### Logout
 
+Logged in users can easily and intuitively log out of their account (user story 12).
+
+Key features:
+- Clear link to logout in the account_header.
+- Clear success message on logging out.
+- On logging out the user is redirected to the home page.
+
 ##### Forgotten Password
 
 #### Account Home EPIC

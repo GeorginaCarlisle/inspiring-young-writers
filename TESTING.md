@@ -164,9 +164,9 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | When entering the wrong information I am prompted and informed what needs to be entered | PASS | PASS |
 | | | I receive a clear message to let me know I have successfully logged in | PASS | PASS |
 | | | On logging in I am redirected to the account_home page | PASS | PASS |
-| 12 | As a **signed-in user** I can easily logout of my account | I can logout out easily and intuitively | PASS | |
-| | | I am given clear success feedback on logging out of my account | PASS | |
-| | | On logging out I am redirected to the home page | PASS | |
+| 12 | As a **signed-in user** I can easily logout of my account | I can logout out easily and intuitively | PASS | PASS |
+| | | I am given clear success feedback on logging out of my account | PASS | PASS |
+| | | On logging out I am redirected to the home page | PASS | PASS |
 | 13 | As a **registered user** (with the help of my parent) I can reset my password using a link sent to my parent’s email | The login page has a clear link for 'Forgotten Password' | PASS | |
 | | | Clicking on 'Forgotten Password' takes me to a 'Password reset' page where I can enter the email address linked to my account | PASS | |
 | | | On submitting I am taken to a success message | PASS | |
