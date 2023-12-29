@@ -900,6 +900,12 @@ Key features:
 
 ##### Account Navigation
 
+##### Parent information
+
+Parent information can also be accessed when logged in (user story 22)
+
+![Screenshot of the parent information as accessed when logged in](documentation/features/parent-info-loggedin.png)
+
 ##### Error Pages
 
 Logged in users are informed when page link (404) or server (500) errors occur and provided with a link straight back to their account home page (user story 21).
