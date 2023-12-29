@@ -40,7 +40,7 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | | contact.html | PASS | |
 | users | signup.html | PASS | |
 | | login.html | PASS | |
-| account | account_home.html | | |
+| account | account_home.html | PASS | |
 | | account_contact.html | | |
 | writing | create_writing.html | | |
 | | my_work.html | | |
@@ -81,8 +81,8 @@ Each individual pythoon file created or edited by me has been passed through the
 | | models.py | PASS | |
 | | urls.py | PASS | |
 | | views.py | PASS | |
-| account | urls.py | | |
-| | views.py | | |
+| account | urls.py | PASS | |
+| | views.py | PASS | |
 | writing | admin.py | PASS | |
 | | forms.py | | |
 | | models.py | | |
@@ -185,14 +185,13 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | I am asked to confirm this action before it will be carried out | PASS | PASS |
 | 18 | As the **parent of a registered user** I am informed via email if my child’s account has been removed including the reason why | As site Admin I can handle this manually | PASS | PASS |
 | | | When deleting a user account I can see all the details I need: email address, first name and last name of the parent or guardian | PASS | PASS |
-| 19 | As a **signed-in user** user once logged in I am taken to a home page for my account | The top left of the nav bar lets me know I am signed in to my account with wording unique to me "Pen name's inspiring writing" | PASS | |
-| | | The navigation bar provides links to all the registered user features |  PASS | |
-| | | It is easy and intuitive to navigate through the available features | PASS | |
-| | | A clear title welcomes me to my account | PASS | |
-| | | There are clear buttons to take me straight to important areas of the site | PASS | |
-| | | The page cannot be accessed unless logged in | PASS | |
-| 20 | As a **signed-in user** I am provided with tips on how I can use the platform when I first log in to my account | | | |
-| | | | | |
+| 19 | As a **signed-in user** user once logged in I am taken to a home page for my account | The top left of the nav bar lets me know I am signed in to my account with wording unique to me "Pen name's inspiring writing" | PASS | PASS |
+| | | The navigation bar provides links to all the registered user features |  PASS | PASS |
+| | | It is easy and intuitive to navigate through the available features | PASS | PASS |
+| | | A clear title welcomes me to my account | PASS | PASS |
+| | | There are clear buttons to take me straight to important areas of the site | PASS | PASS |
+| | | The page cannot be accessed unless logged in | PASS | PASS |
+| 20 | As a **signed-in user** I am provided with tips on how I can use the platform when I first log in to my account | Future Feature | | |
 | 21 | As a **signed-in user** I am informed when page link errors occur and provided with a link straight back to my account home page | When I am logged in the link from the 404 page takes me back to my account_home page | PASS | |
 | 22 | As the **parent of a signed-in user** I can also access the information for parents when my child is logged in | 'Parent' link is available when logged in as well as when not | PASS | |
 | | | Clicking on 'Parent' in the header brings up the parent information | PASS | |
@@ -685,6 +684,10 @@ Note: There are four alerts given for all pages above that are linked to longer 
 
 ### Account Home
 
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-account-home.png)
+
+Note: The alerts are linked to longer alt text for image. Longer text was written purposefully in order to provide more detail for those unable to see the image.
+
 ### My Work
 
 ### Create work
@@ -770,6 +773,14 @@ Password reset success:
 ![Screenshot showing performance 99, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-password-reset-success.png)
 
 ### Account Home
+
+Results for desktop:
+
+![Screenshot showing performance 93, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-account-home-desktop.png)
+
+Results for mobile:
+
+![Screenshot showing performance 78, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-account-home-mobile.png)
 
 ### My Work
 
@@ -885,6 +896,17 @@ Screenshots that show how the pages change across different screen sizes have be
 #### Medium and large screens
 
 ![Screenshot from a safari browser showing the login page](documentation/features/login-page-desktop.png)
+
+### Account home
+
+#### Mobile first
+
+![Screenshot from an iPhone showing the account home page](documentation/features/account-home-mobile.PNG)
+
+#### Large screens
+
+![Screenshot from a safari browser showing the account home page](documentation/features/account-home-desktop.png)
+
 
 [Return to contents list](#contents)
 ## Compatibility Testing

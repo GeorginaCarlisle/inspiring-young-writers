@@ -887,6 +887,17 @@ Key features:
 
 ##### Account Home Page
 
+Once logged in users are taken to their account home page (user story 19). This is also where they are returned should they:
+- try to access the landing page when logged in.
+- try to access a page they don't have permission for. They are also given a message should this happen.
+
+Key features:
+- A clear title welcomes me to my account
+- Clear buttons to take me straight to important areas of the site.
+- The page cannot be accessed unless logged in. Trying to do so will redirect you to the login page.
+
+![Screenshot of the account-home page](documentation/features/account-home-desktop.png)
+
 ##### Account Navigation
 
 ##### Error Pages
@@ -944,6 +955,11 @@ The site admin can:
 On the landing page, a section below the featured writing will be added to give futher information about the platform. This covers user story 3:
 
 "As a new user I am given clear information on what registered users can do, so that I know what signing up will allow me to see and do."
+
+#### Tips and ideas
+
+Throughout the logged in user side of the platform will be tips and ideas to aid the user. These will be presented as small images that will also make the platform visually more appealing. These will be added to the:
+- account home page (user story 20)
 
 #### Profile control
 
