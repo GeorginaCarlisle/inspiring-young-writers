@@ -818,7 +818,7 @@ Attempting to access a webpage that does not exist, has been moved, or has a dea
 
 They are taken to an error 500 page if the server encounters an unexpected condition that prevented it from fulfilling the request.
 
-![Screenshot showing the 500 Error page](documentation/features/404-page-safari.png)
+![Screenshot showing the 500 Error page](documentation/features/500-page-desktop.png)
 
 #### Authentication EPIC
 
@@ -974,6 +974,25 @@ Key features:
 ##### View feedback for my work
 
 ##### Edit work
+
+Users can click to edit their work (user stories 32, 33 and 53). 
+
+Key features:
+- Clicking on 'draft work' or 'work not meeting publishing requirements' automatically brings it up in the edit view.
+- For published work and work awaiting approval a clear button to edit is present when viewing the work.
+- The work to be edited is displayed in a form.
+- A title and introduction (unique to status of work) help users to navigate the process of editing their work.
+- There are three clear options - save draft, submit for publishing, delete writing
+- Submit for publishing and delete writing both bring up a conformation step.
+- An x in the top right of the container takes the user back to 'My Work' after confirming there are no changes needing saving.
+
+![Screenshot showing editing of published work](documentation/features/edit-published-work.png)
+
+![Screenshot showing editing of work awaiting approval](documentation/features/edit-work-awaiting-approval.png)
+
+![Screenshot showing editing of work that's failed approval](documentation/features/edit-work-failed-approval.png)
+
+![Screenshot showing editing of published work](documentation/features/edit-draft-work.png)
 
 ##### Delete work
 

@@ -240,18 +240,18 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | The view work page displays the 'title', 'date submitted', 'writing' and a message | PASS | PASS |
 | | | An x in the top right of the container takes me back to 'My Work' | PASS | PASS |
 | | | The view work page has two buttons 'edit writing' and 'delete writing' | PASS | PASS |
-| | | Clicking to 'edit writing' takes me into the edit view with a message specific to work pending approval | PASS | |
-| | | Editing my work passes all user story #33 criteria | PASS | |
+| | | Clicking to 'edit writing' takes me into the edit view with a message specific to work pending approval | PASS | PASS |
+| | | Editing my work passes all user story #33 criteria | PASS | PASS |
 | | | Clicking to 'delete' my writing passes all user story USER STORY #34 criteria | PASS | |
-| 33 | As a **signed-in user** I can view and edit my draft work | When in 'My Work' clicking on the title of a piece of writing listed under 'My Drafts' will take me to an edit page | PASS | |
-| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
-| | | The draft work is displayed in a form allowing me to edit the title and or the writing | PASS | |
-| | | The form title and introduction help me to navigate the process of editing my work | PASS | |
-| | | There are three clear options - save draft, submit for publishing, delete writing | PASS | |
-| | | Save draft and submit for publishing function as per user stories #26 and #30 | PASS | |
+| 33 | As a **signed-in user** I can view and edit my draft work | When in 'My Work' clicking on the title of a piece of writing listed under 'My Drafts' will take me to an edit page | PASS | PASS |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | PASS |
+| | | The draft work is displayed in a form allowing me to edit the title and or the writing | PASS | PASS |
+| | | The form title and introduction help me to navigate the process of editing my work | PASS | PASS |
+| | | There are three clear options - save draft, submit for publishing, delete writing | PASS | PASS |
+| | | Save draft and submit for publishing function as per user stories #26 and #30 | PASS | PASS |
 | | | Delete writing as per user story #34 | PASS | |
-| | | An x in the top right of the container takes me back to 'My Work' | PASS | |
-| | | On clicking the x I am asked to confirm that there are no changes I wish to save | PASS | |
+| | | An x in the top right of the container takes me back to 'My Work' | PASS | PASS |
+| | | On clicking the x I am asked to confirm that there are no changes I wish to save | PASS | PASS |
 | 34 | As a **signed-in user** I can delete my writing | Delete is an option I can access when editing or viewing my writing | PASS | |
 | | | I am reminded that once deleted I cannot get my writing back | PASS | |
 | | | I can confirm to delete or choose to keep | PASS | |
@@ -336,10 +336,10 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | The layout of the feedback makes it easy to read | PASS | |
 | | | There is a clear button to 'Hide feedback' when on smaller screens | PASS | |
 | | | Clicking to hide feedback takes me back to the normal view of my published work | PASS | |
-| 53 | As a **signed-in user** I can edit my published work | When viewing my published work I can click a button to 'Edit writing' | PASS | |
-| | | Clicking to 'Edit writing' takes me to the Edit Writing page | PASS | |
-| | | I am given a message specific to editing published work | PASS | |
-| | | Editing my work passes all user story #33 criteria | PASS | |
+| 53 | As a **signed-in user** I can edit my published work | When viewing my published work I can click a button to 'Edit writing' | PASS | PASS |
+| | | Clicking to 'Edit writing' takes me to the Edit Writing page | PASS | PASS |
+| | | I am given a message specific to editing published work | PASS | PASS |
+| | | Editing my work passes all user story #33 criteria | PASS | PASS |
 | 54 | As a **signed-in user** I can delete feedback given to me by other users | | | |
 | | | | | |
 | 55 | As a **signed-in user** I can click a help button should I see something in the feedback that worries me | | | |
@@ -483,8 +483,8 @@ The following documents all forms and any requirements needed, with details on h
 
 | Input Field | Requirement | Error caught | Final check |
 | --- | ----- | ---- | -- |
-| Title | Required field | "Please fill in this field" notification pointed at input box | |
-| | Maximum length 50 | Cannot physically enter more than 50 characters | |
+| Title | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Maximum length 50 | Cannot physically enter more than 50 characters | PASS |
 | | Minimum length 3 | Message displayed under 'Create Writing' title: "Your title needs to more than 3 characters long to be published. Please add a little more." | |
 | | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
 | Body | Required field | "Please fill in this field" notification pointed at input box | |
