@@ -751,6 +751,15 @@ They can also read work written by another child, inspiring them to write and sh
 
 ##### New User Navigation
 
+##### Developer links (footer)
+
+Every page contains a footer with my name and contact links, as the developer who created this platform, and the year the platform was created. On larger screens extra info is given to say that the platform was created for 'educational purposes only'.
+Clear and easy to access links to take the user to my LinkedIn and GitHub with links opening in a new tab.
+
+![screenshot of the footer as seen on mobile screens](documentation/features//footer-mobile.PNG)
+
+![screenshot of the footer as seen on medium and large screens](documentation/features/footer-desktop.png)
+
 ##### Information For Parents
 
 Parents of new users can read about how the platform works, the steps in place to protect their child and what they and their child can do to increase safety (user story 4).

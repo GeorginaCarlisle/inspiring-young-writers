@@ -138,10 +138,10 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | When entering the wrong information I am prompted and informed what needs to be entered | PASS | PASS |
 | | | I am given clear success feedback on submission of the form | PASS | PASS |
 | 6 | As the **site admin** user's question and concerns along with their contact details are passed to me | Submitted contact us data emailed to the site owner | PASS | PASS |
-| 7 | As a **new user** I am provided with the name and contact links for the developer who created this platform | The name of the developer and year platform created are clearly visible at the bottom of every page. | PASS | |
-| | | On larger screens extra info is given to say that the platform was created for 'educational purposes only'. | PASS | |
-| | | Clear and easy to access links to take the user to the developer's LinkedIn and GitHub. | PASS | |
-| | | Clicking on links open relevant page in new tab. | PASS | |
+| 7 | As a **new user** I am provided with the name and contact links for the developer who created this platform | The name of the developer and year platform created are clearly visible at the bottom of every page. | PASS | PASS |
+| | | On larger screens extra info is given to say that the platform was created for 'educational purposes only'. | PASS | PASS |
+| | | Clear and easy to access links to take the user to the developer's LinkedIn and GitHub. | PASS | PASS |
+| | | Clicking on links open relevant page in new tab. | PASS | PASS |
 | 8 | As a **new user** I am informed when page link errors occur and provided with a link straight back to the landing page | Attempting to access a webpage that does not exist, has been moved, or has a dead or broken link takes me to a 404 page | PASS | |
 | | | I am taken to an error 500 page if the server encounters an unexpected condition that prevented it from fulfilling the request | PASS | |
 | | | Both pages provide links back to the platform | PASS | |
