@@ -157,15 +157,9 @@ def edit_writing_view(request, writing_id):
             if not request.GET.get('confirm_delete'):
                 context['confirmation_delete_needed'] = True
                 context['create_writing_form'] = form
-                context['work_id'] = writing_id
+                context['writing_id'] = writing_id
                 context['writing'] = writing
-                return render(request, 'edit_writing.html', context)
-
-            # Path if user clicks to NOT delete, following initial click to delete
-            elif 'keep' in request.POST:
-                context['create_writing_form'] = form
-                context['work_id'] = writing_id
-                context['writing'] = writing
+                print(f"writing_id in context passed when confirm delete called: {context.get('writing_id')}")
                 return render(request, 'edit_writing.html', context)
 
             # If confirmation recieved proceed
@@ -174,6 +168,14 @@ def edit_writing_view(request, writing_id):
                 messages.success(request, "You have successfully \
                                 deleted your writing")
                 return redirect('my_work', user_id=request.user.id)
+
+        # Path if user clicks to NOT delete, following initial click to delete
+        elif 'keep' in request.POST:
+            context['create_writing_form'] = form
+            context['writing_id'] = writing_id
+            context['writing'] = writing
+            print("Keep pathway called")
+            return render(request, 'edit_writing.html', context)
 
         # Save as draft and submit to publish pathways
         elif form.is_valid():
@@ -187,6 +189,8 @@ def edit_writing_view(request, writing_id):
                     'Your title needs to more than 3 characters long to be \
                         published. Please add a little more.')
                 context['create_writing_form'] = form
+                context['writing_id'] = writing_id
+                context['writing'] = writing
                 return render(request, 'edit_writing.html', context)
 
             # Check body length
@@ -196,6 +200,8 @@ def edit_writing_view(request, writing_id):
                     'Your writing needs to more than 50 characters long to be \
                         published. Please add a little more.')
                 context['create_writing_form'] = form
+                context['writing_id'] = writing_id
+                context['writing'] = writing
                 return render(request, 'edit_writing.html', context)
 
             # Path if user clicked to Publish
@@ -205,7 +211,8 @@ def edit_writing_view(request, writing_id):
                 if not request.GET.get('confirm'):
                     context['confirmation_needed'] = True
                     context['create_writing_form'] = form
-                    context['work_id'] = writing_id
+                    context['writing_id'] = writing_id
+                    context['writing'] = writing
                     return render(request, 'edit_writing.html', context)
 
                 # If confirmation recieved proceed
@@ -246,15 +253,16 @@ def edit_writing_view(request, writing_id):
                 request,
                 'There is an error with your title or writing')
             context['create_writing_form'] = form
-            context['work_id'] = writing_id
+            context['writing_id'] = writing_id
             context['writing'] = writing
 
     else:
         form = CreateWritingForm(instance=writing)
         context['create_writing_form'] = form
-        context['work_id'] = writing_id
+        context['writing_id'] = writing_id
         context['writing'] = writing
 
+    print(f"writing_id in context: {context.get('writing_id')}")
     return render(request, 'edit_writing.html', context)
 
 

@@ -129,15 +129,15 @@
             <!-- Create Writing form -->
             {% if confirmation_needed %}
             <!-- Form to confirm publish -->
-            <form action="{% url 'edit' work_id %}?confirm=True" method="post">
+            <form action="{% url 'edit' writing_id %}?confirm=True" method="post">
 
             {% elif confirmation_delete_needed %}
             <!-- Form to confirm delete-->
-            <form action="{% url 'edit' work_id %}?confirm_delete=True" method="post">
+            <form action="{% url 'edit' writing_id %}?confirm_delete=True" method="post">
 
             {% else %}
-            <!-- Form to edit -->
-            <form action="{% url 'edit' work_id %}" method="post">
+            <!-- Original form -->
+            <form action="{% url 'edit' writing_id %}" method="post">
             {% endif %}
 
             {% csrf_token %}
@@ -182,7 +182,7 @@
                 name="draft"
                 class="absolute left-4 bottom-4 p-1 rounded border-orange-700 border-2 border-solid bg-white hover:bg-orange-700 text-orange-700 hover:text-white sm:text-lg hover:cursor-pointer">
 
-                <!-- Confirm delete -->
+                <!-- Delete writing -->
                 <input
                 type="submit"
                 value="Delete writing"
