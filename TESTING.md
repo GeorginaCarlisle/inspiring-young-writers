@@ -32,10 +32,10 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | | 404.html | PASS | |
 | | hero.html | PASS | Tested as part of the landing page |
 | | parent_info.html | PASS | Tested as part of the landing page |
-| templates/password_reset | password_reset.html | | |
-| | password_reset_sent.html | | |
-| | password_reset_complete.html | | |
-| | password_reset_form.html | | |
+| templates/password_reset | password_reset.html | PASS | |
+| | password_reset_sent.html | PASS | |
+| | password_reset_complete.html | PASS | |
+| | password_reset_form.html | PASS | |
 | home | index.html | PASS | |
 | | contact.html | PASS | |
 | users | signup.html | PASS | |
@@ -167,12 +167,12 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | 12 | As a **signed-in user** I can easily logout of my account | I can logout out easily and intuitively | PASS | PASS |
 | | | I am given clear success feedback on logging out of my account | PASS | PASS |
 | | | On logging out I am redirected to the home page | PASS | PASS |
-| 13 | As a **registered user** (with the help of my parent) I can reset my password using a link sent to my parent’s email | The login page has a clear link for 'Forgotten Password' | PASS | |
-| | | Clicking on 'Forgotten Password' takes me to a 'Password reset' page where I can enter the email address linked to my account | PASS | |
-| | | On submitting I am taken to a success message | PASS | |
-| | | I also receive an email with a link to reset my password | PASS | |
-| | | Clicking on the link takes me to the platform and a form to reset my password | PASS | |
-| | | On reseting my password I receive a success message with a link to login | PASS | |
+| 13 | As a **registered user** (with the help of my parent) I can reset my password using a link sent to my parent’s email | The login page has a clear link for 'Forgotten Password' | PASS | PASS |
+| | | Clicking on 'Forgotten Password' takes me to a 'Password reset' page where I can enter the email address linked to my account | PASS | PASS |
+| | | On submitting I am taken to a success message | PASS | PASS |
+| | | I also receive an email with a link to reset my password | PASS | PASS |
+| | | Clicking on the link takes me to the platform and a form to reset my password | PASS | PASS |
+| | | On reseting my password I receive a success message with a link to login | PASS | PASS |
 | 14 | As a **signed-in user** I can edit my profile | | | |
 | | | | | |
 | 15 | As a **signed-in user** I can delete my account | | | |
@@ -666,6 +666,23 @@ Note: The alerts are linked to longer alt text for the hero-images. Longer text 
 
 ### Forgotten Password
 
+Password reset request:
+
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-password-reset-request.png)
+
+Password reset email sent:
+
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-password-reset-email-sent.png)
+
+Password reset form:
+
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-password-reset-form.png)
+
+Password reset success:
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-password-reset-success.png)
+
+Note: There are four alerts given for all pages above that are linked to longer alt text for the hero-images. Longer text was written purposefully in order to provide more detail for those unable to see the image. There is also an additional alert given to the success message page. This fifth alert is being generated because the login page can be accessed directly from a link within the success message as well as from the main navigation. This extra link has been purposefully added in order to aid user experience.
+
 ### Account Home
 
 ### My Work
@@ -735,6 +752,22 @@ Results for mobile:
 ![Screenshot showing performance 86, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-login-page-mobile.png)
 
 ### Forgotten Password
+
+Password reset request:
+
+![Screenshot showing performance 98, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-password-reset-request.png)
+
+Password reset email sent:
+
+![Screenshot showing performance 98, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-password-reset-email-sent.png)
+
+Password reset form:
+
+![Screenshot showing performance 97, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-password-reset-form.png)
+
+Password reset success:
+
+![Screenshot showing performance 99, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-password-reset-success.png)
 
 ### Account Home
 

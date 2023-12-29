@@ -866,6 +866,23 @@ Key features:
 
 ##### Forgotten Password
 
+Registered users who have forgotten their password can reset it (user story 13).
+
+Key features:
+- The login page has a clear link for 'Forgotten Password'.
+- Clicking on 'Forgotten Password' takes the user to a 'Password reset' page where they can enter the email address linked to their account.
+- A clear success message lets them know that an email to reset password has benn sent.
+- The email contains a link that takes them to a form to reset my password.
+- On reseting their password they receive a success message with a link to login.
+
+![Password reset request page](documentation/features/password-reset-request.png)
+
+![Password reset email sent](documentation/features/password-reset-email-sent.png)
+
+![Password reset form](documentation/features/password-reset-form.PNG)
+
+![Password reset success](documentation/features/password-reset-success.PNG)
+
 #### Account Home EPIC
 
 ##### Account Home Page
