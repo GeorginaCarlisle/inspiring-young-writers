@@ -29,8 +29,7 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | | footer.html | PASS | Tested as part of the landing page |
 | | header.html | PASS | Tested as part of the landing page |
 | | account_header.html | | |
-| | 404.html | | |
-| | 500.html | | |
+| | 404.html | PASS | |
 | | hero.html | PASS | Tested as part of the landing page |
 | | parent_info.html | PASS | Tested as part of the landing page |
 | templates/password_reset | password_reset.html | | |
@@ -74,7 +73,7 @@ Each individual pythoon file created or edited by me has been passed through the
 | --- | --- | --- | --- |
 | inspiringyw | settings.py | Two errors | See below for further details |
 | | urls.py | Clear | |
-| | views.py | | |
+| | views.py | Clear | |
 | home | urls.py | Clear | |
 | | views.py | Clear | |
 | users | admin.py | | |
@@ -647,7 +646,11 @@ Note: The alerts are linked to longer alt text for the hero-images. Longer text 
 
 ### 404 Error Page
 
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-404-page.png)
+
 ### 500 Error Page
+
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-500-page.png)
 
 ### Sign - up
 
@@ -779,6 +782,16 @@ The platform has been fully tested across a range of screen sizes, from 350px up
 #### Medium screens
 
 ![Screenshot of the contact us page](documentation/features/contact-devtools-medium.png)
+
+### Error Pages
+
+#### Mobile first
+
+![Screenshot from an iPhone showing the 404 Error page](documentation/features/404-page-mobile-iphone.PNG)
+
+#### Larger screens
+
+![Screenshot from a chrome browser showing the 404 Error page](documentation/features/404-page-chrome.png)
 
 ### Mobile first (< 640px )
 

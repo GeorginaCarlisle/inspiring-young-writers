@@ -810,6 +810,16 @@ The contact form:
 
 ##### Error Pages
 
+New users are informed when page link errors occur and provided with a link straight back to the landing page.
+
+Attempting to access a webpage that does not exist, has been moved, or has a dead or broken link takes them to a 404 page.
+
+![Screenshot showing the 404 Error page](documentation/features/404-page-desktop.png)
+
+They are taken to an error 500 page if the server encounters an unexpected condition that prevented it from fulfilling the request.
+
+![Screenshot showing the 500 Error page](documentation/features/404-page-safari.png)
+
 #### Authentication EPIC
 
 ##### Sign - up
@@ -860,57 +870,6 @@ The contact form:
 
 #### ADMIN (covers Approval of writing EPIC plus more)
 
-
-
-#### 404 Error Page
-
-Attempting to access a webpage that does not exist, has been moved, or has a dead or broken link takes the user to a 404 page. A clear button provides a link back to the main site.
-
-![Screenshot showing the 404 Error page](documentation/features/404-page-desktop.png)
-
-<details>
-<summary>
-Additional screenshots showing mobile and browser compatibility
-</summary>
-
-##### Mobile - iPhone
-
-![Screenshot from an iPhone showing the 404 Error page](documentation/features/404-page-mobile-iphone.PNG)
-
-#### Chrome browser
-
-![Screenshot from a chrome browser showing the 404 Error page](documentation/features/404-page-chrome.png)
-
-#### Safari browser
-
-![Screenshot from a safari browser showing the 404 Error page](documentation/features/404-page-safari.png)
-
-</details>
-
-#### 500 Error Page
-
-Users are taken to an error 500 page if the server encounters an unexpected condition that prevented it from fulfilling the request. A clear button provides a link back to the main site.
-
-![Screenshot showing the 500 Error page](documentation/features/404-page-safari.png)
-
-<details>
-<summary>
-Additional screenshots showing mobile and browser compatibility
-</summary>
-
-##### Mobile - iPhone
-
-![Screenshot from an iPhone showing the 500 Error page](documentation/features/500-page-mobile-iphone.PNG)
-
-#### Chrome browser
-
-![Screenshot from a chrome browser showing the 500 Error page](documentation/features/500-page-chrome.png)
-
-#### Safari browser
-
-![Screenshot from a safari browser showing the 500 Error page](documentation/features/500-page-safari.png)
-
-</details>
 
 [Return to contents list](#contents)
 
