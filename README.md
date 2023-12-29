@@ -930,10 +930,21 @@ Key features:
 
 #### New User Experience
 
-On the landing page, a section below the featured writing will be added to give futher information about the platform. This covers user story #3:
+On the landing page, a section below the featured writing will be added to give futher information about the platform. This covers user story 3:
 
 "As a new user I am given clear information on what registered users can do, so that I know what signing up will allow me to see and do."
 
+#### Profile control
+
+Currently users can create an account, but cannot then edit or delete their user details. A future feature of the platform will be a profile page that would allow users to edit their details and/or delete their account. This covers user stories 14, 15 and 16:
+
+"As a signed-in user I can edit my profile so that I can update my details."
+
+"As a signed-in user I can delete my account, so that I can remove all my contributions and details from the platform should I wish."
+
+"As the parent of a registered user I am informed of any profile changes my child makes and my consent to any changes is required, so that I can continue to support my child."
+
+These user stories were left for future development of the project due to time constraits and the need to prioritise other features. Should a user wish to delete their details then they will be able to directly contact the site owner via the contact form, with the site owner then being able to remove their account via the admin interface.
 
 [Return to contents list](#contents)
 
