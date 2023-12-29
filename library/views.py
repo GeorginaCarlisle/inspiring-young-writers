@@ -266,6 +266,7 @@ def edit_feedback_view(request, feedback_id):
         form = GiveFeedbackForm(instance=feedback)
         context['edit_feedback_form'] = form
 
+    print(form.instance)
     return render(request, 'edit_feedback.html', context)
 
 
