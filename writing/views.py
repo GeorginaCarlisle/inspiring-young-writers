@@ -114,8 +114,9 @@ def my_writing_view(request, user_id):
     user = User.objects.get(id=user_id)
     work = user.writing.all()
     published_work = work.filter(approved=True).order_by('-date_approved')
-    awaiting_approval = work.filter(pending_approval=True).order_by(
-        '-date_submitted')
+    awaiting_approval = work.filter(
+        pending_approval=True, failed_approval=False).order_by(
+            '-date_submitted')
     failed_approval = work.filter(failed_approval=True).order_by(
         '-date_failed')
     draft = work.filter(approved=False, pending_approval=False).order_by(
