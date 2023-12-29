@@ -49,7 +49,7 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | | view_my_feedback.html | | |
 | library | library.html | PASS | |
 | | read.html | PASS | |
-| | give_feedback.html | | |
+| | give_feedback.html | PASS | |
 | | read_feedback.html | | |
 | | edit_feedback.html | | |
 
@@ -297,15 +297,15 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | | | |
 | 45 | As the **site admin** I am alerted immediately to any raised concerns | | | |
 | | | | | |
-| 46 | As a **signed-in user** I can give feedback to other users | When reading published writing in the library there is a clear button to 'Give Feedback' | PASS | |
-| | | Clicking 'Give Feedback' brings up a form to submit feedback | PASS | |
-| | | The form title and introduction help me to navigate the process of submitting feedback | PASS | |
-| | | Sentence starters help me to submit positive and constructive feedback | PASS | |
-| | | The button to submit my feedback is clear | PASS | |
-| | | I receive clear feedback to ensure I have correctly filled in the form | PASS | |
-| | | On clicking the submit button, I am asked to confirm that I would like to submit my feedback. This includes a quick explanation of the process | PASS | |
-| | | I am given clear feedback to let me know I have successfully submitted my feedback | PASS | |
-| | | On submission I am redirected back to the library of inspiration | PASS | |
+| 46 | As a **signed-in user** I can give feedback to other users | When reading published writing in the library there is a clear button to 'Give Feedback' | PASS | PASS |
+| | | Clicking 'Give Feedback' brings up a form to submit feedback | PASS | PASS |
+| | | The form title and introduction help me to navigate the process of submitting feedback | PASS | PASS |
+| | | Sentence starters help me to submit positive and constructive feedback | PASS | PASS |
+| | | The button to submit my feedback is clear | PASS | PASS |
+| | | I receive clear feedback to ensure I have correctly filled in the form | PASS | PASS |
+| | | On clicking the submit button, I am asked to confirm that I would like to submit my feedback. This includes a quick explanation of the process | PASS | PASS |
+| | | I am given clear feedback to let me know I have successfully submitted my feedback | PASS | PASS |
+| | | On submission I am redirected back to the library of inspiration | PASS | PASS |
 | 47 | As a **signed-in user** I can view all feedback associated with a piece of work | When reading a story for the library there is a clear button to 'View feedback' | PASS | |
 | | | On clicking 'View feedback' I can see any published feedback associated with the work I am reading | PASS | |
 | | | If there is no feedback a message explains this to me | PASS | |
@@ -530,59 +530,59 @@ The following documents all forms and any requirements needed, with details on h
 
 | Input Field | Requirement | Error caught | Final check |
 | --- | ----- | ---- | -- |
-| Email | Required field | "Please fill in this field" notification pointed at input box | |
+| Email | Required field | "Please fill in this field" notification pointed at input box | PASS |
 
 ### Reset password
 
 | Input Field | Requirement | Error caught | Final check |
 | --- | ----- | ---- | -- |
-| Password1 | Required field | "Please fill in this field" notification pointed at input box | |
-| | Can't be too similar to other personal information | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "The password is too similar to the username." | |
-| | Must contain at least 8 characters | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is too short. It must contain at least 8 characters." | |
-| | Can't be a commonly used password | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is too common." | |
-| | Can't be entirely numeric | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is entirely numeric." | |
-| Password2 | Required field | "Please fill in this field" notification pointed at input box | |
-| | Must match password1 | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "The two password fields didn’t match." | |
+| Password1 | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Can't be too similar to other personal information | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "The password is too similar to the username." | PASS |
+| | Must contain at least 8 characters | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is too short. It must contain at least 8 characters." | PASS |
+| | Can't be a commonly used password | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is too common." | PASS |
+| | Can't be entirely numeric | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "This password is entirely numeric." | PASS |
+| Password2 | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Must match password1 | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "The two password fields didn’t match." | PASS |
 
 ### Give Feedback
 
 | Input Field | Requirement | Error caught | Final check |
 | --- | ----- | ---- | -- |
 | Star one | Required field | "Please fill in this field" notification pointed at input box | |
-| | Maximum length 400 | Cannot physically enter more than 400 characters | |
-| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your first star" | |
-| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
-| Star two | Required field | "Please fill in this field" notification pointed at input box | |
-| | Maximum length 400 | Cannot physically enter more than 400 characters | |
-| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your second star" | |
-| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
-| Wish | Required field | "Please fill in this field" notification pointed at input box | |
-| | Maximum length 400 | Cannot physically enter more than 400 characters | |
-| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your wish" | |
-| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
+| | Maximum length 400 | Cannot physically enter more than 400 characters | PASS |
+| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your first star" | PASS |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | PASS |
+| Star two | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Maximum length 400 | Cannot physically enter more than 400 characters | PASS |
+| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your second star" | PASS |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | PASS |
+| Wish | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Maximum length 400 | Cannot physically enter more than 400 characters | PASS |
+| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your wish" | PASS |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | PASS |
 
 #### Give feedback confirms 'submit feedback'
 
 | Trigger | Expected Response | 1st Check | Final Check |
 | --- | --- | --- | --- |
-| Click to submit feedback | Confirmation message and two buttons 'Confirm' 'Cancel' | PASS | |
-| Click to confirm | Redirect to 'Library of inspiration' with "You have successfully submitted your feedback for "". It may take a couple of days to be approved." message displayed. | PASS | |
-| Click to cancel | Return to normal give feedback view with form input still there | PASS | |
+| Click to submit feedback | Confirmation message and two buttons 'Confirm' 'Cancel' | PASS | PASS |
+| Click to confirm | Redirect to 'Library of inspiration' with "You have successfully submitted your feedback for "". It may take a couple of days to be approved." message displayed. | PASS | PASS |
+| Click to cancel | Return to normal give feedback view with form input still there | PASS | PASS |
 
 #### Give feedback prevented if user is the author of the writing
 
 | Trigger | Expected Response | 1st Check | Final Check |
 | --- | --- | --- | --- |
-| Click to give feedback | No form to give feedback. Instead a message "You can't give feedback for yourself!" and an option to return | PASS | |
-| Click return | Return to read view | PASS | |
+| Click to give feedback | No form to give feedback. Instead a message "You can't give feedback for yourself!" and an option to return | PASS | PASS |
+| Click return | Return to read view | PASS | PASS |
 
 #### Give feedback prevented if feedback already given
 
 | Trigger | Expected Response | 1st Check | Final Check |
 | --- | --- | --- | --- |
-| Click to give feedback | No form to give feedback. Instead a message "You have already given feedback for this writing." and options to return or read feedback | PASS | |
-| Click return | Return to read view | PASS | |
-| Click read feedback | Taken to read_feedback view | PASS | |
+| Click to give feedback | No form to give feedback. Instead a message "You have already given feedback for this writing." and options to return or read feedback | PASS | PASS |
+| Click return | Return to read view | PASS | PASS |
+| Click read feedback | Taken to read_feedback view | PASS | PASS |
 
 ### Edit Feedback
 
@@ -727,6 +727,8 @@ Note: Alert is linked to the back confirmation repeating the link to return to t
 ### Read feedback
 
 ### Give feedback
+
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-give-feedback.png)
 
 ### Edit feedback
 
@@ -879,6 +881,14 @@ Results for mobile:
 ### Read feedback
 
 ### Give feedback
+
+Results for desktop:
+
+![Screenshot showing performance 99, accessibility 100, best practice 95 and SEO 100](documentation/testing//lighthouse-give-feedback-desktop.png)
+
+Results for mobile:
+
+![Screenshot showing performance 84, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-give-feedback-mobile.png)
 
 ### Edit feedback
 
@@ -1059,6 +1069,25 @@ Screenshots that show how the pages change across different screen sizes have be
 
 
 [Return to contents list](#contents)
+
+### Give feedback
+
+#### Mobile first
+
+![screenshot of give feedback on a mobile](documentation/features/give-feedback-mobile-1.PNG)
+![screenshot of give feedback on a mobile - scroll](documentation/features/give-feedback-mobile-2.PNG)
+
+#### Small screens
+
+![screenshot of give feedback on a small screen](documentation/features/give-feedback-small.png)
+
+#### Medium screens
+
+![screenshot of give feedback on a medium screen](documentation/features/give-feedback-medium.png)
+
+#### Large screens
+
+![screenshot of give feedback on a large screen](documentation/features/give-feedback-large.png)
 
 ## Compatibility Testing
 

@@ -1032,6 +1032,26 @@ Key features:
 
 ##### Give feedback
 
+Logged in users can give feedback on published work (user story 46).
+
+Key features:
+- When reading published writing in the library there is a clear button to 'Give Feedback'.
+- Clicking 'Give Feedback' brings up a form to submit feedback.
+- The form title and introduction help users to navigate the process of submitting feedback.
+- Sentence starters help users to submit positive and constructive feedback.
+- There is a clear button to submit feedback.
+- Clear prompts ensure the form is correctly filled in.
+- On clicking the submit button, users are asked to confirm that I would like to submit my feedback.
+- Clear feedback is given to users on successfully submitting feedback.
+- On submission of feedback users are redirected back to the library of inspiration.
+- Feedback cannot be given to yourself.
+- Feedback can only be given once.
+
+![Screenshot showing giving feedback](documentation/features/give-feedback-large.png)
+
+![Screenshot showing giving feedback on a mobile](documentation/features/give-feedback-mobile-1.PNG)
+![Screenshot showing giving feedback on a mobile, scrolled view](documentation/features/give-feedback-mobile-2.PNG)
+
 ##### Edit feedback
 
 ##### Delete feedback
