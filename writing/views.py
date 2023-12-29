@@ -159,7 +159,6 @@ def edit_writing_view(request, writing_id):
                 context['create_writing_form'] = form
                 context['writing_id'] = writing_id
                 context['writing'] = writing
-                print(f"writing_id in context passed when confirm delete called: {context.get('writing_id')}")
                 return render(request, 'edit_writing.html', context)
 
             # If confirmation recieved proceed
@@ -174,7 +173,6 @@ def edit_writing_view(request, writing_id):
             context['create_writing_form'] = form
             context['writing_id'] = writing_id
             context['writing'] = writing
-            print("Keep pathway called")
             return render(request, 'edit_writing.html', context)
 
         # Save as draft and submit to publish pathways
@@ -262,7 +260,6 @@ def edit_writing_view(request, writing_id):
         context['writing_id'] = writing_id
         context['writing'] = writing
 
-    print(f"writing_id in context: {context.get('writing_id')}")
     return render(request, 'edit_writing.html', context)
 
 
