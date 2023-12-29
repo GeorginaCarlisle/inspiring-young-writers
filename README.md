@@ -902,6 +902,10 @@ Key features:
 
 ##### Error Pages
 
+Logged in users are informed when page link (404) or server (500) errors occur and provided with a link straight back to their account home page (user story 21).
+
+![Screenshot showing the 404 Error page](documentation/features/404-error-loggedin-user.png)
+
 #### My Work EPIC
 
 ##### My Work

@@ -192,7 +192,7 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | There are clear buttons to take me straight to important areas of the site | PASS | PASS |
 | | | The page cannot be accessed unless logged in | PASS | PASS |
 | 20 | As a **signed-in user** I am provided with tips on how I can use the platform when I first log in to my account | Future Feature | | |
-| 21 | As a **signed-in user** I am informed when page link errors occur and provided with a link straight back to my account home page | When I am logged in the link from the 404 page takes me back to my account_home page | PASS | |
+| 21 | As a **signed-in user** I am informed when page link errors occur and provided with a link straight back to my account home page | When I am logged in the link from the 404 and 500 pages takes me back to my account_home page | PASS | PASS |
 | 22 | As the **parent of a signed-in user** I can also access the information for parents when my child is logged in | 'Parent' link is available when logged in as well as when not | PASS | |
 | | | Clicking on 'Parent' in the header brings up the parent information | PASS | |
 | 23 | As the **parent of a signed-in user** I can also contact the site admin when my child is logged in | I can easily navigate to the contact page when logged in | PASS | |
