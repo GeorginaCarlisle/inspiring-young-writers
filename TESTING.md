@@ -359,13 +359,13 @@ The acceptance criteria for each user story has been checked on completion (1st 
 
 | # | User Story | Acceptance Criteria | 1st Check | Final Check |
 | -- | ---- | ---- | -- | -- |
-| 64 | As a **user** I can navigate intuitively through the site | The navigation links display clearly across the top of the page for larger screens. | PASS | |
-| | | The navigation links display clearly in a dropdown menu on smaller screens. | PASS | |
-| | | On smaller screens I can click a hamburger icon allowing me to open the mobile nav. | PASS | |
-| | | On smaller screens I can click on an x to close the mobile nav. | PASS | |
-| | | The platform name "Inspiring young writers" is clearly displayed on the left of the nav bar. This directs back to the home page. | PASS | |
-| | | When hovering over a link there is clear visual feedback. | PASS | |
-| | | All navigation links take you to the correct destination when clicked. | PASS | |
+| 64 | As a **user** I can navigate intuitively through the site | The navigation links display clearly across the top of the page for larger screens. | PASS | PASS |
+| | | The navigation links display clearly in a dropdown menu on smaller screens. | PASS | PASS |
+| | | On smaller screens I can click a hamburger icon allowing me to open the mobile nav. | PASS | PASS |
+| | | On smaller screens I can click on an x to close the mobile nav. | PASS | PASS |
+| | | The platform name "Inspiring young writers" is clearly displayed on the left of the nav bar. This directs back to the home page. | PASS | PASS |
+| | | When hovering over a link there is clear visual feedback. | PASS | PASS |
+| | | All navigation links take you to the correct destination when clicked. | PASS | PASS |
 | 75 | As the site admin I can approve feedback | I can view all instances of feedback through the admin page | PASS | PASS |
 | | | I can filter by approved and find all submitted feedback that hasn't been approved | PASS | PASS |
 | | | I can read the giver's name, writing title, star_one, star_two, wish, date_created, date_last_edit, approved and date_approved of each instance of feedback | PASS | PASS |

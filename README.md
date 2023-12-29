@@ -751,6 +751,20 @@ They can also read work written by another child, inspiring them to write and sh
 
 ##### New User Navigation
 
+Navigation throughout the platform is intuitive and easy to use (user story 64).
+
+Key features of the main navigation when not logged in:
+- The navigation links display clearly across the top of the page for larger screens.
+- The navigation links display clearly in a dropdown menu on smaller screens.
+- On smaller screens users can click a hamburger icon allowing them to open the mobile nav.
+- On smaller screens users can click on an x to close the mobile nav.
+- The platform name "Inspiring young writers" is clearly displayed on the left of the nav bar. This directs back to the home page.
+- When hovering over a link there is clear visual feedback.
+
+![screenshot of the new user nav on mobile](documentation/features/new-user-nav-mobile.png)
+
+![screenshot of the new user nav on desktop](documentation/features/new-user-nav-desktop.png)
+
 ##### Developer links (footer)
 
 Every page contains a footer with my name and contact links, as the developer who created this platform, and the year the platform was created. On larger screens extra info is given to say that the platform was created for 'educational purposes only'.
@@ -899,6 +913,16 @@ Key features:
 ![Screenshot of the account-home page](documentation/features/account-home-desktop.png)
 
 ##### Account Navigation
+
+Navigation throughout the platform is intuitive and easy to use (user story 64).
+
+Key features:
+- The account navigation has links specific to logged in users.
+- The users pen name is clearly displayed on the left of the nav bar. This directs back to the account home page.
+
+![screenshot of the account nav on mobile](documentation/features/account-nav-mobile.png)
+
+![screenshot of the account nav on desktop](documentation/features/account-nav-desktop.png)
 
 ##### Parent information
 
