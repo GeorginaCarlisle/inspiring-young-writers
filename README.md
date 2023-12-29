@@ -996,6 +996,17 @@ Key features:
 
 ##### Delete work
 
+Users can click to delete their writing (user story 34).
+
+Key features:
+- The option to delete can be found when viewing or editing writing.
+- Clicking to delete brings up a confirmation step.
+- On choosing to delete the writing is deleted and the user is returned to 'My work' with a success message.
+
+![Screenshot showing delete confirmation step](documentation/features/delete-confirmation-step.png)
+
+![Screenshot showing successful delete](documentation/features/delete-success.png)
+
 #### Library of Published Work EPIC
 
 ##### Library of inspiration
