@@ -1045,7 +1045,7 @@ Key features:
 
 ##### Give feedback
 
-Logged in users can give feedback on published work (user story 46).
+Logged in users can give feedback on published work (user stories 46 and 48).
 
 Key features:
 - When reading published writing in the library there is a clear button to 'Give Feedback'.
@@ -1066,6 +1066,22 @@ Key features:
 ![Screenshot showing giving feedback on a mobile, scrolled view](documentation/features/give-feedback-mobile-2.PNG)
 
 ##### Edit feedback
+
+Logged in users can edit feedback they have created (user story 49).
+
+Key features:
+- When viewing feedback they have given to another user there is a clear option to edit feedback.
+- Clicking to 'edit feedback' takes the user to an edit page.
+- Their feedback is displayed in a form allowing them to edit.
+- There are two clear options - submit feedback or return.
+- Clicking to return takes them back to the read feedback view.
+- Clicking to submit feedback brings up a confirmation message with a choice to 'confirm' or 'cancel'.
+- Clicking to cancel takes them back to the edit feedback page with any changes intacked.
+- Clicking to confirm takes them back to the library with a displayed success message.
+
+![Screenshot showing edit feedback](documentation/features/edit-feedback-desktop.png)
+
+![Screenshot showing edit feedback on a mobile](documentation/features/edit-feedback-mobile.PNG)
 
 ##### Delete feedback
 

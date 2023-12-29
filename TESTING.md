@@ -51,7 +51,7 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | | read.html | PASS | |
 | | give_feedback.html | PASS | |
 | | read_feedback.html | PASS | |
-| | edit_feedback.html | | |
+| | edit_feedback.html | PASS | |
 
 #### HTML warnings
 
@@ -314,15 +314,15 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | Clicking to hide feedback takes me back to the normal view of my published work | PASS | PASS |
 | | | There is a clear button to give feedback | PASS | PASS |
 | | | Clicking to give feedback takes me to the give feedback view | PASS | PASS |
-| 48 | As a **signed-in user** my feedback is passed through validation tests | An error message is raised when a swear word is entered in any of the input fields. | PASS | |
-| 49 | As a **signed-in user** I can edit my feedback | When viewing feedback I have given to another user there is a clear option to edit feedback | PASS | |
-| | | Clicking to 'edit feedback' takes me to an edit page | PASS | |
-| | | My feedback is displayed in a form allowing me to edit | PASS | |
-| | | There are two clear options - submit feedback or return | PASS | |
-| | | Clicking to return takes me back to the read feedback view | PASS | |
-| | | Clicking to submit feedback brings up a confirmation message with a choice to 'confirm' or 'cancel' | PASS | |
-| | | Clicking to cancel takes me back to the edit feedback page with any changes intacked | PASS | |
-| | | Clicking to confirm takes me back to the library with a displayed success message | PASS | |
+| 48 | As a **signed-in user** my feedback is passed through validation tests | An error message is raised when a swear word is entered in any of the input fields. | PASS | PASS |
+| 49 | As a **signed-in user** I can edit my feedback | When viewing feedback I have given to another user there is a clear option to edit feedback | PASS | PASS |
+| | | Clicking to 'edit feedback' takes me to an edit page | PASS | PASS |
+| | | My feedback is displayed in a form allowing me to edit | PASS | PASS |
+| | | There are two clear options - submit feedback or return | PASS | PASS |
+| | | Clicking to return takes me back to the read feedback view | PASS | PASS |
+| | | Clicking to submit feedback brings up a confirmation message with a choice to 'confirm' or 'cancel' | PASS | PASS |
+| | | Clicking to cancel takes me back to the edit feedback page with any changes intacked | PASS | PASS |
+| | | Clicking to confirm takes me back to the library with a displayed success message | PASS | PASS |
 | 50 | As a **signed-in user** I can delete my feedback | Delete is an option I can access when reading feedback I have given | PASS | |
 | | | I am reminded that once deleted I cannot get the feedback back | PASS | |
 | | | I can confirm to delete or choose to keep | PASS | |
@@ -588,26 +588,26 @@ The following documents all forms and any requirements needed, with details on h
 
 | Input Field | Requirement | Error caught | Final check |
 | --- | ----- | ---- | -- |
-| Star one | Required field | "Please fill in this field" notification pointed at input box | |
-| | Maximum length 400 | Cannot physically enter more than 400 characters | |
-| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your first star" | |
-| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
-| Star two | Required field | "Please fill in this field" notification pointed at input box | |
-| | Maximum length 400 | Cannot physically enter more than 400 characters | |
-| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your second star" | |
-| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
-| Wish | Required field | "Please fill in this field" notification pointed at input box | |
-| | Maximum length 400 | Cannot physically enter more than 400 characters | |
-| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your wish" | |
-| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
+| Star one | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Maximum length 400 | Cannot physically enter more than 400 characters | PASS |
+| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your first star" | PASS |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | PASS |
+| Star two | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Maximum length 400 | Cannot physically enter more than 400 characters | PASS |
+| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your second star" | PASS |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | PASS |
+| Wish | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Maximum length 400 | Cannot physically enter more than 400 characters | PASS |
+| | Minimum length 10 | Message displayed at the top of the form: "Please add a little more to your wish" | PASS |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | PASS |
 
 #### Edit feedback confirms 'submit feedback'
 
 | Trigger | Expected Response | 1st Check | Final Check |
 | --- | --- | --- | --- |
-| Click to submit feedback | Confirmation message and two buttons 'Confirm' 'Cancel' | PASS | |
-| Click to confirm | Redirect to 'Library of inspiration' with "You have successfully submitted your feedback for "". It may take a couple of days to be approved." message displayed. | PASS | |
-| Click to cancel | Return to normal give feedback view with form input still there | PASS | |
+| Click to submit feedback | Confirmation message and two buttons 'Confirm' 'Cancel' | PASS | PASS |
+| Click to confirm | Redirect to 'Library of inspiration' with "You have successfully submitted your feedback for "". It may take a couple of days to be approved." message displayed. | PASS | PASS |
+| Click to cancel | Return to normal give feedback view with form input still there | PASS | PASS |
 
 ### Read feedback
 
@@ -733,6 +733,8 @@ Note: Alert is linked to the back confirmation repeating the link to return to t
 ![screenshot of wave test results showing no errors detected](documentation/testing/wave-give-feedback.png)
 
 ### Edit feedback
+
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-edit-feedback.png)
 
 [Return to contents list](#contents)
 
@@ -901,6 +903,14 @@ Results for mobile:
 ![Screenshot showing performance 84, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-give-feedback-mobile.png)
 
 ### Edit feedback
+
+Results for desktop:
+
+![Screenshot showing performance 99, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-edit-writing-desktop.png)
+
+Results for mobile:
+
+![Screenshot showing performance 83, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-edit-feedback-mobile.png)
 
 [Return to contents list](#contents)
 
@@ -1117,6 +1127,17 @@ Screenshots that show how the pages change across different screen sizes have be
 #### Large screens
 
 ![screenshot of read feedback on a large screen](documentation/features/read-feedback-large.png)
+
+### Edit feedback
+
+#### Mobile first
+
+![Screenshot from an iPhone showing editing feedback](documentation/features/edit-feedback-mobile.PNG)
+
+#### Larger screens
+
+![Screenshot from a safari browser showing editing feedback](documentation/features/edit-feedback-desktop.png)
+
 
 ## Compatibility Testing
 
