@@ -44,7 +44,7 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | | account_contact.html | PASS | |
 | writing | create_writing.html | PASS | |
 | | my_work.html | PASS | |
-| | edit_writing.html | | |
+| | edit_writing.html | PASS | |
 | | view_writing.html | PASS | |
 | | view_my_feedback.html | | |
 | library | library.html | | |
@@ -485,35 +485,35 @@ The following documents all forms and any requirements needed, with details on h
 | --- | ----- | ---- | -- |
 | Title | Required field | "Please fill in this field" notification pointed at input box | PASS |
 | | Maximum length 50 | Cannot physically enter more than 50 characters | PASS |
-| | Minimum length 3 | Message displayed under 'Create Writing' title: "Your title needs to more than 3 characters long to be published. Please add a little more." | |
-| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
-| Body | Required field | "Please fill in this field" notification pointed at input box | |
-| | Minimum length 50 | Message displayed under 'Create Writing' title: "Your writing needs to more than 50 characters long to be published. Please add a little more." | |
-| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | |
+| | Minimum length 3 | Message displayed under 'Create Writing' title: "Your title needs to more than 3 characters long to be published. Please add a little more." | PASS |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | PASS |
+| Body | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Minimum length 50 | Message displayed under 'Create Writing' title: "Your writing needs to more than 50 characters long to be published. Please add a little more." | PASS |
+| | No swear words | If swear word entered is on the validation list the following message is displayed "Swear word ' ' is not allowed. Please remove. | PASS |
 
 #### Edit writing confirms 'submit to be published'
 
 | Trigger | Expected Response | 1st Check | Final Check |
 | --- | --- | --- | --- |
-| Click to submit work to be published | Confirmation message and two buttons 'Confirm' 'save as draft' | PASS | |
-| Click to confirm | Redirect to 'My Work' with "You have successfully submitted your writing to be published" message displayed. Writing correctly saved with pending_approval = True | PASS | |
-| Click to save as draft | Redirect to 'My Work' with "You have successfully saved your writing as a draft" message displayed. Writing correctly saved with pending_approval = False | PASS | |
+| Click to submit work to be published | Confirmation message and two buttons 'Confirm' 'save as draft' | PASS | PASS |
+| Click to confirm | Redirect to 'My Work' with "You have successfully submitted your writing to be published" message displayed. Writing correctly saved with pending_approval = True | PASS | PASS |
+| Click to save as draft | Redirect to 'My Work' with "You have successfully saved your writing as a draft" message displayed. Writing correctly saved with pending_approval = False | PASS | PASS |
 
 #### Edit writing confirms 'delete writing'
 
 | Trigger | Expected Response | 1st Check | Final Check |
 | --- | --- | --- | --- |
-| Click to 'Delete Writing' | Confirmation message and two buttons 'Keep writing' and 'Delete writing' | PASS | |
-| Click to 'Delete writing'| Redirect to 'My Work' with "You have successfully deleted your writing" message displayed. Writing has been deleted from the data base | PASS | |
-| Click to 'Keep writing' | Redirect back to 'Edit Writing' | PASS | |
+| Click to 'Delete Writing' | Confirmation message and two buttons 'Keep writing' and 'Delete writing' | PASS | PASS |
+| Click to 'Delete writing'| Redirect to 'My Work' with "You have successfully deleted your writing" message displayed. Writing has been deleted from the data base | PASS | PASS |
+| Click to 'Keep writing' | Redirect back to 'Edit Writing' | PASS | PASS |
 
 #### Edit writing confirms 'back' button
 
 | Trigger | Expected Response | 1st Check | Final Check |
 | --- | --- | --- | --- |
-| Clicking the 'x' to come out of the edit view | Confirmation message and two buttons 'keep editing' and 'head back' | PASS | |
-| Clicking 'keep editing' | In the edit view with the confirmation message and associated buttons gone and no changes to writing lost | PASS | |
-| Clicking 'Head back' | Returned to the My Work view | PASS | |
+| Clicking the 'x' to come out of the edit view | Confirmation message and two buttons 'keep editing' and 'head back' | PASS | PASS |
+| Clicking 'keep editing' | In the edit view with the confirmation message and associated buttons gone and no changes to writing lost | PASS | PASS |
+| Clicking 'Head back' | Returned to the My Work view | PASS | PASS |
 
 ### View my writing
 
@@ -712,6 +712,10 @@ Note: Alert is linked to the back confirmation repeating the link to return to t
 
 ### Edit work
 
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-edit-writing.png)
+
+Note: Alert is linked to the back confirmation repeating the link to return to the my work page. This will be looked at in future iterations of the project.
+
 ### Library Of Inspiration
 
 ### Read work
@@ -839,6 +843,14 @@ Results for mobile:
 ### View feedback for my work
 
 ### Edit work
+
+Results for desktop:
+
+![Screenshot showing performance 99, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-edit-writing-desktop.png)
+
+Results for mobile:
+
+![Screenshot showing performance 80, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-edit-writing-mobile.png)
 
 ### Library Of Inspiration
 
@@ -991,23 +1003,39 @@ Screenshots that show how the pages change across different screen sizes have be
 
 ![Screenshot from an iPhone showing View Writing](documentation/features/view-writing-mobile.PNG)
 
-#### Large screens
+#### Larger screens
 
 ![Screenshot from a safari browser showing view writing](documentation/features/view-published-work.png)
+
+### Edit writing
+
+#### Mobile first
+
+![Screenshot from an iPhone showing Edit Writing](documentation/features/edit-writing-mobile.PNG)
+
+#### Larger screens
+
+![Screenshot from a safari browser showing edit writing](documentation/features/edit-draft-work.png)
 
 [Return to contents list](#contents)
 ## Compatibility Testing
 
-Intro
+The platform was built and test along the way predominantly in Chrome with some testing in Safari. Once the platform was completed and deployed testing was also carried out in the following browsers. All responded as expect with just some slight differences in the handing of email validation and blank input boxes (slightly different wording).
 
 ### Chrome
 
-The platform has been fully tested on a chrome browser on both a MacBook Air and .....
+The platform has been fully tested in a chrome browser on both a MacBook Air and pc desktop.
 
 ### Safari
 
-The platform has been fully tested on a Safari browser on both a MacBook Air and an iPhone 12 mini.
+The platform has been fully tested in a Safari browser on both a MacBook Air and an iPhone 12 mini.
 
 ### Firefox
+
+The platform has been fully tested in a firefox browser on a pc desktop.
+
+### Edge
+
+The platform has been fully tested in an edge browser on a pc desktop.
 
 [Return to contents list](#contents)
