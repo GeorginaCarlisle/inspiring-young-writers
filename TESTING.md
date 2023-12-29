@@ -38,7 +38,7 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | | password_reset_form.html | | |
 | home | index.html | PASS | |
 | | contact.html | PASS | |
-| users | signup.html | | |
+| users | signup.html | PASS | |
 | | login.html | | |
 | account | account_home.html | | |
 | | account_contact.html | | |
@@ -72,15 +72,15 @@ Each individual pythoon file created or edited by me has been passed through the
 | App/folder | Python file | Result | Extra notes |
 | --- | --- | --- | --- |
 | inspiringyw | settings.py | Two errors | See below for further details |
-| | urls.py | Clear | |
-| | views.py | Clear | |
-| home | urls.py | Clear | |
-| | views.py | Clear | |
-| users | admin.py | | |
-| | forms.py | | |
-| | models.py | | |
-| | urls.py | | |
-| | views.py | | |
+| | urls.py | PASS | |
+| | views.py | PASS | |
+| home | urls.py | PASS | |
+| | views.py | PASS | |
+| users | admin.py | PASS | |
+| | forms.py | PASS | |
+| | models.py | PASS | |
+| | urls.py | PASS | |
+| | views.py | PASS | |
 | account | urls.py | | |
 | | views.py | | |
 | writing | admin.py | | |
@@ -141,21 +141,21 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | On larger screens extra info is given to say that the platform was created for 'educational purposes only'. | PASS | PASS |
 | | | Clear and easy to access links to take the user to the developer's LinkedIn and GitHub. | PASS | PASS |
 | | | Clicking on links open relevant page in new tab. | PASS | PASS |
-| 8 | As a **new user** I am informed when page link errors occur and provided with a link straight back to the landing page | Attempting to access a webpage that does not exist, has been moved, or has a dead or broken link takes me to a 404 page | PASS | |
-| | | I am taken to an error 500 page if the server encounters an unexpected condition that prevented it from fulfilling the request | PASS | |
-| | | Both pages provide links back to the platform | PASS | |
-| 9 | As a **new user** I can easily set up an account | I can navigate intuitively and easily to the sign-up page | PASS | |
-| | | The landing page contains a call to action providing a direct and clear link to sign-up | PASS | |
-| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
-| | | The title and clear instructions help me to navigate the sign-up process | PASS | |
-| | | It is clear which part of the form is for the child and which is for the parent | PASS | |
-| | | Clear labels indicate the information to be added to each input field | PASS | |
-| | | The button to sign-up is clear | PASS | |
-| | | When entering the wrong information I am prompted and informed what needs to be entered | PASS | |
-| | | I am given clear feedback to let me know I have successfully signed up | PASS | |
-| | | On signing-up I am redirected to the account_home page | PASS | |
-| 10 | As the **parent of a new user** I am asked to input my name and email address and give consent for my child joining the site | When signing up to the platform, my child is informed that they will need me to sign up | PASS | |
-| | | I am asked to provide my name, email address and consent before my child can sign up | PASS | |
+| 8 | As a **new user** I am informed when page link errors occur and provided with a link straight back to the landing page | Attempting to access a webpage that does not exist, has been moved, or has a dead or broken link takes me to a 404 page | PASS | PASS |
+| | | I am taken to an error 500 page if the server encounters an unexpected condition that prevented it from fulfilling the request | PASS | PASS |
+| | | Both pages provide links back to the platform | PASS | PASS |
+| 9 | As a **new user** I can easily set up an account | I can navigate intuitively and easily to the sign-up page | PASS | PASS |
+| | | The landing page contains a call to action providing a direct and clear link to sign-up | PASS | PASS |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | PASS |
+| | | The title and clear instructions help me to navigate the sign-up process | PASS | PASS |
+| | | It is clear which part of the form is for the child and which is for the parent | PASS | PASS |
+| | | Clear labels indicate the information to be added to each input field | PASS | PASS |
+| | | The button to sign-up is clear | PASS | PASS |
+| | | When entering the wrong information I am prompted and informed what needs to be entered | PASS | PASS |
+| | | I am given clear feedback to let me know I have successfully signed up | PASS | PASS |
+| | | On signing-up I am redirected to the account_home page | PASS | PASS |
+| 10 | As the **parent of a new user** I am asked to input my name and email address and give consent for my child joining the site | When signing up to the platform, my child is informed that they will need me to sign up | PASS | PASS |
+| | | I am asked to provide my name, email address and consent before my child can sign up | PASS | PASS |
 | 11 | As a **registered user** I can use my pen-name and password to login to my account | I can navigate intuitively and easily to the login page | PASS | |
 | | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
 | | | The title and clear instructions help me to navigate the login process | PASS | |
@@ -401,7 +401,7 @@ The following documents all forms and any requirements needed, with details on h
 | | Text only no numbers | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Only letters and spaces are allowed in your Second name" | PASS |
 | | Maximum length 20 | Cannot physically enter more than 20 characters | PASS |
 | Email | Required field | "Please fill in this field" notification pointed at input box | PASS |
-| | Recognisable as a real email address | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Enter a valid email address." | |
+| | Recognisable as a real email address | Messages displayed under sign-up title: "Form not valid. Please correct before clicking to signup" and "Enter a valid email address." | PASS |
 | | | On chrome: "Please include an @ in the email address" On Safari: "Enter an email address" notification pointed at input box | PASS |
 | | | On chrome: "Please enter a part following the @" On Safari: "Enter an email address" notification pointed at input box | PASS |
 | | | On chrome: "Please enter a part followed by @" On Safari: "Enter an email address" notification pointed at input box | PASS |
@@ -654,6 +654,10 @@ Note: The alerts are linked to longer alt text for the hero-images. Longer text 
 
 ### Sign - up
 
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-signup-page.png)
+
+Note: Four of the alerts are linked to longer alt text for the hero-images. Longer text was written purposefully in order to provide more detail for those unable to see the image. The fifth alert is being generated because the contact form can be accessed directly from a link within the form as well as from the main navigation. This extra link has been purposefully added in order to aid the user experience of the parent/guardian of a new user.
+
 ### Login
 
 ### Forgotten Password
@@ -700,11 +704,12 @@ Results for desktop:
 Results for mobile:
 ![Screenshot showing performance 92, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-contact-page-mobile.png)
 
-### 404 Error Page
-
-### 500 Error Page
-
 ### Sign - up
+
+Results for desktop:
+![Screenshot showing performance 98, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-signup-page-desktop.png)
+Results for mobile:
+![Screenshot showing performance 85, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-signup-page-mobile.png)
 
 ### Login
 
@@ -736,7 +741,21 @@ Results for mobile:
 
 ## Responsive Testing
 
-The platform has been fully tested across a range of screen sizes, from 350px upto 1920px. Screenshots that show how the pages change across different screen sizes have been included below.
+The platform has been fully tested across a range of screen sizes, from 350px upto 1920px. 
+
+Tailwind's responsive design breakpoints were used alongside testing using chrome developer tools during development. The breakpoints used are as follows:
+- Mobile first (< 640px )
+- Small screens ( 640px - 768px )
+- Medium screens ( 768px - 1024px )
+- Large screens ( 1024px - 1280px )
+- Extra large screens ( > 1280px)
+
+Further testing was carried out on the final deployed site using:
+- iphone12 mini
+- MacbookAir 13inch
+- Chrome Developer tools
+
+Screenshots that show how the pages change across different screen sizes have been included below.
 
 ### Landing Page
 
@@ -793,23 +812,15 @@ The platform has been fully tested across a range of screen sizes, from 350px up
 
 ![Screenshot from a chrome browser showing the 404 Error page](documentation/features/404-page-chrome.png)
 
-### Mobile first (< 640px )
+### Sign-up Page
 
-All pages have been tested and respond well for screens as small as 350px. A selection of screenshots from an iPhone 12 mini with a screen size of 360px by 780px have been added below:
+#### Mobile first
 
-### Small screens ( 640px - 768px )
+![Screenshot from an iPhone showing the signup page](documentation/features/signup-page-mobile.PNG)
 
-A selection of screenshots have been taken from Chrome dev tools, showing the responsiveness of the platform for small screens:
+#### Medium and large screens
 
-### Medium screens ( 768px - 1024px )
-
-A selection of screenshots have been taken from Chrome dev tools, showing the responsiveness of the platform for medium screens:
-
-### Large screens ( 1024px - 1280px )
-
-A selection of screenshots from a safari browser on a 13-inch screen have been added below:
-
-### Extra large screens ( > 1280px)
+![Screenshot from a safari browser showing the signup page](documentation/features/signup-page-desktop.png)
 
 
 [Return to contents list](#contents)
@@ -819,6 +830,8 @@ A selection of screenshots from a safari browser on a 13-inch screen have been a
 Intro
 
 ### Chrome
+
+The platform has been fully tested on a chrome browser on both a MacBook Air and .....
 
 ### Safari
 

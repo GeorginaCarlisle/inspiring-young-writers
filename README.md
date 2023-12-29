@@ -754,7 +754,7 @@ They can also read work written by another child, inspiring them to write and sh
 ##### Developer links (footer)
 
 Every page contains a footer with my name and contact links, as the developer who created this platform, and the year the platform was created. On larger screens extra info is given to say that the platform was created for 'educational purposes only'.
-Clear and easy to access links to take the user to my LinkedIn and GitHub with links opening in a new tab.
+Clear and easy to access links to take the user to my LinkedIn and GitHub with links opening in a new tab (user story 7).
 
 ![screenshot of the footer as seen on mobile screens](documentation/features//footer-mobile.PNG)
 
@@ -810,7 +810,7 @@ The contact form:
 
 ##### Error Pages
 
-New users are informed when page link errors occur and provided with a link straight back to the landing page.
+New users are informed when page link errors occur and provided with a link straight back to the landing page (user story 8).
 
 Attempting to access a webpage that does not exist, has been moved, or has a dead or broken link takes them to a 404 page.
 
@@ -823,6 +823,22 @@ They are taken to an error 500 page if the server encounters an unexpected condi
 #### Authentication EPIC
 
 ##### Sign - up
+
+New users can sign-up and become registered users (user story 9). As this site is for children aged 8 - 12, the sign up process also involves their parent/guardian (user story 10).
+
+Key features:
+- Clear link to the sign-up page in the header.
+- Call to action on the landing page also links to the sign-up page.
+- A clear title and instructions are provided to help users navigate the sign-up process.
+- The user is clearly informed they will need their parent/guardian to help them sign up.
+- The sign-up form is split into clear sections, so that it is obvious which parts need to be filled in by a parent/guardian.
+- The parent/guardian is asked to provide their contact details and consent before their child can sign up.
+- Clear labels indicate the information to be added to each input field.
+- Clear prompts are provided when the form has not be filled in correctly.
+- Clear feedback lets the user know they have successfully signed up.
+- On signing-up users are redirected to the account_home page.
+
+![Screenshot showing the signup page](documentation/features/signup-page-desktop.png)
 
 ##### Login
 
