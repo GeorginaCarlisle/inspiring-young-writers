@@ -922,6 +922,21 @@ Logged in users are informed when page link (404) or server (500) errors occur a
 
 ##### My Work
 
+Logged in users can navigate to a page where all their work is listed by status (user story 24).
+
+Key features:
+- 'My work' link in the main navigation.
+- 'View my work' link from call to action button on the account home page.
+- Title shows the user that they are in the 'My Work' section of the platform.
+- The users work is listed by category: published work, work awaiting approval, drafts and if there is any Submitted work that does not meet publishing requirements.
+- Clicking on the title of a piece of writing will bring it up to view (published and awaiting approval) or edit (draft and submitted work that does not meet publishing requirements)
+- A clear button takes the user to the create writing page.
+- This page cannot be accessed unless logged in (directed to login page) and users cannot accidentally access someone else's work (directed to account home with a message).
+
+![Screenshot showing the 'My Work' page](documentation/features/mywork-desktop-1.png)
+
+![Screenshot showing the 'My Work' page when scrolled down](documentation/features/mywork-desktop-2.png)
+
 ##### Create work
 
 ##### View work

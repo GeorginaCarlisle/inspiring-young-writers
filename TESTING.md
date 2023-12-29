@@ -43,7 +43,7 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | account | account_home.html | PASS | |
 | | account_contact.html | PASS | |
 | writing | create_writing.html | | |
-| | my_work.html | | |
+| | my_work.html | PASS | |
 | | edit_writing.html | | |
 | | view_writing.html | | |
 | | view_my_feedback.html | | |
@@ -84,10 +84,10 @@ Each individual pythoon file created or edited by me has been passed through the
 | account | urls.py | PASS | |
 | | views.py | PASS | |
 | writing | admin.py | PASS | |
-| | forms.py | | |
-| | models.py | | |
-| | urls.py | | |
-| | views.py | | |
+| | forms.py | PASS | |
+| | models.py | PASS | |
+| | urls.py | PASS | |
+| | views.py | PASS | |
 | library | admin.py | PASS | |
 | | forms.py | | |
 | | models.py | | |
@@ -198,14 +198,14 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | 23 | As the **parent of a signed-in user** I can also contact the site admin when my child is logged in | I can easily navigate to the contact page when logged in | PASS | PASS |
 | | | I do not need to add in my name or email address as this can be gained from my user data | PASS | PASS |
 | | | A clear message explains this | PASS | PASS |
-| 24 | As a **signed-in user** I can navigate to a page where all my work is listed by status | I can navigate to my work from the navigation bar | PASS | |
-| | | I can navigate to my work from a call to action button on my account home page | PASS | |
-| | | A title shows me that I am in the 'My Work' section of the platform | PASS | |
-| | | I am shown a list of all my saved work | PASS | |
-| | | The list is categorised by published work, work awaiting approval and drafts | PASS | |
-| | | There is a clear button that takes me to the create writing page | PASS | |
-| | | The page cannot be accessed unless logged in | PASS | |
-| | | Users cannot accidentally access someone else's work | PASS | |
+| 24 | As a **signed-in user** I can navigate to a page where all my work is listed by status | I can navigate to my work from the navigation bar | PASS | PASS |
+| | | I can navigate to my work from a call to action button on my account home page | PASS | PASS |
+| | | A title shows me that I am in the 'My Work' section of the platform | PASS | PASS |
+| | | I am shown a list of all my saved work | PASS | PASS |
+| | | The list is categorised by published work, work awaiting approval and drafts | PASS | PASS |
+| | | There is a clear button that takes me to the create writing page | PASS | PASS |
+| | | The page cannot be accessed unless logged in | PASS | PASS |
+| | | Users cannot accidentally access someone else's work | PASS | PASS |
 | 25 | As a **signed-in user** I am provided with tips and ideas for the sort of work I could create | | | |
 | | | | | |
 | 26 | As a **signed-in user** I can write and submit a piece of work with title | From the account home page there is a clear button I can click that will take me directly to a page for inputting new work | PASS | |
@@ -696,6 +696,8 @@ Note: The alerts are linked to longer alt text for image. Longer text was writte
 
 ### My Work
 
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-mywork.png)
+
 ### Create work
 
 ### View work
@@ -799,6 +801,14 @@ Results for mobile:
 ![Screenshot showing performance 87, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-account-contact-mobile.png)
 
 ### My Work
+
+Results for desktop:
+
+![Screenshot showing performance 97, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-mywork-desktop.png)
+
+Results for mobile:
+
+![Screenshot showing performance 85, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-mywork-mobile.png)
 
 ### Create work
 
@@ -932,6 +942,16 @@ Screenshots that show how the pages change across different screen sizes have be
 #### Large screens
 
 ![Screenshot from a safari browser showing the contact us page when logged in](documentation/features/contact-account-desktop.png)
+
+### My work
+
+#### Mobile first
+
+![Screenshot from an iPhone showing my work](documentation/features/my-work-mobile.PNG)
+
+#### Large screens
+
+![Screenshot from a safari browser showing my work](documentation/features/mywork-desktop-1.png)
 
 [Return to contents list](#contents)
 ## Compatibility Testing
