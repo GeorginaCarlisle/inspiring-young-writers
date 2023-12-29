@@ -842,6 +842,19 @@ Key features:
 
 ##### Login
 
+Registered users can use their pen name and password to login to their account (user story 11).
+
+Key features:
+- Clear link to the login page in the header.
+- Clear title and instructions to help the user navigate the login process.
+- Clear labels indicate the information to be added to each input field.
+- Clear prompts are provided when the form has not be filled in correctly.
+- Clear button to login.
+- Clear success message on successfully logging in.
+- On logging in the user is redirected to the account_home page.
+
+![Screenshot showing the login page](documentation/features/login-page-desktop.png)
+
 ##### Logout
 
 ##### Forgotten Password

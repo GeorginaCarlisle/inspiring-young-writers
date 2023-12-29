@@ -39,7 +39,7 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | home | index.html | PASS | |
 | | contact.html | PASS | |
 | users | signup.html | PASS | |
-| | login.html | | |
+| | login.html | PASS | |
 | account | account_home.html | | |
 | | account_contact.html | | |
 | writing | create_writing.html | | |
@@ -156,14 +156,14 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | On signing-up I am redirected to the account_home page | PASS | PASS |
 | 10 | As the **parent of a new user** I am asked to input my name and email address and give consent for my child joining the site | When signing up to the platform, my child is informed that they will need me to sign up | PASS | PASS |
 | | | I am asked to provide my name, email address and consent before my child can sign up | PASS | PASS |
-| 11 | As a **registered user** I can use my pen-name and password to login to my account | I can navigate intuitively and easily to the login page | PASS | |
-| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
-| | | The title and clear instructions help me to navigate the login process | PASS | |
+| 11 | As a **registered user** I can use my pen-name and password to login to my account | I can navigate intuitively and easily to the login page | PASS | PASS |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | PASS |
+| | | The title and clear instructions help me to navigate the login process | PASS | PASS |
 | | | Clear labels indicate the information to be added to each input field | PASS | |
-| | | The button to login is clear | PASS | |
-| | | When entering the wrong information I am prompted and informed what needs to be entered | PASS | |
-| | | I receive a clear message to let me know I have successfully logged in | PASS | |
-| | | On logging in I am redirected to the account_home page | PASS | |
+| | | The button to login is clear | PASS | PASS |
+| | | When entering the wrong information I am prompted and informed what needs to be entered | PASS | PASS |
+| | | I receive a clear message to let me know I have successfully logged in | PASS | PASS |
+| | | On logging in I am redirected to the account_home page | PASS | PASS |
 | 12 | As a **signed-in user** I can easily logout of my account | I can logout out easily and intuitively | PASS | |
 | | | I am given clear success feedback on logging out of my account | PASS | |
 | | | On logging out I am redirected to the home page | PASS | |
@@ -420,10 +420,10 @@ The following documents all forms and any requirements needed, with details on h
 
 | Input Field | Requirement | Error caught | Final check |
 | --- | ----- | ---- | -- |
-| Pen name | Required field | "Please fill in this field" notification pointed at input box | |
-| | Pen name matches a registered username | Message displayed under login title: "Details given do not match a registered user" | |
-| Password | Required field | "Please fill in this field" notification pointed at input box | |
-| | Password matches password for pen name given | Message displayed under login title: "Details given do not match a registered user" | |
+| Pen name | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Pen name matches a registered username | Message displayed under login title: "Details given do not match a registered user" | PASS |
+| Password | Required field | "Please fill in this field" notification pointed at input box | PASS |
+| | Password matches password for pen name given | Message displayed under login title: "Details given do not match a registered user" | PASS |
 
 
 ### Contact us (New User Experience)
@@ -660,6 +660,10 @@ Note: Four of the alerts are linked to longer alt text for the hero-images. Long
 
 ### Login
 
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-login-page.png)
+
+Note: The alerts are linked to longer alt text for the hero-images. Longer text was written purposefully in order to provide more detail for those unable to see the image.
+
 ### Forgotten Password
 
 ### Account Home
@@ -693,25 +697,42 @@ Chrome developer tools Lighthouse was used to test the performance, accessibilit
 ### Landing Page
 
 Results for desktop:
+
 ![Screenshot showing performance 97, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-landing-page-desktop.png)
+
 Results for mobile:
+
 ![Screenshot showing performance 77, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-landing-page-mobile.png)
 
 ### Contact Us (New User Experience)
 
 Results for desktop:
+
 ![Screenshot showing performance 97, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-contact-page-desktop.png)
+
 Results for mobile:
+
 ![Screenshot showing performance 92, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-contact-page-mobile.png)
 
 ### Sign - up
 
 Results for desktop:
+
 ![Screenshot showing performance 98, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-signup-page-desktop.png)
+
 Results for mobile:
+
 ![Screenshot showing performance 85, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-signup-page-mobile.png)
 
 ### Login
+
+Results for desktop:
+
+![Screenshot showing performance 98, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-login-page-desktop.png)
+
+Results for mobile:
+
+![Screenshot showing performance 86, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-login-page-mobile.png)
 
 ### Forgotten Password
 
@@ -822,9 +843,17 @@ Screenshots that show how the pages change across different screen sizes have be
 
 ![Screenshot from a safari browser showing the signup page](documentation/features/signup-page-desktop.png)
 
+### Login Page
+
+#### Mobile first
+
+![Screenshot from an iPhone showing the login page](documentation/features/login-page-mobile.PNG)
+
+#### Medium and large screens
+
+![Screenshot from a safari browser showing the login page](documentation/features/login-page-desktop.png)
 
 [Return to contents list](#contents)
-
 ## Compatibility Testing
 
 Intro
