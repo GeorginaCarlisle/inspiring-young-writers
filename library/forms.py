@@ -19,6 +19,7 @@ def validate_no_swearing(value):
                 f"Swear word '{swear_word}' is not allowed. Please remove."
             )
 
+
 class GiveFeedbackForm(forms.ModelForm):
     """
     Form to handle creating a new instance of feedback.

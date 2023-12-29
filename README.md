@@ -1011,7 +1011,20 @@ Key features:
 
 ##### Library of inspiration
 
-##### Read work
+Logged in users can view published work from other users (user story 40).
+
+Key features:
+- A clear link to the library is provided in the main navigation.
+- A clear link to the library is provided as a call to action button on the account home page.
+- A title shows users that they are in the 'Library of inspiration' section of the platform.
+- A list shows all published work with most recent first.
+- For each piece of work the 'title', 'author', 'age of author' and 'date published' are given.
+- Clicking on the title brings the writing up so that it can be read.
+- In the read view clicking the x will take the user back to the library.
+
+![Screenshot showing the library](documentation/features/library-desktop.png)
+
+![Screenshot showing the read writing page](documentation/features/read-writing-desktop.png)
 
 #### Feedback EPIC
 

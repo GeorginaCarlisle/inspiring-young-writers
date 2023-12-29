@@ -47,8 +47,8 @@ The [Nu Html Checker](https://validator.w3.org/nu/) was used to validate all htm
 | | edit_writing.html | PASS | |
 | | view_writing.html | PASS | |
 | | view_my_feedback.html | | |
-| library | library.html | | |
-| | read.html | | |
+| library | library.html | PASS | |
+| | read.html | PASS | |
 | | give_feedback.html | | |
 | | read_feedback.html | | |
 | | edit_feedback.html | | |
@@ -89,10 +89,10 @@ Each individual pythoon file created or edited by me has been passed through the
 | | urls.py | PASS | |
 | | views.py | PASS | |
 | library | admin.py | PASS | |
-| | forms.py | | |
-| | models.py | | |
-| | urls.py | | |
-| | views.py | | |
+| | forms.py | PASS | |
+| | models.py | PASS | |
+| | urls.py | PASS | |
+| | views.py | PASS | |
 
 #### Python warnings
 
@@ -278,15 +278,15 @@ The acceptance criteria for each user story has been checked on completion (1st 
 | | | I can checkbox to change approved to False | PASS | PASS |
 | | | Only writing with approved True will be displayed in the library | PASS | PASS |
 | | | I can checkbox to change failed_approval to True (default is False) and add a date to date_failed | PASS | PASS |
-| 40 | As a **signed-in user** I can view work from other users | I can navigate to the library of inspiration from the navigation bar | PASS | |
-| | | I can navigate to the library from a call to action button on my account home page | PASS | |
-| | | The design of the page is pleasing to the eye and doesn't distract | PASS | |
-| | | A title shows me that I am in the 'Library of inspiration' section of the platform | PASS | |
-| | | I am shown a list of all published work | PASS | |
-| | | For each piece of work I can read the 'title', 'author', 'age of author' and 'date published' | PASS | |
-| | | The list is ordered by most recent first | PASS | |
-| | | Clicking on the title brings the writing up so that I can read it | PASS | |
-| | | In the read view I can click an x to take me back to the library | PASS | |
+| 40 | As a **signed-in user** I can view work from other users | I can navigate to the library of inspiration from the navigation bar | PASS | PASS |
+| | | I can navigate to the library from a call to action button on my account home page | PASS | PASS |
+| | | The design of the page is pleasing to the eye and doesn't distract | PASS | PASS |
+| | | A title shows me that I am in the 'Library of inspiration' section of the platform | PASS | PASS |
+| | | I am shown a list of all published work | PASS | PASS |
+| | | For each piece of work I can read the 'title', 'author', 'age of author' and 'date published' | PASS | PASS |
+| | | The list is ordered by most recent first | PASS | PASS |
+| | | Clicking on the title brings the writing up so that I can read it | PASS | PASS |
+| | | In the read view I can click an x to take me back to the library | PASS | PASS |
 | 41 | As a **signed-in user** I can filter work | | | |
 | | | | | |
 | 42 | As a **signed-in user** I can click a help button should I see/read something I don’t like | | | |
@@ -718,7 +718,11 @@ Note: Alert is linked to the back confirmation repeating the link to return to t
 
 ### Library Of Inspiration
 
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-library.png)
+
 ### Read work
+
+![screenshot of wave test results showing no errors detected](documentation/testing/wave-read-writing.png)
 
 ### Read feedback
 
@@ -854,7 +858,23 @@ Results for mobile:
 
 ### Library Of Inspiration
 
+Results for desktop:
+
+![Screenshot showing performance 95, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-library-desktop.png)
+
+Results for mobile:
+
+![Screenshot showing performance 84, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-library-mobile.png)
+
 ### Read work
+
+Results for desktop:
+
+![Screenshot showing performance 98, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-read-writing-desktop.png)
+
+Results for mobile:
+
+![Screenshot showing performance 86, accessibility 100, best practice 95 and SEO 100](documentation/testing/lighthouse-read-writing-mobile.png)
 
 ### Read feedback
 
@@ -1017,7 +1037,29 @@ Screenshots that show how the pages change across different screen sizes have be
 
 ![Screenshot from a safari browser showing edit writing](documentation/features/edit-draft-work.png)
 
+### Library
+
+#### Mobile first
+
+![Screenshot from an iPhone showing the library](documentation/features/library-mobile.PNG)
+
+#### Larger screens
+
+![Screenshot from a safari browser showing the library](documentation/features/library-desktop.png)
+
+### Read
+
+#### Mobile first
+
+![Screenshot from an iPhone showing the read view](documentation/features/read-writing-mobile.PNG)
+
+#### Larger screens
+
+![Screenshot from a safari browser showing the read view](documentation/features/read-writing-desktop.png)
+
+
 [Return to contents list](#contents)
+
 ## Compatibility Testing
 
 The platform was built and test along the way predominantly in Chrome with some testing in Safari. Once the platform was completed and deployed testing was also carried out in the following browsers. All responded as expect with just some slight differences in the handing of email validation and blank input boxes (slightly different wording).
