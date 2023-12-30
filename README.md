@@ -105,7 +105,9 @@ Two main areas of danger will be considered throughout this project:
 
 ### The Scope Plane
 
-The scope of this project is provided by user stories, organised below by epic and then role. Please note that some of the user stories below are not currenlty implemented. See [Product Backlog](#product-backlog) for a list of user stories not completed and [Future Features](#future-features) for further details on what is to come next.
+The scope of this project is provided by user stories, organised below by epic and then role. 
+
+Please note that some of the user stories below are not currenlty implemented. See [Product Backlog](#product-backlog) for a list of user stories not completed and [Future Features](#future-features) for further details on what is to come next.
 
 #### EPIC - New User Experience
 
@@ -324,13 +326,36 @@ As the **site admin** I can approve feedback so that only feedback that I have c
 
 The following diagrams show how the platform will be structured and how the user will move through it.
 
+The following are not currently implemented and will be completed as [future features](#future-features):
+- My Profile
+- Red flags
+- Option to delete feedback that has been given to you
+
 ![Flow diagram showing the structure of the platform and the flow of logic through it](documentation/design/site-flow-logic.png)
 
 ![Key to show the meaning behind the different shapes and colours used on the main flow diagram](documentation/design/site-flow-logic-key.png)
 
 The following diagram shows the models that will be used to store all the data needed by the platform and any connections between the different models.
 
+The following models are not currently implemented and will be completed as part of [future features](#future-features):
+- WorkFlag
+- FeedbackFlag
+
 ![Diagram showing a plan for the database](documentation/design/database-plan.png)
+
+There have also be a number of slight changes, due to an increase in my knowledge and understanding of Django models. In particular, the decision to create a custom user model. Screenshots below showing the three models as they are currently programmed
+
+Datafields for the User model:
+
+![Screenshot showing the data fields for the user model](documentation/design/datafields-user.png)
+
+Datafields for the Writing model:
+
+![Screenshot showing the data fields for the writing model](documentation/design/datafields-writing.png)
+
+Datafields for the Feedback model:
+
+![Screenshot showing the data fields for the feedback model](documentation/design/datafields-feedback.png)
 
 [Return to contents list](#contents)
 
