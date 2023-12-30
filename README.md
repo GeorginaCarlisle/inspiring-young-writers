@@ -343,7 +343,12 @@ The following models are not currently implemented and will be completed as part
 
 ![Diagram showing a plan for the database](documentation/design/database-plan.png)
 
-There have also be a number of slight changes, due to an increase in my knowledge and understanding of Django models. In particular, the decision to create a custom user model. Screenshots below showing the three models as they are currently programmed
+There have also be a number of slight changes, due to an increase in my knowledge and understanding of Django models. In particular, the decision to create a custom user model. 
+
+<details>
+<summary>
+Screenshots showing the three models as they are currently programmed
+</summary>
 
 Datafields for the User model:
 
@@ -356,6 +361,8 @@ Datafields for the Writing model:
 Datafields for the Feedback model:
 
 ![Screenshot showing the data fields for the feedback model](documentation/design/datafields-feedback.png)
+
+</details>
 
 [Return to contents list](#contents)
 
@@ -643,7 +650,10 @@ With three text colours:
 
 ##### Colour contrast
 
-The following images show the contrast between the text and background across the platform.
+<details>
+<summary>
+Images show the contrast between the text and background across the platform
+</summary>
 
 ![The contrast of black text on a light zinc gray background passes all criteria](documentation/design/color-contrast-black-on-zinc.png)
 
@@ -655,6 +665,8 @@ The following images show the contrast between the text and background across th
 It is to be noted that the above text colour will only be used with this background for very large text. Where the text is smaller (but still larger than avergae) the colour documented below will be used.
 
 ![The contrast of black text on a light zinc gray background passes all criteria](documentation/design/colour-contrast-d-orange-on-zinc.png)
+
+</details>
 
 [Return to contents list](#contents)
 
