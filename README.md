@@ -687,17 +687,39 @@ Story points were recorded using labels attached to the user story.
 
 An initial team velocity was set as **40 story points a week**. Note that the 4 iterations will each be a week long.
 
+During the development of the project time velocity was then adjusted in response to my increasing speed as I became more comfortable working in Django.
+
 ### Product Backlog
 
 A product backlog was used in which to store all user stories, prior to being assigned into an iteration. Any user stories not completed at the end of the iteration were then moved back into the backlog. At the end of the project a number of user stories remained in the product backlog. These have been discussed in the [future features](#future-features) section of the readme.
 
 The product backlog is visible on GitHub through the use of a milestone titled "Backlog" and a specific backlog column in the project board.
 
+#### Final Backlog
+
+<details>
+<summary>
+See details
+</summary>
+
+After the completion of iteration four, the following user stories remained in the backlog to be implemented in the future. Please see [Future Features](#future-features) for more details.
+
+![Screen shot of the Backlog showing open issues - User stories 36, 41, 42, 43, 44 and 45](documentation/agile/backlog-1.png)
+![Screen shot of the Backlog showing open issues - User stories 3, 16, 20, 25, 28, 29, 55, 56, 57 and 58](documentation/agile/backlog-2.png)
+![Screen shot of the Backlog showing open issues - User stories 14, 15, 51 and 54](documentation/agile/backlog-3.png)
+
+</details>
+
 ### Time Boxing
 
 Developement of the project was split into four time boxes/iterations. Each iteration was set to a period of one week.
 
 #### First Iteration
+
+<details>
+<summary>
+See details
+</summary>
 
 During the first iteration the following user stories and key tasks were completed and closed:
 ![Screen shot of the First iteration milestone showing closed issues - User stories 1, 7 and 64 plus key additional tasks](documentation/agile/first-iteration-closed.png)
@@ -711,8 +733,14 @@ It is to be noted that the:
 - **Page link errors** (#8) user story cannot be fully completed until authorisation is in place.
 - **Contact form data passed to Admin** (#6) user story despite not being part of this iteration has also been partially completed.
 
+</details>
 
 #### Second Iteration
+
+<details>
+<summary>
+See details
+</summary>
 
 During the second iteration the following user stories and key tasks were completed and closed:
 ![Screen shot of the Second iteration milestone showing closed issues - User stories 5, 8, 12 and 19 plus a task and a bug](documentation/agile/second-iteration-closed-1.png)
@@ -726,8 +754,14 @@ It is to be noted that the:
 - **Admin access to delete accounts** user story (#17) has an associated bug (#72) requiring additional support and 
 will therefore be completed in the next iteration.
 
+</details>
 
 #### Third Iteration
+
+<details>
+<summary>
+See details
+</summary>
 
 During the third iteration I was able to increase my team velocity, completing all the initial user stories set for the interation (40 story points worth) and adding more. There were no open user stories at the end of the iteration.
 
@@ -735,8 +769,14 @@ During the third iteration I was able to increase my team velocity, completing a
 ![Screen shot of more closed issues - User stories 18, 21, 31, 32, 34, 35, 38, 39 and 53](documentation/agile/third-iteration-closed-2.png)
 ![Screen shot of the remaining closed issues - User stories 26, 30 and 37 plus a bug](documentation/agile/third-iteration-closed-3.png)
 
+</details>
 
 #### Fourth Iteration
+
+<details>
+<summary>
+See details
+</summary>
 
 Due to increasing my time velocity during the third iteration, a larger number of story points were added to this iteration. As the fourth iteration was the final iteration only a few of these were marked as must haves, with the majority being should or could. Over the course of the iteration a final stopping place was decided on based on available time left.
 
@@ -747,19 +787,11 @@ The following user stories and key tasks were completed and closed:
 At the end of the iteration the following user stories remained un-completed and open. With a decision to leave these as future features along with the remaining backlog:
 ![Screen shot of the Fourth iteration milestone showing open issues - User stories 3, 14, 15, 51 and 54](documentation/agile/fourth-iteration-open.png)
 
-
-#### Final Backlog
-
-After the completion of iteration four, the following user stories remained in the backlog to be implemented in the future. Please see [Future Features](#future-features) for more details.
-
-![Screen shot of the Backlog showing open issues - User stories 36, 41, 42, 43, 44 and 45](documentation/agile/backlog-1.png)
-![Screen shot of the Backlog showing open issues - User stories 3, 16, 20, 25, 28, 29, 55, 56, 57 and 58](documentation/agile/backlog-2.png)
-![Screen shot of the Backlog showing open issues - User stories 14, 15, 51 and 54](documentation/agile/backlog-3.png)
-
+</details>
 
 ### MoSCoW Prioritisation
 
-MoSCoW prioritisation was used throughout the project. At the beginning of each new iteration the project backlog was accessed and each user story categorised for the current iteration (not the project over all), thus allowing for the correct balance of prioritisation for each iteration. This process was repeated for each new iteration, being mindful at all times of the overall remaining project time left.
+MoSCoW prioritisation was used throughout the project. At the beginning of each new iteration the project backlog was assessed and each user story categorised for the current iteration (not the project over all), thus allowing for the correct balance of prioritisation for each iteration. This process was repeated for each new iteration, being mindful at all times of the overall remaining project time left.
 
 - **Must Have** the user stories deemed vital for this iteration of the project.
 
@@ -784,6 +816,8 @@ Therefore it has been decided for this particular project that user stories gear
 ### Information Radiators
 
 GitHub projects was utilised as a kanban board for this project.
+
+![Screenshot of the projectboard at the end of this phase of the project](documentation/agile/project-board.png)
 
 [Return to contents list](#contents)
 
