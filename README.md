@@ -1266,10 +1266,76 @@ Currently users can create an account, but cannot then edit or delete their user
 
 These user stories were left for future development of the project due to time constraits and the need to prioritise other features. Should a user wish to delete their details then they will be able to directly contact the site owner via the contact form, with the site owner then being able to remove their account via the admin interface.
 
+#### Increased safety
+
+In future safety will be increased in a number of ways:
+
+1 - Improved validation at the point writing and feedback are created or editted to guard against inappropriate language. Initial attempts to utilise frameworks like profanity check failed with only a small custom build validator for swear words currently implemented.
+
+2 - Raise concern flag for published writing (user stories 42, 43, 44, 45)
+
+"As a signed-in user I can click a help button should I see/read something that worries me, so that I can keep myself safe."
+
+"As the parent of a signed-in user my child is prompted to seek out my guidance should they see/read something that worries them so that I can support them and then proceed as appropriate."
+
+"As the parent of a signed-in user I can raise concern about a specific piece of writing, so that I can help keep my child and others safe."
+
+"As the site admin I am alerted immediately to any raised concerns, so that I can respond swiftly."
+
+Due to the amount of work needed to implement this feature, and alongside the fact that all writing has to be approved before it can be seen by other users, this has been left to be implemented as a future feature.
+
+3 - Raise concern flag for feedback (user stories 55, 56, 57, 58)
+
+"As a signed-in user I can click a help button should I see something in the feedback that worries me, so that I can keep myself safe."
+
+"As the parent of a signed-in user my child is prompted to seek out my guidance should they see/read something in the feedback that worries them, so that I can support them and then proceed as appropriate."
+
+"As the parent of a signed-in user I can raise concern about a specific piece of feedback, so that I can keep my child and others safe."
+
+"As the site admin I am alerted immediately to any raised concerns about feedback, so that I can respond swiftly."
+
+Due to the amount of work needed to implement this feature it has been left to be implemented as a future feature. In order to make sure the platform is safe, it was decided to implement authorisation for all feedback (something not originally planned) until the above feature, plus improved validation are in place.
+
 #### Admin interface
 
 The current admin interface is the default interface provided by Django with only very basic customisation. In future a custom interface will be built making it easier for the admin to carry out their tasks as well as adding further functionality to automise some of the processes. This has been left for future development due to the large amount of work needed to achieve this and the small initial gain when the platform has very few users.
 
+Associated users stories not implemented:
+
+36 - "As the site admin I am informed when a child submits their writing for approval, so that I can respond to the request in a timely fashion."
+
+#### Extra information alongside writing
+
+A future feature is to add blurbs (user story 28) and pictures (user story 29). 
+
+"As a signed-in user I can write a blurb for my writing, so that I can entice other readers to read my work."
+
+"As a signed-in user I can write a blurb for my writing, so that I can entice other readers to read my work."
+
+It was decided to keep things simple for the first phase of the project and then to get a feel for whether these would add to the platform without overcomplicating the user experience, before implementing.
+
+#### Ability to filter work in the library
+
+Published work is currently displayed in reverse date order with the newest writing first. A future feature would be to implement some way for users to be able to filter the writing so they can more easily find things they would like to read (user story 41)
+
+"As a signed-in user I can filter published work so that I can more easily find work that I am interested in reading."
+
+It was decided that while the platform is just getting going with few published pieces of writing this functionality is not needed and is therefore better left as a future feature.
+
+#### Improved alerts to the user
+
+When writing and feedback are approved, or they receive feedback, this is display for the user to see, however they will have to search in the correct place to find it. A future feature would provide a message on the account home page that will inform the user of all activity since they last logged in (includes user story 51).
+
+"As a signed-in user I am alerted to any new feedback on my published work, so that I don't miss any feedback."
+
+Due to the work involved in implementing this feature and the need to prioritise other features first it has been left as a future feature.
+
+#### User can delete feedback given to them
+
+User story 54:
+"As a signed-in user I can delete feedback given to me by other users, so that I can control the feedback that is associated with my work."
+
+It was decided to leave this feature for fututre implementation in order to prioritise other features.
 
 [Return to contents list](#contents)
 
