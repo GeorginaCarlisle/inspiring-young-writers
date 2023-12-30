@@ -2,11 +2,11 @@
 
 Developer: Georgina Carlisle
 
-Image showing deployed project to go here.
+![Screenshot showing the full landing page](documentation/features/full-landing-page.png)
 
 Inspiring Young Writers is a platform specifically designed for children aged 8 - 12 to share their writing and give and gain feedback.
 
-Project currently under development and no live link available.
+Live link: https://inspiring-young-writers-0f3170377dc7.herokuapp.com/
 
 ## Contents
 
