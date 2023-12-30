@@ -105,7 +105,7 @@ Two main areas of danger will be considered throughout this project:
 
 ### The Scope Plane
 
-The scope of this project is provided by user stories, organised below by epic and then role.
+The scope of this project is provided by user stories, organised below by epic and then role. Please note that some of the user stories below are not currenlty implemented. See [Product Backlog](#product-backlog) for a list of user stories not completed and [Future Features](#future-features) for further details on what is to come next.
 
 #### EPIC - New User Experience
 
@@ -309,6 +309,10 @@ View User Stories
 As a **user** I can navigate intuitively through the site, so that I can quickly access the areas I need. (64)
 
 - Initially this was going to be handled as part of other user stories. However, I then later decided it would sit better as a user story in it's own right.
+
+As the **site admin** I can approve feedback so that only feedback that I have checked will be published for other users to see. (75)
+
+- This user story was added after the decision not to implement the flag system during this phase of the project was taken. The lack of this plus only having very basic validation in place to protect against harmful content meant that the platform was vulnerable and therefore unsafe. In order to maintain safety I decided that all feedback would need to be approved by admin.
 
 </details>
 
