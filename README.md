@@ -2,7 +2,7 @@
 
 Developer: Georgina Carlisle
 
-![Screenshot showing the full landing page](documentation/features/full-landing-page.png)
+![Screenshot showing the full landing page](documentation/features/intro-picture.png)
 
 Inspiring Young Writers is a platform specifically designed for children aged 8 - 12 to share their writing and give and gain feedback.
 
@@ -41,6 +41,10 @@ Live link: https://inspiring-young-writers-0f3170377dc7.herokuapp.com/
 [Bugs and Fixes](#bugs-and-fixes)
 
 [Deployment](#deployment)
+
+[Cloning this repository](#cloning)
+
+[Forking a branch](#forking)
 
 [Credits](#credits)
 
@@ -1256,6 +1260,123 @@ See [TESTING.md](TESTING.md) for all testing and validation
 [Return to contents list](#contents)
 
 ## Deployment
+
+This website has been deployed using Heroku.
+
+Instructions to deploy using Heroku:
+
+1 - While in Heroku, navigate to dashboard and then click on the new button in the top right corner choosing: create new app.
+
+2 - Input a name for your app (this name will need to be unique) and choose the correct region for where you are located. Click create app.
+
+3 - Your app has been created, now click on the settings tab.
+
+4 - Click reveal config vars to add any keys the application will need. For this project I added:
+- DISABLE_COLLECTSTATIC : 0
+- PORT : 800
+- All the key value pairs from my env.py file.
+
+5 - Click add buildpack to install any interdependecies needed. For this project I installed 'python'.
+
+6 - Click on deploy tab. Select deploy method, in this case Git Hub. Confirm connection to git hub by searching for the correct repository and then connecting to it.
+
+7 - To manually deploy project click 'Deploy Branch'. Once built a message will appear saying: Your app was successfully deployed. Click the view button to view the deployed page making a note of it's url.
+
+8 - You can also set up automatic deployment.
+
+9 - If you find your css is not showing correctly on the deployed site running the following command while in your workspace may help:
+./manage.py collectstatic
+
+10 - Don't forget to turn Debug back to False before final deployment.
+
+[Return to contents list](#contents)
+
+## Cloning this repository
+
+In order to work on this repository you will first need to clone it.
+
+**Instructions to clone the repository**:
+
+1 - While in the GitHub repository, click on the green code button.
+
+2 - Copy the link.
+
+3 - In your IDE or local coding environment use the link to open the repository. 
+
+For example: in VScode 
+- clicking on 'Clone Git Repository...' will bring up a box in which to paste the link. 
+- once vscode has the link, you will then be asked where you would like the repo saving.
+- You should now be set up ready to work on the repository.
+
+For example: in CodeAnywhere
+- Click on 'Add new workspace'
+- You will then be given the option to 'Create from your project repository' and a box in which to paste the link
+- CodeAnywhere will now open a new workspace containing the repository.
+- You should now be set up ready to work on the repository.
+
+4 - If you are working in VSCode I would then recommend creating a virtual environment:
+-  I use the following command to do this: python3 -m venv .venv
+- Agreeing to select as workspace folder.
+- I move into the virutal environment with the command: source .venv/bin/activate
+
+5 - Import all dependencies. I use the command: pip3 install -r requirements.txt.
+
+6 - Create an env.py file in the main directory.
+
+7 - Enter key data, such as: DATABASE_URL, SECRET_KEY, CLOUDINARY_URL, SITE_OWNER_EMAIL and EMAIL_PASSWORD.
+
+8 - Check that both the virtual environment and env.py are named in the .gitignore file.
+
+9 - In settings.py change Debug to True while developing. You make also want to change to Django's inbuilt sqlite database.
+
+10 - In order to get Tailwind re-running, you will need to:
+
+- Add the following code to settings.py:
+
+COMPRESS_ROOT = BASE_DIR / 'static'
+
+COMPRESS_ENABLED = True
+
+STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
+
+- Add the following at the top of base.html:
+{% load compress %}
+
+- Add the following around the link to output.css:
+{% compress css %}
+{% endcompress %}
+
+11 - Run Tailwind by using the command:
+npx tailwindcss -i ./static/src/input.css -o ./static/src/output.css --watch
+
+12 - Check it's all working by running the program. I used the command:
+python3 manage.py runserver
+
+[Return to contents list](#contents)
+
+## Forking a branch
+
+In order to protect the main branch while you work on something new, essential when working as part of a team or when you want to experiment with a new feature, you will need to fork a branch. 
+
+**Instructions to fork the repository**:
+
+1 - While in the GitHub repository, click on the branch symbol and text indicating the number of branches.
+
+2 - This will load details on current branches. Click on the green 'New branch' button.
+
+3 - Enter a name for the new branch and then click the green 'create new branch' button.
+
+4 - Your new branch should now have appeared on the screen.
+
+5 - Clicking on the new branch and then following the steps for cloning will allow you to open up and work on this branch.
+
+**Instructions to fork directly from an issue**:
+
+1 - Click to view an issue, either from the issues list or from the project board. From the project board you will need to click once to bring up the issue and then again on the title to go into it fully.
+
+2 - Partway down the right hand side (on desktop) you should see the heading 'Development' and under this a link to 'create a branch for this issue or link a pull request'.
+
+3 - Click on the link to create a forked branch that is tied to the issue.
 
 [Return to contents list](#contents)
 
