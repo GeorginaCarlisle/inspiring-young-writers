@@ -1240,11 +1240,17 @@ Tools and technologies are listed in order of use during the development of this
 
 [Jshint](https://jshint.com/) - Used to validate the JavaScript code.
 
+[W3C - CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS code. Please see [TESTING.md](TESTING.md) for notes on this.
+
+[CI Python Linter](https://pep8ci.herokuapp.com/) - Used to validate the Python code.
+
+[Nu HTML Checker](https://validator.w3.org/nu/) - Used to validate the HTML code.
+
 [Return to contents list](#contents)
 
 ## Testing and Validation
 
-See [TESTING.md](TESTING.md) for all testing and validation
+See [TESTING.md](TESTING.md) for all testing and validation.
 
 ## Bugs and Fixes
 
