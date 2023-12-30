@@ -825,9 +825,7 @@ GitHub projects was utilised as a kanban board for this project.
 
 ### Existing Features
 
-#### New User Experience EPIC
-
-##### Landing Page
+#### Landing Page
 
 For new users first visiting the platform, it is instantly obvious that the platform is geared towards children aged 8 - 12 and sharing writing (User Story 1). They are presented with:
 
@@ -853,7 +851,7 @@ They can also read work written by another child, inspiring them to write and sh
 
 ![screenshot of the landing page](documentation/features/landing-page-chrome-2.png)
 
-##### New User Navigation
+#### New User Navigation
 
 Navigation throughout the platform is intuitive and easy to use (user story 64).
 
@@ -869,7 +867,7 @@ Key features of the main navigation when not logged in:
 
 ![screenshot of the new user nav on desktop](documentation/features/new-user-nav-desktop.png)
 
-##### Developer links (footer)
+#### Developer links (footer)
 
 Every page contains a footer with my name and contact links, as the developer who created this platform, and the year the platform was created. On larger screens extra info is given to say that the platform was created for 'educational purposes only'.
 Clear and easy to access links to take the user to my LinkedIn and GitHub with links opening in a new tab (user story 7).
@@ -878,7 +876,7 @@ Clear and easy to access links to take the user to my LinkedIn and GitHub with l
 
 ![screenshot of the footer as seen on medium and large screens](documentation/features/footer-desktop.png)
 
-##### Information For Parents
+#### Information For Parents (New user experience)
 
 Parents of new users can read about how the platform works, the steps in place to protect their child and what they and their child can do to increase safety (user story 4).
 This information:
@@ -907,7 +905,7 @@ This information:
 
 ![Fourth screenshot of the parent information](documentation/features/parent-info-chrome-4.png)
 
-##### Contact Us
+#### Contact Us (New user experience)
 
 Parents of a new user can contact the site admin so that they can raise any concerns or ask any questions about the platform (user story 5) with the details they enter in the form being directly emailed to the site owner (user story 6).
 
@@ -926,7 +924,7 @@ The contact form:
 
 ![Screenshot of the email received following submission of the contact form](documentation/features/contact-form-email.PNG)
 
-##### Error Pages
+#### Error Pages (New user experience)
 
 New users are informed when page link errors occur and provided with a link straight back to the landing page (user story 8).
 
@@ -938,9 +936,7 @@ They are taken to an error 500 page if the server encounters an unexpected condi
 
 ![Screenshot showing the 500 Error page](documentation/features/500-page-desktop.png)
 
-#### Authentication EPIC
-
-##### Sign - up
+#### Sign - up
 
 New users can sign-up and become registered users (user story 9). As this site is for children aged 8 - 12, the sign up process also involves their parent/guardian (user story 10).
 
@@ -958,7 +954,7 @@ Key features:
 
 ![Screenshot showing the signup page](documentation/features/signup-page-desktop.png)
 
-##### Login
+#### Login
 
 Registered users can use their pen name and password to login to their account (user story 11).
 
@@ -973,7 +969,7 @@ Key features:
 
 ![Screenshot showing the login page](documentation/features/login-page-desktop.png)
 
-##### Logout
+#### Logout
 
 Logged in users can easily and intuitively log out of their account (user story 12).
 
@@ -982,7 +978,7 @@ Key features:
 - Clear success message on logging out.
 - On logging out the user is redirected to the home page.
 
-##### Forgotten Password
+#### Forgotten Password
 
 Registered users who have forgotten their password can reset it (user story 13).
 
@@ -1001,9 +997,7 @@ Key features:
 
 ![Password reset success](documentation/features/password-reset-success.PNG)
 
-#### Account Home EPIC
-
-##### Account Home Page
+#### Account Home Page
 
 Once logged in users are taken to their account home page (user story 19). This is also where they are returned should they:
 - try to access the landing page when logged in.
@@ -1016,7 +1010,7 @@ Key features:
 
 ![Screenshot of the account-home page](documentation/features/account-home-desktop.png)
 
-##### Account Navigation
+#### Account Navigation
 
 Navigation throughout the platform is intuitive and easy to use (user story 64).
 
@@ -1028,27 +1022,25 @@ Key features:
 
 ![screenshot of the account nav on desktop](documentation/features/account-nav-desktop.png)
 
-##### Parent information
+#### Parent information (logged in)
 
 Parent information can also be accessed when logged in (user story 22)
 
 ![Screenshot of the parent information as accessed when logged in](documentation/features/parent-info-loggedin.png)
 
-##### Contact
+#### Contact (logged in)
 
 The contact us form can also be accessed when the user is logged in. However, when logged in users won't need to add in a name or email address as this will be automatically generated from their user details, making the process easier for users but also clearly linking the message sent with the logged in user making it easier for the admin to then look into any issues.
 
 ![Screenshot of the contact us page as accessed when logged in](documentation/features/contact-account-desktop.png)
 
-##### Error Pages
+#### Error Pages (logged in)
 
 Logged in users are informed when page link (404) or server (500) errors occur and provided with a link straight back to their account home page (user story 21).
 
 ![Screenshot showing the 404 Error page](documentation/features/404-error-loggedin-user.png)
 
-#### My Work EPIC
-
-##### My Work
+#### My Work
 
 Logged in users can navigate to a page where all their work is listed by status (user story 24).
 
@@ -1065,7 +1057,7 @@ Key features:
 
 ![Screenshot showing the 'My Work' page when scrolled down](documentation/features/mywork-desktop-2.png)
 
-##### Create work
+#### Create work
 
 Users can create a piece of writing (user stories 26, 27 and 30):
 - From the account home page there is a clear button that takes them directly to a page for creating work.
@@ -1084,7 +1076,7 @@ Users can create a piece of writing (user stories 26, 27 and 30):
 
 ![Screenshot showing the back confirmation](documentation/features/create-writing-back-conformation.png)
 
-##### View work
+#### View work
 
 Users can click on an item of 'published work' or 'work awaiting approval' and view it (user stories 31 and 32).
 
@@ -1099,7 +1091,7 @@ Key features:
 
 ![Screenshot showing view of work awaiting approval](documentation/features/view-work-awaiting-approval.png)
 
-##### View feedback for my work
+#### View feedback for my work
 
 Users can view any feedback given to them when viewing an item of their published work (user story 52).
 
@@ -1112,7 +1104,7 @@ Key features:
 
 ![Screenshot showing view of feedback associated with published work](documentation/features/view-my-feedback.png)
 
-##### Edit work
+#### Edit work
 
 Users can click to edit their work (user stories 32, 33 and 53). 
 
@@ -1133,7 +1125,7 @@ Key features:
 
 ![Screenshot showing editing of published work](documentation/features/edit-draft-work.png)
 
-##### Delete work
+#### Delete work
 
 Users can click to delete their writing (user story 34).
 
@@ -1146,9 +1138,7 @@ Key features:
 
 ![Screenshot showing successful delete](documentation/features/delete-success.png)
 
-#### Library of Published Work EPIC
-
-##### Library of inspiration
+#### Library of inspiration
 
 Logged in users can view published work from other users (user story 40).
 
@@ -1165,9 +1155,7 @@ Key features:
 
 ![Screenshot showing the read writing page](documentation/features/read-writing-desktop.png)
 
-#### Feedback EPIC
-
-##### View feedback
+#### View feedback
 
 Logged in users can view feedback given for published work (user story 47).
 
@@ -1182,7 +1170,7 @@ Key features:
 
 ![Screenshot showing reading feedback](documentation/features/read-feedback-large.png)
 
-##### Give feedback
+#### Give feedback
 
 Logged in users can give feedback on published work (user stories 46 and 48).
 
@@ -1204,7 +1192,7 @@ Key features:
 ![Screenshot showing giving feedback on a mobile](documentation/features/give-feedback-mobile-1.PNG)
 ![Screenshot showing giving feedback on a mobile, scrolled view](documentation/features/give-feedback-mobile-2.PNG)
 
-##### Edit feedback
+#### Edit feedback
 
 Logged in users can edit feedback they have created (user story 49).
 
@@ -1222,7 +1210,7 @@ Key features:
 
 ![Screenshot showing edit feedback on a mobile](documentation/features/edit-feedback-mobile.PNG)
 
-##### Delete feedback
+#### Delete feedback
 
 Logged in users can delete feedback they have created (user story 50).
 
@@ -1237,7 +1225,7 @@ Key features:
 
 ![Screenshot showing successful delete](documentation/features/delete-feedback-success.png)
 
-#### ADMIN (covers Approval of writing EPIC plus more)
+#### ADMIN
 
 The site admin can:
 - delete users and all their associated writing and feedback (user story 17)
