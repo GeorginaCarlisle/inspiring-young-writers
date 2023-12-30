@@ -385,6 +385,9 @@ The main url will direct straight to the landing page.
 
 Notes: The landing page can be re-accessed by clicking on the platform name in the top left corner. The sign-up today section will also contain details about the ability to give and recieve feedback, should this feature be implemented.
 
+[Future Features](#future-features):
+The 'sign-up today and you can ..' section.
+
 </details>
 
 <details>
@@ -397,6 +400,8 @@ This page provides parents of new users with a means of contacting the site admi
 ![Wireframe showing the intended design of the contact page](documentation/design/wireframes/wireframe-contact.png)
 
 Notes: Feedback will be provided to the user if any of the form input fields fail to pass validation. Feedback to the user will also be provided on successful submission of the form.
+
+Changes: Improved wording.
 
 </details>
 
@@ -411,6 +416,8 @@ This page provides new users alongside their parents with the means to register 
 
 Notes: Feedback will be provided to the user if any of the form input fields fail to pass validation. Feedback to the user will also be provided on successful submission of the form.
 
+Changes: Sectioned differently to provide a better flow. Improved wording
+
 </details>
 
 <details>
@@ -424,6 +431,8 @@ This page provides registered users with the means to login to their account.
 
 Notes: Feedback will be provided to the user if any of the form input fields fail to link to a known account. Feedback to the user will also be provided on successful user authentication prior to redirection to their account home page.
 
+Changes: Forgotten password is a link rather than a button.
+
 </details>
 
 <details>
@@ -436,6 +445,9 @@ This part of the platform provides parents with all the information they should 
 ![Wireframe showing the intended design of the parent information modal](documentation/design/wireframes/wireframe-parents.png)
 
 Notes: In the above view the modal is shown as accessed from the landing page.
+
+[Future Features](#future-features):
+Raising confirm information. This functionality is yet to be implemented.
 
 </details>
 
@@ -454,6 +466,10 @@ This is the page a user will be directed to when they first log in.
 
 Notes: The Tips will be about how to use the platform. Providing support and guidance for users.
 
+[Future Features](#future-features):
+- Tips
+- Message for user on activity since last logged in.
+
 </details>
 
 <details>
@@ -466,6 +482,9 @@ This page ensures the parents of users can still contact the site admin and that
 ![Wireframe showing the intended design of the contact page for logged in users](documentation/design/wireframes/wireframe-account-contact.png)
 
 Notes: The contact form when sent will pull information from the users profile, such as email address, pen-name of the child and name of parent. Feedback will be provided to the user if any of the form input fields fail to pass validation. Feedback to the user will also be provided on successful submission of the form.
+
+Changes:
+- Improved wording
 
 </details>
 
@@ -480,6 +499,9 @@ This page allows the user to edit their profile information as well as delete th
 
 Notes: Any changes to the users profile will need to be verified by their parent via an email sent to the registered email address. Feedback will be provided to the user if any of the form input fields fail to pass validation. Feedback to the user will also be provided on successful submission of the form.
 
+[Future Features](#future-features):
+- This whole section is a future feature.
+
 </details>
 
 <details>
@@ -491,6 +513,9 @@ This page allows the parent of a user to still access all the information provid
 
 ![Wireframe showing the intended design of the information for parents page](documentation/design/wireframes/wireframe-account-parents.png)
 
+[Future Features](#future-features):
+Raising confirm information. This functionality is yet to be implemented.
+
 </details>
 
 <details>
@@ -500,6 +525,10 @@ My Work
 
 This is the page that the user will use to access, edit, create and delete all of their work.
 Notes: The Tips will include ideas for the sort of work the user could create. Each listed item of work can be clicked on to bring that piece up in a modal.
+
+[Future Features](#future-features):
+- Tips
+- Raise concern functionality
 
 ![Wireframe showing the intended design of the my work page](documentation/design/wireframes/wireframe-my-work.png)
 
@@ -522,6 +551,10 @@ Clicking on a submitted piece of work will bring it up in this view.
 <summary>
 Library
 </summary>
+
+[Future Features](#future-features):
+- Tips
+- Raise concern functionality
 
 This is the page that the user will use to access published work from other users.
 Notes: The Tips will include ideas around gaining inspiration and tips from other peoples writing.
